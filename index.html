@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rx & the Fox — Daily Diagnostic</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Fennick MD — Daily Diagnostic</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -13,451 +12,189 @@
   --parchment-light:#fffbe8;
   --gold:#c8a040;
   --gold-light:#e8d060;
-  --gold-dark:#8b6020;
   --brown-dark:#3a1c08;
   --brown-mid:#7a5218;
   --brown-light:#9b7230;
-  --wood-bar:#b8891e;
-  --tag-red-bg:#fde8d8;--tag-red-text:#7a2808;--tag-red-border:#d08858;
-  --tag-blue-bg:#dce8f8;--tag-blue-text:#18386a;--tag-blue-border:#7898c8;
-  --tag-green-bg:#dcf0dc;--tag-green-text:#184818;--tag-green-border:#68a868;
-  --correct:#2a6a1a;--correct-bg:#e8f5e0;--correct-border:#4a8a2a;
-  --wrong:#b04020;--wrong-bg:#fde8d8;--wrong-border:#c05030;
+  --tag-red-bg:#fde8d8;--tag-red-txt:#7a2808;--tag-red-brd:#d08858;
+  --tag-blue-bg:#dce8f8;--tag-blue-txt:#18386a;--tag-blue-brd:#7898c8;
+  --tag-green-bg:#dcf0dc;--tag-green-txt:#184818;--tag-green-brd:#68a868;
+  --ok:#2a6a1a;--ok-bg:#e8f5e0;--ok-brd:#4a8a2a;
+  --err:#b04020;--err-bg:#fde8d8;--err-brd:#c05030;
 }
 body{
-  background:var(--parchment);
   font-family:'Lora',Georgia,serif;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:0 12px 48px;
-}
-
-/* ── HERO ── */
-#hero{
-  position:fixed;inset:0;z-index:200;
-  background:var(--brown-dark);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:32px 24px;text-align:center;
-  transition:opacity .4s ease;
-}
-#hero.hidden{opacity:0;pointer-events:none;}
-.hero-title{font-size:32px;color:#f0d898;letter-spacing:.5px;margin-bottom:6px}
-.hero-sub-title{font-size:11px;color:var(--gold);letter-spacing:3px;margin-bottom:28px;text-transform:uppercase}
-.hero-desc{font-size:14px;color:rgba(240,216,152,.7);max-width:340px;line-height:1.9;margin-bottom:32px}
-.hero-pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
-.hero-pill{
-  background:rgba(200,160,64,.15);border:1px solid rgba(200,160,64,.3);
-  border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(240,216,152,.8);
-}
-.hero-cta{
-  background:var(--gold);color:var(--brown-dark);
-  border:2px solid var(--gold-light);
-  padding:13px 36px;border-radius:24px;
-  font-family:'Lora',serif;font-size:14px;font-weight:500;
-  cursor:pointer;letter-spacing:.5px;
-  transition:background .18s,transform .1s;
-}
-.hero-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
-.hero-gear{margin-bottom:20px;opacity:.4}
-
-/* ── PAGE WRAP ── */
-.page{
   background:var(--parchment);
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;
+  padding:0 12px 60px;
+}
+.page{
   width:100%;max-width:680px;
-  border-radius:14px;
-  overflow:hidden;
+  border-radius:14px;overflow:hidden;
   border:2px solid var(--brown-mid);
   margin-top:20px;
+  background:var(--parchment);
 }
-
-/* ── TOPBAR ── */
+.wood{position:relative;overflow:hidden}
+.wood svg.grain{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .topbar{
-  padding:11px 22px;
+  min-height:48px;padding:11px 22px;
   display:flex;align-items:center;justify-content:space-between;
   border-bottom:2px solid var(--brown-mid);
-  position:relative;overflow:hidden;min-height:48px;
 }
-.topbar-wood{position:absolute;inset:0;width:100%;height:100%}
-.topbar-z{position:relative;display:flex;align-items:center;justify-content:space-between;width:100%}
-.tlogo{color:#f0d898;font-size:16px;letter-spacing:.5px;text-shadow:0 1px 2px rgba(0,0,0,.4)}
-.tsub{color:var(--gold);font-size:9px;letter-spacing:3px;margin-top:1px}
-.tpill{
-  background:var(--gold);color:var(--brown-dark);
-  font-size:10px;padding:4px 14px;border-radius:20px;
-  letter-spacing:1px;border:1px solid var(--gold-light);
-  font-family:'Lora',serif;
-}
-.streak-display{
-  display:flex;align-items:center;gap:6px;
-  font-size:11px;color:var(--gold);font-style:italic;
-}
-.streak-display b{color:#f0d898}
-
-/* ── SCENE ── */
+.tlogo{color:#f0d898;font-size:16px;letter-spacing:.5px;text-shadow:0 1px 2px rgba(0,0,0,.4);position:relative}
+.tsub{color:var(--gold);font-size:9px;letter-spacing:3px;margin-top:1px;position:relative}
+.tright{display:flex;align-items:center;gap:10px;position:relative}
+.streak-pill{font-size:11px;color:var(--gold);font-style:italic;display:none}
+.streak-pill b{color:#f0d898}
+.case-pill{background:var(--gold);color:var(--brown-dark);font-size:10px;padding:4px 14px;border-radius:20px;letter-spacing:1px;border:1px solid var(--gold-light)}
 .scene{
   display:grid;grid-template-columns:1fr 1fr 1fr;
-  min-height:210px;overflow:hidden;
+  height:210px;overflow:hidden;
   border-bottom:2px solid var(--brown-mid);
   position:relative;background:#e8d488;
 }
 .scene-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
-.scene-col{
-  display:flex;flex-direction:column;
-  align-items:stretch;justify-content:flex-end;
-  position:relative;z-index:1;
-  overflow:hidden;
-}
-.bubble-col{
-  display:flex;flex-direction:column;
-  justify-content:center;padding:16px 10px;
-  position:relative;z-index:1;
-}
-.char-img{
-  width:100%;
-  height:210px;
-  object-fit:contain;
-  object-position:center bottom;
-  display:block;
-}
-.char-placeholder{
-  width:88px;height:160px;
-  background:rgba(155,114,48,.1);
-  border:2px dashed rgba(155,114,48,.25);
-  border-radius:8px 8px 0 0;
-  display:flex;align-items:center;justify-content:center;
-}
-.char-placeholder-label{
-  color:rgba(80,40,0,.25);font-size:9px;
-  letter-spacing:1px;text-align:center;line-height:1.8;
-}
-.speech-box{
-  background:rgba(255,252,235,.97);
-  border:2px solid var(--brown-mid);
-  border-radius:12px;padding:14px 15px;
-  position:relative;
-}
-.speech-box::after{
-  content:'';position:absolute;
-  top:50%;left:-11px;transform:translateY(-50%);
-  border-top:9px solid transparent;
-  border-bottom:9px solid transparent;
-  border-right:11px solid var(--brown-mid);
-}
-.speech-box::before{
-  content:'';position:absolute;
-  top:50%;left:-8px;transform:translateY(-50%);z-index:1;
-  border-top:8px solid transparent;
-  border-bottom:8px solid transparent;
-  border-right:9px solid rgba(255,252,235,.97);
-}
-.speech-name{font-size:9px;color:#9b5010;letter-spacing:1.5px;margin-bottom:5px}
-.speech-text{font-size:12px;color:#3a1e08;line-height:1.9;font-style:italic}
-
-/* ── WOOD BAR ── */
-.woodbar{
-  height:20px;position:relative;overflow:hidden;
-  border-top:2px solid var(--brown-mid);
-  border-bottom:2px solid var(--brown-mid);
-}
-.woodbar svg{position:absolute;inset:0;width:100%;height:100%}
-
-/* ── MAIN BODY ── */
+.scene-col{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.char-img{width:100%;height:210px;object-fit:contain;object-position:center bottom;display:block}
+.char-empty{width:88px;height:170px;background:rgba(155,114,48,.1);border:2px dashed rgba(155,114,48,.25);border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center}
+.char-empty span{color:rgba(80,40,0,.25);font-size:9px;letter-spacing:1px;text-align:center;line-height:1.8}
+.bubble-col{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:14px 10px}
+.speech{background:rgba(255,252,235,.97);border:2px solid var(--brown-mid);border-radius:12px;padding:13px 14px;position:relative}
+.speech::after{content:'';position:absolute;top:50%;left:-11px;transform:translateY(-50%);border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:11px solid var(--brown-mid)}
+.speech::before{content:'';position:absolute;top:50%;left:-8px;transform:translateY(-50%);z-index:1;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:9px solid rgba(255,252,235,.97)}
+.speech-name{font-size:9px;color:#9b5010;letter-spacing:1.5px;margin-bottom:4px}
+.speech-text{font-size:11.5px;color:#3a1e08;line-height:1.85;font-style:italic}
+.woodbar{height:20px;border-top:2px solid var(--brown-mid);border-bottom:2px solid var(--brown-mid)}
 .body{padding:16px 18px;display:flex;flex-direction:column;gap:13px}
-
-/* ── CASE PANEL ── */
-.case-panel{
-  background:var(--parchment-light);
-  border:2px solid var(--brown-light);
-  border-radius:11px;padding:15px;position:relative;
-}
-.case-panel::after{
-  content:'';position:absolute;inset:4px;
-  border:1px solid rgba(155,114,48,.15);
-  border-radius:7px;pointer-events:none;
-}
-.case-ribbon{
-  position:absolute;top:-1px;left:16px;
-  background:var(--brown-light);color:var(--parchment);
-  font-size:8px;letter-spacing:2px;padding:3px 12px;
-  border-radius:0 0 7px 7px;
-}
+.case-panel{background:var(--parchment-light);border:2px solid var(--brown-light);border-radius:11px;padding:15px;position:relative}
+.case-panel::after{content:'';position:absolute;inset:4px;border:1px solid rgba(155,114,48,.15);border-radius:7px;pointer-events:none}
+.case-ribbon{position:absolute;top:-1px;left:16px;background:var(--brown-light);color:var(--parchment);font-size:8px;letter-spacing:2px;padding:3px 12px;border-radius:0 0 7px 7px}
 .case-title{font-size:14px;color:#4a2408;margin:10px 0 8px}
 .case-body{font-size:12px;color:#3a1e08;line-height:2.1}
 .case-body b{color:#8b3808}
 .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.tag{font-size:10px;padding:3px 11px;border-radius:20px;border:1.5px solid;font-family:'Lora',serif}
-.tag-red{background:var(--tag-red-bg);color:var(--tag-red-text);border-color:var(--tag-red-border)}
-.tag-blue{background:var(--tag-blue-bg);color:var(--tag-blue-text);border-color:var(--tag-blue-border)}
-.tag-green{background:var(--tag-green-bg);color:var(--tag-green-text);border-color:var(--tag-green-border)}
-
-/* ── PIPE DIVIDER ── */
-.pipe-divider{display:flex;align-items:center;gap:0;margin:2px 0}
-.pipe-seg{height:7px;flex:1;background:var(--gold);border-top:1.5px solid #e8c060;border-bottom:1.5px solid #886010}
-.pipe-bolt{
-  width:12px;height:12px;background:var(--gold);border-radius:50%;
-  border:2px solid #886010;flex-shrink:0;position:relative;
-}
-.pipe-bolt::after{
-  content:'';position:absolute;top:50%;left:50%;
-  width:3.5px;height:3.5px;background:#886010;
-  border-radius:50%;transform:translate(-50%,-50%);
-}
-.pipe-valve{flex-shrink:0;margin:0 3px}
-
-/* ── CHOICES ── */
+.tag{font-size:10px;padding:3px 11px;border-radius:20px;border:1.5px solid}
+.tag-red{background:var(--tag-red-bg);color:var(--tag-red-txt);border-color:var(--tag-red-brd)}
+.tag-blue{background:var(--tag-blue-bg);color:var(--tag-blue-txt);border-color:var(--tag-blue-brd)}
+.tag-green{background:var(--tag-green-bg);color:var(--tag-green-txt);border-color:var(--tag-green-brd)}
+.pipe{display:flex;align-items:center}
+.ps{height:7px;flex:1;background:var(--gold);border-top:1.5px solid #e8c060;border-bottom:1.5px solid #886010}
+.pb{width:12px;height:12px;flex-shrink:0;background:var(--gold);border-radius:50%;border:2px solid #886010;position:relative}
+.pb::after{content:'';position:absolute;top:50%;left:50%;width:3.5px;height:3.5px;background:#886010;border-radius:50%;transform:translate(-50%,-50%)}
 .choices-label{font-size:8px;letter-spacing:3px;color:var(--brown-light);margin-bottom:9px;text-transform:uppercase}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.choice{
-  background:var(--parchment-light);
-  border:2px solid var(--gold);
-  border-radius:10px;padding:13px;
-  cursor:pointer;position:relative;overflow:hidden;
-  transition:border-color .15s,transform .1s,background .15s;
-  text-align:left;
-}
-.choice::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:repeating-linear-gradient(90deg,var(--gold) 0px,var(--gold) 6px,#b89030 6px,#b89030 8px);
-}
-.choice:hover:not(.answered){
-  border-color:var(--brown-mid);
-  background:#fef3d0;
-  transform:translateY(-1px);
-}
-.choice.correct{
-  background:var(--correct-bg);
-  border-color:var(--correct-border);
-  cursor:default;
-}
-.choice.wrong{
-  background:var(--wrong-bg);
-  border-color:var(--wrong-border);
-  cursor:default;
-  opacity:.75;
-}
-.choice.answered{cursor:default}
-.choice-letter{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:21px;height:21px;border-radius:50%;
-  background:var(--gold);color:var(--brown-dark);
-  font-size:10px;margin-bottom:6px;
-  border:1px solid var(--brown-light);
-}
-.choice.correct .choice-letter{background:var(--correct-border);color:#fff;border-color:var(--correct)}
-.choice.wrong .choice-letter{background:var(--wrong-border);color:#fff;border-color:var(--wrong)}
-.choice-drug{font-size:13px;color:#4a2408;margin-bottom:2px}
-.choice-class{font-size:10px;color:var(--brown-light);font-style:italic}
-
-/* ── REVEAL ── */
-.reveal{
-  display:none;
-  background:var(--parchment-light);
-  border:2px solid var(--brown-light);
-  border-radius:10px;padding:14px;
-  font-size:12.5px;color:#3a1e08;line-height:1.9;
-  animation:reveal-in .3s ease;
-}
-.reveal.show{display:block}
-@keyframes reveal-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
-.reveal-correct-head{color:var(--correct);font-size:13px;margin-bottom:8px}
-.reveal-wrong-head{color:var(--wrong);font-size:13px;margin-bottom:8px}
-.reveal-divider{height:1px;background:rgba(155,114,48,.2);margin:10px 0}
-.reveal-full-exp{margin-top:2px}
-.reveal-exp-item{margin-bottom:8px}
-.reveal-exp-drug{font-size:11px;font-weight:500;color:#5a2e08;margin-bottom:2px}
-.reveal-exp-text{font-size:11.5px;color:#4a3020;line-height:1.8}
-
-/* ── HINT BTN ── */
-.hint-row{display:flex;justify-content:flex-end;margin-top:-4px}
-.hint-btn{
-  background:var(--gold);color:var(--brown-dark);
-  border:1.5px solid var(--gold-light);
-  padding:7px 18px;border-radius:20px;
-  font-family:'Lora',serif;font-size:12px;
-  cursor:pointer;transition:background .15s;
-}
+.choice{background:var(--parchment-light);border:2px solid var(--gold);border-radius:10px;padding:13px;cursor:pointer;position:relative;overflow:hidden;text-align:left;transition:border-color .15s,transform .1s,background .15s}
+.choice::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 6px,#b89030 6px,#b89030 8px)}
+.choice:hover:not(.done){border-color:var(--brown-mid);background:#fef3d0;transform:translateY(-1px)}
+.choice.correct{background:var(--ok-bg);border-color:var(--ok-brd);cursor:default}
+.choice.wrong{background:var(--err-bg);border-color:var(--err-brd);cursor:default;opacity:.75}
+.choice.done{cursor:default}
+.cletter{display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:50%;background:var(--gold);color:var(--brown-dark);font-size:10px;margin-bottom:6px;border:1px solid var(--brown-light)}
+.choice.correct .cletter{background:var(--ok-brd);color:#fff;border-color:var(--ok)}
+.choice.wrong .cletter{background:var(--err-brd);color:#fff;border-color:var(--err)}
+.cdrug{font-size:13px;color:#4a2408;margin-bottom:2px}
+.cclass{font-size:10px;color:var(--brown-light);font-style:italic}
+.hint-row{display:flex;justify-content:flex-end}
+.hint-btn{background:var(--gold);color:var(--brown-dark);border:1.5px solid var(--gold-light);padding:7px 18px;border-radius:20px;font-family:'Lora',serif;font-size:12px;cursor:pointer;transition:background .15s}
 .hint-btn:hover{background:var(--gold-light)}
 .hint-btn:disabled{opacity:.45;cursor:default}
-
-/* ── BOTTOM BAR ── */
-.bottombar{
-  padding:10px 22px;
-  display:flex;align-items:center;justify-content:space-between;
-  border-top:2px solid var(--brown-mid);
-  position:relative;overflow:hidden;min-height:46px;
-}
-.bottombar-wood{position:absolute;inset:0;width:100%;height:100%}
-.bottombar-z{position:relative;display:flex;align-items:center;justify-content:space-between;width:100%}
-.bottombar-streak{font-size:11px;color:#d4b850;font-style:italic}
-.bottombar-streak b{color:#f0d898}
-.archive-link{
-  font-size:11px;color:var(--gold);
-  text-decoration:none;letter-spacing:.5px;
-  border-bottom:1px solid rgba(200,160,64,.3);
-  transition:color .15s;position:relative;
-}
-.archive-link:hover{color:#f0d898}
-
-/* ── ARCHIVE PAGE ── */
+.reveal{display:none;background:var(--parchment-light);border:2px solid var(--brown-light);border-radius:10px;padding:14px;font-size:12.5px;color:#3a1e08;line-height:1.9}
+.reveal.show{display:block;animation:slideIn .3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.rhead-ok{color:var(--ok);font-size:13px;margin-bottom:8px}
+.rhead-err{color:var(--err);font-size:13px;margin-bottom:8px}
+.rdivider{height:1px;background:rgba(155,114,48,.2);margin:10px 0}
+.ritem{margin-bottom:8px}
+.rdrug{font-size:11px;font-weight:500;color:#5a2e08;margin-bottom:2px}
+.rtext{font-size:11.5px;color:#4a3020;line-height:1.8}
+.played-card{background:var(--parchment-light);border:2px solid var(--brown-light);border-radius:11px;padding:24px;text-align:center}
+.played-card .icon{font-size:28px;margin-bottom:10px}
+.played-card h3{font-size:14px;color:#4a2408;margin-bottom:8px}
+.played-ans{display:inline-block;margin-bottom:12px;font-size:12px;padding:6px 18px;border-radius:999px;background:var(--tag-green-bg);border:1px solid var(--tag-green-brd);color:var(--tag-green-txt)}
+.played-card p{font-size:12px;color:var(--brown-light);line-height:1.9;margin-bottom:16px}
+.played-card button{background:var(--gold);color:var(--brown-dark);border:1.5px solid var(--gold-light);padding:8px 20px;border-radius:20px;font-family:'Lora',serif;font-size:12px;cursor:pointer}
+.bottombar{min-height:46px;padding:10px 22px;display:flex;align-items:center;justify-content:space-between}
+.bstreak{font-size:11px;color:#d4b850;font-style:italic;position:relative}
+.bstreak b{color:#f0d898}
+.archive-btn{font-size:11px;color:var(--gold);background:none;border:none;font-family:'Lora',serif;cursor:pointer;letter-spacing:.5px;border-bottom:1px solid rgba(200,160,64,.3);transition:color .15s;position:relative}
+.archive-btn:hover{color:#f0d898}
 #archive-page{display:none}
-#archive-page.active{display:block}
-.archive-grid{display:flex;flex-direction:column;gap:8px;padding:16px 18px}
-.archive-item{
-  background:var(--parchment-light);
-  border:1.5px solid var(--brown-light);
-  border-radius:10px;padding:13px 16px;
-  display:flex;align-items:center;justify-content:space-between;
-  cursor:pointer;transition:border-color .15s,background .15s;
-}
-.archive-item:hover{border-color:var(--brown-mid);background:#fef3d0}
-.archive-item-left{display:flex;flex-direction:column;gap:3px}
-.archive-item-title{font-size:13px;color:#4a2408}
-.archive-item-date{font-size:10px;color:var(--brown-light);letter-spacing:.5px}
-.archive-item-right{display:flex;align-items:center;gap:8px}
-.archive-played{
-  font-size:10px;padding:3px 10px;border-radius:20px;
-  background:var(--tag-green-bg);color:var(--tag-green-text);
-  border:1px solid var(--tag-green-border);
-}
-.archive-arrow{color:var(--brown-light);font-size:14px}
-.archive-empty{
-  text-align:center;padding:32px;
-  font-size:13px;color:var(--brown-light);font-style:italic;
-}
-
-/* ── BACK BTN ── */
-.back-btn{
-  background:none;border:none;
-  color:var(--gold);font-family:'Lora',serif;font-size:12px;
-  cursor:pointer;letter-spacing:.5px;padding:0;
-  display:flex;align-items:center;gap:5px;
-  transition:color .15s;
-}
+.archive-grid{padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.aitem{background:var(--parchment-light);border:1.5px solid var(--brown-light);border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:border-color .15s,background .15s}
+.aitem:hover{border-color:var(--brown-mid);background:#fef3d0}
+.aitem-left{display:flex;flex-direction:column;gap:3px}
+.aitem-title{font-size:13px;color:#4a2408}
+.aitem-date{font-size:10px;color:var(--brown-light);letter-spacing:.5px}
+.aitem-right{display:flex;align-items:center;gap:8px}
+.aitem-badge{font-size:10px;padding:3px 10px;border-radius:20px;background:var(--tag-green-bg);color:var(--tag-green-txt);border:1px solid var(--tag-green-brd)}
+.aitem-arrow{color:var(--brown-light);font-size:14px}
+.back-btn{background:none;border:none;color:var(--gold);font-family:'Lora',serif;font-size:12px;cursor:pointer;position:relative}
 .back-btn:hover{color:#f0d898}
-
-/* ── TOAST ── */
-#toast{
-  position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
-  padding:11px 22px;border-radius:9px;font-size:12px;font-family:'Lora',serif;
-  z-index:300;display:none;white-space:nowrap;color:#f0d898;
-  background:var(--brown-dark);border:1px solid var(--gold-dark);
-}
+#toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);padding:11px 22px;border-radius:9px;font-size:12px;font-family:'Lora',serif;color:#f0d898;background:var(--brown-dark);border:1px solid var(--gold);z-index:999;display:none;white-space:nowrap}
 @keyframes toastAnim{0%{opacity:0;transform:translateX(-50%) translateY(6px)}15%{opacity:1;transform:translateX(-50%) translateY(0)}85%{opacity:1}100%{opacity:0}}
-
-/* ── ALREADY PLAYED ── */
-.played-card{
-  background:var(--parchment-light);
-  border:2px solid var(--brown-light);
-  border-radius:11px;padding:24px;
-  text-align:center;
-}
-.played-icon{font-size:28px;margin-bottom:10px}
-.played-title{font-size:14px;color:#4a2408;margin-bottom:8px}
-.played-answer{
-  display:inline-block;margin-bottom:12px;
-  font-size:12px;padding:6px 18px;border-radius:999px;
-  background:var(--tag-green-bg);border:1px solid var(--tag-green-border);color:var(--tag-green-text);
-}
-.played-sub{font-size:12px;color:var(--brown-light);line-height:1.9;margin-bottom:16px}
-.played-archive-btn{
-  background:var(--gold);color:var(--brown-dark);
-  border:1.5px solid var(--gold-light);
-  padding:8px 20px;border-radius:20px;
-  font-family:'Lora',serif;font-size:12px;
-  cursor:pointer;
-}
-
-/* ── RESPONSIVE ── */
-@media(max-width:480px){
-  .choices{grid-template-columns:1fr}
-  .scene{grid-template-columns:100px 1fr 100px}
-}
+@media(max-width:480px){.choices{grid-template-columns:1fr}.scene{grid-template-columns:90px 1fr 90px}}
 </style>
 </head>
 <body>
-
 <div id="toast"></div>
 
-<!-- MAIN GAME PAGE -->
 <div id="game-page">
   <div class="page">
-
-    <!-- TOPBAR -->
-    <div class="topbar">
-      <svg class="topbar-wood" viewBox="0 0 680 48" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <div class="topbar wood">
+      <svg class="grain" viewBox="0 0 680 48" preserveAspectRatio="xMidYMid slice">
         <rect width="680" height="48" fill="#3a1c08"/>
-        <path d="M0 8 Q85 5 170 9 Q255 13 340 8 Q425 3 510 7 Q595 11 680 8" stroke="rgba(255,200,100,0.07)" stroke-width="2.5" fill="none"/>
-        <path d="M0 16 Q110 12 220 17 Q330 22 440 16 Q550 10 680 15" stroke="rgba(0,0,0,0.1)" stroke-width="2" fill="none"/>
-        <path d="M0 24 Q70 20 140 25 Q280 32 420 22 Q540 14 680 24" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/>
-        <path d="M0 34 Q120 29 240 35 Q360 41 480 33 Q580 27 680 34" stroke="rgba(0,0,0,0.08)" stroke-width="2" fill="none"/>
-        <path d="M0 43 Q90 39 180 44 Q340 50 500 41 Q600 35 680 43" stroke="rgba(255,200,100,0.05)" stroke-width="2" fill="none"/>
+        <path d="M0 8 Q170 4 340 8 Q510 12 680 8" stroke="rgba(255,200,100,0.07)" stroke-width="2.5" fill="none"/>
+        <path d="M0 18 Q170 13 340 18 Q510 23 680 16" stroke="rgba(0,0,0,0.09)" stroke-width="2" fill="none"/>
+        <path d="M0 28 Q170 23 340 29 Q510 35 680 27" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/>
+        <path d="M0 38 Q170 33 340 39 Q510 45 680 37" stroke="rgba(0,0,0,0.08)" stroke-width="2" fill="none"/>
       </svg>
-      <div class="topbar-z">
-        <div>
-          <div class="tlogo">Rx &amp; the Fox</div>
-          <div class="tsub">Daily Diagnostic</div>
-        </div>
-        <div style="display:flex;align-items:center;gap:10px">
-          <div class="streak-display" id="streak-display" style="display:none">🔥 <b id="streak-val">0</b> days</div>
-          <div class="tpill" id="case-pill">Case no. —</div>
-        </div>
+      <div style="position:relative">
+        <div class="tlogo">Fennick MD</div>
+        <div class="tsub">Daily Diagnostic</div>
+      </div>
+      <div class="tright">
+        <div class="streak-pill" id="streak-pill">🔥 <b id="streak-val">0</b> days</div>
+        <div class="case-pill" id="case-pill">Case no. —</div>
       </div>
     </div>
 
-    <!-- SCENE -->
     <div class="scene">
-      <img class="scene-bg" id="scene-bg" src="https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775179062/Background_n0pwly.png" alt="" onerror="this.style.display='none'"/>
+      <img class="scene-bg" src="https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775179062/Background_n0pwly.png" alt="" onerror="this.style.display='none'">
       <div class="scene-col">
-        <img class="char-img" id="fennick-img"
-          src="https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775183043/DRDEFAULT_mpikmc.png"
-          alt="Dr. Fennick"
-          onerror="this.outerHTML='<div class=\'char-placeholder\'><div class=\'char-placeholder-label\'>Dr. Fennick</div></div>'"
-        />
+        <img class="char-img" src="https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775183043/DRDEFAULT_mpikmc.png" alt="Dr. Fennick" onerror="this.style.display='none'">
       </div>
       <div class="bubble-col">
-        <div class="speech-box">
+        <div class="speech">
           <div class="speech-name">Dr. Fennick</div>
-          <div class="speech-text" id="fennick-speech">"Loading today's case..."</div>
+          <div class="speech-text" id="speech-text">"Welcome. Today's case is loading..."</div>
         </div>
       </div>
       <div class="scene-col" id="patient-col">
-        <div class="char-placeholder" id="patient-placeholder">
-          <div class="char-placeholder-label">Today's<br>patient</div>
-        </div>
+        <div class="char-empty"><span>Today's<br>patient</span></div>
       </div>
     </div>
 
-    <!-- WOOD BAR -->
-    <div class="woodbar">
-      <svg viewBox="0 0 680 20" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <div class="woodbar wood">
+      <svg class="grain" viewBox="0 0 680 20" preserveAspectRatio="xMidYMid slice">
         <rect width="680" height="20" fill="#b8891e"/>
-        <path d="M0 4 Q85 1 170 5 Q255 9 340 4 Q425 0 510 4 Q595 8 680 4" stroke="rgba(255,220,120,0.12)" stroke-width="2" fill="none"/>
-        <path d="M0 9 Q110 5 220 10 Q330 15 440 9 Q560 3 680 9" stroke="rgba(0,0,0,0.1)" stroke-width="1.5" fill="none"/>
-        <path d="M0 14 Q90 10 180 15 Q340 21 500 13 Q600 7 680 14" stroke="rgba(255,220,120,0.09)" stroke-width="2" fill="none"/>
-        <path d="M0 18 Q140 14 280 19 Q440 24 600 17 Q650 15 680 18" stroke="rgba(0,0,0,0.07)" stroke-width="1.5" fill="none"/>
-        <line x1="0" y1="1" x2="680" y2="1" stroke="rgba(255,220,120,0.15)" stroke-width="1"/>
-        <line x1="0" y1="19" x2="680" y2="19" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+        <path d="M0 4 Q170 1 340 5 Q510 9 680 4" stroke="rgba(255,220,120,0.12)" stroke-width="2" fill="none"/>
+        <path d="M0 10 Q170 6 340 11 Q510 16 680 10" stroke="rgba(0,0,0,0.09)" stroke-width="1.5" fill="none"/>
+        <path d="M0 16 Q170 12 340 17 Q510 22 680 15" stroke="rgba(255,220,120,0.08)" stroke-width="2" fill="none"/>
       </svg>
     </div>
 
-    <!-- BODY -->
     <div class="body" id="game-body">
-
-      <!-- CASE PANEL -->
-      <div class="case-panel" id="case-panel">
+      <div class="case-panel">
         <div class="case-ribbon" id="case-ribbon">loading...</div>
         <div class="case-title" id="case-title">Loading today's case...</div>
         <div class="case-body" id="case-body"></div>
         <div class="tags" id="case-tags"></div>
       </div>
 
-      <!-- PIPE DIVIDER -->
-      <div class="pipe-divider">
-        <div class="pipe-bolt"></div><div class="pipe-seg"></div>
-        <div class="pipe-bolt"></div><div class="pipe-seg"></div>
-        <svg class="pipe-valve" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <div class="pipe">
+        <div class="pb"></div><div class="ps"></div><div class="pb"></div><div class="ps"></div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin:0 3px">
           <circle cx="10" cy="10" r="8" fill="#c8a850" stroke="#886010" stroke-width="1.8"/>
           <circle cx="10" cy="10" r="3.5" fill="#886010"/>
           <line x1="10" y1="2" x2="10" y2="5" stroke="#886010" stroke-width="2" stroke-linecap="round"/>
@@ -465,389 +202,240 @@ body{
           <line x1="2" y1="10" x2="5" y2="10" stroke="#886010" stroke-width="2" stroke-linecap="round"/>
           <line x1="15" y1="10" x2="18" y2="10" stroke="#886010" stroke-width="2" stroke-linecap="round"/>
         </svg>
-        <div class="pipe-seg"></div><div class="pipe-bolt"></div>
-        <div class="pipe-seg"></div><div class="pipe-bolt"></div>
+        <div class="ps"></div><div class="pb"></div><div class="ps"></div><div class="pb"></div>
       </div>
 
-      <!-- CHOICES -->
       <div>
         <div class="choices-label">Choose the first-line treatment</div>
         <div class="choices" id="choices"></div>
       </div>
 
-      <!-- HINT -->
       <div class="hint-row">
         <button class="hint-btn" id="hint-btn" onclick="showHint()">Ask Dr. Fennick</button>
       </div>
 
-      <!-- REVEAL -->
       <div class="reveal" id="reveal"></div>
-
     </div>
 
-    <!-- BOTTOM BAR -->
-    <div class="bottombar">
-      <svg class="bottombar-wood" viewBox="0 0 680 46" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <div class="bottombar wood">
+      <svg class="grain" viewBox="0 0 680 46" preserveAspectRatio="xMidYMid slice">
         <rect width="680" height="46" fill="#3a1c08"/>
-        <path d="M0 7 Q85 4 170 8 Q255 12 340 7 Q425 2 510 6 Q595 10 680 7" stroke="rgba(255,200,100,0.07)" stroke-width="2.5" fill="none"/>
-        <path d="M0 15 Q110 11 220 16 Q330 21 440 15 Q550 9 680 14" stroke="rgba(0,0,0,0.1)" stroke-width="2" fill="none"/>
-        <path d="M0 24 Q70 19 140 24 Q280 31 420 21 Q540 13 680 23" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/>
-        <path d="M0 33 Q120 28 240 34 Q360 40 480 32 Q580 26 680 33" stroke="rgba(0,0,0,0.08)" stroke-width="2" fill="none"/>
-        <path d="M0 41 Q90 37 180 42 Q340 48 500 39 Q600 33 680 41" stroke="rgba(255,200,100,0.05)" stroke-width="2" fill="none"/>
+        <path d="M0 8 Q170 4 340 9 Q510 14 680 8" stroke="rgba(255,200,100,0.07)" stroke-width="2.5" fill="none"/>
+        <path d="M0 22 Q170 17 340 23 Q510 29 680 21" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/>
+        <path d="M0 36 Q170 31 340 37 Q510 43 680 35" stroke="rgba(0,0,0,0.08)" stroke-width="2" fill="none"/>
       </svg>
-      <div class="bottombar-z">
-        <div class="bottombar-streak">Streak <b id="bottom-streak">0</b> days 🔥</div>
-        <a href="#" class="archive-link" onclick="showArchive(); return false;">Archive →</a>
-      </div>
+      <div class="bstreak">Streak <b id="bottom-streak">0</b> days 🔥</div>
+      <button class="archive-btn" onclick="showArchive()">Archive →</button>
     </div>
-
   </div>
 </div>
 
-<!-- ARCHIVE PAGE -->
 <div id="archive-page">
   <div class="page">
-    <div class="topbar">
-      <svg class="topbar-wood" viewBox="0 0 680 48" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <div class="topbar wood">
+      <svg class="grain" viewBox="0 0 680 48" preserveAspectRatio="xMidYMid slice">
         <rect width="680" height="48" fill="#3a1c08"/>
-        <path d="M0 8 Q85 5 170 9 Q255 13 340 8 Q425 3 510 7 Q595 11 680 8" stroke="rgba(255,200,100,0.07)" stroke-width="2.5" fill="none"/>
-        <path d="M0 24 Q70 20 140 25 Q280 32 420 22 Q540 14 680 24" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/>
-        <path d="M0 43 Q90 39 180 44 Q340 50 500 41 Q600 35 680 43" stroke="rgba(255,200,100,0.05)" stroke-width="2" fill="none"/>
+        <path d="M0 18 Q170 13 340 18 Q510 23 680 16" stroke="rgba(0,0,0,0.09)" stroke-width="2" fill="none"/>
+        <path d="M0 32 Q170 27 340 33 Q510 39 680 31" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/>
       </svg>
-      <div class="topbar-z">
-        <button class="back-btn" onclick="showGame()">← Back</button>
-        <div class="tlogo" style="font-size:14px">Case Archive</div>
-        <div style="width:60px"></div>
-      </div>
+      <button class="back-btn" onclick="showGame()">← Back</button>
+      <div class="tlogo" style="position:relative;font-size:14px">Case Archive</div>
+      <div style="width:60px"></div>
     </div>
-    <div class="woodbar">
-      <svg viewBox="0 0 680 20" preserveAspectRatio="xMidYMid slice"><rect width="680" height="20" fill="#b8891e"/><path d="M0 4 Q85 1 170 5 Q255 9 340 4 Q425 0 510 4 Q595 8 680 4" stroke="rgba(255,220,120,0.12)" stroke-width="2" fill="none"/><path d="M0 9 Q110 5 220 10 Q330 15 440 9 Q560 3 680 9" stroke="rgba(0,0,0,0.1)" stroke-width="1.5" fill="none"/></svg>
+    <div class="woodbar wood">
+      <svg class="grain" viewBox="0 0 680 20" preserveAspectRatio="xMidYMid slice">
+        <rect width="680" height="20" fill="#b8891e"/>
+        <path d="M0 10 Q170 6 340 11 Q510 16 680 10" stroke="rgba(0,0,0,0.09)" stroke-width="1.5" fill="none"/>
+      </svg>
     </div>
     <div class="archive-grid" id="archive-grid"></div>
-    <div class="bottombar">
-      <svg class="bottombar-wood" viewBox="0 0 680 46" preserveAspectRatio="xMidYMid slice"><rect width="680" height="46" fill="#3a1c08"/><path d="M0 24 Q70 19 140 24 Q280 31 420 21 Q540 13 680 23" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/></svg>
-      <div class="bottombar-z">
-        <div class="bottombar-streak">Streak <b id="archive-streak">0</b> days 🔥</div>
-        <span style="font-size:11px;color:var(--gold);font-style:italic">Past cases</span>
-      </div>
+    <div class="bottombar wood">
+      <svg class="grain" viewBox="0 0 680 46" preserveAspectRatio="xMidYMid slice">
+        <rect width="680" height="46" fill="#3a1c08"/>
+        <path d="M0 22 Q170 17 340 23 Q510 29 680 21" stroke="rgba(255,200,100,0.06)" stroke-width="3" fill="none"/>
+      </svg>
+      <div class="bstreak">Streak <b id="arc-streak">0</b> days 🔥</div>
+      <span style="font-size:11px;color:var(--gold);font-style:italic;position:relative">Past cases</span>
     </div>
   </div>
 </div>
 
 <script>
-// ── STATE ──
-let allCases = [];
-let currentCase = null;
-let gameAnswered = false;
-let hintUsed = false;
+let allCases = [], currentCase = null, answered = false, hintUsed = false;
 
-// ── UTILS ──
-function getTodayCST() {
+function todayCST() {
   return new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'America/Chicago',
-    year: 'numeric', month: '2-digit', day: '2-digit'
+    timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
   }).format(new Date());
 }
-
-function getStreak() { return parseInt(localStorage.getItem('rxfox_streak') || '0'); }
-function getLastPlayed() { return localStorage.getItem('rxfox_last_played') || ''; }
-
+function getStreak() { return parseInt(localStorage.getItem('fmd_streak') || '0'); }
+function getLastPlayed() { return localStorage.getItem('fmd_last') || ''; }
 function updateStreak() {
-  const today = getTodayCST();
-  const last = getLastPlayed();
+  const today = todayCST(), last = getLastPlayed();
   const yest = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'America/Chicago',
-    year: 'numeric', month: '2-digit', day: '2-digit'
+    timeZone:'America/Chicago', year:'numeric', month:'2-digit', day:'2-digit'
   }).format(new Date(Date.now() - 86400000));
-  let streak = getStreak();
-  if (last === today) return streak;
-  if (last === yest) streak++;
-  else streak = 1;
-  localStorage.setItem('rxfox_streak', streak);
-  localStorage.setItem('rxfox_last_played', today);
-  return streak;
+  if (last === today) return getStreak();
+  const s = last === yest ? getStreak() + 1 : 1;
+  localStorage.setItem('fmd_streak', s);
+  localStorage.setItem('fmd_last', today);
+  return s;
 }
-
 function renderStreak() {
   const s = getStreak();
-  const elVal = document.getElementById('streak-val');
-  const elBot = document.getElementById('bottom-streak');
-  const elArc = document.getElementById('archive-streak');
-  if(elVal) elVal.textContent = s;
-  if(elBot) elBot.textContent = s;
-  if(elArc) elArc.textContent = s;
-  if (s > 0) document.getElementById('streak-display').style.display = 'flex';
+  ['streak-val','bottom-streak','arc-streak'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = s;
+  });
+  if (s > 0) { const p = document.getElementById('streak-pill'); if (p) p.style.display = 'flex'; }
 }
-
-function getPlayedCases() {
-  try { return JSON.parse(localStorage.getItem('rxfox_played') || '{}'); }
-  catch(e) { return {}; }
+function getPlayed() {
+  try { return JSON.parse(localStorage.getItem('fmd_played') || '{}'); } catch(e) { return {}; }
 }
-function markPlayed(caseId, correct) {
-  const played = getPlayedCases();
-  played[caseId] = { correct, date: getTodayCST() };
-  localStorage.setItem('rxfox_played', JSON.stringify(played));
+function markPlayed(id, correct) {
+  const p = getPlayed(); p[id] = { correct, date: todayCST() };
+  localStorage.setItem('fmd_played', JSON.stringify(p));
 }
-
-function showToast(msg) {
+function toast(msg) {
   const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.style.display = 'block';
-  t.style.animation = 'none';
-  t.offsetHeight;
+  t.textContent = msg; t.style.display = 'block';
+  t.style.animation = 'none'; void t.offsetHeight;
   t.style.animation = 'toastAnim 2.4s ease-in-out';
   setTimeout(() => t.style.display = 'none', 2400);
 }
 
-// ── LOAD CASES ──
-
-async function loadCases() {
+async function init() {
   try {
-    const res = await fetch('cases.json');
-    allCases = await res.json();
+    const r = await fetch('cases.json');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    allCases = await r.json();
   } catch(e) {
-    console.error('Failed to load cases.json', e);
+    console.error('cases.json failed:', e);
+    document.getElementById('case-title').textContent = 'Could not load cases. Make sure cases.json is in the same folder on GitHub.';
+    return;
   }
-  const today = getTodayCST();
+  const today = todayCST();
   currentCase = allCases.find(c => c.date === today) || allCases[allCases.length - 1];
-  if (currentCase) renderGame(currentCase);
+  if (currentCase) renderGame(currentCase, false);
   renderStreak();
 }
 
-// ── RENDER GAME ──
-function renderGame(c, isArchive = false) {
-  currentCase = c;
-  gameAnswered = false;
-  hintUsed = false;
-
-  document.getElementById('case-pill').textContent = `Case no. ${c.id}`;
-  document.getElementById('case-ribbon').textContent = `case file — no. ${c.id}`;
+function renderGame(c, isArchive) {
+  currentCase = c; answered = false; hintUsed = false;
+  document.getElementById('case-pill').textContent = 'Case no. ' + c.id;
+  document.getElementById('case-ribbon').textContent = 'case file — no. ' + c.id;
   document.getElementById('case-title').textContent = c.title;
-
-  // Bold key terms in body
-  const body = c.body.replace(/\b(\d[\w\s-]*(?:year|mg|mcg|mmol|CKD|eGFR)[^\.,;]*)/gi, '<b>$1</b>');
   document.getElementById('case-body').innerHTML = c.body;
-
-  // Tags
-  const tagsEl = document.getElementById('case-tags');
-  tagsEl.innerHTML = c.tags.map(t =>
-    `<span class="tag tag-${t.type}">${t.label}</span>`
-  ).join('');
-
-  // Patient image
-  const patientCol = document.getElementById('patient-col');
-  if (c.patient_img) {
-    patientCol.innerHTML = `<img class="char-img" src="${c.patient_img}" alt="Patient" onerror="this.outerHTML='<div class=\ar-placeholder\><div class=\ar-placeholder-label\>Today\'s<br>patient</div></div>'"/>`;
-  } else {
-    patientCol.innerHTML = '<div class="char-placeholder"><div class="char-placeholder-label">Today's<br>patient</div></div>';
-  }
-
-  // Dr. Fennick opening line
-  document.getElementById('fennick-speech').textContent = `"${c.title}. A curious case. Study the details carefully before you choose."`;
-
-  // Choices
-  const choicesEl = document.getElementById('choices');
-  const letters = ['A','B','C','D'];
-  choicesEl.innerHTML = c.options.map((opt, i) => `
-    <div class="choice" id="choice-${i}" onclick="pickAnswer(${i})">
-      <div class="choice-letter">${letters[i]}</div>
-      <div class="choice-drug">${opt.drug}</div>
-      <div class="choice-class">${opt.class}</div>
-    </div>
-  `).join('');
-
-  // Reset reveal + hint
-  const reveal = document.getElementById('reveal');
-  reveal.className = 'reveal';
-  reveal.innerHTML = '';
-  reveal.style.display = 'none';
-  document.getElementById('hint-btn').disabled = false;
-  document.getElementById('hint-btn').textContent = 'Ask Dr. Fennick';
-
-  // Check if already played today (non-archive)
-  if (!isArchive) {
-    const played = getPlayedCases();
-    if (played[c.id]) {
-      showAlreadyPlayed(c, played[c.id].correct);
-    }
-  }
+  document.getElementById('speech-text').textContent = '"' + c.title + '. A curious case. Study the details carefully before you choose."';
+  document.getElementById('case-tags').innerHTML = c.tags.map(t =>
+    `<span class="tag tag-${t.type}">${t.label}</span>`).join('');
+  const col = document.getElementById('patient-col');
+  col.innerHTML = c.patient_img
+    ? `<img class="char-img" src="${c.patient_img}" alt="Patient" onerror="this.style.display='none'">`
+    : `<div class="char-empty"><span>Today's<br>patient</span></div>`;
+  document.getElementById('choices').innerHTML = c.options.map((o, i) =>
+    `<div class="choice" id="ch${i}" onclick="pick(${i})">
+      <div class="cletter">${'ABCD'[i]}</div>
+      <div class="cdrug">${o.drug}</div>
+      <div class="cclass">${o.class}</div>
+    </div>`).join('');
+  const rev = document.getElementById('reveal');
+  rev.className = 'reveal'; rev.innerHTML = ''; rev.style.display = 'none';
+  const hb = document.getElementById('hint-btn');
+  hb.disabled = false; hb.textContent = 'Ask Dr. Fennick';
+  const old = document.querySelector('.played-card'); if (old) old.remove();
+  if (!isArchive) { const p = getPlayed(); if (p[c.id]) showAlreadyPlayed(c, p[c.id].correct); }
 }
 
-// ── PICK ANSWER ──
-function pickAnswer(idx) {
-  if (gameAnswered) return;
-  gameAnswered = true;
-
-  const c = currentCase;
-  const chosen = c.options[idx];
-  const isCorrect = chosen.drug === c.answer;
-
-  // Style all choices
-  c.options.forEach((opt, i) => {
-    const el = document.getElementById(`choice-${i}`);
-    el.classList.add('answered');
-    if (opt.drug === c.answer) el.classList.add('correct');
+function pick(idx) {
+  if (answered) return;
+  answered = true;
+  const c = currentCase, chosen = c.options[idx], correct = chosen.drug === c.answer;
+  c.options.forEach((o, i) => {
+    const el = document.getElementById('ch' + i);
+    el.classList.add('done');
+    if (o.drug === c.answer) el.classList.add('correct');
     else if (i === idx) el.classList.add('wrong');
   });
-
-  // Update streak + mark played
-  if (isCorrect) updateStreak();
-  markPlayed(c.id, isCorrect);
+  if (correct) updateStreak();
+  markPlayed(c.id, correct);
   renderStreak();
-
-  // Build reveal
-  showReveal(isCorrect, chosen.drug);
-
-  // Update Fennick speech
-  if (isCorrect) {
-    document.getElementById('fennick-speech').textContent = `"Precisely. ${c.answer} — the correct first-line choice. Well reasoned."`;
-  } else {
-    document.getElementById('fennick-speech').textContent = `"Not quite. Study the reasoning carefully. This is how you improve."`;
-  }
+  showReveal(correct, chosen.drug);
+  document.getElementById('speech-text').textContent = correct
+    ? `"Precisely. ${c.answer} — the correct first-line choice. Well reasoned."`
+    : `"Not quite. Study the reasoning carefully. This is how you improve."`;
 }
 
-// ── SHOW REVEAL ──
-function showReveal(isCorrect, chosenDrug) {
-  const c = currentCase;
-  const reveal = document.getElementById('reveal');
-
+function showReveal(correct, chosenDrug) {
+  const c = currentCase, rev = document.getElementById('reveal');
   let html = '';
-  if (isCorrect) {
-    reveal.style.borderColor = 'var(--correct-border)';
-    html += `<div class="reveal-correct-head">✓ Correct — ${c.answer}</div>`;
-    html += `<div>${c.explanation.correct}</div>`;
-    html += `<div class="reveal-divider"></div>`;
-    html += `<div class="reveal-full-exp">`;
+  if (correct) {
+    rev.style.borderColor = 'var(--ok-brd)';
+    html += `<div class="rhead-ok">✓ Correct — ${c.answer}</div><div>${c.explanation.correct}</div><div class="rdivider"></div>`;
     c.options.filter(o => o.drug !== c.answer).forEach(o => {
-      html += `<div class="reveal-exp-item">
-        <div class="reveal-exp-drug">Why not ${o.drug}?</div>
-        <div class="reveal-exp-text">${c.explanation.wrong[o.drug]}</div>
-      </div>`;
+      html += `<div class="ritem"><div class="rdrug">Why not ${o.drug}?</div><div class="rtext">${c.explanation.wrong[o.drug]||''}</div></div>`;
     });
-    html += `</div>`;
   } else {
-    reveal.style.borderColor = 'var(--wrong-border)';
-    html += `<div class="reveal-wrong-head">✗ ${chosenDrug} — incorrect</div>`;
-    html += `<div>${c.explanation.wrong[chosenDrug]}</div>`;
-    html += `<div class="reveal-divider"></div>`;
-    html += `<div class="reveal-exp-item">
-      <div class="reveal-exp-drug">The correct answer was ${c.answer}:</div>
-      <div class="reveal-exp-text">${c.explanation.correct}</div>
-    </div>`;
+    rev.style.borderColor = 'var(--err-brd)';
+    html += `<div class="rhead-err">✗ ${chosenDrug} — incorrect</div><div>${c.explanation.wrong[chosenDrug]||'Not the right choice for this patient.'}</div><div class="rdivider"></div>`;
+    html += `<div class="ritem"><div class="rdrug">The correct answer: ${c.answer}</div><div class="rtext">${c.explanation.correct}</div></div>`;
   }
-
-  reveal.innerHTML = html;
-  reveal.classList.add('show');
-  reveal.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  rev.innerHTML = html; rev.style.display = 'block'; rev.classList.add('show');
+  setTimeout(() => rev.scrollIntoView({ behavior:'smooth', block:'nearest' }), 50);
 }
 
-// ── HINT ──
 function showHint() {
-  if (hintUsed) return;
-  hintUsed = true;
-  const c = currentCase;
-  document.getElementById('fennick-speech').textContent = `"${c.fennick_hint}"`;
-  document.getElementById('hint-btn').disabled = true;
-  document.getElementById('hint-btn').textContent = 'Hint revealed';
-  showToast('Dr. Fennick speaks...');
+  if (hintUsed) return; hintUsed = true;
+  document.getElementById('speech-text').textContent = '"' + currentCase.fennick_hint + '"';
+  const hb = document.getElementById('hint-btn'); hb.disabled = true; hb.textContent = 'Hint revealed';
+  toast('Dr. Fennick speaks...');
 }
 
-// ── ALREADY PLAYED ──
 function showAlreadyPlayed(c, wasCorrect) {
-  gameAnswered = true;
+  answered = true;
   document.getElementById('choices').innerHTML = '';
-  document.getElementById('reveal').className = 'reveal';
-  document.getElementById('reveal').innerHTML = '';
   document.getElementById('hint-btn').disabled = true;
-
-  const body = document.getElementById('game-body');
-  // Remove existing played card if any
-  const existing = body.querySelector('.played-card');
-  if (existing) existing.remove();
-
   const card = document.createElement('div');
   card.className = 'played-card';
-  card.innerHTML = `
-    <div class="played-icon">${wasCorrect ? '✓' : '✗'}</div>
-    <div class="played-title">You've already played today's case.</div>
-    <div class="played-answer">${wasCorrect ? '✓' : '✗'} ${c.answer}</div>
-    <div class="played-sub">Come back tomorrow for a new case.<br>Browse past cases in the archive.</div>
-    <button class="played-archive-btn" onclick="showArchive()">Browse Archive →</button>
-  `;
-  body.appendChild(card);
+  card.innerHTML = `<div class="icon">${wasCorrect?'✓':'✗'}</div><h3>Already played today's case.</h3><div class="played-ans">${wasCorrect?'✓':'✗'} ${c.answer}</div><p>Come back tomorrow for a new case.<br>Browse past cases in the archive.</p><button onclick="showArchive()">Browse Archive →</button>`;
+  document.getElementById('game-body').appendChild(card);
 }
 
-// ── ARCHIVE ──
 function showArchive() {
   document.getElementById('game-page').style.display = 'none';
   document.getElementById('archive-page').style.display = 'block';
-  document.getElementById('archive-page').classList.add('active');
-
-  const played = getPlayedCases();
+  renderStreak();
+  const played = getPlayed(), today = todayCST();
+  const past = allCases.filter(c => c.date <= today).sort((a,b) => b.date.localeCompare(a.date));
   const grid = document.getElementById('archive-grid');
-
-  const past = allCases.filter(c => c.date <= getTodayCST()).sort((a, b) => b.date.localeCompare(a.date));
-
-  if (past.length === 0) {
-    grid.innerHTML = '<div class="archive-empty">No cases available yet.</div>';
-    return;
-  }
-
+  if (!past.length) { grid.innerHTML = '<div style="text-align:center;padding:32px;font-size:13px;color:var(--brown-light);font-style:italic">No past cases yet.</div>'; return; }
   grid.innerHTML = past.map(c => {
-    const isToday = c.date === getTodayCST();
-    const wasPlayed = played[c.id];
-    const dateStr = new Date(c.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    return `
-      <div class="archive-item" onclick="loadArchiveCase('${c.id}')">
-        <div class="archive-item-left">
-          <div class="archive-item-title">${c.title}</div>
-          <div class="archive-item-date">${isToday ? 'Today — ' : ''}${dateStr}</div>
-        </div>
-        <div class="archive-item-right">
-          ${wasPlayed ? `<span class="archive-played">${wasPlayed.correct ? '✓' : '✗'} Played</span>` : ''}
-          <span class="archive-arrow">›</span>
-        </div>
-      </div>
-    `;
+    const p = played[c.id];
+    const dateStr = new Date(c.date+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    return `<div class="aitem" onclick="loadArchive('${c.id}')">
+      <div class="aitem-left"><div class="aitem-title">${c.title}</div><div class="aitem-date">${c.date===today?'Today — ':''}${dateStr}</div></div>
+      <div class="aitem-right">${p?`<span class="aitem-badge">${p.correct?'✓':'✗'} Played</span>`:''}<span class="aitem-arrow">›</span></div>
+    </div>`;
   }).join('');
 }
 
-function loadArchiveCase(id) {
-  const c = allCases.find(x => x.id === id);
-  if (!c) return;
-  showGame();
-  renderGame(c, true);
-  const played = getPlayedCases();
-  if (played[c.id]) {
-    pickAnswerForArchive(c, played[c.id].correct);
+function loadArchive(id) {
+  const c = allCases.find(x => x.id === id); if (!c) return;
+  showGame(); renderGame(c, true);
+  const p = getPlayed();
+  if (p[id]) {
+    answered = true;
+    c.options.forEach((o,i) => { const el = document.getElementById('ch'+i); if(el){el.classList.add('done');if(o.drug===c.answer)el.classList.add('correct');} });
+    showReveal(p[id].correct, p[id].correct ? c.answer : 'previous attempt');
   }
-}
-
-function pickAnswerForArchive(c, wasCorrect) {
-  gameAnswered = true;
-  c.options.forEach((opt, i) => {
-    const el = document.getElementById(`choice-${i}`);
-    if(el) {
-      el.classList.add('answered');
-      if (opt.drug === c.answer) el.classList.add('correct');
-    }
-  });
-  showReveal(wasCorrect, wasCorrect ? c.answer : 'Incorrect Attempt');
 }
 
 function showGame() {
   document.getElementById('archive-page').style.display = 'none';
-  document.getElementById('archive-page').classList.remove('active');
   document.getElementById('game-page').style.display = 'block';
-  const playedCard = document.querySelector('.played-card');
-  if (playedCard && currentCase && !getPlayedCases()[currentCase.id]) playedCard.remove();
 }
 
-
-// ── INIT ──
-window.addEventListener('DOMContentLoaded', () => {
-  loadCases();
-});
+window.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>
