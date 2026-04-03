@@ -588,9 +588,14 @@ function updateStreak() {
 
 function renderStreak() {
   const s = getStreak();
-  document.getElementById('streak-val').textContent = s;
-  document.getElementById('bottom-streak').textContent = s;
-  document.getElementById('archive-streak').textContent = s;
+  const elVal = document.getElementById('streak-val');
+  const elBot = document.getElementById('bottom-streak');
+  const elArc = document.getElementById('archive-streak');
+  
+  if(elVal) elVal.textContent = s;
+  if(elBot) elBot.textContent = s;
+  if(elArc) elArc.textContent = s;
+  
   if (s > 0) document.getElementById('streak-display').style.display = 'flex';
 }
 
@@ -619,13 +624,16 @@ async function loadCases() {
   try {
     const res = await fetch('cases.json');
     allCases = await res.json();
+    const today = getTodayCST();
+    currentCase = allCases.find(c => c.date === today) || allCases[allCases.length - 1];
+    if (currentCase) {
+        renderGame(currentCase);
+    }
+    renderStreak();
   } catch(e) {
-    allCases = [];
+    console.error("Failed to load cases:", e);
+    document.getElementById('case-title').textContent = "Error loading cases. Please ensure cases.json exists.";
   }
-  const today = getTodayCST();
-  currentCase = allCases.find(c => c.date === today) || allCases[allCases.length - 1];
-  renderGame(currentCase);
-  renderStreak();
 }
 
 // ── RENDER GAME ──
@@ -638,8 +646,7 @@ function renderGame(c, isArchive = false) {
   document.getElementById('case-ribbon').textContent = `case file — no. ${c.id}`;
   document.getElementById('case-title').textContent = c.title;
 
-  // Bold key terms in body
-  const body = c.body.replace(/\b(\d[\w\s-]*(?:year|mg|mcg|mmol|CKD|eGFR)[^\.,;]*)/gi, '<b>$1</b>');
+  // Render body (highlighting key terms is handled by JSON author, simple display here)
   document.getElementById('case-body').innerHTML = c.body;
 
   // Tags
@@ -651,9 +658,9 @@ function renderGame(c, isArchive = false) {
   // Patient image
   const patientCol = document.getElementById('patient-col');
   if (c.patient_img) {
-    patientCol.innerHTML = `<img class="char-img" src="${c.patient_img}" alt="Patient" onerror="this.outerHTML='<div class=\ar-placeholder\><div class=\ar-placeholder-label\>Today\'s<br>patient</div></div>'"/>`;
+    patientCol.innerHTML = `<img class="char-img" src="${c.patient_img}" alt="Patient" onerror="this.outerHTML='<div class=\'char-placeholder\'><div class=\'char-placeholder-label\'>Today\'s<br>patient</div></div>'"/>`;
   } else {
-    patientCol.innerHTML = '<div class="char-placeholder"><div class="char-placeholder-label">Today's<br>patient</div></div>';
+    patientCol.innerHTML = '<div class="char-placeholder"><div class="char-placeholder-label">Today\'s<br>patient</div></div>';
   }
 
   // Dr. Fennick opening line
@@ -674,6 +681,7 @@ function renderGame(c, isArchive = false) {
   const reveal = document.getElementById('reveal');
   reveal.className = 'reveal';
   reveal.innerHTML = '';
+  reveal.style.display = 'none';
   document.getElementById('hint-btn').disabled = false;
   document.getElementById('hint-btn').textContent = 'Ask Dr. Fennick';
 
@@ -741,7 +749,7 @@ function showReveal(isCorrect, chosenDrug) {
   } else {
     reveal.style.borderColor = 'var(--wrong-border)';
     html += `<div class="reveal-wrong-head">✗ ${chosenDrug} — incorrect</div>`;
-    html += `<div>${c.explanation.wrong[chosenDrug]}</div>`;
+    html += `<div>${c.explanation.wrong[chosenDrug] || 'Not the preferred choice for this case.'}</div>`;
     html += `<div class="reveal-divider"></div>`;
     html += `<div class="reveal-exp-item">
       <div class="reveal-exp-drug">The correct answer was ${c.answer}:</div>
@@ -750,6 +758,7 @@ function showReveal(isCorrect, chosenDrug) {
   }
 
   reveal.innerHTML = html;
+  reveal.style.display = 'block';
   reveal.classList.add('show');
   reveal.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
@@ -769,12 +778,13 @@ function showHint() {
 function showAlreadyPlayed(c, wasCorrect) {
   gameAnswered = true;
   document.getElementById('choices').innerHTML = '';
-  document.getElementById('reveal').className = 'reveal';
-  document.getElementById('reveal').innerHTML = '';
+  const reveal = document.getElementById('reveal');
+  reveal.className = 'reveal';
+  reveal.innerHTML = '';
+  reveal.style.display = 'none';
   document.getElementById('hint-btn').disabled = true;
 
   const body = document.getElementById('game-body');
-  // Remove existing played card if any
   const existing = body.querySelector('.played-card');
   if (existing) existing.remove();
 
@@ -798,7 +808,6 @@ function showArchive() {
 
   const played = getPlayedCases();
   const grid = document.getElementById('archive-grid');
-
   const past = allCases.filter(c => c.date <= getTodayCST()).sort((a, b) => b.date.localeCompare(a.date));
 
   if (past.length === 0) {
@@ -830,12 +839,33 @@ function loadArchiveCase(id) {
   if (!c) return;
   showGame();
   renderGame(c, true);
+  
+  // If it was already played, show the reveal immediately for archive viewing
+  const played = getPlayedCases();
+  if (played[c.id]) {
+    pickAnswerForArchive(c, played[c.id].correct);
+  }
+}
+
+function pickAnswerForArchive(c, wasCorrect) {
+    gameAnswered = true;
+    c.options.forEach((opt, i) => {
+        const el = document.getElementById(`choice-${i}`);
+        if(el) {
+            el.classList.add('answered');
+            if (opt.drug === c.answer) el.classList.add('correct');
+        }
+    });
+    showReveal(wasCorrect, wasCorrect ? c.answer : "Incorrect Attempt");
 }
 
 function showGame() {
   document.getElementById('archive-page').style.display = 'none';
   document.getElementById('archive-page').classList.remove('active');
   document.getElementById('game-page').style.display = 'block';
+  // Remove played card if coming back from archive to a fresh case
+  const playedCard = document.querySelector('.played-card');
+  if (playedCard && !getPlayedCases()[currentCase.id]) playedCard.remove();
 }
 
 // ── HERO ──
