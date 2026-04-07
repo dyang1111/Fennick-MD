@@ -345,6 +345,45 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .prog-line{flex:1;height:2px;background:rgba(160,120,40,0.15);border-radius:2px;transition:background .3s}
 .prog-line.done{background:rgba(100,70,10,0.5)}
 
+/* ── GEAR OVERLAY PANELS ── */
+.note-gear {
+  position: relative;
+  overflow: hidden;
+}
+.note-gear::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%; height: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto 80%;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 0;
+}
+.note-gear::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 75%; height: 65%;
+  background: radial-gradient(ellipse at top right, rgba(140,90,20,0.22) 0%, rgba(180,130,50,0.1) 40%, transparent 68%);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 0;
+}
+.note-gear > * {
+  position: relative;
+  z-index: 2;
+}
+.gear-workup::before {
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775600415/Gemini_Generated_Image_qwnyg6qwnyg6qwny_fsrwgl.png');
+}
+.gear-mgmt::before {
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775600417/Gemini_Generated_Image_eb02e8eb02e8eb02_copy_nvovzo.png');
+  background-size: auto 60%;
+}
+
 /* ── ENDGAME ── */
 #endgame{display:none;text-align:center;padding:20px}
 .grade-circle{
@@ -428,7 +467,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
       <div class="vitals-row" id="vitals-row"></div>
     </div>
 
-    <div class="note" id="workup-note">
+    <div class="note note-gear gear-workup" id="workup-note">
       <span class="section-tag">CLINICAL WORKUP</span>
       <div id="ordered-results"></div>
       <div class="tests-grid" id="tests-grid"></div>
@@ -444,7 +483,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
       <div id="dx-result"></div>
     </div>
 
-    <div class="note" id="mgmt-note">
+    <div class="note note-gear gear-mgmt" id="mgmt-note">
       <span class="section-tag">MANAGEMENT</span>
       <div class="progress-track" id="mgmt-progress"></div>
       <div style="margin-top:12px" id="mgmt-stages"></div>
