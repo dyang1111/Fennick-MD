@@ -490,7 +490,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
       <div id="dx-result"></div>
     </div>
 
-    <div class="note note-gear gear-mgmt" id="mgmt-note">
+    <div class="note note-gear gear-mgmt" id="mgmt-note" style="display: none;">
       <div class="gear-overlay gear-overlay-mgmt"></div>
       <div class="gear-overlay-tint"></div>
       <span class="section-tag">MANAGEMENT</span>
@@ -661,26 +661,29 @@ function renderChart(){
   `;
 }
 
-function renderTests(){ 
+function renderTests() { 
   const grid = document.getElementById('tests-grid'); 
-  if(!currentCase.tests) return; 
-  grid.innerHTML = currentCase.tests.map((t,i)=>`
+  const tests = currentCase.tests || currentCase.labs; 
+  if(!tests) return; 
+  
+  grid.innerHTML = tests.map((t, i) => `
     <div class="test-btn" id="test-${i}" onclick="orderTest(${i})">
       <div class="test-btn-name">${t.name}</div>
-      <div class="test-btn-cost">−${t.cost||5} HP</div>
+      <div class="test-btn-cost">−${t.cost !== undefined ? t.cost : 5} HP</div>
     </div>
   `).join('');
 }
 
-window.orderTest = function(idx){ 
-  if(!currentCase.tests) return; 
-  const t = currentCase.tests[idx]; 
+window.orderTest = function(idx) { 
+  const tests = currentCase.tests || currentCase.labs;
+  if(!tests) return; 
+  const t = tests[idx]; 
   if(orderedTests.has(idx)) return; 
   
-  drainHP(t.cost||5); 
+  drainHP(t.cost !== undefined ? t.cost : 5); 
   orderedTests.add(idx); 
   
-  document.getElementById('test-'+idx).classList.add('ordered'); 
+  document.getElementById('test-' + idx).classList.add('ordered'); 
   
   const results = document.getElementById('ordered-results'); 
   const card = document.createElement('div'); 
@@ -842,7 +845,9 @@ function useHint(){
 }
 
 function unlockNextStage(){ 
-  if(currentStage===0){/* noop */}
+  const mgmtNote = document.getElementById('mgmt-note');
+  mgmtNote.style.display = 'block';
+  mgmtNote.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function endCase(failed){ 
