@@ -9,6 +9,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
+/* ── DEFINE DAY/NIGHT VARIABLES ── */
 body.day {
   --panel-bg: rgba(252,248,225,0.95);
   --text-primary: #2a1a06;
@@ -29,6 +30,7 @@ body.night {
 
 html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#2a1a06;}
 
+/* ── MAIN TOWN BACKGROUND ── */
 #bg {
   position: fixed;
   inset: 0;
@@ -39,6 +41,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   transition: background-image 1s ease;
 }
 
+/* ── WOOD NAV ── */
 .fm-nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   padding:10px 24px;
@@ -72,6 +75,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .fm-hp-nav-fill{height:100%;background:#c8a45a;border-radius:99px;transition:width .4s ease}
 .fm-hp-nav-num{color:#e8c87a;font-size:11px;font-weight:600;min-width:28px}
 
+/* ── MAIN LAYOUT ── */
 #app{
   position:relative;z-index:10;
   padding-top:52px;
@@ -87,6 +91,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   z-index:10;
 }
 
+/* ── LEFT COLUMN — FIXED ── */
 #left-col{
   width:210px;flex-shrink:0;
   height:calc(100vh - 52px);
@@ -116,6 +121,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   border:1px solid rgba(200,160,60,0.25);
 }
 
+/* ── DR FENNICK PICTURE SPECIFICS (FIXED ZOOM) ── */
 #fennick-img-wrap {
   width: 170px;
   height: 170px;
@@ -167,7 +173,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .streak-lbl{color:#a08040;font-size:13px}
 .streak-val{color:#e8c87a;font-size:14px}
 
-/* ── RIGHT COL — position:relative so the abs img is contained ── */
+/* ── RIGHT SCROLLABLE — NEW PAPER BACKGROUND ── */
 #right-col{
   flex:1;
   max-width:680px;
@@ -175,22 +181,13 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   overflow-y:auto;
   padding:20px 16px;
   display:flex;flex-direction:column;gap:14px;
-  position:relative;
-  box-shadow: -4px 0 15px rgba(0,0,0,0.3);
-}
 
-/* ── PAPER IMAGE — fills right-col, scrolls with content ── */
-#paper-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  pointer-events: none;
-  z-index: 0;
-  display: block;
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775594676/Gemini_Generated_Image_u7xtifu7xtifu7xt_wdifid.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: -4px 0 15px rgba(0,0,0,0.3);
 }
 
 /* ── THEMATIC SCROLLBAR ── */
@@ -199,7 +196,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 #right-col::-webkit-scrollbar-thumb { background: rgba(160, 120, 40, 0.6); border-radius: 4px; }
 #right-col::-webkit-scrollbar-thumb:hover { background: rgba(200, 160, 60, 0.8); }
 
-/* ── NOTE PANELS — sit above the paper bg ── */
+/* ── NOTE PANELS (CLEAN IVORY, NO TEXTURE) ── */
 .note{
   background: var(--panel-bg);
   border:1px solid rgba(140,100,30,0.28);
@@ -207,12 +204,12 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   padding:18px 20px;
   box-shadow:1px 2px 10px rgba(60,30,0,0.18);
   font-size:15px;
-  position: relative;
-  z-index: 1;
 }
 
+/* ── PATIENT BANNER ── */
 #pt-banner{display:flex;gap:14px;align-items:flex-start}
 
+/* ── PATIENT PICTURE SPECIFICS ── */
 #pt-img-wrap{
   width:170px; 
   height:170px; 
@@ -233,6 +230,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .pt-occ{color: var(--text-secondary);font-size:14px;margin-top:2px}
 .pt-tag{display:inline-flex;align-items:center;gap:5px;background:#3a1a06;color:#e8c87a;font-size:11px;letter-spacing:.12em;padding:3px 9px;border-radius:4px;margin-top:6px}
 
+/* ── MEDICAL CHART ── */
 .chart-grid{display:grid;grid-template-columns:140px 1fr;gap:0;margin-top:10px}
 .chart-label{font-size:13px;color: var(--text-secondary);font-weight:600;letter-spacing:.04em;padding:6px 0;border-bottom:1px solid var(--chart-border)}
 .chart-val{font-size:15px;color: var(--text-primary);padding:6px 0 6px 12px;border-bottom:1px solid var(--chart-border);line-height:1.6;font-style:normal}
@@ -242,8 +240,10 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .vital-val{font-size:17px;font-weight:600;color: var(--text-primary);font-family:'Playfair Display',serif}
 .vital-lbl{font-size:11px;color: var(--text-secondary);letter-spacing:.08em}
 
+/* ── SECTION HEADERS ── */
 .section-tag{display:inline-block;background:#3a1a06;color:#e8c87a;font-size:11px;letter-spacing:.14em;padding:3px 10px;border-radius:4px;margin-bottom:10px}
 
+/* ── ORDERABLE TESTS ── */
 .tests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
 .test-btn{
   background: var(--test-btn-bg);
@@ -263,6 +263,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .test-result-name{font-size:12px;color: var(--text-secondary);letter-spacing:.1em;margin-bottom:4px}
 .test-result-val{font-size:15px;color: var(--text-primary);line-height:1.6}
 
+/* ── DX SECTION ── */
 .dx-input-wrap{position:relative;margin-top:8px}
 #dx-input{
   width:100%;padding:10px 14px;
@@ -293,6 +294,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 #dx-result.correct{background:rgba(180,230,160,0.45);color:#1a4a08;border:1px solid rgba(80,160,60,0.4)}
 #dx-result.wrong{background:rgba(230,160,150,0.4);color:#4a1010;border:1px solid rgba(180,80,70,0.35)}
 
+/* ── MANAGEMENT ── */
 .mgmt-stage{margin-bottom:4px}
 .mgmt-stage-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
 .stage-num{
@@ -335,6 +337,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
 .stage-divider{height:1px;background:rgba(120,90,20,0.15);margin:10px 0}
 
+/* ── PROGRESS BAR ── */
 .progress-track{display:flex;align-items:center;gap:0;padding:0 2px}
 .prog-dot{width:10px;height:10px;border-radius:50%;background:rgba(200,160,80,0.35);border:1.5px solid rgba(120,80,10,0.35);flex-shrink:0;transition:all .3s}
 .prog-dot.done{background:rgba(100,70,10,0.65);border-color:rgba(80,50,5,0.65)}
@@ -342,6 +345,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .prog-line{flex:1;height:2px;background:rgba(160,120,40,0.15);border-radius:2px;transition:background .3s}
 .prog-line.done{background:rgba(100,70,10,0.5)}
 
+/* ── ENDGAME ── */
 #endgame{display:none;text-align:center;padding:20px}
 .grade-circle{
   width:100px;height:100px;border-radius:50%;
@@ -404,11 +408,6 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
   <div id="right-col">
 
-    <!-- ── PAPER BACKGROUND IMAGE ── -->
-    <img id="paper-bg"
-      src="https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775594676/Gemini_Generated_Image_u7xtifu7xtifu7xt_wdifid.png"
-      alt="">
-
     <div class="note" id="pt-banner-note">
       <div id="pt-banner">
         <div id="pt-img-wrap">
@@ -465,9 +464,9 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
   </div>
 </div>
-</div>
 
 <script>
+// ── STATE ──
 let HP = 100;
 let errors = 0;
 let dxSubmitted = false;
@@ -477,6 +476,7 @@ let orderedTests = new Set();
 let currentHintIdx = 0;
 let streak = 0;
 
+// ── DATA WILL BE LOADED INTO THESE ──
 let DIAGNOSES = [];
 let CASES = [];
 let currentCase = null;
@@ -491,19 +491,24 @@ const FOX = {
   lose:      'https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775527215/fox_-2_t0r5hb.png',
 };
 
+// ── INIT ──
 document.addEventListener("DOMContentLoaded", async function(){
   applyTimeTheme(); 
+  
   await loadData();
+  
   if (CASES.length > 0) {
     initCase();
     setupDxAutocomplete();
   }
 });
 
+// ── FETCH DATA ──
 async function loadData() {
   try {
     const diagRes = await fetch('diagnoses.json');
     DIAGNOSES = await diagRes.json();
+
     const casesRes = await fetch('cases.json');
     CASES = await casesRes.json();
   } catch (err) {
@@ -512,15 +517,20 @@ async function loadData() {
   }
 }
 
+// ── TIME THEME LOGIC ──
 function applyTimeTheme(){
   const now = new Date();
   const cst = new Date(now.toLocaleString('en-US',{timeZone:'America/Chicago'}));
   const hr = cst.getHours();
+  
   const isNight = hr >= 18 || hr < 6; 
+
   const bgUrl = isNight 
     ? 'https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775527250/night_pi7sfg.png'
     : 'https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775527232/background_ui_tl1rgz.png';
+
   document.getElementById('bg').style.backgroundImage = `url('${bgUrl}')`;
+
   if(isNight) {
     document.body.classList.remove('day');
     document.body.classList.add('night');
@@ -530,13 +540,17 @@ function applyTimeTheme(){
   }
 }
 
+// ── INIT CASE ──
 function initCase(){
   currentCase = CASES[0]; 
   if(!currentCase) return;
+
   document.getElementById('case-num-lbl').textContent = 'Case no. ' + currentCase.id;
+
   document.getElementById('pt-name').textContent = currentCase.patient.name + ', ' + currentCase.patient.age + currentCase.patient.sex;
   document.getElementById('pt-occ').textContent = currentCase.patient.occupation;
   document.getElementById('pt-cc').textContent = '"' + currentCase.chart.cc + '"';
+
   const ptImg = document.getElementById('pt-img');
   if(currentCase.patient.image_url){
     ptImg.src = currentCase.patient.image_url.replace('w_110,h_130', 'w_340,h_340');
@@ -544,6 +558,7 @@ function initCase(){
   } else {
     ptImg.style.display = 'none'; 
   }
+
   setFennick('default', `"A new case has arrived. Take your time — but not too much of it."`);
   renderChart();
   renderTests();
@@ -574,15 +589,22 @@ function renderChart(){
   const v = currentCase.vitals; 
   const grid = document.getElementById('chart-grid'); 
   const rows = [
-    ['HPI', c.hpi],['PMH', c.pmh],['PSH', c.psh],
-    ['Medications', c.meds],['Allergies', c.allergies],
-    ['Family Hx', c.fh],['Social Hx', c.sh]
+    ['HPI', c.hpi],
+    ['PMH', c.pmh],
+    ['PSH', c.psh],
+    ['Medications', c.meds],
+    ['Allergies', c.allergies],
+    ['Family Hx', c.fh],
+    ['Social Hx', c.sh]
   ]; 
+  
   grid.innerHTML = rows.map(([l,val])=>`
     <div class="chart-label">${l}</div>
     <div class="chart-val">${val||'None'}</div>
   `).join(''); 
-  document.getElementById('vitals-row').innerHTML = `
+  
+  const vitalsRow = document.getElementById('vitals-row'); 
+  vitalsRow.innerHTML = `
     <div class="vital-item"><div class="vital-val">${v.bp}</div><div class="vital-lbl">BP</div></div>
     <div class="vital-item"><div class="vital-val">${v.hr}</div><div class="vital-lbl">HR</div></div>
     <div class="vital-item"><div class="vital-val">${v.rr}</div><div class="vital-lbl">RR</div></div>
@@ -606,9 +628,12 @@ window.orderTest = function(idx){
   if(!currentCase.tests) return; 
   const t = currentCase.tests[idx]; 
   if(orderedTests.has(idx)) return; 
+  
   drainHP(t.cost||5); 
   orderedTests.add(idx); 
+  
   document.getElementById('test-'+idx).classList.add('ordered'); 
+  
   const results = document.getElementById('ordered-results'); 
   const card = document.createElement('div'); 
   card.className = 'test-result-card'; 
@@ -619,16 +644,20 @@ window.orderTest = function(idx){
 function setupDxAutocomplete(){ 
   const input = document.getElementById('dx-input'); 
   const sug = document.getElementById('dx-suggestions'); 
+  
   input.addEventListener('input',()=>{ 
     const q = input.value.toLowerCase().trim(); 
     if(q.length < 2){ sug.style.display='none'; return; } 
+    
     const matches = DIAGNOSES.filter(d=>d.toLowerCase().includes(q)).slice(0,8); 
     if(!matches.length){ sug.style.display='none'; return; } 
+    
     sug.innerHTML = matches.map(d=>`
       <div class="dx-suggestion" onclick="selectDx('${d.replace(/'/g,"\\'")}')"> ${d}</div>
     `).join(''); 
     sug.style.display='block'; 
   }); 
+  
   document.addEventListener('click',e=>{ 
     if(!e.target.closest('#dx-note')) sug.style.display='none'; 
   });
@@ -643,17 +672,21 @@ window.submitDx = function(){
   if(dxSubmitted && dxCorrect) return; 
   const val = document.getElementById('dx-input').value.trim(); 
   if(!val) return; 
+  
   const result = document.getElementById('dx-result'); 
   const correct = currentCase.dx_answer; 
+  
   if(val.toLowerCase()===correct.toLowerCase()){ 
-    dxSubmitted=true; dxCorrect=true; 
+    dxSubmitted=true; 
+    dxCorrect=true; 
     result.className='dx-result correct'; 
     result.textContent='✓ Correct — ' + correct; 
     result.style.display='block'; 
     setFennick('answer','"That is the diagnosis. Now let us see how you manage it."'); 
     unlockNextStage();
   } else { 
-    errors++; drainHP(15); 
+    errors++; 
+    drainHP(15); 
     result.className='dx-result wrong'; 
     result.textContent='✗ Incorrect. Try again.'; 
     result.style.display='block'; 
@@ -664,11 +697,13 @@ window.submitDx = function(){
 function renderManagement(){ 
   const stages = currentCase.management; 
   if(!stages) return; 
+  
   const progressEl = document.getElementById('mgmt-progress'); 
   progressEl.innerHTML = stages.map((_,i)=>`
     ${i>0?'<div class="prog-line" id="prog-line-'+i+'"></div>':''}
     <div class="prog-dot ${i===0?'cur':''}" id="prog-dot-${i}"></div>
   `).join(''); 
+  
   const stagesEl = document.getElementById('mgmt-stages'); 
   stagesEl.innerHTML = stages.map((s,si)=>`
     <div class="mgmt-stage" id="stage-wrap-${si}">
@@ -697,10 +732,12 @@ window.pickMgmt = function(stageIdx, optIdx){
   const stage = currentCase.management[stageIdx]; 
   const opt = stage.options[optIdx]; 
   const optEl = document.getElementById(`opt-${stageIdx}-${optIdx}`); 
+  
   stage.options.forEach((_,i)=>{ 
     const el = document.getElementById(`opt-${stageIdx}-${i}`); 
     if(el) el.classList.add('locked-opt'); 
   }); 
+  
   if(opt.correct){ 
     optEl.classList.remove('locked-opt'); 
     optEl.classList.add('selected-correct'); 
@@ -710,7 +747,8 @@ window.pickMgmt = function(stageIdx, optIdx){
   } else { 
     optEl.classList.remove('locked-opt'); 
     optEl.classList.add('selected-wrong'); 
-    errors++; drainHP(15); 
+    errors++; 
+    drainHP(15); 
     updateFennickByErrors(); 
     setTimeout(()=>advanceStage(stageIdx+1), 600); 
   }
@@ -718,22 +756,32 @@ window.pickMgmt = function(stageIdx, optIdx){
 
 function advanceStage(nextIdx){ 
   const stages = currentCase.management; 
-  if(nextIdx >= stages.length){ setTimeout(()=>endCase(false), 500); return; } 
+  if(nextIdx >= stages.length){ 
+    setTimeout(()=>endCase(false), 500); 
+    return; 
+  } 
+  
   currentStage = nextIdx; 
+  
   const prevDot = document.getElementById('prog-dot-'+(nextIdx-1)); 
   if(prevDot) prevDot.classList.replace('cur','done'); 
+  
   const prevLine = document.getElementById('prog-line-'+nextIdx); 
   if(prevLine) prevLine.classList.add('done'); 
+  
   const curDot = document.getElementById('prog-dot-'+nextIdx); 
   if(curDot) curDot.classList.add('cur'); 
+  
   const numEl = document.getElementById('stage-num-'+nextIdx); 
   const titleEl = document.getElementById('stage-title-'+nextIdx); 
   if(numEl) numEl.classList.remove('locked'); 
   if(titleEl) titleEl.classList.remove('locked'); 
+  
   stages[nextIdx].options.forEach((_,i)=>{ 
     const el = document.getElementById(`opt-${nextIdx}-${i}`); 
     if(el) el.classList.remove('locked-opt'); 
   }); 
+  
   document.getElementById('stage-wrap-'+nextIdx)?.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
@@ -753,20 +801,26 @@ function endCase(failed){
   document.getElementById('mgmt-note').style.display='none'; 
   document.getElementById('endgame').style.display='block'; 
   document.getElementById('endgame').scrollIntoView({behavior:'smooth'}); 
+  
   let grade, comment; 
   if(failed){ 
-    grade='F'; comment='"The patient survived. That is the kindest thing I can say."'; 
+    grade='F'; 
+    comment='"The patient survived. That is the kindest thing I can say."'; 
     setFennick('lose', comment); 
   } else if(HP>=80){ 
-    grade='A'; comment='"Textbook. I had nothing to teach you today."'; 
+    grade='A'; 
+    comment='"Textbook. I had nothing to teach you today."'; 
     setFennick('answer', comment); 
   } else if(HP>=60){ 
-    grade='B'; comment='"Solid work. The right instincts."'; 
+    grade='B'; 
+    comment='"Solid work. The right instincts."'; 
     setFennick('answer', comment); 
   } else { 
-    grade='F'; comment='"We will not speak of this. Study harder."'; 
+    grade='F'; 
+    comment='"We will not speak of this. Study harder."'; 
     setFennick('lose', comment); 
   } 
+  
   document.getElementById('grade-circle').textContent = grade; 
   document.getElementById('endgame-title').textContent = failed ? 'Case Lost' : 'Case Complete'; 
   document.getElementById('endgame-comment').textContent = comment; 
