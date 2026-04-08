@@ -1,36 +1,32 @@
-
 {
-  "Cephalexin": {
-    "correct": "Cephalexin covers E. coli UTI effectively, has no interaction with valproate, and is safe in G6PD deficiency. It is the clean first-line choice when all other options carry specific contraindications in this patient.",
-    "mechanism": "First-generation cephalosporin. Inhibits bacterial cell wall synthesis by binding penicillin-binding proteins. Covers gram-positive cocci and some gram-negative organisms including E. coli.",
-    "clinical_use": "Uncomplicated UTIs, skin and soft tissue infections, streptococcal pharyngitis. Oral bioavailability makes it ideal for outpatient use.",
-    "key_facts": "Safe in penicillin allergy (cross-reactivity <2%). No significant CYP interactions. Dose-adjust in renal impairment. Safe in G6PD deficiency.",
-    "wrong": {
-      "Ciprofloxacin": "Fluoroquinolones lower the seizure threshold and can reduce valproate serum levels through CYP interactions — a dangerous combination in a patient with epilepsy already on anticonvulsant therapy.",
-      "Trimethoprim-sulfamethoxazole": "Sulfonamides cause oxidative stress on red blood cells. In G6PD deficiency, the cell cannot neutralize this stress, triggering hemolytic anemia. Hard contraindication.",
-      "Nitrofurantoin": "Also causes oxidative hemolysis in G6PD-deficient patients through the same mechanism as sulfonamides. Both TMP-SMX and Nitrofurantoin are traps for the same reason — G6PD deficiency catches them both."
-    }
+  "2026-04-06": {
+    "diagnosis": "Parkinson Disease",
+    "who_gets_it": "Adults over 60, slightly more common in men. Can occur younger with genetic mutations (LRRK2, PINK1, Parkin). Drug-induced parkinsonism mimics it — caused by dopamine blockers like haloperidol and metoclopramide.",
+    "risk_factors": "Age, male sex, pesticide/herbicide exposure, rural living, well water. Family history (LRRK2 most common genetic cause). Protective factors: smoking, caffeine (epidemiologically).",
+    "typical_presentation": "Rest tremor (pill-rolling, 4-6 Hz, disappears with movement), bradykinesia, cogwheel rigidity, postural instability. Non-motor: hyposmia, constipation, REM sleep behavior disorder, depression, micrographia, hypophonic voice, masked facies.",
+    "moa": "Loss of dopaminergic neurons in the substantia nigra pars compacta → reduced dopamine in the striatum → unopposed cholinergic activity → movement disorder. Lewy bodies (alpha-synuclein aggregates) are the pathologic hallmark found on autopsy.",
+    "step1_buzzwords": "Rest tremor, pill-rolling, cogwheel rigidity, masked facies, shuffling gait, micrographia, substantia nigra, Lewy bodies, dopamine deficiency, DaTscan comma-to-period sign.",
+    "lab_buzzwords": "DaTscan: reduced dopamine transporter uptake in putamen — asymmetric, comma becomes period. MRI brain normal on standard sequences. Clinical diagnosis — DaTscan confirms when uncertain.",
+    "treatment": "Levodopa/Carbidopa (gold standard — most effective symptomatic treatment). MAO-B inhibitors (selegiline, rasagiline) for mild/early disease. Dopamine agonists (pramipexole, ropinirole). NEVER give dopamine blockers (haloperidol, metoclopramide, promethazine) — catastrophic motor worsening. DBS for refractory cases."
   },
-  "Levofloxacin": {
-    "correct": "Levofloxacin covers both typical and atypical CAP organisms, is safe in penicillin allergy, and requires only dose adjustment for CKD stage 3 — not avoidance. It has no significant interaction with warfarin at standard doses.",
-    "mechanism": "Respiratory fluoroquinolone. Inhibits DNA gyrase and topoisomerase IV, blocking bacterial DNA replication. Broad spectrum covering gram-positives, gram-negatives, and atypicals.",
-    "clinical_use": "Community-acquired pneumonia, complicated UTIs, skin infections. 'Respiratory fluoroquinolone' because of superior S. pneumoniae coverage vs ciprofloxacin.",
-    "key_facts": "Dose-reduce in CKD (eGFR-based dosing). Safe with penicillin allergy. Monitor QTc. Weak CYP1A2 inhibitor — minimal warfarin interaction at standard doses.",
-    "wrong": {
-      "Amoxicillin-clavulanate": "This is a penicillin-class antibiotic. The patient had anaphylaxis to penicillin — an absolute contraindication. Cross-reactivity risk is real and this must be eliminated immediately.",
-      "Azithromycin": "Azithromycin monotherapy is insufficient for CAP in an elderly patient with significant comorbidities. It also carries QT prolongation risk in a patient with AFib. Not the right choice here.",
-      "Clarithromycin": "Clarithromycin is a potent CYP3A4 inhibitor. It would dramatically increase warfarin's anticoagulant effect in this patient, creating serious bleeding risk. This interaction is a clinical contraindication."
-    }
+  "2026-04-07": {
+    "diagnosis": "Small Cell Lung Cancer",
+    "who_gets_it": "Heavy smokers (>30 pack-years), typically men over 60. SCLC accounts for ~15% of all lung cancers but is the most aggressive subtype with the fastest doubling time.",
+    "risk_factors": "Smoking (>95% of cases — strongest association of any lung cancer). Radon exposure. Occupational carcinogens (asbestos, arsenic, chromium). Prior thoracic radiation.",
+    "typical_presentation": "Central hilar mass, rapid doubling time, early mediastinal spread. Paraneoplastic syndromes in up to 20%: SIADH (hyponatremia — ectopic ADH), Lambert-Eaton (proximal weakness with facilitation — VGCC antibodies), Cushing syndrome (ectopic ACTH — very high cortisol). SVC syndrome when mediastinal nodes compress SVC — facial plethora, arm edema, non-pulsatile neck veins.",
+    "moa": "Neuroendocrine tumor arising from Kulchitsky cells of the bronchial epithelium. Expresses synaptophysin, chromogranin A, CD56, TTF-1. Rapid proliferation (Ki-67 >50%). Ectopic hormone production drives paraneoplastic syndromes.",
+    "step1_buzzwords": "Small blue cells, salt-and-pepper chromatin, nuclear molding, neuroendocrine markers, SIADH, Lambert-Eaton (facilitation on EMG), SVC syndrome, central hilar mass, never surgical in extensive stage.",
+    "lab_buzzwords": "Hyponatremia + inappropriately high urine sodium = SIADH. Lambert-Eaton: facilitation (increased strength) on repetitive high-frequency nerve stimulation — opposite of myasthenia gravis. Low voltage on EKG with large mediastinal mass.",
+    "treatment": "Extensive stage: Carboplatin + Etoposide + Atezolizumab (IMpower133 trial — added PD-L1 inhibitor). Limited stage: concurrent chemoradiation + prophylactic cranial irradiation. Surgery has no role in extensive stage. Highly chemo-sensitive initially — but relapses almost universally within 1-2 years."
   },
-  "Amoxicillin": {
-    "correct": "Amoxicillin is the first-line outpatient treatment for CAP caused by S. pneumoniae (Gram-positive diplococci) in a young healthy patient with no allergies or comorbidities. No reason to escalate therapy.",
-    "mechanism": "Aminopenicillin. Inhibits bacterial cell wall synthesis. Extended spectrum vs plain penicillin — covers gram-positive organisms including S. pneumoniae and some gram-negatives.",
-    "clinical_use": "Outpatient CAP, otitis media, strep pharyngitis, H. pylori (triple therapy), sinusitis. First-line for S. pneumoniae.",
-    "key_facts": "Oral bioavailability ~90%. Safe in pregnancy. No dose adjustment needed for normal renal function. Watch for maculopapular rash if EBV mononucleosis is missed.",
-    "wrong": {
-      "Vancomycin": "Vancomycin is reserved for MRSA, severe hospital-acquired infections, or patients who have failed other therapies. Using it for outpatient CAP in a healthy young adult is gross over-treatment and promotes resistance.",
-      "Meropenem": "A broad-spectrum carbapenem is entirely inappropriate for a simple outpatient CAP. It is reserved for multi-drug resistant organisms and severe hospital infections. Massive antibiotic stewardship violation.",
-      "Doxycycline": "Doxycycline is an alternative for atypical CAP coverage, but it is not the first-line agent for S. pneumoniae pneumonia. Amoxicillin has superior activity against this organism in a patient with no contraindications."
-    }
+  "2026-04-08": {
+    "diagnosis": "Infective Endocarditis",
+    "who_gets_it": "Structural valve disease (bicuspid AV, MVP, rheumatic heart disease), IV drug users (tricuspid valve — S. aureus), prosthetic valves, recent dental or invasive procedures without antibiotic prophylaxis.",
+    "risk_factors": "Structural heart disease, IV drug use, poor dentition, central venous catheters, immunosuppression, hemodialysis, previous endocarditis.",
+    "typical_presentation": "Fever + new murmur = endocarditis until proven otherwise. Peripheral stigmata: Osler nodes (tender erythematous nodules on fingertips — immune complex deposition), Janeway lesions (painless hemorrhagic macules on palms/soles — septic emboli), splinter hemorrhages under nails, Roth spots (white-centered retinal hemorrhages). Embolic complications: stroke, renal infarct, septic pulmonary emboli (IV drug use). Immune complex GN: RBC casts on UA.",
+    "moa": "Bacteremia seeds damaged or turbulent endothelium → vegetation forms (platelets + fibrin + bacteria) → local valve destruction + systemic emboli + immune complex deposition. Strep viridans post-dental (native valve). S. aureus most aggressive (prosthetic, IV drug use). Enterococcus from GI/GU source.",
+    "step1_buzzwords": "Duke criteria (2 major OR 1 major + 3 minor OR 5 minor), Osler nodes, Janeway lesions, Roth spots, splinter hemorrhages, new murmur, positive blood cultures, vegetation on echo. PR prolongation → perivalvular abscess.",
+    "lab_buzzwords": "Blood cultures x3 before antibiotics — most critical step. UA: RBC casts = immune complex GN. New PR prolongation on EKG = perivalvular abscess until proven otherwise → urgent TEE. Echo vegetation = major Duke criterion.",
+    "treatment": "Native valve Strep viridans (penicillin-susceptible): IV Penicillin G or Ceftriaxone x4 weeks. S. aureus MSSA: IV Nafcillin x6 weeks. MRSA: Vancomycin x6 weeks. Surgery indications: heart failure from valve destruction, perivalvular abscess, uncontrolled infection despite antibiotics, recurrent emboli, fungal endocarditis. Prophylaxis: amoxicillin before dental procedures in high-risk valve patients."
   }
 }
