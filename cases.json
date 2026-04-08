@@ -13,7 +13,7 @@
       "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/w_110,h_130,c_pad,g_south,b_transparent/q_auto/f_auto/v1775528227/api6_m3o0vw.png"
     },
     "chart": {
-      "cc": "Progressive hand tremor for 14 months. I can no longer wind the city's great clock.",
+      "cc": "My hands won't stop shaking. It started about a year ago — just the right one at first. I had to stop winding the city clock. My husband thinks I'm depressed but I told him this feels different.",
       "hpi": "14-month history of rest tremor, right hand predominant. Worsens at rest, improves with intentional movement. Gradual onset, slowly progressive. Shuffling gait, difficulty initiating movement. Treated for depression x8 months without improvement.",
       "pmh": "Depression (misdiagnosed). Hypertension.",
       "psh": "Appendectomy age 34.",
@@ -228,7 +228,7 @@
     "date": "2026-04-07",
     "urgency": "urgent",
     "title": "The Merchant's Cough",
-    "dx_answer": "Lung Cancer (Small Cell)",
+    "dx_answer": "Small Cell Lung Cancer",
     "patient": {
       "name": "The Merchant",
       "age": 62,
@@ -237,7 +237,7 @@
       "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775528229/api7_p31faf.png"
     },
     "chart": {
-      "cc": "Persistent cough for 3 months. I thought it was the road dust. My wife made me come in.",
+      "cc": "I've had this cough for three months and my wife finally dragged me in. I kept telling her it was the dust from the roads. But last week there was blood in it, and — I don't know. I've also lost a lot of weight without trying. And my face looks puffy in the mornings, my collar's too tight.",
       "hpi": "62-year-old male with 3-month history of progressive dry cough, unintentional 12 lb weight loss over 4 months, and new-onset facial and neck swelling worse in the morning. He reports increasing fatigue and two episodes of blood-tinged sputum over the past 2 weeks. Denies fever. He also notes his face turns a deep red-purple when he bends forward. Treated with antibiotics twice for 'bronchitis' without improvement.",
       "pmh": "Hypertension. GERD.",
       "psh": "Appendectomy age 28. Hernia repair age 45.",
@@ -461,7 +461,7 @@
       "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775528232/api8_oa0piq.png"
     },
     "chart": {
-      "cc": "Fever for 3 weeks and I feel exhausted. I thought it was a flu that wouldn't quit.",
+      "cc": "I've had a fever every single night for three weeks. I thought it was just a bad flu that wouldn't quit. But I'm exhausted, I've lost weight, and two days ago this painful red spot appeared on my finger. My wife said my eyes looked yellow. I'm scared something is seriously wrong.",
       "hpi": "34-year-old male with 3-week history of daily fevers to 38.8°C, drenching night sweats, profound fatigue, and a 9 lb unintentional weight loss. He reports intermittent sharp chest pain, worse with inspiration. Two days ago he noticed a painful red spot on his right index finger. He saw his GP last week who prescribed azithromycin for presumed atypical pneumonia — no improvement. He denies cough, URI symptoms, or sick contacts.",
       "pmh": "Bicuspid aortic valve — diagnosed incidentally at age 22, never required intervention. No other medical history.",
       "psh": "None.",
