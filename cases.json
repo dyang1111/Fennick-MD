@@ -90,16 +90,10 @@
         "hint": "This patient has been slowly progressive for 14 months. Think about what level of urgency is truly warranted here.",
         "options": [
           {
-            "text": "Reassure and schedule outpatient follow-up",
-            "sub": "No acute intervention needed",
-            "correct": true,
-            "feedback_correct": "Correct. This is a chronic, slowly progressive condition. No emergency exists. A calm and thorough outpatient approach is ideal."
-          },
-          {
-            "text": "Admit for IV thiamine",
-            "sub": "Wernicke protocol",
+            "text": "Stop sertraline immediately",
+            "sub": "Abrupt discontinuation",
             "correct": false,
-            "feedback_wrong": "Thiamine is for Wernicke encephalopathy — confusion, ophthalmoplegia, ataxia. None of those are present here."
+            "feedback_wrong": "Abrupt SSRI discontinuation causes withdrawal syndrome — dizziness, nausea, electric shock sensations. Always taper. Never stop abruptly."
           },
           {
             "text": "Emergent neurology consult",
@@ -108,10 +102,16 @@
             "feedback_wrong": "This has been progressing for 14 months. Urgent outpatient neurology yes. Emergent inpatient is not warranted."
           },
           {
-            "text": "Stop sertraline immediately",
-            "sub": "Abrupt discontinuation",
+            "text": "Admit for IV thiamine",
+            "sub": "Wernicke protocol",
             "correct": false,
-            "feedback_wrong": "Abrupt SSRI discontinuation causes withdrawal syndrome — dizziness, nausea, electric shock sensations. Always taper. Never stop abruptly."
+            "feedback_wrong": "Thiamine is for Wernicke encephalopathy — confusion, ophthalmoplegia, ataxia. None of those are present here."
+          },
+          {
+            "text": "Reassure and schedule outpatient follow-up",
+            "sub": "No acute intervention needed",
+            "correct": true,
+            "feedback_correct": "Correct. This is a chronic, slowly progressive condition. No emergency exists. A calm and thorough outpatient approach is ideal."
           }
         ]
       },
@@ -119,6 +119,12 @@
         "title": "First-line pharmacotherapy",
         "hint": "Parkinson Disease involves loss of dopaminergic neurons. Your first-line treatment should address that deficit directly.",
         "options": [
+          {
+            "text": "Increase sertraline dose",
+            "sub": "SSRI escalation",
+            "correct": false,
+            "feedback_wrong": "The depression was a misdiagnosis — masked facies and bradyphrenia from Parkinson Disease. More sertraline will not help a dopamine deficiency."
+          },
           {
             "text": "Levodopa / Carbidopa",
             "sub": "25/100mg TID — dopamine precursor",
@@ -130,12 +136,6 @@
             "sub": "Typical antipsychotic — D2 blocker",
             "correct": false,
             "feedback_wrong": "Catastrophically wrong. Haloperidol blocks dopamine receptors — the exact opposite of what this patient needs. It will dramatically worsen every motor symptom. Never."
-          },
-          {
-            "text": "Increase sertraline dose",
-            "sub": "SSRI escalation",
-            "correct": false,
-            "feedback_wrong": "The depression was a misdiagnosis — masked facies and bradyphrenia from Parkinson Disease. More sertraline will not help a dopamine deficiency."
           },
           {
             "text": "Propranolol",
@@ -150,18 +150,6 @@
         "hint": "Parkinson Disease is complex and progressive. Who manages it best long-term?",
         "options": [
           {
-            "text": "Movement disorder specialist",
-            "sub": "Neurology subspecialty",
-            "correct": true,
-            "feedback_correct": "Correct. Movement disorder neurologists specialize in optimizing PD management — medication timing, DBS candidacy, motor complications."
-          },
-          {
-            "text": "Lumbar puncture",
-            "sub": "CSF analysis",
-            "correct": false,
-            "feedback_wrong": "LP is not indicated in Parkinson Disease. This is a clinical diagnosis supported by DaTscan. CSF analysis will not change management."
-          },
-          {
             "text": "Brain biopsy",
             "sub": "Histopathology for Lewy bodies",
             "correct": false,
@@ -172,6 +160,18 @@
             "sub": "ADL assessment and adaptation",
             "correct": true,
             "feedback_correct": "Also correct — OT is essential. Fine motor tasks, handwriting aids, safety assessment. Both this and movement disorder referral are right answers."
+          },
+          {
+            "text": "Lumbar puncture",
+            "sub": "CSF analysis",
+            "correct": false,
+            "feedback_wrong": "LP is not indicated in Parkinson Disease. This is a clinical diagnosis supported by DaTscan. CSF analysis will not change management."
+          },
+          {
+            "text": "Movement disorder specialist",
+            "sub": "Neurology subspecialty",
+            "correct": true,
+            "feedback_correct": "Correct. Movement disorder neurologists specialize in optimizing PD management — medication timing, DBS candidacy, motor complications."
           }
         ]
       },
@@ -186,6 +186,12 @@
             "feedback_correct": "Exactly right. Stable chronic condition, clear diagnosis, outpatient management with appropriate follow-up."
           },
           {
+            "text": "Admit for DaTscan",
+            "sub": "Inpatient imaging",
+            "correct": false,
+            "feedback_wrong": "DaTscan is an outpatient nuclear medicine study. There is no indication for inpatient admission to obtain it."
+          },
+          {
             "text": "Admit to neurology floor",
             "sub": "Inpatient workup",
             "correct": false,
@@ -196,12 +202,6 @@
             "sub": "Watch and wait",
             "correct": false,
             "feedback_wrong": "The diagnosis is established. Withholding levodopa serves no purpose and leaves the patient suffering unnecessarily."
-          },
-          {
-            "text": "Admit for DaTscan",
-            "sub": "Inpatient imaging",
-            "correct": false,
-            "feedback_wrong": "DaTscan is an outpatient nuclear medicine study. There is no indication for inpatient admission to obtain it."
           }
         ]
       }
@@ -323,28 +323,28 @@
         "hint": "His SVC is 80% occluded. His face is turning purple. He has a headache from raised intracranial pressure. What do you do first?",
         "options": [
           {
-            "text": "Elevate head of bed, IV dexamethasone, urgent oncology consult",
-            "sub": "Reduce edema and obstruction urgently",
-            "correct": true,
-            "feedback_correct": "Correct. Head elevation reduces venous pressure to the head. Dexamethasone reduces peritumoral edema acutely. This is a partial oncologic emergency — urgent but not requiring immediate intubation."
-          },
-          {
             "text": "IV furosemide aggressively",
             "sub": "Diurese the facial edema",
             "correct": false,
             "feedback_wrong": "Diuresis will not relieve SVC obstruction and risks dangerous volume depletion in an already compromised patient. The edema is obstructive, not fluid overload."
           },
           {
-            "text": "Urgent SVC stenting by interventional radiology",
-            "sub": "Mechanical recanalization",
-            "correct": false,
-            "feedback_wrong": "SVC stenting is sometimes used for severe SVC syndrome but is not the first step — stabilization, diagnosis confirmation, and oncology input come first. Stenting before histology is premature."
+            "text": "Elevate head of bed, IV dexamethasone, urgent oncology consult",
+            "sub": "Reduce edema and obstruction urgently",
+            "correct": true,
+            "feedback_correct": "Correct. Head elevation reduces venous pressure to the head. Dexamethasone reduces peritumoral edema acutely. This is a partial oncologic emergency — urgent but not requiring immediate intubation."
           },
           {
             "text": "Start anticoagulation for presumed SVC thrombosis",
             "sub": "Heparin drip",
             "correct": false,
             "feedback_wrong": "The CT shows extrinsic compression by tumor, not primary thrombosis. Anticoagulation without histologic diagnosis and in the setting of hemoptysis is dangerous."
+          },
+          {
+            "text": "Urgent SVC stenting by interventional radiology",
+            "sub": "Mechanical recanalization",
+            "correct": false,
+            "feedback_wrong": "SVC stenting is sometimes used for severe SVC syndrome but is not the first step — stabilization, diagnosis confirmation, and oncology input come first. Stenting before histology is premature."
           }
         ]
       },
@@ -353,16 +353,16 @@
         "hint": "Na 128. Urine sodium is inappropriately elevated. What is the mechanism and how do you correct it safely?",
         "options": [
           {
-            "text": "Fluid restriction 800-1000 mL/day",
-            "sub": "First-line SIADH management",
-            "correct": true,
-            "feedback_correct": "Correct. SIADH treatment is free water restriction, not sodium supplementation. Giving salt will not fix the underlying ADH excess — the kidneys will just excrete it."
-          },
-          {
             "text": "3% hypertonic saline bolus",
             "sub": "Rapid sodium correction",
             "correct": false,
             "feedback_wrong": "Hypertonic saline is reserved for symptomatic severe hyponatremia (seizures, coma, Na <120). Na of 128 without neurological symptoms does not warrant hypertonic saline — too rapid correction risks osmotic demyelination syndrome."
+          },
+          {
+            "text": "Fluid restriction 800-1000 mL/day",
+            "sub": "First-line SIADH management",
+            "correct": true,
+            "feedback_correct": "Correct. SIADH treatment is free water restriction, not sodium supplementation. Giving salt will not fix the underlying ADH excess — the kidneys will just excrete it."
           },
           {
             "text": "Normal saline 1L bolus",
@@ -383,16 +383,10 @@
         "hint": "Small cell lung cancer, extensive stage. It has already seeded — SVC involvement, likely liver mets. What is the standard of care?",
         "options": [
           {
-            "text": "Carboplatin + Etoposide + Atezolizumab",
-            "sub": "Chemoimmunotherapy — current standard of care",
-            "correct": true,
-            "feedback_correct": "Correct. EP (etoposide + platinum) with atezolizumab (PD-L1 inhibitor) is the current first-line for extensive stage SCLC based on the IMpower133 trial. SCLC is exquisitely chemo-sensitive initially."
-          },
-          {
-            "text": "Surgical resection of right hilar mass",
-            "sub": "Lobectomy",
+            "text": "Erlotinib (EGFR inhibitor)",
+            "sub": "Targeted therapy",
             "correct": false,
-            "feedback_wrong": "Surgery has no role in extensive stage SCLC. SCLC is a systemic disease at presentation in most cases — the problem is not just the primary tumor. Chemotherapy is the backbone of treatment."
+            "feedback_wrong": "EGFR-targeted therapy is for non-small cell lung cancer with EGFR mutations. SCLC does not harbor EGFR mutations and does not respond to EGFR inhibitors."
           },
           {
             "text": "Stereotactic body radiotherapy (SBRT) alone",
@@ -401,10 +395,16 @@
             "feedback_wrong": "SBRT is for early-stage non-small cell lung cancer. Extensive stage SCLC requires systemic therapy. Local radiation does not address micrometastatic disease."
           },
           {
-            "text": "Erlotinib (EGFR inhibitor)",
-            "sub": "Targeted therapy",
+            "text": "Surgical resection of right hilar mass",
+            "sub": "Lobectomy",
             "correct": false,
-            "feedback_wrong": "EGFR-targeted therapy is for non-small cell lung cancer with EGFR mutations. SCLC does not harbor EGFR mutations and does not respond to EGFR inhibitors."
+            "feedback_wrong": "Surgery has no role in extensive stage SCLC. SCLC is a systemic disease at presentation in most cases — the problem is not just the primary tumor. Chemotherapy is the backbone of treatment."
+          },
+          {
+            "text": "Carboplatin + Etoposide + Atezolizumab",
+            "sub": "Chemoimmunotherapy — current standard of care",
+            "correct": true,
+            "feedback_correct": "Correct. EP (etoposide + platinum) with atezolizumab (PD-L1 inhibitor) is the current first-line for extensive stage SCLC based on the IMpower133 trial. SCLC is exquisitely chemo-sensitive initially."
           }
         ]
       },
@@ -412,12 +412,6 @@
         "title": "Disposition",
         "hint": "SVC syndrome, Na 128, hemoptysis, O2 94%. Is this patient safe to go home?",
         "options": [
-          {
-            "text": "Admit — oncology, IV dexamethasone, fluid restriction, urgent CT guided biopsy planning",
-            "sub": "Inpatient workup and stabilization",
-            "correct": true,
-            "feedback_correct": "Correct. This is a new diagnosis of extensive stage SCLC with active SVC syndrome, hemoptysis, and hyponatremia. Inpatient admission is mandatory for stabilization and expedited workup."
-          },
           {
             "text": "Discharge with outpatient oncology referral",
             "sub": "Follow-up in 1-2 weeks",
@@ -429,6 +423,12 @@
             "sub": "Urgent treatment",
             "correct": false,
             "feedback_wrong": "Chemotherapy is not started without histologic confirmation. You need a tissue diagnosis first. Admitting to the general oncology floor for workup and stabilization is the appropriate level of care."
+          },
+          {
+            "text": "Admit — oncology, IV dexamethasone, fluid restriction, urgent CT guided biopsy planning",
+            "sub": "Inpatient workup and stabilization",
+            "correct": true,
+            "feedback_correct": "Correct. This is a new diagnosis of extensive stage SCLC with active SVC syndrome, hemoptysis, and hyponatremia. Inpatient admission is mandatory for stabilization and expedited workup."
           },
           {
             "text": "Transfer to thoracic surgery for emergent resection",
@@ -556,6 +556,18 @@
         "hint": "He has been on azithromycin for a week with no improvement. What is your first priority before starting the right antibiotics?",
         "options": [
           {
+            "text": "Start oral amoxicillin and observe",
+            "sub": "Outpatient oral therapy",
+            "correct": false,
+            "feedback_wrong": "Infective endocarditis requires IV antibiotics for 4-6 weeks. Oral therapy is not appropriate for native valve endocarditis with vegetation. This patient requires admission."
+          },
+          {
+            "text": "Urgent cardiac surgery consultation for valve replacement",
+            "sub": "Emergent OR",
+            "correct": false,
+            "feedback_wrong": "Surgery is indicated for severe complications (heart failure, abscess, emboli, uncontrolled infection) — not as the first step. Medical therapy is initiated first. Surgery timing is decided after stabilization and culture results."
+          },
+          {
             "text": "Draw 3 sets of blood cultures then start IV antibiotics",
             "sub": "Culture first — always",
             "correct": true,
@@ -566,18 +578,6 @@
             "sub": "Empiric broad-spectrum coverage",
             "correct": false,
             "feedback_wrong": "Do not start antibiotics before blood cultures in stable endocarditis. He is not in septic shock. He can wait 15 minutes for cultures. Starting vancomycin blindly eliminates your ability to identify the organism and optimize therapy."
-          },
-          {
-            "text": "Urgent cardiac surgery consultation for valve replacement",
-            "sub": "Emergent OR",
-            "correct": false,
-            "feedback_wrong": "Surgery is indicated for severe complications (heart failure, abscess, emboli, uncontrolled infection) — not as the first step. Medical therapy is initiated first. Surgery timing is decided after stabilization and culture results."
-          },
-          {
-            "text": "Start oral amoxicillin and observe",
-            "sub": "Outpatient oral therapy",
-            "correct": false,
-            "feedback_wrong": "Infective endocarditis requires IV antibiotics for 4-6 weeks. Oral therapy is not appropriate for native valve endocarditis with vegetation. This patient requires admission."
           }
         ]
       },
@@ -585,12 +585,6 @@
         "title": "Antibiotic regimen for Strep viridans endocarditis",
         "hint": "Strep viridans, fully penicillin susceptible, native valve. What is the guideline-recommended regimen?",
         "options": [
-          {
-            "text": "IV Penicillin G or Ceftriaxone x4 weeks",
-            "sub": "Drug of choice for susceptible Strep viridans",
-            "correct": true,
-            "feedback_correct": "Correct. Penicillin-susceptible Strep viridans (MIC ≤0.12) on a native valve is treated with penicillin G or ceftriaxone for 4 weeks. Gentamicin can be added for the first 2 weeks to shorten treatment in uncomplicated cases."
-          },
           {
             "text": "IV Vancomycin x6 weeks",
             "sub": "MRSA coverage",
@@ -608,6 +602,12 @@
             "sub": "Macrolide coverage",
             "correct": false,
             "feedback_wrong": "He was already on azithromycin and worsened. Macrolides have poor activity against Strep viridans in a biofilm-protected cardiac vegetation. IV therapy is mandatory."
+          },
+          {
+            "text": "IV Penicillin G or Ceftriaxone x4 weeks",
+            "sub": "Drug of choice for susceptible Strep viridans",
+            "correct": true,
+            "feedback_correct": "Correct. Penicillin-susceptible Strep viridans (MIC ≤0.12) on a native valve is treated with penicillin G or ceftriaxone for 4 weeks. Gentamicin can be added for the first 2 weeks to shorten treatment in uncomplicated cases."
           }
         ]
       },
@@ -622,10 +622,10 @@
             "feedback_correct": "Correct and urgent. New PR prolongation in aortic valve endocarditis indicates possible extension into the aortic root with perivalvular abscess — the abscess can interrupt the conduction system. TEE is far more sensitive than TTE for detecting perivalvular complications. Abscess is a surgical indication."
           },
           {
-            "text": "Cardiology consult for pacemaker placement",
-            "sub": "Treat the AV block",
+            "text": "Reassure — first-degree AV block is benign",
+            "sub": "Observe only",
             "correct": false,
-            "feedback_wrong": "Do not place a pacemaker in active endocarditis — the pacemaker wire becomes a nidus for further infection. The underlying cause (potential abscess) must be diagnosed and treated first."
+            "feedback_wrong": "A new PR prolongation in the context of aortic valve endocarditis is never benign — it is a red flag for perivalvular extension until proven otherwise. This is an indication for urgent TEE and possible surgery."
           },
           {
             "text": "Increase antibiotic duration to 8 weeks",
@@ -634,10 +634,10 @@
             "feedback_wrong": "Extending antibiotic duration empirically does not address the question of whether a perivalvular abscess has formed. You need imaging to answer that question, not more antibiotics."
           },
           {
-            "text": "Reassure — first-degree AV block is benign",
-            "sub": "Observe only",
+            "text": "Cardiology consult for pacemaker placement",
+            "sub": "Treat the AV block",
             "correct": false,
-            "feedback_wrong": "A new PR prolongation in the context of aortic valve endocarditis is never benign — it is a red flag for perivalvular extension until proven otherwise. This is an indication for urgent TEE and possible surgery."
+            "feedback_wrong": "Do not place a pacemaker in active endocarditis — the pacemaker wire becomes a nidus for further infection. The underlying cause (potential abscess) must be diagnosed and treated first."
           }
         ]
       },
@@ -645,12 +645,6 @@
         "title": "Disposition",
         "hint": "Vegetation confirmed, new murmur, EKG changes, septic emboli on CXR. Where does this patient go?",
         "options": [
-          {
-            "text": "Admit to cardiology with cardiac surgery on standby",
-            "sub": "Inpatient IV antibiotics + monitoring",
-            "correct": true,
-            "feedback_correct": "Correct. Native valve endocarditis with a visible vegetation, severe AR, PR prolongation, and septic emboli requires inpatient admission to cardiology with cardiac surgery availability. 4-6 weeks of IV antibiotics, daily EKGs, serial echos, and monitoring for surgical indications."
-          },
           {
             "text": "Discharge with PICC line for outpatient IV antibiotics",
             "sub": "OPAT — outpatient parenteral therapy",
@@ -662,6 +656,12 @@
             "sub": "Immediate OR",
             "correct": false,
             "feedback_wrong": "Surgery is not emergent here. He is hemodynamically stable. Indications for urgent surgery include heart failure, uncontrolled infection, abscess, or recurrent emboli despite antibiotics. He needs TEE first to clarify anatomy before any surgical decision."
+          },
+          {
+            "text": "Admit to cardiology with cardiac surgery on standby",
+            "sub": "Inpatient IV antibiotics + monitoring",
+            "correct": true,
+            "feedback_correct": "Correct. Native valve endocarditis with a visible vegetation, severe AR, PR prolongation, and septic emboli requires inpatient admission to cardiology with cardiac surgery availability. 4-6 weeks of IV antibiotics, daily EKGs, serial echos, and monitoring for surgical indications."
           },
           {
             "text": "Admit to general medicine floor only",
