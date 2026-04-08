@@ -5,7 +5,6 @@
     "urgency": "stable",
     "title": "The Clockmaker's Tremor",
     "dx_answer": "Parkinson Disease",
-    "danger_dx": ["haloperidol", "psychosis"],
     "patient": {
       "name": "The Clockmaker",
       "age": 68,
@@ -30,59 +29,86 @@
       "temp": "37.0",
       "o2": "98% RA"
     },
+    "additional_hx": "Patient reports the tremor is worse when her hands are at rest and actually improves when she reaches for objects. She has noticed her handwriting has become very small over the past year. She walks with short, shuffling steps and has difficulty getting out of chairs. She also reports a reduced sense of smell for the past 2 years and occasional constipation. She denies any family history of similar symptoms. The sertraline prescribed for 'depression' provided no benefit whatsoever.",
+    "pe_findings": "General: Masked facies, reduced blink rate, hypophonic voice. Neuro: 4-6 Hz resting tremor right hand > left, classic pill-rolling quality. Cogwheel rigidity bilateral upper extremities. Bradykinesia on finger-tapping. Gait: shuffling, reduced arm swing, difficulty initiating. Postural instability on pull test. No cerebellar signs. Cognition intact. MMSE 29/30.",
+    "imaging": "MRI Brain (non-contrast): No mass lesion, no acute infarct, no hydrocephalus. Mild age-appropriate cortical atrophy. Standard sequences cannot visualize dopaminergic neurons — DaTscan is the appropriate functional study. No midbrain atrophy to suggest PSP.",
+    "special_test": {
+      "name": "DaTscan (Dopamine Transporter Scan)",
+      "result": "Reduced dopamine transporter uptake in bilateral putamen, asymmetric — right greater than left. Classic 'comma to period' sign. Findings are consistent with nigrostriatal dopaminergic degeneration, confirming Parkinson Disease. Rules out essential tremor and drug-induced parkinsonism."
+    },
     "tests": [
-      { "name": "CBC", "type": "lab", "cost": 5, "result": "Normal. Hgb 13.8, WBC 7.2, Plt 224." },
-      { "name": "CMP", "type": "lab", "cost": 5, "result": "Normal. Creatinine 1.0, glucose 94, LFTs normal." },
-      { "name": "TSH", "type": "lab", "cost": 5, "result": "TSH 1.8 mIU/L — normal. Hyperthyroidism ruled out." },
-      { "name": "B12 / Folate", "type": "lab", "cost": 5, "result": "B12 420 pg/mL (normal). Folate normal." },
-      { "name": "MRI Brain", "type": "imaging", "cost": 15, "result": "No mass lesion. No infarct. Mild age-appropriate cortical atrophy. Standard sequences do not show midbrain abnormality. DaTscan preferred for confirmation." },
-      { "name": "DaTscan", "type": "imaging", "cost": 20, "result": "Reduced dopamine transporter uptake in bilateral putamen — asymmetric, right greater than left. Consistent with nigrostriatal dopaminergic degeneration." },
-      { "name": "EMG / NCS", "type": "lab", "cost": 10, "result": "Normal nerve conduction. No peripheral neuropathy. Tremor: 4-6 Hz rest tremor pattern — consistent with Parkinson disease." }
+      { "name": "CBC", "cost": 5, "result": "Normal. Hgb 13.8, WBC 7.2, Plt 224. No anemia or infection." },
+      { "name": "CMP", "cost": 5, "result": "Normal. Creatinine 1.0, glucose 94, LFTs normal. No metabolic cause." },
+      { "name": "TSH", "cost": 5, "result": "TSH 1.8 mIU/L — normal. Hyperthyroidism ruled out as tremor cause." },
+      { "name": "B12", "cost": 5, "result": "B12 420 pg/mL — normal. Folate normal. No nutritional deficiency." },
+      { "name": "EKG", "cost": 5, "result": "Normal sinus rhythm. No arrhythmia. Not directly relevant to tremor." },
+      { "name": "Coags", "cost": 5, "result": "PT/INR normal. PTT normal. No coagulopathy." },
+      { "name": "UA", "cost": 5, "result": "Clear, no infection, no protein. Unremarkable." },
+      { "name": "EMG/NCS", "cost": 5, "result": "Normal nerve conduction. No peripheral neuropathy. Tremor analysis: 4-6 Hz rest tremor pattern, suppressible with movement — consistent with Parkinson Disease." }
     ],
     "hints": [
-      "The tremor frequency is 4-6 Hz. Note when it disappears — and when it returns.",
-      "Look at her face carefully. A masked expression and reduced blink rate are not depression.",
-      "The sertraline did not help the depression. That itself is a clue.",
-      "Pill-rolling, cogwheeling, micrographia. The diagnosis is in the examination."
+      "The tremor frequency is 4-6 Hz and disappears with intentional movement. That pattern narrows your differential significantly.",
+      "Look beyond the tremor — masked face, reduced blink rate, hypophonic voice, micrographia. These are not psychiatric symptoms.",
+      "The sertraline did absolutely nothing. That itself is diagnostic information.",
+      "Pill-rolling rest tremor + cogwheel rigidity + bradykinesia + shuffling gait. You have all four cardinal features in front of you."
     ],
     "management": [
       {
         "title": "Immediate stabilization",
+        "hint": "This patient has been slowly progressive for 14 months. Think about what level of urgency is truly warranted here.",
         "options": [
-          { "text": "Reassure and schedule follow-up", "sub": "No acute intervention needed", "correct": true, "feedback_correct": "Correct. This is not an emergency. A calm, thorough approach." },
-          { "text": "Admit for IV thiamine", "sub": "Wernicke protocol", "correct": false, "danger": false, "feedback_wrong": "Thiamine is for Wernicke — not indicated here." },
-          { "text": "Emergent neurology consult", "sub": "Urgent inpatient", "correct": false, "danger": false, "feedback_wrong": "Urgent, yes. Emergent, no. This has been progressing for 14 months." },
-          { "text": "Stop sertraline immediately", "sub": "Discontinue without taper", "correct": false, "danger": true, "feedback_wrong": "Abrupt SSRI discontinuation causes withdrawal syndrome. Taper if stopping." }
+          { "text": "Reassure and schedule outpatient follow-up", "sub": "No acute intervention needed", "correct": true, "feedback_correct": "Correct. This is a chronic, slowly progressive condition. No emergency exists. A calm and thorough outpatient approach is ideal." },
+          { "text": "Admit for IV thiamine", "sub": "Wernicke protocol", "correct": false, "feedback_wrong": "Thiamine is for Wernicke encephalopathy — confusion, ophthalmoplegia, ataxia. None of those are present here." },
+          { "text": "Emergent neurology consult", "sub": "Urgent inpatient", "correct": false, "feedback_wrong": "This has been progressing for 14 months. Urgent outpatient neurology, yes. Emergent inpatient consult is not warranted." },
+          { "text": "Stop sertraline immediately", "sub": "Abrupt discontinuation", "correct": false, "feedback_wrong": "Abrupt SSRI discontinuation causes withdrawal syndrome — dizziness, nausea, electric shock sensations. Always taper. Never stop abruptly." }
         ]
       },
       {
-        "title": "First-line medication",
+        "title": "First-line pharmacotherapy",
+        "hint": "Parkinson Disease involves loss of dopaminergic neurons. Your first-line treatment should logically address that deficit.",
         "options": [
-          { "text": "Levodopa / Carbidopa", "sub": "Dopamine precursor — 25/100mg TID", "correct": true, "feedback_correct": "The gold standard. You know your pharmacology." },
-          { "text": "Haloperidol", "sub": "Typical antipsychotic", "correct": false, "danger": true, "feedback_wrong": "Haloperidol blocks dopamine receptors — it will dramatically worsen Parkinson disease. Never." },
-          { "text": "Sertraline dose increase", "sub": "SSRI escalation", "correct": false, "danger": false, "feedback_wrong": "The depression was a misdiagnosis. Sertraline will not help the tremor." },
-          { "text": "Propranolol", "sub": "Beta blocker — for essential tremor", "correct": false, "danger": false, "feedback_wrong": "Propranolol is for essential tremor — an action tremor. This is a rest tremor." }
+          { "text": "Levodopa / Carbidopa", "sub": "25/100mg TID — dopamine precursor", "correct": true, "feedback_correct": "The gold standard. Levodopa crosses the blood-brain barrier and is converted to dopamine. Carbidopa prevents peripheral conversion, reducing side effects. You know your pharmacology." },
+          { "text": "Haloperidol", "sub": "Typical antipsychotic — D2 blocker", "correct": false, "feedback_wrong": "Catastrophically wrong. Haloperidol blocks dopamine receptors — the exact opposite of what this patient needs. It will dramatically worsen every motor symptom. Never give antipsychotics in Parkinson Disease unless absolutely necessary." },
+          { "text": "Increase sertraline dose", "sub": "SSRI escalation", "correct": false, "feedback_wrong": "The depression was a misdiagnosis — it was masked facies and bradyphrenia from Parkinson Disease. More sertraline will not help a dopamine deficiency." },
+          { "text": "Propranolol", "sub": "Beta-blocker — for essential tremor", "correct": false, "feedback_wrong": "Propranolol is effective for essential tremor — an action/intention tremor. This is a rest tremor from dopamine deficiency. Propranolol will not touch it." }
         ]
       },
       {
-        "title": "Further workup",
+        "title": "Specialist referral",
+        "hint": "Parkinson Disease is a complex, progressive condition. Who manages it best long-term?",
         "options": [
-          { "text": "Refer to movement disorder specialist", "sub": "Neurology subspecialty", "correct": true, "feedback_correct": "Correct. Movement disorder specialists optimize PD management." },
-          { "text": "Lumbar puncture", "sub": "CSF analysis", "correct": false, "danger": false, "feedback_wrong": "LP is not indicated in Parkinson disease. This is a clinical diagnosis." },
-          { "text": "Brain biopsy", "sub": "Histopathology", "correct": false, "danger": true, "feedback_wrong": "Brain biopsy for Parkinson disease would be unconscionable." },
-          { "text": "Occupational therapy referral", "sub": "ADL assessment and adaptation", "correct": true, "feedback_correct": "Also correct — OT is essential in PD management." }
+          { "text": "Movement disorder specialist", "sub": "Neurology subspecialty", "correct": true, "feedback_correct": "Correct. Movement disorder neurologists specialize in optimizing PD management — medication timing, DBS candidacy, motor complications. Essential referral." },
+          { "text": "Lumbar puncture", "sub": "CSF analysis", "correct": false, "feedback_wrong": "LP is not indicated in Parkinson Disease. This is a clinical diagnosis supported by DaTscan. CSF analysis will not change management." },
+          { "text": "Brain biopsy", "sub": "Histopathology for Lewy bodies", "correct": false, "feedback_wrong": "Brain biopsy for Parkinson Disease is not done in living patients. Lewy bodies are a post-mortem finding. This would be unconscionable." },
+          { "text": "Occupational therapy", "sub": "ADL assessment and adaptation", "correct": true, "feedback_correct": "Also correct — OT is essential. Fine motor tasks, handwriting aids, safety assessment. Both this and movement disorder referral are right answers." }
         ]
       },
       {
         "title": "Disposition",
+        "hint": "Is there any reason this stable, chronic outpatient condition requires inpatient admission?",
         "options": [
-          { "text": "Outpatient — start levodopa, neurology follow-up", "sub": "Discharge with plan", "correct": true, "feedback_correct": "Exactly right. Stable patient, chronic condition, outpatient management." },
-          { "text": "Admit to neurology floor", "sub": "Inpatient workup", "correct": false, "danger": false, "feedback_wrong": "No indication for admission. This is a chronic, stable outpatient condition." },
-          { "text": "Discharge without treatment", "sub": "Watch and wait", "correct": false, "danger": false, "feedback_wrong": "The diagnosis is clear. Withholding treatment serves no one." },
-          { "text": "Admit for DaTscan", "sub": "Inpatient imaging", "correct": false, "danger": false, "feedback_wrong": "DaTscan is an outpatient procedure. No need for admission." }
+          { "text": "Discharge — start levodopa, neurology follow-up", "sub": "Outpatient management", "correct": true, "feedback_correct": "Exactly right. Stable chronic condition, clear diagnosis, outpatient management with appropriate follow-up. This is the correct disposition." },
+          { "text": "Admit to neurology floor", "sub": "Inpatient workup", "correct": false, "feedback_wrong": "There is no indication for admission. This condition has been present for 14 months and is hemodynamically stable. Admission wastes resources and increases infection risk." },
+          { "text": "Discharge without treatment", "sub": "Watch and wait", "correct": false, "feedback_wrong": "The diagnosis is established and treatment is available. Withholding levodopa serves no purpose and leaves the patient suffering unnecessarily." },
+          { "text": "Admit for DaTscan", "sub": "Inpatient imaging", "correct": false, "feedback_wrong": "DaTscan is an outpatient nuclear medicine study. There is no indication for inpatient admission to obtain it." }
         ]
       }
     ],
-    "explanation": "Parkinson disease is a progressive neurodegenerative disorder caused by dopaminergic neuron loss in the substantia nigra. Cardinal features: rest tremor (4-6 Hz, pill-rolling), bradykinesia, rigidity (cogwheeling), postural instability. Levodopa/carbidopa remains the most effective symptomatic treatment. Dopamine-blocking agents (typical antipsychotics, metoclopramide) are contraindicated — they worsen motor symptoms dramatically."
+    "report_template": {
+      "age": 68,
+      "sex": "F",
+      "pmh": "hypertension and previously misdiagnosed depression",
+      "presenting": "a 14-month progressive rest tremor",
+      "pertinent_positives": {
+        "hx": "pill-rolling 4-6 Hz rest tremor worse at rest and improved with movement, micrographia, shuffling gait, difficulty initiating movement, reduced sense of smell, failure to respond to sertraline",
+        "pe": "masked facies, reduced blink rate, cogwheel rigidity, bradykinesia, shuffling gait with reduced arm swing, positive pull test",
+        "labs": "normal CBC, CMP, TSH, B12 ruling out metabolic and nutritional causes",
+        "imaging": "MRI brain without acute findings",
+        "special": "DaTscan showing reduced dopamine transporter uptake in bilateral putamen consistent with nigrostriatal degeneration"
+      },
+      "assessment": "Parkinson Disease",
+      "plan": "initiate levodopa/carbidopa 25/100mg TID, taper sertraline, refer to movement disorder specialist, occupational therapy referral, outpatient follow-up in 4-6 weeks"
+    },
+    "explanation": "Parkinson Disease is a progressive neurodegenerative disorder caused by loss of dopaminergic neurons in the substantia nigra pars compacta, leading to Lewy body accumulation. Cardinal features: rest tremor (4-6 Hz, pill-rolling), bradykinesia, cogwheel rigidity, postural instability. Non-motor features include hyposmia, constipation, REM sleep behavior disorder, and depression. Levodopa/carbidopa remains the most effective symptomatic treatment. Dopamine-blocking agents (typical antipsychotics, metoclopramide) are absolutely contraindicated."
   }
 ]
