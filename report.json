@@ -58,5 +58,50 @@
     },
     "assessment": "Pheochromocytoma — right adrenal gland, biochemically confirmed",
     "plan": "admit for alpha-blockade with phenoxybenzamine, endocrinology and surgical oncology consult, 10-14 day preoperative preparation with high-salt diet and volume expansion, genetic testing for RET/VHL/SDHB, laparoscopic adrenalectomy after adequate preparation"
+  },
+  "2026-04-10": {
+    "age": 41,
+    "sex": "M",
+    "pmh": "no significant past medical history",
+    "presenting": "three weeks of progressive headache, nausea, and cognitive slowing — worse at work, better on days off — with a near-syncopal episode yesterday",
+    "pertinent_positives": {
+      "addl-hx": "symptoms strictly worse at work and resolve on days off, two co-workers with identical symptoms, ventilation sealed for winter, near-syncope yesterday",
+      "pe": "encephalopathic, cherry-red skin tone on lips and nail beds, ataxia on tandem gait, tachycardic",
+      "labs": "elevated lactate 4.2, elevated troponin from CO myocardial injury, metabolic acidosis, elevated hematocrit from compensatory polycythemia, normal SpO2 falsely reassuring",
+      "imaging": "CT head without acute intracranial process, subtle cerebral edema",
+      "special": "COHb 28% confirming carbon monoxide poisoning — normal SpO2 was misleading"
+    },
+    "assessment": "Carbon Monoxide Poisoning — occupational, chronic subacute exposure with acute-on-chronic episode, complicated by myocardial injury and encephalopathy",
+    "plan": "100% O2 via non-rebreather mask, admit for cardiac monitoring, hyperbaric oxygen therapy (COHb >25% with neurological symptoms), serial troponins, neurology follow-up for delayed sequelae, mandatory reporting and evacuation of furnace hall"
+  },
+  "2026-04-11": {
+    "age": 22,
+    "sex": "M",
+    "pmh": "prior spontaneous left pneumothorax 18 months ago, not formally treated",
+    "presenting": "sudden left-sided chest pain and dyspnea at rest — second episode of spontaneous pneumothorax",
+    "pertinent_positives": {
+      "addl-hx": "second ipsilateral episode, first ignored 18 months ago, tall lean habitus BMI 19, no trauma or exertion precipitant",
+      "pe": "decreased breath sounds and hyperresonance left hemithorax, trachea midline, O2 95%",
+      "labs": "mild hypoxemia pO2 78 on ABG, low voltage on EKG left leads consistent with PTX",
+      "imaging": "CXR showing 30% left pneumothorax with visible pleural line",
+      "special": "CT chest confirming multiple bilateral subpleural blebs, largest 1.4cm left upper lobe — surgical bleb disease confirmed"
+    },
+    "assessment": "Primary Spontaneous Pneumothorax — second episode, bilateral bleb disease on CT, surgical intervention indicated",
+    "plan": "needle aspiration or small-bore chest tube, supplemental O2, admit for observation and repeat CXR, thoracic surgery consult for VATS pleurodesis, Marfan syndrome assessment"
+  },
+  "2026-04-12": {
+    "age": 27,
+    "sex": "F",
+    "pmh": "no significant past medical history",
+    "presenting": "acute anticholinergic toxidrome following two hours of unprotected dermal exposure to Atropa belladonna during herbalist work",
+    "pertinent_positives": {
+      "addl-hx": "two hours bare-handed grinding of belladonna berries and leaves, facial contact, symptom onset within two hours — blurred vision first, then dry mouth, then palpitations, now urinary retention",
+      "pe": "fixed maximally dilated pupils 8mm bilaterally, flushed hot dry skin with complete anhidrosis, HR 128, temp 38.6, distended bladder with 680mL retention on ultrasound, absent bowel sounds",
+      "labs": "mildly elevated glucose, QT prolongation to 480ms on EKG — arrhythmia risk",
+      "imaging": "CT head without acute intracranial process, bladder scan confirming urinary retention",
+      "special": "serum and urine toxicology positive for atropine and tropane alkaloids confirming belladonna anticholinergic toxidrome"
+    },
+    "assessment": "Anticholinergic Toxidrome — Atropa belladonna dermal and mucosal exposure, complicated by urinary retention, ileus, hyperthermia, and QT prolongation",
+    "plan": "IV benzodiazepines for agitation, urinary catheterization, active cooling, continuous telemetry for QT monitoring, IV magnesium on standby, physostigmine if refractory agitation or hemodynamic compromise, toxicology consult, admit for 24-48hr monitoring"
   }
 }
