@@ -43,5 +43,20 @@
     },
     "assessment": "Infective Endocarditis — native bicuspid aortic valve, Streptococcus viridans, complicated by severe aortic regurgitation, immune complex glomerulonephritis, septic pulmonary emboli, and new PR prolongation concerning for perivalvular abscess",
     "plan": "blood cultures x3 before antibiotics, IV ceftriaxone 2g daily x4 weeks, urgent TEE to evaluate for perivalvular abscess given PR prolongation, cardiac surgery consult, admit to cardiology with surgery on standby, serial EKGs and echo"
+  },
+  "2026-04-09": {
+    "age": 58,
+    "sex": "M",
+    "pmh": "poorly controlled hypertension",
+    "presenting": "episodic attacks of severe headache, diaphoresis, and palpitations over 8 months, with a collapse this morning",
+    "pertinent_positives": {
+      "addl-hx": "paroxysmal episodes triggered by exertion and bending lasting 20-40 minutes with complete resolution between attacks, 8 lb weight loss, family history of adrenal tumor in mother",
+      "pe": "BP 188/112, HR 108, flushed and diaphoretic, right upper quadrant abdominal tenderness, hypertensive retinopathy",
+      "labs": "hyperglycemia glucose 148 without prior diabetes, mildly elevated troponin from catecholamine-induced myocardial injury, frequent PVCs on EKG",
+      "imaging": "CT abdomen showing 4.8cm heterogeneous right adrenal mass with central necrosis — highly suspicious for pheochromocytoma",
+      "special": "plasma free metanephrines 2.8 nmol/L and 24-hr urine metanephrines markedly elevated, confirming biochemical diagnosis"
+    },
+    "assessment": "Pheochromocytoma — right adrenal gland, biochemically confirmed",
+    "plan": "admit for alpha-blockade with phenoxybenzamine, endocrinology and surgical oncology consult, 10-14 day preoperative preparation with high-salt diet and volume expansion, genetic testing for RET/VHL/SDHB, laparoscopic adrenalectomy after adequate preparation"
   }
 }
