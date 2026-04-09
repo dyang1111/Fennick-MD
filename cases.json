@@ -14,13 +14,13 @@
     },
     "chart": {
       "cc": "My hands won't stop shaking. It started about a year ago — just the right one at first. I had to stop winding the city clock. My husband thinks I'm depressed but I told him this feels different.",
-      "hpi": "14-month history of rest tremor, right hand predominant. Worsens at rest, improves with intentional movement. Gradual onset, slowly progressive. Shuffling gait, difficulty initiating movement. Treated for depression x8 months without improvement.",
-      "pmh": "Depression (misdiagnosed). Hypertension.",
-      "psh": "Appendectomy age 34.",
+      "hpi": "The Clockmaker arrived by horse cart, her husband at her side. She has not been able to wind the Grand Meridian Tower clock in fourteen months — the tremor in her right hand makes the delicate mechanism impossible. The shaking is worst when her hands are at rest; it quiets, oddly, when she reaches for something. She walks now with short, shuffling steps and has difficulty rising from chairs. She was treated for depression at the Irongate Infirmary for eight months — the sertraline did nothing.",
+      "pmh": "Depression (misdiagnosed at the Irongate Infirmary). Hypertension.",
+      "psh": "Appendectomy, age 34.",
       "meds": "Sertraline 50mg daily. Amlodipine 5mg daily.",
       "allergies": "Penicillin — rash.",
       "fh": "No family history of movement disorder.",
-      "sh": "Retired clockmaker. Lives with husband. Non-smoker. Occasional wine."
+      "sh": "Retired Master Clockmaker of the Grand Meridian Tower. Lives with her husband in the Cogsworth District. Non-smoker. A glass of wine with supper."
     },
     "vitals": {
       "bp": "138/84",
@@ -29,7 +29,7 @@
       "temp": "37.0",
       "o2": "98% RA"
     },
-    "additional_hx": "Patient reports the tremor is worse when her hands are at rest and actually improves when she reaches for objects. She has noticed her handwriting has become very small over the past year. She walks with short, shuffling steps and has difficulty getting out of chairs. She also reports a reduced sense of smell for the past 2 years and occasional constipation. She denies any family history of similar symptoms. The sertraline prescribed for depression provided no benefit whatsoever.",
+    "additional_hx": "When pressed for more detail, she speaks carefully, as if measuring each word like a gear tooth. The tremor is worst when her hands rest in her lap — it quiets the moment she reaches for something, which she finds cruelly ironic given her trade. Her handwriting has shrunk to near-illegibility over the past year. She rises from chairs by pushing off with both arms, and on cobblestones she moves slowly, afraid of her own feet. She lost her sense of smell two years ago — she mentioned it only when asked, as if it were beneath complaint. The sertraline did nothing. She knew it wouldn't.",
     "pe_findings": "General: Masked facies, reduced blink rate, hypophonic voice. Neuro: 4-6 Hz resting tremor right hand > left, classic pill-rolling quality. Cogwheel rigidity bilateral upper extremities. Bradykinesia on finger-tapping. Gait: shuffling, reduced arm swing, difficulty initiating. Postural instability on pull test. No cerebellar signs. MMSE 29/30.",
     "imaging": "MRI Brain (non-contrast): No mass lesion, no acute infarct, no hydrocephalus. Mild age-appropriate cortical atrophy. Standard sequences cannot visualize dopaminergic neurons — DaTscan is the appropriate functional study. No midbrain atrophy to suggest PSP.",
     "special_test": {
@@ -230,7 +230,8 @@
       "step1_buzzwords": "Rest tremor, pill-rolling, cogwheel rigidity, masked facies, shuffling gait, micrographia, substantia nigra, Lewy bodies, dopamine deficiency.",
       "lab_buzzwords": "DaTscan: reduced dopamine transporter uptake in putamen (comma → period sign). MRI is normal on standard sequences. Clinical diagnosis.",
       "treatment": "Levodopa/Carbidopa (gold standard). MAO-B inhibitors (selegiline, rasagiline) for mild disease. Dopamine agonists (pramipexole, ropinirole). NEVER give dopamine blockers (haloperidol, metoclopramide) — catastrophic worsening."
-    }
+    },
+    "patient_quote_addl_hx": "\"The right hand first. Then the left began. I kept telling myself it was fatigue from the mechanisms — the fine work. But I know my hands. These are not tired hands. These are broken ones.\""
   },
   {
     "id": "002",
@@ -246,14 +247,14 @@
       "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775528229/api7_p31faf.png"
     },
     "chart": {
-      "cc": "I've had this cough for three months and my wife finally dragged me in. I kept telling her it was the dust from the roads. But last week there was blood in it, and — I don't know. I've also lost a lot of weight without trying. And my face looks puffy in the mornings, my collar's too tight.",
-      "hpi": "62-year-old male with 3-month history of progressive dry cough, unintentional 12 lb weight loss over 4 months, and new-onset facial and neck swelling worse in the morning. He reports increasing fatigue and two episodes of blood-tinged sputum over the past 2 weeks. Denies fever. He also notes his face turns a deep red-purple when he bends forward. Treated with antibiotics twice for 'bronchitis' without improvement.",
-      "pmh": "Hypertension. GERD.",
-      "psh": "Appendectomy age 28. Hernia repair age 45.",
+      "cc": "I've had this cough for three months and my wife finally dragged me in. I kept telling her it was the dust from the roads. But last week there was blood in it. And my face looks puffy in the mornings, my collar's too tight.",
+      "hpi": "The Merchant arrived from the eastern trade routes, visibly thinner than his last visit and reluctant to be here. He has had a persistent dry cough for three months — initially dismissed as road dust from the Ashgate lowlands. Over the past two weeks he has coughed up small amounts of bright red blood on two occasions. His face has taken on a deep red-purple hue that worsens when he leans forward over his ledgers. He has lost twelve pounds without trying and reports his arms have grown weak — he struggled to lift his traveling case this morning.",
+      "pmh": "Hypertension. Acid reflux.",
+      "psh": "Appendectomy, age 28.",
       "meds": "Lisinopril 10mg daily. Omeprazole 20mg daily.",
       "allergies": "NKDA.",
-      "fh": "Father died of lung cancer age 67. Mother: colon cancer.",
-      "sh": "45 pack-year smoking history, currently smokes 1 PPD. Occasional alcohol. Travels extensively for trade."
+      "fh": "Father died of lung disease, age 67. Mother: bowel cancer.",
+      "sh": "Traveling merchant, eastern trade routes. Lives with his wife near the harbor district. Smokes a pipe — 45 pack-year equivalent. Occasional drink."
     },
     "vitals": {
       "bp": "158/94",
@@ -262,7 +263,7 @@
       "temp": "37.2",
       "o2": "94% RA"
     },
-    "additional_hx": "The facial swelling began about 6 weeks ago and he initially attributed it to poor sleep on the road. It is notably worse in the mornings and when he leans forward. His collar has become too tight. He reports a headache that is also worse in the morning and when bending over. He has had two episodes of hemoptysis — small amounts, bright red. The weight loss is unintentional — he has been eating the same but losing weight regardless. He also mentions his arms feel weak lately and he has had difficulty buttoning his coat. On further questioning he reports occasional double vision over the past month.",
+    "additional_hx": "He answers questions with the minimum number of words possible, arms crossed, as if the consultation is keeping him from something more important. The facial swelling, he admits, has been worsening for six weeks — worse in the mornings, worse when he hunches over his ledgers. His collar is a full inch too tight now. The headaches come with it, mornings mainly. He has lost twelve pounds without meaning to and is irritated by the fact. His arms have gone weak — he had trouble lifting his traveling case this morning and he clearly hates admitting it. The double vision started a month ago. He attributes everything to the roads.",
     "pe_findings": "General: Plethoric, cyanotic facies. Marked facial and bilateral upper extremity edema. Dilated, non-pulsatile neck veins. Prominent venous collaterals visible across the chest wall and upper abdomen — flow directed downward. Resp: Decreased breath sounds right upper lobe. No wheeze. Neuro: Proximal muscle weakness bilateral upper > lower extremities. Reflexes diminished globally. Pupils: sluggish reaction bilaterally. No Horner syndrome. No lymphadenopathy detected on palpation — nodes may be mediastinal.",
     "imaging": "CXR: Large right hilar mass with widened superior mediastinum. Right upper lobe infiltrate/atelectasis. No pleural effusion. CT Chest with contrast: 6.2cm right hilar mass with direct invasion of the superior vena cava and significant extrinsic compression — SVC lumen reduced by approximately 80%. Extensive mediastinal and paratracheal lymphadenopathy. No pulmonary emboli.",
     "special_test": {
@@ -463,7 +464,8 @@
       "step1_buzzwords": "Small blue cells, salt-and-pepper chromatin, nuclear molding, neuroendocrine markers, SIADH, Lambert-Eaton, SVC syndrome, hilar mass, never surgical.",
       "lab_buzzwords": "Hyponatremia + high urine sodium (SIADH). Lambert-Eaton: facilitation on repetitive nerve stimulation (opposite of MG). ACTH-independent Cushing: very high ACTH, no dexamethasone suppression.",
       "treatment": "Extensive stage: Carboplatin + Etoposide + Atezolizumab (IMpower133). Limited stage: concurrent chemoradiation + prophylactic cranial irradiation. Surgery: no role in extensive stage. Highly chemo-sensitive initially but relapses almost universally."
-    }
+    },
+    "patient_quote_addl_hx": "\"I've crossed the Ashgate lowlands in a broken cart with a fever and kept moving. I don't come to doctors. My wife packed my bag. I didn't even know she'd done it until she handed it to me at the door.\""
   },
   {
     "id": "003",
@@ -480,13 +482,13 @@
     },
     "chart": {
       "cc": "I've had a fever every single night for three weeks. I thought it was just a bad flu that wouldn't quit. But I'm exhausted, I've lost weight, and two days ago this painful red spot appeared on my finger. My wife said my eyes looked yellow. I'm scared something is seriously wrong.",
-      "hpi": "34-year-old male with 3-week history of daily fevers to 38.8°C, drenching night sweats, profound fatigue, and a 9 lb unintentional weight loss. He reports intermittent sharp chest pain, worse with inspiration. Two days ago he noticed a painful red spot on his right index finger. He saw his GP last week who prescribed azithromycin for presumed atypical pneumonia — no improvement. He denies cough, URI symptoms, or sick contacts.",
-      "pmh": "Bicuspid aortic valve — diagnosed incidentally at age 22, never required intervention. No other medical history.",
+      "hpi": "The Engineer arrived pale and drenched in night sweat, having lost nine pounds in three weeks. He had a routine tooth cleaning at the guild dentist five weeks ago — his gums bled considerably during the procedure. The fevers began a fortnight later, nightly, with drenching sweats by morning. He noticed a painful red nodule on his right index fingertip two days ago and dark lines beneath two fingernails. His wife remarked yesterday that his eyes looked faintly yellow. He has developed a sharp chest pain that worsens when he breathes deeply.",
+      "pmh": "Bicuspid aortic valve — found incidentally at age 22. Never required intervention.",
       "psh": "None.",
       "meds": "Azithromycin 250mg (ongoing). Ibuprofen PRN.",
       "allergies": "NKDA.",
-      "fh": "Father: bicuspid aortic valve. Mother: healthy.",
-      "sh": "Non-smoker. Drinks 2-3 beers/week. Works on construction sites — frequent cuts and lacerations to hands. Denied IV drug use. Had a dental cleaning 5 weeks ago — no prophylaxis given."
+      "fh": "Father: bicuspid aortic valve.",
+      "sh": "Civil engineer, works the construction sites of the new Ferrovane bridge. Lives with his wife. Non-smoker. A few drinks a week. Denies injection drug use."
     },
     "vitals": {
       "bp": "122/48",
@@ -495,7 +497,7 @@
       "temp": "38.9",
       "o2": "96% RA"
     },
-    "additional_hx": "He recalls the dental cleaning 5 weeks ago — his gums bled significantly during the procedure and no antibiotics were given beforehand, though he was not informed he needed prophylaxis for his bicuspid valve. The fevers began approximately 2 weeks after the dental visit. He reports that the chest pain is pleuritic and started 5 days ago. The painful red spot on his finger appeared 2 days ago and is very tender — not a blister, more like a bruise under the skin. He also reports noticing small dark lines under two of his fingernails on the right hand. His wife noticed his eyes looked slightly yellow last week. He denies headache, focal neurological symptoms, or hematuria, though he has not been paying attention to urine color.",
+    "additional_hx": "He is cooperative and forthcoming, asking clarifying questions as if this were a technical problem to be solved collaboratively. He remembers the dental visit precisely — fifth week ago, Tuesday afternoon, the guild dentist on Meridian Lane, gums bled more than usual. He started feeling feverish about two weeks later and assumed it would pass. He has been tracking his temperature on a small chart he brought with him — nightly spikes to 38.8, breaking by morning. The painful spot on his finger appeared two days ago and he finds it genuinely puzzling. He has not yet connected any of this into a single picture, and when you mention the heart, he looks up with sudden attention.",
     "pe_findings": "General: Ill-appearing, sweating, pale. Cardiovascular: Hyperdynamic precordium. New harsh diastolic murmur grade III/VI at left sternal border — not present on prior echocardiogram. JVP mildly elevated. Skin: Osler nodes — tender erythematous nodules on right index and middle fingertip pads. Splinter hemorrhages under right index and middle fingernails (3 total). Janeway lesions — flat, non-tender, hemorrhagic macules on bilateral thenar eminences. Eyes: conjunctival petechiae bilaterally. Fundoscopy: Roth spots — white-centered hemorrhages bilateral retinae. Mild scleral icterus. Spleen palpable 2 cm below costal margin. No peripheral edema. No clubbing yet.",
     "imaging": "CXR: Multiple bilateral peripheral nodular opacities — septic emboli pattern. Mild cardiomegaly. Transthoracic Echocardiogram (TTE): Bicuspid aortic valve with a 1.4cm oscillating vegetation on the non-coronary cusp. Severe aortic regurgitation — wide pulse pressure confirmed. EF 55%. No perivalvular abscess on TTE (TEE recommended to exclude).",
     "special_test": {
@@ -696,6 +698,232 @@
       "step1_buzzwords": "Duke criteria (2 major OR 1 major + 3 minor), Osler nodes, Janeway lesions, Roth spots, splinter hemorrhages, new murmur, positive blood cultures, vegetation on echo.",
       "lab_buzzwords": "Blood cultures x3 before antibiotics (most important step). UA: RBC casts (immune complex GN). New PR prolongation → perivalvular abscess → urgent TEE. Echo vegetation = major Duke criterion.",
       "treatment": "Native valve Strep viridans: IV Penicillin G or Ceftriaxone x4 weeks. S. aureus: IV Nafcillin (MSSA) or Vancomycin (MRSA) x6 weeks. Surgery indications: heart failure, abscess, uncontrolled infection, recurrent emboli despite antibiotics."
-    }
+    },
+    "patient_quote_addl_hx": "\"I actually looked up my symptoms last week. I thought maybe it was just a virus going around the construction site. My wife said I should come in sooner. I kept saying it wasn't a big deal. Is it a big deal?\""
+  },
+  {
+    "id": "004",
+    "date": "2026-04-09",
+    "urgency": "urgent",
+    "title": "The General's Episodes",
+    "dx_answer": "Pheochromocytoma",
+    "patient": {
+      "name": "The General",
+      "age": 58,
+      "sex": "M",
+      "occupation": "Military Commander",
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775528235/api9_mfs09z.png"
+    },
+    "chart": {
+      "cc": "I don't need to be here. My aide insisted. I've had a few dizzy spells — nothing a soldier can't manage. Though I'll admit the last one knocked me off my feet.",
+      "hpi": "The General was escorted in by his aide, who looked considerably more alarmed than the patient. He has had episodic attacks over the past eight months — each lasting twenty to forty minutes — consisting of a severe pounding headache, profuse sweating, and a sensation that his heart is 'trying to escape his chest.' He initially attributed these to battlefield stress and the pressures of his current campaign. The episodes have increased in frequency: once monthly at first, now nearly weekly. The last attack occurred this morning when he bent down to retrieve a map from the floor — he collapsed briefly and struck his desk. His face remains flushed even now, at rest.",
+      "pmh": "Hypertension — diagnosed two years ago, poorly controlled on medication. No prior cardiac history.",
+      "psh": "Shrapnel removal, left shoulder, age 34.",
+      "meds": "Amlodipine 5mg daily. Aspirin 81mg daily.",
+      "allergies": "Sulfonamides — rash.",
+      "fh": "Mother died of 'a tumor near the kidney,' details unknown. No known cardiac family history.",
+      "sh": "Military commander, Ferrovane Northern Division. Lives in the officer's quarters at the garrison. Smokes a pipe occasionally. Drinks at regimental dinners."
+    },
+    "vitals": {
+      "bp": "188/112",
+      "hr": "108",
+      "rr": "18",
+      "temp": "37.4",
+      "o2": "97% RA"
+    },
+    "additional_hx": "He describes the episodes only when directly asked, in clipped military language, as if filing a damage report on someone else's equipment. The attacks come without warning — a sudden hammering behind the eyes, then the sweating, then the heart going wild. They last perhaps half an hour and then vanish completely, which is part of why he dismissed them. He has had seven or eight in the past two months. This morning's was triggered by bending to retrieve a map from the floor — he straightened up, the room tilted, and he struck his desk on the way down. He lost perhaps thirty seconds. He does not call this a collapse. He calls it a 'brief interruption.' His mother died of something near the kidney — he doesn't know what, he was overseas. He has lost eight pounds and attributes it to the recent campaign's rations.",
+    "pe_findings": "General: Flushed, diaphoretic, visibly anxious despite his attempts to appear composed. BP 188/112 right arm, 186/110 left arm — symmetric. HR 108, irregular with frequent palpitations. Skin: warm, clammy, facial flushing. Abdomen: vague fullness in right upper quadrant on deep palpation — patient winces. No palpable mass but tenderness noted. No carotid bruits. Fundoscopy: mild hypertensive retinopathy. No focal neurological deficits. No lymphadenopathy.",
+    "imaging": "CT Abdomen/Pelvis with contrast: 4.8cm heterogeneous right adrenal mass with central necrosis and peripheral enhancement — highly suspicious for adrenal neoplasm. No liver metastases identified. No lymphadenopathy. Left adrenal gland normal. Incidental note: mild atherosclerosis of the abdominal aorta.",
+    "special_test": {
+      "name": "24-Hour Urine Metanephrines",
+      "result": "Urine metanephrines: 4,820 mcg/24hr (normal <900). Urine normetanephrines: 3,110 mcg/24hr (normal <600). Urine catecholamines markedly elevated. Plasma free metanephrines: 2.8 nmol/L (normal <0.5). Results confirm biochemical diagnosis of pheochromocytoma. Genetic testing recommended (RET, VHL, SDHB mutations)."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "WBC 11.4 (mildly elevated — stress response). Hgb 15.2 (normal). Plt 312 (normal). Hematocrit mildly elevated — possible volume contraction from catecholamine-induced vasoconstriction."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Glucose 148 (HIGH — catecholamines inhibit insulin release). Cr 1.2 (normal). BUN 18. LFTs normal. Na 141, K 3.4 (mildly low — catecholamine effect). No metabolic acidosis."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Sinus tachycardia rate 108. LVH voltage criteria. Diffuse ST changes consistent with catecholamine-induced cardiomyopathy. Frequent PVCs. No STEMI pattern."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Troponin I 0.08 (mildly elevated) — demand ischemia and catecholamine-induced myocardial injury. Not a primary ACS pattern. Serial troponins recommended."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. No pancreatic involvement."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Glucose 2+ (spillover from hyperglycemia). No RBCs, no casts, no protein. Urine appears concentrated. No infection."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "pH 7.46 (mildly alkalotic). pO2 94 on room air. pCO2 36. Mild respiratory alkalosis — anxiety/hyperventilation during paroxysm. No hypoxemia at rest."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "Normal. PT/INR 1.0. PTT 28. No coagulopathy."
+      }
+    ],
+    "hints": [
+      "The episodes last twenty to forty minutes and then completely resolve. Between attacks he is entirely normal. What diagnosis presents in paroxysms rather than continuously?",
+      "Triggered by bending forward, exertion, emotional stress. Headache, sweating, palpitations — the classic triad. His blood pressure during an attack would be extraordinary.",
+      "The family history mentions his mother died of 'a tumor near the kidney.' The CT shows a right adrenal mass. The glucose is elevated without diabetes. Catecholamines do this.",
+      "Pheo rule: alpha-block first, then beta-block. Never give beta-blockers alone — you remove the vasodilatory beta-2 effect and leave unopposed alpha vasoconstriction. Hypertensive crisis ensues."
+    ],
+    "management": [
+      {
+        "title": "Immediate blood pressure management",
+        "hint": "BP 188/112 with a suspected catecholamine-secreting tumor. What do you reach for first — and what do you absolutely avoid?",
+        "options": [
+          {
+            "text": "IV Phentolamine or oral Phenoxybenzamine",
+            "sub": "Alpha-blockade first — standard of care",
+            "correct": true,
+            "feedback_correct": "Correct. Alpha-blockade must come first in pheochromocytoma. Phenoxybenzamine (oral, non-selective) or phentolamine (IV for acute crisis) controls the catecholamine-driven hypertension safely. Beta-blockers are added only after alpha-blockade is established."
+          },
+          {
+            "text": "IV Metoprolol",
+            "sub": "Beta-1 selective blocker",
+            "correct": false,
+            "feedback_wrong": "Never give beta-blockers first in pheochromocytoma. Blocking beta-2 vasodilation leaves unopposed alpha-1 vasoconstriction — you will precipitate a catastrophic hypertensive crisis. This is one of the classic dangerous drug errors in medicine."
+          },
+          {
+            "text": "IV Labetalol",
+            "sub": "Combined alpha/beta blocker",
+            "correct": false,
+            "feedback_wrong": "Labetalol is combined alpha/beta blockade but its beta effect dominates. In pheochromocytoma it is not the preferred agent — the ratio of beta to alpha blockade is not adequate. Pure alpha-blockade first is the standard."
+          },
+          {
+            "text": "Increase amlodipine dose",
+            "sub": "Calcium channel blocker escalation",
+            "correct": false,
+            "feedback_wrong": "Amlodipine has already failed to control his blood pressure for two years. A calcium channel blocker alone is insufficient for catecholamine-driven hypertension of this magnitude. This is not the right move."
+          }
+        ]
+      },
+      {
+        "title": "Confirm the biochemical diagnosis",
+        "hint": "You suspect pheochromocytoma. The CT shows an adrenal mass. What do you need before surgery can be planned?",
+        "options": [
+          {
+            "text": "Plasma free metanephrines or 24-hr urine metanephrines",
+            "sub": "Most sensitive biochemical test",
+            "correct": true,
+            "feedback_correct": "Correct. Plasma free metanephrines have >97% sensitivity for pheochromocytoma. 24-hour urine metanephrines are slightly less sensitive but highly specific. Either is appropriate. Biochemical confirmation is mandatory before surgical planning."
+          },
+          {
+            "text": "Adrenal biopsy",
+            "sub": "Tissue diagnosis",
+            "correct": false,
+            "feedback_wrong": "Adrenal biopsy of a suspected pheochromocytoma is absolutely contraindicated. Needle manipulation of the tumor can trigger a massive catecholamine release and fatal hypertensive crisis. Never biopsy a suspected pheo."
+          },
+          {
+            "text": "Urine cortisol",
+            "sub": "Rule out Cushing syndrome",
+            "correct": false,
+            "feedback_wrong": "The clinical picture — paroxysmal hypertension, sweating, palpitations, adrenal mass — is pheochromocytoma, not Cushing syndrome. Cortisol testing is not the priority here."
+          },
+          {
+            "text": "Proceed directly to adrenalectomy",
+            "sub": "Remove the mass now",
+            "correct": false,
+            "feedback_wrong": "Operating on an unprepared pheochromocytoma patient is dangerous. Without adequate alpha-blockade preoperatively, surgical manipulation of the tumor causes a massive catecholamine surge on the table. Biochemical confirmation and medical preparation come first."
+          }
+        ]
+      },
+      {
+        "title": "Preoperative preparation",
+        "hint": "Surgery is planned. How long must you alpha-block before it is safe to operate?",
+        "options": [
+          {
+            "text": "Alpha-blockade x 10-14 days, then add beta-blocker, high-salt diet",
+            "sub": "Standard preoperative protocol",
+            "correct": true,
+            "feedback_correct": "Correct. Phenoxybenzamine for 10-14 days allows adequate alpha-blockade and volume expansion (catecholamines cause chronic vasoconstriction and volume depletion). High-salt diet and IV fluids help restore intravascular volume. Beta-blockers added only after alpha-blockade is established — to control reflex tachycardia."
+          },
+          {
+            "text": "Operate within 48 hours — the mass is large",
+            "sub": "Urgent resection",
+            "correct": false,
+            "feedback_wrong": "Size does not change the requirement for preoperative preparation. Operating without adequate alpha-blockade risks intraoperative hypertensive crisis, arrhythmia, and death. 10-14 days of preparation is not negotiable."
+          },
+          {
+            "text": "Start beta-blocker first to control tachycardia",
+            "sub": "Rate control before surgery",
+            "correct": false,
+            "feedback_wrong": "Beta-blockers before alpha-blockade is the cardinal error in pheochromocytoma management. You will cause unopposed alpha vasoconstriction and potentially fatal hypertension. Alpha first. Always."
+          },
+          {
+            "text": "Radiation therapy to shrink the mass preoperatively",
+            "sub": "Neoadjuvant radiation",
+            "correct": false,
+            "feedback_wrong": "Pheochromocytoma is not treated with radiation preoperatively. The standard approach is medical preparation followed by laparoscopic adrenalectomy. Radiation has no role here."
+          }
+        ]
+      },
+      {
+        "title": "Disposition",
+        "hint": "BP 188/112, episodic crises, confirmed adrenal mass. Where does the General go?",
+        "options": [
+          {
+            "text": "Admit — alpha-blockade, endocrinology + surgery consult",
+            "sub": "Inpatient workup and preparation",
+            "correct": true,
+            "feedback_correct": "Correct. This patient requires inpatient admission for blood pressure stabilization, biochemical confirmation, and preoperative preparation. Endocrinology and surgical oncology consults are essential. He should not leave the building."
+          },
+          {
+            "text": "Discharge with outpatient endocrinology referral",
+            "sub": "Follow-up next week",
+            "correct": false,
+            "feedback_wrong": "A BP of 188/112 with an uncontrolled catecholamine-secreting tumor and a history of collapse this morning is not an outpatient situation. The next paroxysm could be fatal. He stays."
+          },
+          {
+            "text": "Discharge with increased amlodipine and aspirin",
+            "sub": "Optimize current medications",
+            "correct": false,
+            "feedback_wrong": "Amlodipine has failed for two years. Aspirin does nothing for a pheochromocytoma. Sending this man home with the same medications that have already failed is not a plan — it is negligence."
+          },
+          {
+            "text": "Admit to ICU for immediate surgery prep",
+            "sub": "Emergency OR planning",
+            "correct": false,
+            "feedback_wrong": "ICU is not immediately necessary unless he is in active hypertensive emergency. He needs medical stabilization over 10-14 days before surgery. Admit to a monitored bed on the endocrine or medical service, not the ICU."
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 58,
+      "sex": "M",
+      "pmh": "poorly controlled hypertension",
+      "presenting": "episodic attacks of severe headache, diaphoresis, and palpitations over 8 months, with a collapse this morning",
+      "pertinent_positives": {
+        "addl-hx": "paroxysmal episodes triggered by exertion and bending, lasting 20-40 minutes with complete resolution between attacks, 8 lb weight loss, family history of adrenal tumor",
+        "pe": "BP 188/112, HR 108, flushed and diaphoretic, abdominal tenderness in right upper quadrant, hypertensive retinopathy on fundoscopy",
+        "labs": "hyperglycemia glucose 148 without diabetes, mildly elevated troponin from catecholamine injury, frequent PVCs on EKG",
+        "imaging": "CT abdomen showing 4.8cm heterogeneous right adrenal mass with central necrosis consistent with adrenal neoplasm",
+        "special": "plasma free metanephrines 2.8 nmol/L and 24-hr urine metanephrines markedly elevated, confirming biochemical diagnosis of pheochromocytoma"
+      },
+      "assessment": "Pheochromocytoma — right adrenal, biochemically confirmed",
+      "plan": "admit for alpha-blockade with phenoxybenzamine, endocrinology and surgical oncology consult, 10-14 day preoperative preparation, genetic testing for RET/VHL/SDHB mutations, laparoscopic adrenalectomy after adequate preparation"
+    },
+    "explanation": "Pheochromocytoma is a catecholamine-secreting tumor of the adrenal medulla (or extra-adrenal paraganglia). The classic triad is episodic headache, sweating, and palpitations. Key: paroxysmal hypertension triggered by exertion, bending, or stress. Diagnose with plasma free metanephrines (most sensitive). Image with CT/MRI. Treat with alpha-blockade first (phenoxybenzamine), then beta-blockade, then surgery. Never biopsy. Never beta-block first.",
+    "patient_quote_addl_hx": "\"I've been in three campaigns. I don't get dizzy. I don't collapse. What happened this morning was — I was simply fatigued from the night exercise. My aide is prone to exaggeration. I'm here as a courtesy.\""
   }
 ]
