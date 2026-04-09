@@ -925,5 +925,680 @@
     },
     "explanation": "Pheochromocytoma is a catecholamine-secreting tumor of the adrenal medulla (or extra-adrenal paraganglia). The classic triad is episodic headache, sweating, and palpitations. Key: paroxysmal hypertension triggered by exertion, bending, or stress. Diagnose with plasma free metanephrines (most sensitive). Image with CT/MRI. Treat with alpha-blockade first (phenoxybenzamine), then beta-blockade, then surgery. Never biopsy. Never beta-block first.",
     "patient_quote_addl_hx": "\"I've been in three campaigns. I don't get dizzy. I don't collapse. What happened this morning was — I was simply fatigued from the night exercise. My aide is prone to exaggeration. I'm here as a courtesy.\""
+  },
+  {
+    "id": "005",
+    "date": "2026-04-10",
+    "urgency": "urgent",
+    "title": "The Furnace Keeper's Headache",
+    "dx_answer": "Carbon Monoxide Poisoning",
+    "patient": {
+      "name": "The Furnace Keeper",
+      "age": 41,
+      "sex": "M",
+      "occupation": "Industrial Furnace Keeper",
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775528219/api10_jytuxs.png"
+    },
+    "chart": {
+      "cc": "S-sorry to bother you. It's probably nothing. I've just had this headache for... well, a few weeks now. My foreman told me to come. I wouldn't have come on my own.",
+      "hpi": "The Furnace Keeper arrived still wearing his work collar, smelling faintly of soot, and apologizing before he'd even sat down. He has had a dull, pressure-like frontal headache daily for three weeks — worse at work, better on his days off, which he mentioned hesitantly, as if unsure whether that was relevant. He has felt nauseated most mornings and his thinking has been slow — he forgot to seal two pressure valves last week, which has never happened in eleven years. Two of his fellow workers in the lower furnace hall have complained of similar headaches. He nearly lost consciousness briefly yesterday while adjusting the main flue.",
+      "pmh": "No significant medical history.",
+      "psh": "None.",
+      "meds": "None.",
+      "allergies": "NKDA.",
+      "fh": "Father: heart disease.",
+      "sh": "Works the lower furnace hall of the Ferrovane ironworks, 10-12 hours daily. The ventilation ducts in his section were sealed for winter two months ago. Lives alone. Non-smoker."
+    },
+    "vitals": {
+      "bp": "138/86",
+      "hr": "102",
+      "rr": "20",
+      "temp": "37.1",
+      "o2": "97% RA (falsely reassuring — pulse ox cannot distinguish COHb)"
+    },
+    "additional_hx": "He answers every question with an apology first. The headaches are bilateral, pressure-like, never throbbing — he rates them a four out of ten, then immediately revises to three, not wanting to exaggerate. They begin within an hour of starting his shift and resolve over a day or two when he is away from work. Last Sunday — his day off — he felt nearly normal and assumed he was improving. Monday morning at the furnace the headache returned within two hours. He has had two episodes of vomiting in the past week, which he attributed to something he ate. The near-syncope yesterday lasted perhaps thirty seconds — he caught himself on a pipe. He has not told his foreman how bad it has gotten because he does not want to cause trouble.",
+    "patient_quote_addl_hx": "\"I — I'm sure it's just fatigue. I've been working long shifts. I don't want to make a fuss. The other men have headaches too but they haven't come in. Should I have... come in sooner? I'm sorry if I should have come sooner.\"",
+    "pe_findings": "General: Anxious, mildly confused — takes a moment to process questions. Mild diaphoresis. Cherry-red skin tone subtle but present on lips and nail beds. Neuro: oriented to person and place but not date. Mild ataxia on tandem gait. Pupils equal and reactive. No focal deficits. CV: tachycardic, rhythm regular. Resp: clear bilaterally — deceptively normal. No signs of frank coma but clearly encephalopathic.",
+    "imaging": "CXR: Normal. No pulmonary edema, no infiltrate. CT Head: no acute intracranial process, no hemorrhage, no mass. Mild diffuse cerebral edema — subtle, consistent with toxic encephalopathy. MRI would show bilateral globus pallidus hyperintensity on T2 — classic delayed CO finding.",
+    "special_test": {
+      "name": "Carboxyhemoglobin Level (COHb)",
+      "result": "COHb 28% (CRITICAL — normal <3%, symptomatic >20%, loss of consciousness >40%). Confirms carbon monoxide poisoning. Note: pulse oximetry was 97% — SpO2 cannot distinguish oxyhemoglobin from carboxyhemoglobin and is dangerously misleading in CO poisoning. Co-workers must be evacuated and tested."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "WBC 10.2 (normal). Hgb 16.8 (HIGH — compensatory polycythemia from chronic CO exposure). Plt 310. Elevated hematocrit — body trying to compensate for impaired oxygen delivery."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Lactate 4.2 mmol/L (HIGH — tissue hypoxia despite normal SpO2). BMP otherwise normal. Cr 1.1. Glucose 108. Anion gap 18 (mildly elevated — lactic acidosis from cellular hypoxia)."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Sinus tachycardia rate 102. Diffuse ST depression — myocardial ischemia from CO binding to cardiac myoglobin. No STEMI pattern. CO cardiotoxicity is a serious complication."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Troponin I 0.12 (ELEVATED) — CO-induced myocardial injury. CO binds cardiac myoglobin and disrupts mitochondrial respiration in myocytes. This patient needs cardiac monitoring."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. No pancreatic involvement."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Myoglobinuria trace positive — rhabdomyolysis from prolonged cellular hypoxia. RBCs absent. No infection."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "pH 7.31 (low — metabolic acidosis). pO2 104 on room air (NORMAL — dissolved O2 unaffected). pCO2 32. HCO3 16. Elevated lactate confirmed. CO poisoning has normal pO2 — another reason SpO2 is misleading."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "Normal. No coagulopathy."
+      }
+    ],
+    "hints": [
+      "The headache is worse at work and better on days off. Two coworkers have the same symptoms. The ventilation was sealed for winter. What toxin accumulates in poorly ventilated industrial spaces?",
+      "His pulse oximetry reads 97% — and yet he is encephalopathic, tachycardic, and acidotic. SpO2 cannot distinguish carboxyhemoglobin from oxyhemoglobin. The number is lying to you.",
+      "Cherry-red skin, normal pO2 on ABG, elevated lactate, elevated COHb — CO binds hemoglobin with 250 times the affinity of oxygen. His blood is carrying almost no usable oxygen despite looking fully saturated.",
+      "Treatment is high-flow 100% oxygen via non-rebreather mask. This displaces CO from hemoglobin — the half-life of COHb drops from 5 hours on room air to 60-90 minutes on 100% O2. Hyperbaric oxygen if COHb >25% or neurological symptoms."
+    ],
+    "management": [
+      {
+        "title": "Immediate treatment",
+        "hint": "COHb 28%, encephalopathic, cardiac involvement. What is the single most important intervention right now?",
+        "options": [
+          {
+            "text": "Supplemental O2 at 2L nasal cannula",
+            "sub": "Low-flow oxygen",
+            "correct": false,
+            "feedback_wrong": "Completely inadequate. Low-flow oxygen will not displace CO quickly enough. This patient needs 100% O2 via non-rebreather mask — maximum inspired oxygen concentration. There is no benefit to titrating oxygen in CO poisoning."
+          },
+          {
+            "text": "Intubate and mechanically ventilate",
+            "sub": "Airway protection",
+            "correct": false,
+            "feedback_wrong": "He is encephalopathic but protecting his airway. Intubation is not the first step — 100% O2 via non-rebreather is. Reserve intubation for comatose patients or those unable to protect their airway."
+          },
+          {
+            "text": "IV sodium bicarbonate for metabolic acidosis",
+            "sub": "Correct the acidosis directly",
+            "correct": false,
+            "feedback_wrong": "The acidosis is from cellular hypoxia caused by CO — treat the cause, not the number. Bicarbonate will not help if CO remains on hemoglobin. Fix the CO first; the acidosis will resolve."
+          },
+          {
+            "text": "100% O2 via non-rebreather mask, remove from source",
+            "sub": "Competitive displacement of CO from hemoglobin",
+            "correct": true,
+            "feedback_correct": "Correct. High-flow 100% oxygen is the immediate treatment. It reduces COHb half-life from ~5 hours (room air) to 60-90 minutes. Remove him from the source immediately and notify authorities about the furnace hall."
+          }
+        ]
+      },
+      {
+        "title": "Hyperbaric oxygen — is it indicated?",
+        "hint": "COHb 28%, neurological symptoms, cardiac involvement. Does this patient meet criteria for hyperbaric oxygen?",
+        "options": [
+          {
+            "text": "Yes — COHb >25% with neurological symptoms meets HBO criteria",
+            "sub": "Hyperbaric oxygen therapy",
+            "correct": true,
+            "feedback_correct": "Correct. Hyperbaric oxygen (HBO) is indicated for COHb >25%, loss of consciousness, neurological symptoms, cardiac involvement, or pregnancy. This patient has COHb 28% with encephalopathy and troponin elevation — he meets multiple criteria. HBO reduces COHb half-life to ~20 minutes and reduces risk of delayed neurological sequelae."
+          },
+          {
+            "text": "Give IV methylene blue",
+            "sub": "Antidote for CO",
+            "correct": false,
+            "feedback_wrong": "Methylene blue is the antidote for methemoglobinemia, not carbon monoxide poisoning. Completely different condition. CO poisoning is treated with oxygen — high-flow normobaric and hyperbaric."
+          },
+          {
+            "text": "No — normobaric O2 is sufficient for all CO cases",
+            "sub": "Continue current treatment only",
+            "correct": false,
+            "feedback_wrong": "Normobaric 100% O2 is appropriate for mild CO poisoning. However, with COHb 28%, neurological symptoms, near-syncope, and cardiac injury, this patient meets criteria for HBO therapy. The evidence supports HBO in reducing delayed neuropsychiatric sequelae."
+          },
+          {
+            "text": "No — HBO is only for COHb >50%",
+            "sub": "Threshold is too high",
+            "correct": false,
+            "feedback_wrong": "The threshold for HBO is not a single number. COHb >25% is one criterion — but neurological symptoms, cardiac involvement, loss of consciousness, and pregnancy are equally important indications. This patient qualifies on multiple grounds."
+          }
+        ]
+      },
+      {
+        "title": "What else must be done immediately",
+        "hint": "He is one of at least three affected workers. The furnace hall is still operating.",
+        "options": [
+          {
+            "text": "Treat this patient and send a note to his employer",
+            "sub": "Notify employer only",
+            "correct": false,
+            "feedback_wrong": "A note is not adequate. Active workers are currently being poisoned. This requires immediate evacuation and emergency response — not paperwork."
+          },
+          {
+            "text": "Nothing — treat the patient, the worksite is not your concern",
+            "sub": "Clinical focus only",
+            "correct": false,
+            "feedback_wrong": "Physicians have a duty to report environmental hazards causing patient harm. Active poisoning of multiple workers is absolutely your concern. You have both a professional and moral obligation to act."
+          },
+          {
+            "text": "Advise him to take time off work",
+            "sub": "Occupational health advice",
+            "correct": false,
+            "feedback_wrong": "Advising one worker to stay home does nothing for the men currently working in the poisoned environment. This is an active ongoing emergency. The hall must be evacuated now."
+          },
+          {
+            "text": "Notify authorities, evacuate the furnace hall, test all co-workers",
+            "sub": "Public safety response",
+            "correct": true,
+            "feedback_correct": "Correct and critical. This is not just one patient — it is an industrial CO poisoning event. The furnace hall must be evacuated immediately, the source identified and sealed, all co-workers tested for COHb, and public health authorities notified. Failure to do this could mean deaths."
+          }
+        ]
+      },
+      {
+        "title": "Disposition",
+        "hint": "COHb 28%, troponin elevated, encephalopathic. Where does he go?",
+        "options": [
+          {
+            "text": "Admit — 100% O2, cardiac monitoring, HBO consult, neurology follow-up",
+            "sub": "Inpatient with HBO planning",
+            "correct": true,
+            "feedback_correct": "Correct. Admission is mandatory. He needs cardiac monitoring for CO-induced myocardial injury, serial troponins, HBO therapy, and neurological follow-up for delayed CO sequelae (personality change, parkinsonism, cognitive impairment can emerge weeks later)."
+          },
+          {
+            "text": "Discharge with nasal cannula O2 to use at home",
+            "sub": "Outpatient oxygen therapy",
+            "correct": false,
+            "feedback_wrong": "Home oxygen at low flow is not adequate treatment for acute CO poisoning with neurological and cardiac involvement. This patient needs inpatient monitoring and HBO therapy."
+          },
+          {
+            "text": "Discharge after 2 hours of O2 in the ED",
+            "sub": "Brief observation only",
+            "correct": false,
+            "feedback_wrong": "Absolutely not. Troponin elevation, neurological symptoms, and COHb 28% all require admission. Delayed neurological sequelae of CO poisoning can appear days to weeks later — this patient needs monitoring and follow-up."
+          },
+          {
+            "text": "Transfer immediately to hyperbaric chamber without admission workup",
+            "sub": "HBO without stabilization",
+            "correct": false,
+            "feedback_wrong": "HBO is indicated but so is proper stabilization first — 100% O2 via NRB, IV access, cardiac monitoring, and admission workup. Transfer to HBO without this is premature and potentially dangerous."
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 41,
+      "sex": "M",
+      "pmh": "no significant past medical history",
+      "presenting": "three weeks of progressive headache, nausea, and cognitive slowing — worse at work, better on days off — with a near-syncopal episode yesterday",
+      "pertinent_positives": {
+        "addl-hx": "symptoms strictly worse at work and resolve on days off, two co-workers with identical symptoms, ventilation sealed for winter, near-syncope yesterday",
+        "pe": "encephalopathic, cherry-red skin tone on lips and nail beds, ataxia on tandem gait, tachycardic",
+        "labs": "elevated lactate 4.2, elevated troponin from CO myocardial injury, metabolic acidosis, elevated hematocrit from compensatory polycythemia, normal SpO2 falsely reassuring",
+        "imaging": "CT head without acute intracranial process, subtle cerebral edema",
+        "special": "COHb 28% confirming carbon monoxide poisoning — normal SpO2 was misleading"
+      },
+      "assessment": "Carbon Monoxide Poisoning — occupational, chronic subacute exposure with acute-on-chronic episode, complicated by myocardial injury and encephalopathy",
+      "plan": "100% O2 via non-rebreather mask, admit for cardiac monitoring, hyperbaric oxygen therapy (COHb >25% with neurological symptoms), serial troponins, neurology follow-up for delayed sequelae, mandatory reporting and evacuation of furnace hall"
+    },
+    "explanation": "Carbon monoxide binds hemoglobin with 250x the affinity of oxygen, forming carboxyhemoglobin (COHb) and preventing oxygen delivery. Key: SpO2 is falsely normal — it cannot distinguish COHb from OHb. Classic presentation: headache/nausea/confusion worse at work, better on days off, multiple people affected. Treatment: 100% O2 via NRB (half-life 60-90 min vs 5hr on room air). HBO if COHb >25%, neuro symptoms, cardiac involvement, pregnancy."
+  },
+  {
+    "id": "006",
+    "date": "2026-04-11",
+    "urgency": "stable",
+    "title": "The Locksmith's Sudden Chest",
+    "dx_answer": "Pneumothorax (Spontaneous)",
+    "patient": {
+      "name": "The Locksmith",
+      "age": 22,
+      "sex": "M",
+      "occupation": "Apprentice Locksmith",
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775528221/api11_ddol8p.png"
+    },
+    "chart": {
+      "cc": "I was just sitting at my workbench this morning and something... popped. In my chest. Now it hurts to breathe.",
+      "hpi": "The Locksmith arrived on foot, slightly hunched and breathing shallowly. He was at his workbench in the Meridian Key Works when he felt a sudden sharp pain in his left chest — he describes it precisely as a pop, followed immediately by shortness of breath. There was no exertion, no trauma, no coughing. He is tall and lean, and this is actually his second such episode — the first occurred eighteen months ago, resolved on its own, and he never sought attention for it.",
+      "pmh": "None. No prior lung disease.",
+      "psh": "None.",
+      "meds": "None.",
+      "allergies": "NKDA.",
+      "fh": "No family history of lung disease. No known connective tissue disorders.",
+      "sh": "Apprentice locksmith, works seated at a precision workbench. Lives with his mother. Non-smoker. Occasional drink at the guild hall."
+    },
+    "vitals": {
+      "bp": "122/76",
+      "hr": "94",
+      "rr": "22",
+      "temp": "37.0",
+      "o2": "95% RA"
+    },
+    "additional_hx": "He answers questions directly and without embellishment — a practical young man who would rather know what is wrong and fix it than discuss how he feels about it. He confirms the first episode eighteen months ago: same sudden pop, same left-sided pain, resolved after two days of rest. He assumed it was a muscle. This time it has not improved since this morning and the shortness of breath is more noticeable than before. He is tall — just over six feet — and on the lean side. He has never smoked. No recent illness, no cough, no fever. He asks, matter-of-factly, whether he will need an operation.",
+    "patient_quote_addl_hx": "\"It happened once before, about a year and a half ago. Same side, same feeling. I just rested and it went away after a couple of days. I figured it was a pulled muscle. Should I have come in for that one?\"",
+    "pe_findings": "General: Tall (188cm), lean, BMI 19.2. Mild respiratory distress — breathing shallowly to minimize pain. Resp: Decreased breath sounds left base, hyperresonance to percussion left hemithorax. Trachea midline — no deviation (not tension). No subcutaneous emphysema. CV: Tachycardic, regular. No JVP elevation. No peripheral edema. Skin: no marfanoid features on quick inspection — no arachnodactyly, no high arched palate noted, though formal assessment warranted.",
+    "imaging": "CXR PA: Left-sided pneumothorax — visible pleural line with absent lung markings peripheral to it. Estimated 30% left lung collapse. No mediastinal shift. No effusion. Right lung clear. No underlying parenchymal disease or blebs visible on plain film. CT chest recommended to assess for subpleural blebs.",
+    "special_test": {
+      "name": "CT Chest (High Resolution)",
+      "result": "Multiple bilateral subpleural blebs — largest 1.4cm at left upper lobe apex. Left pneumothorax confirmed at 30% collapse. No underlying parenchymal disease. No evidence of Marfan syndrome changes on vascular imaging. Findings consistent with primary spontaneous pneumothorax with bilateral bleb disease — significantly elevated recurrence risk. Surgical referral (VATS pleurodesis) strongly recommended given second episode."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "Normal. WBC 9.2, Hgb 14.8, Plt 334. No infection or inflammatory process."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Completely normal. No metabolic derangement."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Sinus tachycardia rate 94. Low voltage QRS left-sided leads — consistent with left pneumothorax. No ischemic changes. No right heart strain pattern. Not a PE pattern."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Negative. No myocardial injury. This is not a cardiac event."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. Not relevant to this presentation."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Normal. Not relevant."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "pH 7.44. pO2 78 (mildly reduced on room air — consistent with 30% lung collapse and V/Q mismatch). pCO2 34. Mild hypoxemia but compensated. Not immediately life-threatening."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "Normal. Relevant if chest tube or surgical intervention planned."
+      }
+    ],
+    "hints": [
+      "Tall, lean, young man. Sudden sharp chest pain with a pop — no trauma, no exertion, no warning. This has happened before. What diagnosis recurs in tall thin young men?",
+      "Decreased breath sounds and hyperresonance on the left. Trachea midline. This is not tension — there is no mediastinal shift. But 30% collapse is not trivial.",
+      "This is his second spontaneous pneumothorax on the same side. The first he ignored. Current guidelines recommend intervention after a second ipsilateral episode — recurrence risk is now over 80%.",
+      "Primary spontaneous pneumothorax: no underlying lung disease, young healthy patient, subpleural blebs. Secondary spontaneous: underlying COPD, CF, Marfan. Always rule out secondary causes — check for connective tissue features."
+    ],
+    "management": [
+      {
+        "title": "Immediate management of 30% pneumothorax",
+        "hint": "30% left pneumothorax, O2 95%, stable, no tension signs. What is the appropriate intervention?",
+        "options": [
+          {
+            "text": "Observation only — it will reabsorb on its own",
+            "sub": "Conservative management",
+            "correct": false,
+            "feedback_wrong": "Observation alone is appropriate only for small (<20%) asymptomatic pneumothoraces. This patient is symptomatic with O2 95% and a 30% collapse. Active intervention is indicated."
+          },
+          {
+            "text": "Emergency thoracotomy",
+            "sub": "Open surgical decompression",
+            "correct": false,
+            "feedback_wrong": "Thoracotomy is not indicated for a stable primary spontaneous pneumothorax. There is no tension, no hemothorax, no mediastinal shift. Needle aspiration or chest tube are the appropriate interventions."
+          },
+          {
+            "text": "Supplemental O2 and needle aspiration or small-bore chest tube",
+            "sub": "Active intervention for symptomatic 30% PTX",
+            "correct": true,
+            "feedback_correct": "Correct. A 30% pneumothorax in a symptomatic patient warrants active intervention. Needle aspiration is first-line for primary spontaneous PTX — if successful, the patient can be observed. If unsuccessful or recurrent, small-bore chest tube. High-flow O2 also accelerates nitrogen resorption from the pleural space."
+          },
+          {
+            "text": "Intubate and positive pressure ventilation",
+            "sub": "Mechanical ventilation",
+            "correct": false,
+            "feedback_wrong": "Positive pressure ventilation in an undecompressed pneumothorax risks converting it to a tension pneumothorax. Never ventilate a patient with a known pneumothorax before decompression. This would be dangerous."
+          }
+        ]
+      },
+      {
+        "title": "Second episode — definitive management",
+        "hint": "This is his second left-sided spontaneous pneumothorax. What does current guidance recommend?",
+        "options": [
+          {
+            "text": "Refer for VATS pleurodesis",
+            "sub": "Video-assisted thoracoscopic surgery",
+            "correct": true,
+            "feedback_correct": "Correct. After a second ipsilateral spontaneous pneumothorax, current guidelines (BTS, ACCP) recommend surgical intervention — VATS with bullectomy and pleurodesis. Recurrence risk after second episode exceeds 80%. The CT shows bilateral blebs, making this even more important."
+          },
+          {
+            "text": "Long-term bronchodilator therapy",
+            "sub": "Treat for underlying airway disease",
+            "correct": false,
+            "feedback_wrong": "This is primary spontaneous pneumothorax — there is no underlying airway disease to treat. Bronchodilators have no role here. This is a structural problem requiring surgical correction."
+          },
+          {
+            "text": "Discharge and advise to return if it recurs again",
+            "sub": "Wait for third episode",
+            "correct": false,
+            "feedback_wrong": "Waiting for a third episode is not guideline-concordant and puts the patient at serious risk. A third spontaneous pneumothorax can be life-threatening. The second episode is the standard threshold for surgical referral."
+          },
+          {
+            "text": "Chemical pleurodesis via chest tube only",
+            "sub": "Talc or tetracycline via tube",
+            "correct": false,
+            "feedback_wrong": "Chemical pleurodesis via chest tube is less effective than VATS in young patients with bleb disease. VATS allows direct visualization and resection of blebs as well as mechanical and chemical pleurodesis — superior outcomes and lower recurrence rates."
+          }
+        ]
+      },
+      {
+        "title": "Rule out secondary cause",
+        "hint": "Tall, lean, 22 years old. Second spontaneous pneumothorax. What must you actively exclude?",
+        "options": [
+          {
+            "text": "Bronchoscopy to rule out endobronchial lesion",
+            "sub": "Airway assessment",
+            "correct": false,
+            "feedback_wrong": "Bronchoscopy is not indicated for primary spontaneous pneumothorax in a young healthy patient. There is no clinical suspicion for an endobronchial lesion causing this presentation."
+          },
+          {
+            "text": "HIV testing",
+            "sub": "Rule out immunocompromise",
+            "correct": false,
+            "feedback_wrong": "HIV-related pneumothorax is typically secondary to PCP pneumonia and presents differently — with bilateral infiltrates, hypoxia, and systemic illness. This young non-immunocompromised patient has primary spontaneous PTX with blebs. HIV testing is not the priority here."
+          },
+          {
+            "text": "Assess for Marfan syndrome — echocardiogram and genetics referral",
+            "sub": "Rule out connective tissue disorder",
+            "correct": true,
+            "feedback_correct": "Correct. Marfan syndrome and other connective tissue disorders (Ehlers-Danlos, Birt-Hogg-Dubé) are associated with spontaneous pneumothorax. A tall, lean young man with recurrent PTX needs formal assessment — arm span, upper/lower segment ratio, slit lamp, echocardiogram for aortic root, genetics consult."
+          },
+          {
+            "text": "No workup needed — primary spontaneous PTX requires no further investigation",
+            "sub": "Discharge after treatment",
+            "correct": false,
+            "feedback_wrong": "A second episode in a young patient always warrants investigation for secondary causes, particularly connective tissue disorders. Marfan syndrome specifically needs to be excluded — it carries serious aortic implications beyond the pneumothorax."
+          }
+        ]
+      },
+      {
+        "title": "Disposition",
+        "hint": "Treated, stable, O2 improving. Where does he go after chest tube or aspiration?",
+        "options": [
+          {
+            "text": "Discharge with advice to avoid exercise and flying",
+            "sub": "Activity restrictions only",
+            "correct": false,
+            "feedback_wrong": "Activity restrictions alone are not definitive management for a second ipsilateral spontaneous pneumothorax with known bleb disease. This patient needs surgical referral and admission — not a list of things to avoid."
+          },
+          {
+            "text": "Discharge immediately after aspiration if CXR improved",
+            "sub": "Same-day discharge",
+            "correct": false,
+            "feedback_wrong": "Same-day discharge after aspiration is reasonable only for small first-episode pneumothoraces in reliable patients close to hospital. This is a second episode with bilateral blebs — he needs admission and surgical planning."
+          },
+          {
+            "text": "Transfer to thoracic surgery for immediate VATS today",
+            "sub": "Operative today",
+            "correct": false,
+            "feedback_wrong": "VATS is not performed acutely on a fresh pneumothorax. The lung needs time to re-expand fully before surgery. Admit, decompress, re-expand, then plan elective VATS."
+          },
+          {
+            "text": "Admit for observation, repeat CXR, thoracic surgery consult",
+            "sub": "Inpatient with surgical planning",
+            "correct": true,
+            "feedback_correct": "Correct. After intervention, admit for 24-hour observation with repeat CXR to confirm re-expansion. Thoracic surgery consult for VATS planning given second episode. Marfan workup. Do not discharge until lung is fully re-expanded and stable."
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 22,
+      "sex": "M",
+      "pmh": "prior spontaneous left pneumothorax 18 months ago, not formally treated",
+      "presenting": "sudden left-sided chest pain and dyspnea at rest — second episode of spontaneous pneumothorax",
+      "pertinent_positives": {
+        "addl-hx": "second ipsilateral episode, first ignored 18 months ago, tall lean habitus BMI 19, no trauma or exertion precipitant",
+        "pe": "decreased breath sounds and hyperresonance left hemithorax, trachea midline, O2 95%",
+        "labs": "mild hypoxemia pO2 78 on ABG, low voltage on EKG left leads consistent with PTX",
+        "imaging": "CXR showing 30% left pneumothorax with visible pleural line",
+        "special": "CT chest confirming multiple bilateral subpleural blebs, largest 1.4cm left upper lobe — surgical bleb disease confirmed"
+      },
+      "assessment": "Primary Spontaneous Pneumothorax — second episode, bilateral bleb disease on CT, surgical intervention indicated",
+      "plan": "needle aspiration or small-bore chest tube, supplemental O2, admit for observation and repeat CXR, thoracic surgery consult for VATS pleurodesis, Marfan syndrome assessment"
+    },
+    "explanation": "Primary spontaneous pneumothorax (PSP) occurs in tall, thin young men without underlying lung disease — subpleural blebs rupture at the apex. Recurrence after first episode ~30%, after second >80%. Treat first episode: aspiration or small-bore chest tube. Second ipsilateral episode: VATS bullectomy + pleurodesis. Always rule out Marfan syndrome in young patients with recurrent PSP."
+  },
+  {
+    "id": "007",
+    "date": "2026-04-12",
+    "urgency": "urgent",
+    "title": "The Herbalist's Affliction",
+    "dx_answer": "Anticholinergic Toxidrome",
+    "patient": {
+      "name": "The Herbalist",
+      "age": 27,
+      "sex": "F",
+      "occupation": "Botanical Herbalist",
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775528224/api12_pu28yr.png"
+    },
+    "chart": {
+      "cc": "Something is very wrong. My mouth has gone completely dry, I can't see properly, and I feel like my heart is going to come through my chest. I've been working with belladonna all morning.",
+      "hpi": "The Herbalist arrived flushed and frightened, still holding dried belladonna stems, her pupils so dilated she walked into the doorframe. She has been preparing a belladonna tincture in her apothecary workshop in the Ashgate botanical quarter since early morning — grinding the berries and leaves without gloves. Over the past two hours she has developed profound dry mouth, blurred vision, palpitations, and confusion that is worsening. She also reports that she cannot urinate despite feeling she needs to. Her skin is hot and dry. She has not ingested the plant deliberately but significant dermal and possible mucosal absorption has occurred.",
+      "pmh": "No significant medical history. Works with botanical compounds daily.",
+      "psh": "None.",
+      "meds": "None prescribed. Uses various herbal preparations — none containing atropine or anticholinergics.",
+      "allergies": "NKDA.",
+      "fh": "Non-contributory.",
+      "sh": "Botanical herbalist and apothecary, Ashgate quarter. Lives above her workshop. Non-smoker. Does not drink."
+    },
+    "vitals": {
+      "bp": "148/92",
+      "hr": "128",
+      "rr": "18",
+      "temp": "38.6",
+      "o2": "98% RA"
+    },
+    "additional_hx": "She is frightened but still coherent — she knows exactly what she was working with and volunteers the information immediately. The belladonna was a large fresh harvest. She ground the berries with her bare hands for approximately two hours, then rubbed her face at some point. She cannot recall exactly when symptoms began but her vision went blurry first, then her mouth dried completely, then the heart racing. She tried to drink water but could not produce enough saliva to swallow it comfortably. She has not been able to urinate in four hours. She is warm to the touch all over and her skin is completely dry despite the obvious distress — no sweat at all.",
+    "patient_quote_addl_hx": "\"I know what this is. I know it. I just — I didn't think it would happen through the skin. I wasn't even eating it. I've handled it before but never for this long. How bad is it? Please just tell me how bad it is.\"",
+    "pe_findings": "General: Flushed, hot, dry skin — no diaphoresis whatsoever. Agitated, frightened, oriented. Pupils: fixed and maximally dilated bilaterally (8mm) — unable to constrict to direct light. Photophobia. Eyes: dry conjunctivae, unable to focus near objects. Mouth: profoundly dry mucous membranes, thick ropy saliva, cracked lips. CV: HR 128, regular. BP 148/92. Heart sounds normal. Abdomen: distended bladder on percussion, tender on palpation — urinary retention. Bowel sounds absent — ileus. Skin: generalised flushing, hot, completely anhidrotic.",
+    "imaging": "CXR: Normal. No aspiration pneumonia. CT Head: No acute intracranial process. Performed given altered mentation — normal. Bladder ultrasound: 680mL retained urine — acute urinary retention confirmed.",
+    "special_test": {
+      "name": "Serum and Urine Toxicology Screen",
+      "result": "Serum: atropine/scopolamine detected — consistent with Atropa belladonna alkaloid absorption. No other toxins detected. No acetaminophen, no salicylates, no ethanol, no opiates. Urine toxicology: positive for tropane alkaloids (atropine, scopolamine, hyoscyamine). Confirms anticholinergic toxidrome from belladonna alkaloid absorption. Quantitative levels not immediately available but clinical syndrome is diagnostic."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "WBC 13.2 (mildly elevated — stress response/atropine effect). Hgb 13.8. Plt 310. No infection pattern."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Glucose 142 (mildly elevated — anticholinergic effect). Cr 1.1. BUN 18. Na 141, K 3.6. LFTs normal. No metabolic acidosis. Electrolytes normal."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Sinus tachycardia rate 128. Prolonged QT interval 480ms — anticholinergic cardiotoxicity. No ventricular arrhythmia currently. QT must be monitored — risk of Torsades de Pointes. No STEMI pattern."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Negative. No primary myocardial injury. Tachycardia is from anticholinergic effect, not myocardial damage."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. Absent bowel sounds are from anticholinergic ileus, not pancreatitis."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Concentrated urine — markedly decreased output. No infection. Urinary retention confirmed clinically and on bladder scan. Straight catheterization required."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "pH 7.43. pO2 96. pCO2 38. Normal. No respiratory compromise currently. Monitor for hyperthermia-induced deterioration."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "Normal. No coagulopathy."
+      }
+    ],
+    "hints": [
+      "Dry as a bone, blind as a bat, red as a beet, hot as a hare, mad as a hatter. She has been handling belladonna for two hours without gloves. These five findings together have a name.",
+      "Her pupils are fixed and maximally dilated. Her skin is hot and dry — no sweat at all. Her heart is racing. Her bowels have stopped. She cannot urinate. Every secretion in her body has been blocked. What receptor does atropine block?",
+      "Anticholinergic toxidrome — muscarinic blockade. The antidote is physostigmine, a reversible acetylcholinesterase inhibitor. It crosses the blood-brain barrier. Use with caution — can cause seizures and bradycardia if given too fast.",
+      "Do not confuse with sympathomimetic toxidrome — that also has tachycardia, hyperthermia, and agitation BUT has diaphoresis (wet skin). Anticholinergic is DRY. Sympathomimetic is WET. That distinction is the diagnosis."
+    ],
+    "management": [
+      {
+        "title": "Immediate supportive management",
+        "hint": "HR 128, temp 38.6, agitated, urinary retention. What are the first priorities?",
+        "options": [
+          {
+            "text": "Activated charcoal orally",
+            "sub": "GI decontamination",
+            "correct": false,
+            "feedback_wrong": "Activated charcoal is not appropriate here — absorption has already occurred dermally and the exposure was hours ago. Furthermore, anticholinergic ileus means gut motility is absent, increasing aspiration risk. Contraindicated in this context."
+          },
+          {
+            "text": "IV access, benzodiazepines for agitation, urinary catheter, cooling measures",
+            "sub": "Supportive care first",
+            "correct": true,
+            "feedback_correct": "Correct. Supportive care is the foundation. Benzodiazepines (not haloperidol — which worsens anticholinergic QT prolongation) for agitation. Urinary catheter for the 680mL retention. Active cooling for hyperthermia — anhidrosis means she cannot thermoregulate. IV fluids for dry mucous membranes."
+          },
+          {
+            "text": "Induce emesis",
+            "sub": "Remove ingested toxin",
+            "correct": false,
+            "feedback_wrong": "She did not ingest the plant — this was dermal exposure. Inducing emesis does nothing. Additionally, anticholinergics cause ileus and dry mucous membranes making emesis dangerous and ineffective."
+          },
+          {
+            "text": "IV haloperidol for agitation",
+            "sub": "Antipsychotic sedation",
+            "correct": false,
+            "feedback_wrong": "Haloperidol is contraindicated in anticholinergic toxidrome — it has additional anticholinergic activity and prolongs the QT interval further. This patient already has QT 480ms. Benzodiazepines are the correct sedative agent here."
+          }
+        ]
+      },
+      {
+        "title": "Specific antidote",
+        "hint": "Classic anticholinergic toxidrome. Is there a specific antidote and when do you use it?",
+        "options": [
+          {
+            "text": "Naloxone IV",
+            "sub": "Opioid reversal agent",
+            "correct": false,
+            "feedback_wrong": "Naloxone reverses opioid toxidrome — sedation, miosis, respiratory depression. This patient has anticholinergic toxidrome — mydriasis, tachycardia, hyperthermia, dry skin. Completely opposite picture. Naloxone will do nothing."
+          },
+          {
+            "text": "Physostigmine IV — reversible AChE inhibitor, crosses BBB",
+            "sub": "Antidote for severe anticholinergic toxidrome",
+            "correct": true,
+            "feedback_correct": "Correct. Physostigmine inhibits acetylcholinesterase, increasing synaptic ACh to overcome muscarinic blockade. It crosses the blood-brain barrier — making it effective for central anticholinergic effects (agitation, delirium). Use in severe toxidrome: agitation not controlled by benzos, hemodynamic instability, seizures. Give slowly — risk of bradycardia and seizures if pushed too fast."
+          },
+          {
+            "text": "Flumazenil IV",
+            "sub": "Benzodiazepine reversal",
+            "correct": false,
+            "feedback_wrong": "Flumazenil reverses benzodiazepines. She has not taken benzodiazepines — she has belladonna alkaloid poisoning. Flumazenil has no role here and would remove the benzodiazepines you just gave her for agitation control."
+          },
+          {
+            "text": "Atropine IV",
+            "sub": "Anticholinergic antidote",
+            "correct": false,
+            "feedback_wrong": "Atropine IS the poison here — giving more atropine would catastrophically worsen the toxidrome. This is one of the most dangerous errors in toxicology. Never give atropine for anticholinergic toxidrome."
+          }
+        ]
+      },
+      {
+        "title": "Monitor for this serious complication",
+        "hint": "QT 480ms, tachycardia 128, hyperthermia. What are you watching for on the monitor?",
+        "options": [
+          {
+            "text": "Nothing — anticholinergic toxidrome is self-limiting",
+            "sub": "Expectant management",
+            "correct": false,
+            "feedback_wrong": "Anticholinergic toxidrome can cause fatal arrhythmias, hyperthermia-induced seizures, and rhabdomyolysis. It requires active monitoring and management. 'Self-limiting' is only true with proper supportive care — it is not benign."
+          },
+          {
+            "text": "Torsades de Pointes — QT prolongation monitoring and magnesium ready",
+            "sub": "Ventricular arrhythmia risk",
+            "correct": true,
+            "feedback_correct": "Correct. QT 480ms with tachycardia creates significant risk of Torsades de Pointes — a polymorphic ventricular tachycardia that can degenerate into VF. Continuous cardiac monitoring is mandatory. IV magnesium sulfate should be available. Avoid any additional QT-prolonging agents."
+          },
+          {
+            "text": "Hyperkalemia from muscle breakdown",
+            "sub": "Electrolyte monitoring",
+            "correct": false,
+            "feedback_wrong": "Hyperkalemia from rhabdomyolysis is not the primary concern in anticholinergic toxidrome. The immediate threat is QT prolongation and Torsades de Pointes from anticholinergic cardiotoxicity."
+          },
+          {
+            "text": "Pulmonary edema from fluid overload",
+            "sub": "Respiratory monitoring",
+            "correct": false,
+            "feedback_wrong": "Pulmonary edema is not the primary concern here. The main arrhythmia risk from anticholinergic QT prolongation is Torsades de Pointes. This patient needs cardiac monitoring, not respiratory precautions specifically."
+          }
+        ]
+      },
+      {
+        "title": "Disposition",
+        "hint": "HR 128, QT 480ms, temp 38.6, urinary retention, agitation. Where does she go?",
+        "options": [
+          {
+            "text": "Discharge with oral physostigmine prescription",
+            "sub": "Outpatient antidote",
+            "correct": false,
+            "feedback_wrong": "Physostigmine is an IV medication used in acute toxidrome management — it is not dispensed as an outpatient oral prescription. This patient requires inpatient monitoring and IV management."
+          },
+          {
+            "text": "Discharge after 2 hours of observation if vitals improve",
+            "sub": "Brief ED observation",
+            "correct": false,
+            "feedback_wrong": "Two hours is not adequate. Belladonna alkaloids have a prolonged duration of action — effects can last 24-48 hours. QT prolongation and hyperthermia require sustained monitoring. She needs admission."
+          },
+          {
+            "text": "Transfer to psychiatry for agitation management",
+            "sub": "Psychiatric admission",
+            "correct": false,
+            "feedback_wrong": "Her agitation is organic — caused by anticholinergic delirium. This is a medical emergency, not a psychiatric presentation. Psychiatric transfer would be inappropriate and dangerous without medical stabilization."
+          },
+          {
+            "text": "Admit to monitored bed — toxicology, continuous telemetry, physostigmine if needed",
+            "sub": "Inpatient with cardiac monitoring",
+            "correct": true,
+            "feedback_correct": "Correct. Admission with continuous telemetry is mandatory given QT prolongation and tachycardia. Toxicology consult. Serial vital signs and neuro assessments. She will likely improve over 12-24 hours as the alkaloids are metabolized, but the arrhythmia window requires monitoring."
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 27,
+      "sex": "F",
+      "pmh": "no significant past medical history",
+      "presenting": "acute anticholinergic toxidrome following two hours of unprotected dermal exposure to Atropa belladonna during herbalist work",
+      "pertinent_positives": {
+        "addl-hx": "two hours bare-handed grinding of belladonna berries and leaves, facial contact, symptom onset within two hours — blurred vision first, then dry mouth, then palpitations, now urinary retention",
+        "pe": "fixed maximally dilated pupils 8mm bilaterally, flushed hot dry skin with complete anhidrosis, HR 128, temp 38.6, distended bladder with 680mL retention on ultrasound, absent bowel sounds",
+        "labs": "mildly elevated glucose, QT prolongation to 480ms on EKG — arrhythmia risk",
+        "imaging": "CT head without acute intracranial process, bladder scan confirming urinary retention",
+        "special": "serum and urine toxicology positive for atropine and tropane alkaloids confirming belladonna anticholinergic toxidrome"
+      },
+      "assessment": "Anticholinergic Toxidrome — Atropa belladonna dermal and mucosal exposure, complicated by urinary retention, ileus, hyperthermia, and QT prolongation",
+      "plan": "IV benzodiazepines for agitation, urinary catheterization, active cooling, continuous telemetry for QT monitoring, IV magnesium on standby, physostigmine if refractory agitation or hemodynamic compromise, toxicology consult, admit for 24-48hr monitoring"
+    },
+    "explanation": "Anticholinergic toxidrome: dry as a bone (anhidrosis), blind as a bat (mydriasis), red as a beet (flushing), hot as a hare (hyperthermia), mad as a hatter (delirium). Caused by muscarinic blockade — atropine, scopolamine, belladonna, jimsonweed, diphenhydramine. Antidote: physostigmine (crosses BBB). Never give atropine. Never give haloperidol. Distinguish from sympathomimetic (also hot/tachy/agitated but DIAPHORETIC — key difference)."
   }
 ]
