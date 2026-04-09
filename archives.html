@@ -298,9 +298,17 @@ function getTodayCST(){
 
 async function loadCases(){
   try{
-    const res = await fetch('cases.json');
-    if(!res.ok) throw new Error();
-    const cases = await res.json();
+    // Load all known monthly case files
+    const KNOWN_MONTHS = ['2026-4cases.json']; // add '2026-5cases.json' etc when ready
+    let allFetched = [];
+    for(const file of KNOWN_MONTHS){
+      try{
+        const r = await fetch(file);
+        if(r.ok){ const d = await r.json(); if(Array.isArray(d)) allFetched = allFetched.concat(d); }
+      }catch(e){}
+    }
+    const cases = allFetched;
+    if(cases.length===0) throw new Error();
     const today = getTodayCST();
     // Only show past cases (not today's)
     allCases = cases
@@ -313,7 +321,7 @@ async function loadCases(){
       <div class="empty-state">
         <div class="empty-icon">⚠️</div>
         <div class="empty-title">Could not load cases</div>
-        <div class="empty-sub">Make sure cases.json is in the same folder and you're running a local server.</div>
+        <div class="empty-sub">Make sure your monthly cases file (e.g. 2026-4cases.json) is in the same folder.</div>
       </div>`;
   }
 }
