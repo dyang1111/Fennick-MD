@@ -89,6 +89,55 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   max-width:980px;
   position:relative;
   z-index:10;
+
+  /* Leather frame around the entire UI block */
+  outline: 7px solid #2a1206;
+  outline-offset: 0;
+  box-shadow:
+    /* outer leather border */
+    0 0 0 10px #321608,
+    0 0 0 11px rgba(160,100,30,0.35),
+    /* depth shadow */
+    0 8px 32px rgba(0,0,0,0.55),
+    /* left side thicker feel — inset glow */
+    inset 3px 0 8px rgba(0,0,0,0.18);
+}
+
+/* Sparse stitching — only on the left edge (next to fox col) and subtly on top/right/bottom */
+#app-inner::before{
+  content:'';
+  position:absolute;
+  /* Left stitch line — slightly inset from the left edge of the frame */
+  top:-10px;bottom:-10px;left:-10px;
+  width:10px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 10px,
+      rgba(200,150,50,0.35) 10px,
+      rgba(200,150,50,0.35) 14px,
+      transparent 14px,
+      transparent 24px
+    );
+  pointer-events:none;
+  z-index:20;
+}
+/* Top/right/bottom stitching — much sparser */
+#app-inner::after{
+  content:'';
+  position:absolute;
+  inset:-10px;
+  border:2px dashed transparent;
+  border-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 18px,
+    rgba(200,150,50,0.25) 18px,
+    rgba(200,150,50,0.25) 24px
+  ) 2;
+  pointer-events:none;
+  z-index:20;
 }
 
 /* ── LEFT COLUMN — FIXED ── */
