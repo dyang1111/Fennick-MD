@@ -603,74 +603,81 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .tab-bar{
   display:flex;gap:0;margin-bottom:0;
   position:relative;z-index:2;
+  /* Right-aligned tabs — left half is blank */
+  padding-left:50%;
 }
 .tab-btn{
-  flex:1;padding:9px 14px;
-  font-family:'Playfair Display',serif;font-size:13px;font-weight:600;
-  letter-spacing:.06em;color:#7a5010;
-  background:linear-gradient(160deg,rgba(240,230,195,0.85),rgba(225,210,170,0.9));
-  border:1px solid rgba(155,115,36,0.35);
+  flex:1;padding:6px 12px;
+  font-family:'Playfair Display',serif;font-size:12px;font-weight:600;
+  letter-spacing:.05em;color:#9a7030;
+  /* inactive = darker parchment */
+  background:linear-gradient(160deg,rgba(210,195,155,0.9),rgba(195,178,138,0.92));
+  border:1px solid rgba(155,115,36,0.38);
   border-bottom:none;
-  border-radius:6px 6px 0 0;
+  border-radius:5px 5px 0 0;
   cursor:pointer;
-  transition:all .18s ease;
+  transition:background .18s ease, color .18s ease;
   position:relative;
-  box-shadow:0 -2px 6px rgba(50,25,0,0.08);
 }
 .tab-btn:first-child{border-right:none}
+/* Active tab blends into panel — no border bottom, matches panel bg */
 .tab-btn.active{
   background:linear-gradient(160deg,rgba(255,253,232,0.99),rgba(252,245,215,0.98));
   color:#2a1a06;
-  box-shadow:0 -3px 8px rgba(50,25,0,0.12);
+  border-bottom:1px solid rgba(255,253,232,0.99);
+  margin-bottom:-1px;
   z-index:3;
 }
 .tab-btn:hover:not(.active){
-  background:linear-gradient(160deg,rgba(248,238,202,0.95),rgba(235,220,180,0.95));
-  color:#4a2a08;
+  background:linear-gradient(160deg,rgba(228,215,172,0.95),rgba(215,198,155,0.95));
+  color:#5a3a10;
 }
 .tab-content{display:none}
 .tab-content.active{display:flex;flex-direction:column;gap:14px}
 
-/* Tab flip animation */
 @keyframes tabFlipIn{
-  0%{opacity:0;transform:rotateX(-8deg) translateY(6px);}
-  100%{opacity:1;transform:rotateX(0) translateY(0);}
+  0%{opacity:0;transform:translateY(5px);}
+  100%{opacity:1;transform:translateY(0);}
 }
 .tab-content.active{
-  animation:tabFlipIn 0.22s cubic-bezier(0.22,1,0.36,1) both;
-  transform-origin:top center;
+  animation:tabFlipIn 0.2s ease-out both;
 }
 
 /* ── MAIN CONTENT LAYOUT ── */
 #case-management-area{
   display:flex;
-  gap:12px;
+  gap:0;
   align-items:flex-start;
+  position:relative;
 }
 #tab-area{flex:1;min-width:0;}
 
-/* ── VITALS FIXED RIGHT ── */
+/* ── VITALS — bookmark sticking out right ── */
 #vitals-sidebar{
-  width:110px;
-  flex-shrink:0;
-  position:sticky;
-  top:72px;
+  position:absolute;
+  right:-68px;
+  top:0;
+  width:60px;
   display:flex;
   flex-direction:column;
-  gap:8px;
 }
-.vital-card{
-  background:linear-gradient(155deg,rgba(255,253,232,0.98),rgba(248,238,202,0.97));
-  border:1px solid rgba(155,115,36,0.32);
-  border-radius:6px;
-  padding:8px 6px;
-  text-align:center;
-  box-shadow:1px 2px 6px rgba(50,25,0,0.12);
+.vitals-bookmark{
+  background:linear-gradient(160deg,rgba(252,245,215,0.98),rgba(245,235,195,0.97));
+  border:1px solid rgba(155,115,36,0.35);
+  border-left:none;
+  border-radius:0 6px 6px 0;
+  padding:10px 6px;
+  box-shadow:3px 2px 8px rgba(50,25,0,0.15);
 }
-.vital-card .vital-val{font-size:14px;font-weight:600;color:#2a1a06;font-family:'Playfair Display',serif;line-height:1.2}
-.vital-card .vital-lbl{font-size:9px;color:#7a5010;letter-spacing:.1em;margin-top:2px;display:block}
-.vital-card.abnormal{border-color:rgba(180,60,40,0.45);background:linear-gradient(155deg,rgba(255,240,232,0.98),rgba(248,220,200,0.97))}
-.vital-card.abnormal .vital-val{color:#8a2010}
+.vital-row-item{
+  display:flex;flex-direction:column;align-items:center;
+  padding:5px 0;
+  border-bottom:1px solid rgba(155,115,36,0.18);
+}
+.vital-row-item:last-child{border-bottom:none}
+.vital-row-item .vital-val{font-size:11px;font-weight:600;color:#2a1a06;font-family:'Playfair Display',serif;line-height:1.2;text-align:center}
+.vital-row-item .vital-lbl{font-size:8px;color:#9a7030;letter-spacing:.08em;margin-top:1px}
+.vital-row-item.abnormal .vital-val{color:#8a2010}
 
 /* ── LETTER BY LETTER ── */
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
@@ -918,7 +925,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
   <div id="right-col">
 
-    <div class="note" id="pt-banner-note" style="padding:12px 14px;">
+    <div class="note" id="pt-banner-note" style="padding:12px 14px;position:sticky;top:0;z-index:20;">
       <div id="pt-banner">
         <div id="pt-img-wrap">
           <img id="pt-img" src="" alt="Patient">
@@ -1005,13 +1012,15 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
         </div>
       </div>
 
-      <!-- VITALS SIDEBAR -->
+      <!-- VITALS BOOKMARK -->
       <div id="vitals-sidebar">
-        <div class="vital-card" id="vs-bp"><div class="vital-val" id="vs-bp-val">—</div><span class="vital-lbl">BP</span></div>
-        <div class="vital-card" id="vs-hr"><div class="vital-val" id="vs-hr-val">—</div><span class="vital-lbl">HR</span></div>
-        <div class="vital-card" id="vs-rr"><div class="vital-val" id="vs-rr-val">—</div><span class="vital-lbl">RR</span></div>
-        <div class="vital-card" id="vs-temp"><div class="vital-val" id="vs-temp-val">—</div><span class="vital-lbl">TEMP</span></div>
-        <div class="vital-card" id="vs-o2"><div class="vital-val" id="vs-o2-val">—</div><span class="vital-lbl">O₂ SAT</span></div>
+        <div class="vitals-bookmark">
+          <div class="vital-row-item" id="vs-bp"><div class="vital-val" id="vs-bp-val">—</div><span class="vital-lbl">BP</span></div>
+          <div class="vital-row-item" id="vs-hr"><div class="vital-val" id="vs-hr-val">—</div><span class="vital-lbl">HR</span></div>
+          <div class="vital-row-item" id="vs-rr"><div class="vital-val" id="vs-rr-val">—</div><span class="vital-lbl">RR</span></div>
+          <div class="vital-row-item" id="vs-temp"><div class="vital-val" id="vs-temp-val">—</div><span class="vital-lbl">TEMP</span></div>
+          <div class="vital-row-item" id="vs-o2"><div class="vital-val" id="vs-o2-val">—</div><span class="vital-lbl">O₂ SAT</span></div>
+        </div>
       </div>
 
     </div>
@@ -1060,7 +1069,7 @@ window.switchTab = function(tab){
     setFennick('pause','"Reach a diagnosis first."');
     return;
   }
-  playPaperFlip();
+  // paper flip sound removed — visual only
   _currentTab = tab;
   document.getElementById('tab-case').classList.toggle('active', tab==='case');
   document.getElementById('tab-management').classList.toggle('active', tab==='management');
@@ -1076,21 +1085,23 @@ const _origUnlockMgmt = window.unlockManagement;
 // ── VITALS SIDEBAR ──
 function populateVitalsSidebar(v){
   if(!v) return;
-  const abnormalBP = v.bp && (parseInt(v.bp)>140 || parseInt(v.bp)<90);
-  const abnormalHR = v.hr && (parseInt(v.hr)>100 || parseInt(v.hr)<60);
-  const abnormalO2 = v.o2 && parseInt(v.o2)<95;
-  const abnormalTemp = v.temp && (parseFloat(v.temp)>37.5 || parseFloat(v.temp)<36);
-
-  document.getElementById('vs-bp-val').textContent = v.bp||'—';
-  document.getElementById('vs-hr-val').textContent = v.hr||'—';
-  document.getElementById('vs-rr-val').textContent = v.rr||'—';
-  document.getElementById('vs-temp-val').textContent = v.temp+'°C'||'—';
-  document.getElementById('vs-o2-val').textContent = v.o2||'—';
-
-  document.getElementById('vs-bp').classList.toggle('abnormal', !!abnormalBP);
-  document.getElementById('vs-hr').classList.toggle('abnormal', !!abnormalHR);
-  document.getElementById('vs-o2').classList.toggle('abnormal', !!abnormalO2);
-  document.getElementById('vs-temp').classList.toggle('abnormal', !!abnormalTemp);
+  // Strip anything after space or parenthesis — just the number
+  function cleanVal(s){ return s ? s.split(/[\s(]/)[0] : '—'; }
+  const bp = cleanVal(v.bp), hr = cleanVal(v.hr), rr = cleanVal(v.rr);
+  const temp = cleanVal(v.temp), o2 = cleanVal(v.o2);
+  const abnormalBP = parseInt(bp)>140 || parseInt(bp)<90;
+  const abnormalHR = parseInt(hr)>100 || parseInt(hr)<60;
+  const abnormalO2 = parseInt(o2)<95;
+  const abnormalTemp = parseFloat(temp)>37.5 || parseFloat(temp)<36;
+  document.getElementById('vs-bp-val').textContent = bp;
+  document.getElementById('vs-hr-val').textContent = hr;
+  document.getElementById('vs-rr-val').textContent = rr;
+  document.getElementById('vs-temp-val').textContent = temp+'°';
+  document.getElementById('vs-o2-val').textContent = o2+'%';
+  document.getElementById('vs-bp').classList.toggle('abnormal', abnormalBP);
+  document.getElementById('vs-hr').classList.toggle('abnormal', abnormalHR);
+  document.getElementById('vs-o2').classList.toggle('abnormal', abnormalO2);
+  document.getElementById('vs-temp').classList.toggle('abnormal', abnormalTemp);
 }
 
 // ── TYPEWRITER ──
