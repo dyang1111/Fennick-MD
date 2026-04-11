@@ -598,6 +598,84 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 .exp-disclaimer{font-size:11px;color:#a08040;text-align:center;font-style:italic;padding-top:4px}
 
 
+
+/* ── TABS ── */
+.tab-bar{
+  display:flex;gap:0;margin-bottom:0;
+  position:relative;z-index:2;
+}
+.tab-btn{
+  flex:1;padding:9px 14px;
+  font-family:'Playfair Display',serif;font-size:13px;font-weight:600;
+  letter-spacing:.06em;color:#7a5010;
+  background:linear-gradient(160deg,rgba(240,230,195,0.85),rgba(225,210,170,0.9));
+  border:1px solid rgba(155,115,36,0.35);
+  border-bottom:none;
+  border-radius:6px 6px 0 0;
+  cursor:pointer;
+  transition:all .18s ease;
+  position:relative;
+  box-shadow:0 -2px 6px rgba(50,25,0,0.08);
+}
+.tab-btn:first-child{border-right:none}
+.tab-btn.active{
+  background:linear-gradient(160deg,rgba(255,253,232,0.99),rgba(252,245,215,0.98));
+  color:#2a1a06;
+  box-shadow:0 -3px 8px rgba(50,25,0,0.12);
+  z-index:3;
+}
+.tab-btn:hover:not(.active){
+  background:linear-gradient(160deg,rgba(248,238,202,0.95),rgba(235,220,180,0.95));
+  color:#4a2a08;
+}
+.tab-content{display:none}
+.tab-content.active{display:flex;flex-direction:column;gap:14px}
+
+/* Tab flip animation */
+@keyframes tabFlipIn{
+  0%{opacity:0;transform:rotateX(-8deg) translateY(6px);}
+  100%{opacity:1;transform:rotateX(0) translateY(0);}
+}
+.tab-content.active{
+  animation:tabFlipIn 0.22s cubic-bezier(0.22,1,0.36,1) both;
+  transform-origin:top center;
+}
+
+/* ── MAIN CONTENT LAYOUT ── */
+#case-management-area{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+#tab-area{flex:1;min-width:0;}
+
+/* ── VITALS FIXED RIGHT ── */
+#vitals-sidebar{
+  width:110px;
+  flex-shrink:0;
+  position:sticky;
+  top:72px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.vital-card{
+  background:linear-gradient(155deg,rgba(255,253,232,0.98),rgba(248,238,202,0.97));
+  border:1px solid rgba(155,115,36,0.32);
+  border-radius:6px;
+  padding:8px 6px;
+  text-align:center;
+  box-shadow:1px 2px 6px rgba(50,25,0,0.12);
+}
+.vital-card .vital-val{font-size:14px;font-weight:600;color:#2a1a06;font-family:'Playfair Display',serif;line-height:1.2}
+.vital-card .vital-lbl{font-size:9px;color:#7a5010;letter-spacing:.1em;margin-top:2px;display:block}
+.vital-card.abnormal{border-color:rgba(180,60,40,0.45);background:linear-gradient(155deg,rgba(255,240,232,0.98),rgba(248,220,200,0.97))}
+.vital-card.abnormal .vital-val{color:#8a2010}
+
+/* ── LETTER BY LETTER ── */
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.typing-cursor{display:inline-block;width:2px;height:1em;background:#7a5010;margin-left:2px;vertical-align:text-bottom;animation:blink .7s step-end infinite}
+
 /* ── STEAMPUNK ANIMATIONS ── */
 
 /* Keyframes */
@@ -853,69 +931,209 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
       </div>
     </div>
 
-    <div class="note" id="chart-note">
-      <span class="section-tag">MEDICAL CHART</span>
-      <div class="chart-grid" id="chart-grid"></div>
-      <div class="vitals-row" id="vitals-row"></div>
-    </div>
+    <!-- CASE/MANAGEMENT AREA -->
+    <div id="case-management-area">
 
-    <div class="note" id="workup-note" style="position:relative">
-      <span class="section-tag">CLINICAL WORKUP</span>
-      <div class="workup-grid">
-        <button class="workup-btn" id="btn-addl-hx" onclick="revealWorkup('addl-hx')"><span class="workup-btn-name">Additional Hx</span><span class="workup-btn-cost">−5 HP</span><span class="workup-btn-check">✓ Revealed</span></button>
-        <button class="workup-btn" id="btn-pe" onclick="revealWorkup('pe')"><span class="workup-btn-name">PE Findings</span><span class="workup-btn-cost">−8 HP</span><span class="workup-btn-check">✓ Revealed</span></button>
-        <button class="workup-btn" id="btn-labs" onclick="toggleLabsPanel()"><span class="workup-btn-name">Order Labs</span><span class="workup-btn-cost">−5 ea</span><span class="workup-btn-check">✓ Open</span></button>
-        <button class="workup-btn" id="btn-imaging" onclick="revealWorkup('imaging')"><span class="workup-btn-name">Imaging</span><span class="workup-btn-cost">−15 HP</span><span class="workup-btn-check">✓ Revealed</span></button>
-      </div>
-      <div class="labs-panel" id="labs-panel">
-        <div class="labs-panel-header">
-          <span class="section-tag" style="margin-bottom:0">SELECT LAB</span>
-          <div style="display:flex;align-items:center;gap:8px"><span class="lab-counter" id="lab-counter">0/2 for Special Test</span><button class="labs-close-btn" onclick="toggleLabsPanel()">✕</button></div>
+      <!-- TAB AREA -->
+      <div id="tab-area">
+        <div class="tab-bar">
+          <button class="tab-btn active" id="tab-case-btn" onclick="switchTab('case')">Case &amp; Diagnosis</button>
+          <button class="tab-btn" id="tab-mgmt-btn" onclick="switchTab('management')">Management</button>
         </div>
-        <div class="labs-grid" id="labs-grid"></div>
-      </div>
-      <div id="workup-reveals"></div>
-      <div id="lab-results"></div>
-    </div>
 
-    <div class="note" id="dx-note">
-      <span class="section-tag">DIAGNOSIS</span>
-      <div class="wrong-answers-list" id="wrong-answers-list"></div>
-      <div style="position:relative">
-        <div id="dx-suggestions"></div>
-        <input id="dx-input" type="text" placeholder="Search diagnosis..." autocomplete="off" oninput="dxInputHandler()">
-      </div>
-      <button id="dx-submit-btn" onclick="submitDx()" disabled>Submit Diagnosis →</button>
-      <div id="dx-result"></div>
-    </div>
+        <!-- CASE / DX TAB -->
+        <div class="tab-content active" id="tab-case">
+          <div class="note" id="chart-note">
+            <span class="section-tag">MEDICAL CHART</span>
+            <div class="chart-grid" id="chart-grid"></div>
+          </div>
 
+          <div class="note" id="workup-note" style="position:relative">
+            <span class="section-tag">CLINICAL WORKUP</span>
+            <div class="workup-grid">
+              <button class="workup-btn" id="btn-addl-hx" onclick="revealWorkup('addl-hx')"><span class="workup-btn-name">Additional Hx</span><span class="workup-btn-cost">−5 HP</span><span class="workup-btn-check">✓ Revealed</span></button>
+              <button class="workup-btn" id="btn-pe" onclick="revealWorkup('pe')"><span class="workup-btn-name">PE Findings</span><span class="workup-btn-cost">−8 HP</span><span class="workup-btn-check">✓ Revealed</span></button>
+              <button class="workup-btn" id="btn-labs" onclick="toggleLabsPanel()"><span class="workup-btn-name">Order Labs</span><span class="workup-btn-cost">−5 ea</span><span class="workup-btn-check">✓ Open</span></button>
+              <button class="workup-btn" id="btn-imaging" onclick="revealWorkup('imaging')"><span class="workup-btn-name">Imaging</span><span class="workup-btn-cost">−15 HP</span><span class="workup-btn-check">✓ Revealed</span></button>
+            </div>
+            <div class="labs-panel" id="labs-panel">
+              <div class="labs-panel-header">
+                <span class="section-tag" style="margin-bottom:0">SELECT LAB</span>
+                <div style="display:flex;align-items:center;gap:8px"><span class="lab-counter" id="lab-counter">0/2 for Special Test</span><button class="labs-close-btn" onclick="toggleLabsPanel()">✕</button></div>
+              </div>
+              <div class="labs-grid" id="labs-grid"></div>
+            </div>
+            <div id="workup-reveals"></div>
+            <div id="lab-results"></div>
+          </div>
 
-    <div class="note" id="mgmt-note">
-      <span class="section-tag">MANAGEMENT</span>
-      <div class="progress-track" id="mgmt-progress"></div>
-      <div style="margin-top:12px" id="mgmt-stages"></div>
-    </div>
+          <div class="note" id="dx-note">
+            <span class="section-tag">DIAGNOSIS</span>
+            <div class="wrong-answers-list" id="wrong-answers-list"></div>
+            <div style="position:relative">
+              <div id="dx-suggestions"></div>
+              <input id="dx-input" type="text" placeholder="Search diagnosis..." autocomplete="off" oninput="dxInputHandler()">
+            </div>
+            <button id="dx-submit-btn" onclick="submitDx()" disabled>Submit Diagnosis →</button>
+            <div id="dx-result"></div>
+          </div>
+        </div>
 
-    <div class="note" id="endgame" style="display:none">
-      <div class="grade-circle" id="grade-circle">—</div>
-      <div class="endgame-title" id="endgame-title">Case Complete</div>
-      <div class="endgame-fennick-comment" id="endgame-comment">—</div>
-      <div class="endgame-stats">
-        <div class="endgame-stat"><div class="endgame-stat-val" id="end-hp">—</div><div class="endgame-stat-lbl">HP LEFT</div></div>
-        <div class="endgame-stat"><div class="endgame-stat-val" id="end-errors">—</div><div class="endgame-stat-lbl">ERRORS</div></div>
-        <div class="endgame-stat"><div class="endgame-stat-val" id="end-grade">—</div><div class="endgame-stat-lbl">GRADE</div></div>
+        <!-- MANAGEMENT TAB -->
+        <div class="tab-content" id="tab-management">
+          <div class="note" id="mgmt-note">
+            <span class="section-tag">MANAGEMENT</span>
+            <div class="progress-track" id="mgmt-progress"></div>
+            <div style="margin-top:12px" id="mgmt-stages"></div>
+          </div>
+
+          <div class="note" id="endgame" style="display:none">
+            <div class="grade-circle" id="grade-circle">—</div>
+            <div class="endgame-title" id="endgame-title">Case Complete</div>
+            <div class="endgame-fennick-comment" id="endgame-comment">—</div>
+            <div class="endgame-stats">
+              <div class="endgame-stat"><div class="endgame-stat-val" id="end-hp">—</div><div class="endgame-stat-lbl">HP LEFT</div></div>
+              <div class="endgame-stat"><div class="endgame-stat-val" id="end-errors">—</div><div class="endgame-stat-lbl">ERRORS</div></div>
+              <div class="endgame-stat"><div class="endgame-stat-val" id="end-grade">—</div><div class="endgame-stat-lbl">GRADE</div></div>
+            </div>
+            <div class="end-buttons">
+              <button class="end-reveal-btn" onclick="openOverlay('report')">📋 Report to Attending</button>
+              <button class="end-reveal-btn" onclick="openOverlay('explanation')">📚 Explanation</button>
+            </div>
+            <button class="fm-nav-pill" style="width:100%;padding:10px;font-size:14px;margin-top:10px" onclick="location.reload()">Next Case →</button>
+          </div>
+        </div>
       </div>
-      <div class="end-buttons">
-        <button class="end-reveal-btn" onclick="openOverlay('report')">📋 Report to Attending</button>
-        <button class="end-reveal-btn" onclick="openOverlay('explanation')">📚 Explanation</button>
+
+      <!-- VITALS SIDEBAR -->
+      <div id="vitals-sidebar">
+        <div class="vital-card" id="vs-bp"><div class="vital-val" id="vs-bp-val">—</div><span class="vital-lbl">BP</span></div>
+        <div class="vital-card" id="vs-hr"><div class="vital-val" id="vs-hr-val">—</div><span class="vital-lbl">HR</span></div>
+        <div class="vital-card" id="vs-rr"><div class="vital-val" id="vs-rr-val">—</div><span class="vital-lbl">RR</span></div>
+        <div class="vital-card" id="vs-temp"><div class="vital-val" id="vs-temp-val">—</div><span class="vital-lbl">TEMP</span></div>
+        <div class="vital-card" id="vs-o2"><div class="vital-val" id="vs-o2-val">—</div><span class="vital-lbl">O₂ SAT</span></div>
       </div>
-      <button class="fm-nav-pill" style="width:100%;padding:10px;font-size:14px;margin-top:10px" onclick="location.reload()">Next Case →</button>
+
     </div>
 
   </div>
 </div>
 
 <script>
+
+
+// ── TAB SYSTEM ──
+let _currentTab = 'case';
+let _paperFlipAudio = null;
+
+function initPaperFlip(){
+  // Simple click sound using Web Audio API
+  try {
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    _paperFlipAudio = ctx;
+  } catch(e){}
+}
+
+function playPaperFlip(){
+  if(!_paperFlipAudio) return;
+  try {
+    const ctx = _paperFlipAudio;
+    const buf = ctx.createBuffer(1, ctx.sampleRate * 0.08, ctx.sampleRate);
+    const data = buf.getChannelData(0);
+    for(let i=0;i<data.length;i++){
+      data[i] = (Math.random()*2-1) * Math.pow(1-i/data.length, 3) * 0.35;
+    }
+    const src = ctx.createBufferSource();
+    src.buffer = buf;
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'highpass';
+    filter.frequency.value = 2000;
+    src.connect(filter);
+    filter.connect(ctx.destination);
+    src.start();
+  } catch(e){}
+}
+
+window.switchTab = function(tab){
+  if(tab === _currentTab) return;
+  if(tab === 'management' && !dxCorrect){
+    setFennick('pause','"Reach a diagnosis first."');
+    return;
+  }
+  playPaperFlip();
+  _currentTab = tab;
+  document.getElementById('tab-case').classList.toggle('active', tab==='case');
+  document.getElementById('tab-management').classList.toggle('active', tab==='management');
+  document.getElementById('tab-case-btn').classList.toggle('active', tab==='case');
+  document.getElementById('tab-mgmt-btn').classList.toggle('active', tab==='management');
+  // Scroll to top of right col
+  document.getElementById('right-col').scrollTo({top:0,behavior:'smooth'});
+};
+
+// Auto switch to management tab after correct dx
+const _origUnlockMgmt = window.unlockManagement;
+
+// ── VITALS SIDEBAR ──
+function populateVitalsSidebar(v){
+  if(!v) return;
+  const abnormalBP = v.bp && (parseInt(v.bp)>140 || parseInt(v.bp)<90);
+  const abnormalHR = v.hr && (parseInt(v.hr)>100 || parseInt(v.hr)<60);
+  const abnormalO2 = v.o2 && parseInt(v.o2)<95;
+  const abnormalTemp = v.temp && (parseFloat(v.temp)>37.5 || parseFloat(v.temp)<36);
+
+  document.getElementById('vs-bp-val').textContent = v.bp||'—';
+  document.getElementById('vs-hr-val').textContent = v.hr||'—';
+  document.getElementById('vs-rr-val').textContent = v.rr||'—';
+  document.getElementById('vs-temp-val').textContent = v.temp+'°C'||'—';
+  document.getElementById('vs-o2-val').textContent = v.o2||'—';
+
+  document.getElementById('vs-bp').classList.toggle('abnormal', !!abnormalBP);
+  document.getElementById('vs-hr').classList.toggle('abnormal', !!abnormalHR);
+  document.getElementById('vs-o2').classList.toggle('abnormal', !!abnormalO2);
+  document.getElementById('vs-temp').classList.toggle('abnormal', !!abnormalTemp);
+}
+
+// ── TYPEWRITER ──
+let _typeQueue = [];
+let _typing = false;
+
+function typewriterWrite(el, text, speed){
+  speed = speed || 22;
+  return new Promise(resolve => {
+    el.textContent = '';
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    el.appendChild(cursor);
+    let i = 0;
+    function tick(){
+      if(i < text.length){
+        el.insertBefore(document.createTextNode(text[i]), cursor);
+        i++;
+        setTimeout(tick, speed + Math.random()*8);
+      } else {
+        cursor.remove();
+        resolve();
+      }
+    }
+    tick();
+  });
+}
+
+// Override setFennick comment to use typewriter
+const _origSetFennick = setFennick;
+window.setFennick = function(expr, comment){
+  _origSetFennick(expr, comment);
+  if(comment){
+    const el = document.getElementById('fennick-comment');
+    if(el) typewriterWrite(el, comment.replace(/^"|"$/g,''), 20);
+  }
+};
+
+// Init on load
+document.addEventListener('click', function _initAudio(){
+  initPaperFlip();
+  document.removeEventListener('click', _initAudio);
+}, {once:true});
 
 // ── OVERLAYS ──
 window.openOverlay = function(type) {
@@ -1272,10 +1490,11 @@ function updateFennickByErrors(){
 }
 
 function renderChart(){
+  if(currentCase.vitals) populateVitalsSidebar(currentCase.vitals);
   const c=currentCase.chart,v=currentCase.vitals;
   const rows=[['HPI',c.hpi],['PMH',c.pmh],['PSH',c.psh],['Medications',c.meds],['Allergies',c.allergies],['Family Hx',c.fh],['Social Hx',c.sh]];
   document.getElementById('chart-grid').innerHTML=rows.map(([l,val])=>`<div class="chart-label">${l}</div><div class="chart-val">${val||'None'}</div>`).join('');
-  document.getElementById('vitals-row').innerHTML=`<div class="vital-item"><div class="vital-val">${v.bp}</div><div class="vital-lbl">BP</div></div><div class="vital-item"><div class="vital-val">${v.hr}</div><div class="vital-lbl">HR</div></div><div class="vital-item"><div class="vital-val">${v.rr}</div><div class="vital-lbl">RR</div></div><div class="vital-item"><div class="vital-val">${v.temp}\xb0C</div><div class="vital-lbl">TEMP</div></div><div class="vital-item"><div class="vital-val">${v.o2}</div><div class="vital-lbl">O\u2082 SAT</div></div>`;
+  // vitals now in sidebar
 }
 
 const revealedWorkup=new Set(),orderedLabs=new Set(),wrongAnswers=new Set();
@@ -1372,7 +1591,7 @@ window.submitDx=function(){
     result.className='dx-result correct';result.textContent='\u2713 Correct \u2014 '+currentCase.dx_answer;result.style.display='block';
     document.getElementById('dx-submit-btn').disabled=true;document.getElementById('dx-suggestions').style.display='none';
     setFennick('good_job','"That is the diagnosis. Now let us see how you manage it."');
-    unlockManagement();
+    unlockManagement(); setTimeout(()=>switchTab('management'), 800);
   } else {
     errors++;drainHP(10);wrongAnswers.add(val);
     result.className='dx-result wrong';result.textContent='\u2717 Incorrect. Try again.';result.style.display='block';
