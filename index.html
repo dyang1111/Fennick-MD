@@ -135,8 +135,8 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
 /* ── DR FENNICK PICTURE SPECIFICS (FIXED ZOOM) ── */
 #fennick-img-wrap {
-  width: 170px;
-  height: 170px;
+  width: 155px;
+  height: 155px;
   border-radius: 6px;
   overflow: hidden; 
   background: linear-gradient(180deg, #fdf8e8 0%, #dcd0a0 100%);
@@ -224,8 +224,8 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
 /* ── PATIENT PICTURE SPECIFICS ── */
 #pt-img-wrap{
-  width:170px; 
-  height:170px; 
+  width:155px; 
+  height:155px; 
   flex-shrink:0;
   background: linear-gradient(180deg, #fdf8e8 0%, #dcd0a0 100%);
   border:1px solid rgba(160,120,40,0.4);
@@ -601,31 +601,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   position:relative;z-index:2;
   /* Tabs fill right portion only */
 }
-.tab-btn{
-  flex:1;padding:4px 10px;
-  font-family:'Playfair Display',serif;font-size:11px;font-weight:600;
-  letter-spacing:.05em;color:#9a7030;
-  background:linear-gradient(160deg,rgba(210,195,155,0.9),rgba(195,178,138,0.92));
-  border:1px solid rgba(155,115,36,0.38);
-  border-bottom:none;
-  border-radius:5px 5px 0 0;
-  cursor:pointer;
-  transition:background .18s ease, color .18s ease;
-  position:relative;
-}
-.tab-btn:first-child{border-right:none}
-/* Active tab blends into panel — no border bottom, matches panel bg */
-.tab-btn.active{
-  background:linear-gradient(160deg,rgba(255,253,232,0.99),rgba(252,245,215,0.98));
-  color:#2a1a06;
-  border-bottom:1px solid rgba(255,253,232,0.99);
-  margin-bottom:-1px;
-  z-index:3;
-}
-.tab-btn:hover:not(.active){
-  background:linear-gradient(160deg,rgba(228,215,172,0.95),rgba(215,198,155,0.95));
-  color:#5a3a10;
-}
+
 .tab-content{display:none}
 .tab-content.active{display:flex;flex-direction:column;gap:14px;margin-top:1px;}
 
@@ -673,7 +649,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
 /* ── STICKY HEADER STACK ── */
 
-.tab-bar-row{position:sticky;top:198px;z-index:19;margin-top:0;background:rgba(252,248,225,0);}
+
 
 /* ── VITALS INLINE (left of tabs) ── */
 .tab-bar-row{
@@ -682,21 +658,65 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   background:rgba(252,248,225,0);
 }
 #vitals-inline{
-  display:flex;align-items:center;
-  background:linear-gradient(160deg,rgba(248,238,202,0.92),rgba(235,222,175,0.94));
-  border:1px solid rgba(155,115,36,0.35);
-  border-bottom:none;
-  border-radius:5px 5px 0 0;
-  padding:4px 8px;
-  gap:10px;
-  width:fit-content;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-top:14px;
+  padding-top:10px;
+  border-top:1px solid rgba(160,120,40,0.2);
 }
 .vi-item{display:flex;flex-direction:column;align-items:center;gap:0}
 .vi-item + .vi-item{border-left:1px solid rgba(155,115,36,0.2);padding-left:10px}
 .vi-val{font-size:11px;font-weight:600;color:#2a1a06;font-family:'Playfair Display',serif;line-height:1.2}
 .vi-lbl{font-size:8px;color:#9a7030;letter-spacing:.07em}
 .vi-item.abnormal .vi-val{color:#8a2010}
-.tab-bar{display:flex;gap:0;margin-left:auto;}
+/* Container for tabs and chart */
+#tab-area{
+  flex:1;
+  min-width:0;
+  position:relative;
+  margin-top:8px;
+}
+
+/* Hang tabs off the right edge */
+.tab-bar-row{
+  position:absolute;
+  right:-28px;
+  top:20px;
+  z-index:1;
+}
+
+/* Stack tabs vertically */
+.tab-bar{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+/* Side folder tab styling */
+.tab-btn{
+  writing-mode:vertical-rl;
+  padding:14px 6px;
+  font-family:'Playfair Display',serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.05em;
+  color:#9a7030;
+  background:linear-gradient(160deg,rgba(210,195,155,0.9),rgba(195,178,138,0.92));
+  border:1px solid rgba(155,115,36,0.38);
+  border-left:none;
+  border-radius:0 6px 6px 0;
+  cursor:pointer;
+  transition:background .18s ease, color .18s ease;
+}
+
+.tab-btn.active{
+  background:linear-gradient(160deg,rgba(255,253,232,0.99),rgba(252,245,215,0.98));
+  color:#2a1a06;
+  border-left:2px solid rgba(255,253,232,0.99);
+  margin-left:-2px;
+  z-index:3;
+}
 
 /* ── STEAMPUNK ANIMATIONS ── */
 
@@ -940,7 +960,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
   <div id="right-col">
 
-    <div class="note" id="pt-banner-note" style="padding:8px 14px 12px;position:sticky;top:6px;z-index:20;background:rgba(252,248,225,1);margin-top:6px;margin-bottom:0;">
+    <div class="note" id="pt-banner-note" style="padding:14px 14px 12px;position:sticky;top:6px;z-index:20;background:rgba(252,248,225,1);margin-top:6px;margin-bottom:0;border-radius:6px;">
       <div id="pt-banner">
         <div style="flex:1">
           <div class="pt-name" id="pt-name">—</div>
@@ -951,6 +971,9 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
           <img id="pt-img" src="" alt="Patient">
         </div>
       </div>
+      
+      <div id="vitals-inline"></div>
+      
     </div>
 
     <!-- CASE/MANAGEMENT AREA -->
@@ -959,7 +982,6 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
       <!-- TAB AREA -->
       <div id="tab-area">
         <div class="tab-bar-row">
-          <div id="vitals-inline"></div>
           <div class="tab-bar">
             <button class="tab-btn active" id="tab-case-btn" onclick="switchTab('case')">Case &amp; Dx</button>
             <button class="tab-btn" id="tab-mgmt-btn" onclick="switchTab('management')">Management</button>
