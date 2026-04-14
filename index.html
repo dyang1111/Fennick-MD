@@ -28,7 +28,7 @@ body.night {
   --test-btn-hover: rgba(255,255,255,0.85);
 }
 
-html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#2a1a06;}
+html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#2a1a06;overflow-x:hidden;}
 
 /* ── MAIN TOWN BACKGROUND ── */
 #bg {
@@ -93,6 +93,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   display:flex;
   justify-content:center;
   min-height:100vh;
+  overflow-x:hidden;
 }
 
 #app-inner{
@@ -674,15 +675,26 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 #tab-area{
   display:block;
   width:100%;
-  position:relative;
+  position:sticky;
+  top:178px;
+  z-index:15;
   margin-top:8px;
+  pointer-events:none;
+  height:0;
+}
+#tab-area .tab-bar-row{
+  pointer-events:all;
 }
 
 .tab-bar-row{
-  position:absolute;
+  position:sticky;
+  top:178px;
   left:100%;
-  top:16px;
-  z-index:1;
+  z-index:19;
+  width:0;
+  height:0;
+  overflow:visible;
+  margin-left:100%;
 }
 
 .tab-bar{
@@ -708,9 +720,9 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 }
 
 .tab-btn.active{
-  background:linear-gradient(160deg,rgba(255,253,232,0.99),rgba(252,245,215,0.98));
+  background:var(--panel-bg);
   color:#2a1a06;
-  border-left:2px solid rgba(255,253,232,0.99);
+  border-left:2px solid var(--panel-bg);
   margin-left:-1px;
   z-index:3;
 }
@@ -976,17 +988,17 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
       </div>
     </div>
 
+    <!-- TAB BAR: direct child of right-col, sticky -->
+    <div class="tab-bar-row">
+      <div class="tab-bar">
+        <button class="tab-btn active" id="tab-case-btn" onclick="switchTab('case')">Case &amp; Dx</button>
+        <button class="tab-btn" id="tab-mgmt-btn" onclick="switchTab('management')">Management</button>
+      </div>
+    </div>
+
     <!-- CASE/MANAGEMENT AREA -->
     <div id="case-management-area">
-
-      <!-- TAB AREA -->
       <div id="tab-area">
-        <div class="tab-bar-row">
-          <div class="tab-bar">
-            <button class="tab-btn active" id="tab-case-btn" onclick="switchTab('case')">Case &amp; Dx</button>
-            <button class="tab-btn" id="tab-mgmt-btn" onclick="switchTab('management')">Management</button>
-          </div>
-        </div>
 
 <div id="scroll-content">
         <!-- CASE / DX TAB -->
