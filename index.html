@@ -191,7 +191,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   flex:1;
   max-width:700px;
   height:calc(100vh - 42px);
-  overflow-y:auto;
+  overflow:visible;
   padding:0px 26px 20px 16px;
   display:flex;flex-direction:column;gap:0px;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775598232/Gemini_Generated_Image_3h2n6k3h2n6k3h2n_rbyyg4_a_90_km2htn.png');
@@ -635,17 +635,9 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
 
 #scroll-content{
-  flex:1;
-  overflow-y:auto;
-  /* ── FIX: removed 16px side padding so notes match patient panel width ── */
-  padding:0 0 20px;
   display:flex;flex-direction:column;gap:10px;
-  background-size:cover;
-  background-position:center;
+  padding:0 0 20px;
 }
-#scroll-content::-webkit-scrollbar{width:8px}
-#scroll-content::-webkit-scrollbar-track{background:rgba(62,30,8,0.1);border-radius:4px}
-#scroll-content::-webkit-scrollbar-thumb{background:rgba(160,120,40,0.6);border-radius:4px}
 
 /* ── STICKY HEADER STACK ── */
 
@@ -688,13 +680,13 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
 .tab-bar-row{
   position:sticky;
-  top:178px;
-  left:100%;
+  top:330px;
   z-index:19;
   width:0;
   height:0;
   overflow:visible;
-  margin-left:100%;
+  align-self:flex-end;
+  margin-right:0;
 }
 
 .tab-bar{
@@ -705,18 +697,19 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 
 .tab-btn{
   writing-mode:vertical-rl;
-  padding:8px 4px;
+  padding:5px 3px;
   font-family:'Playfair Display',serif;
-  font-size:10.5px;
+  font-size:9px;
   font-weight:600;
-  letter-spacing:.05em;
+  letter-spacing:.04em;
   color:#9a7030;
   background:linear-gradient(160deg,rgba(210,195,155,0.9),rgba(195,178,138,0.92));
   border:1px solid rgba(155,115,36,0.38);
   border-left:none;
-  border-radius:0 5px 5px 0;
+  border-radius:0 4px 4px 0;
   cursor:pointer;
   transition:background .18s ease, color .18s ease;
+  white-space:nowrap;
 }
 
 .tab-btn.active{
@@ -988,7 +981,7 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
       </div>
     </div>
 
-    <!-- TAB BAR: direct child of right-col, sticky -->
+    <!-- TABS: direct child of right-col so sticky works, same as pt-banner-note -->
     <div class="tab-bar-row">
       <div class="tab-bar">
         <button class="tab-btn active" id="tab-case-btn" onclick="switchTab('case')">Case &amp; Dx</button>
