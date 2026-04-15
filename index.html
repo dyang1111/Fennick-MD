@@ -65,7 +65,8 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   top: 18%;
   height: 52%;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776290898/Unknown-2_bdwntl.png');
-  background-size: auto 100%;
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
   opacity: 0.42;
   animation: fogDriftLeft 35s linear infinite;
 }
@@ -73,7 +74,8 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   top: 26%;
   height: 50%;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776290904/Unknown-3_fs7zgk.png');
-  background-size: auto 100%;
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
   opacity: 0.32;
   animation: fogDriftRight 50s linear infinite;
 }
@@ -81,7 +83,8 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   top: 10%;
   height: 54%;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776290910/foggg_ofbmzt.png');
-  background-size: auto 100%;
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
   opacity: 0.26;
   animation: fogDriftLeft 65s linear infinite;
 }
@@ -89,18 +92,19 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   top: 3%;
   height: 48%;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776290898/Unknown-2_bdwntl.png');
-  background-size: auto 100%;
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
   opacity: 0.18;
   animation: fogDriftRight 80s linear infinite;
 }
 
 @keyframes fogDriftLeft {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(25%); }
+  100% { transform: translateX(12.5%); }
 }
 @keyframes fogDriftRight {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-25%); }
+  100% { transform: translateX(-12.5%); }
 }
 
 
