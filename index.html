@@ -51,6 +51,10 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   background-size: auto 100%;
   transition: opacity 1.5s ease;
   will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 /* Full screen ambient haze */
 #fog-ambient {
