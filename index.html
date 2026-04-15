@@ -43,12 +43,13 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
 /* ── FOG LAYERS ── */
 .fog-layer {
   position: fixed;
-  left: -100%;
-  width: 300%;
+  left: 0;
+  width: 100%;
   pointer-events: none;
   z-index: 1;
-  background-repeat: repeat-x;
-  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
   transition: opacity 1.5s ease;
 }
 /* Full screen ambient haze */
@@ -56,39 +57,47 @@ html,body{height:100%;font-family:'Crimson Pro',Georgia,serif;background-color:#
   top: 0; bottom: 0;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776289464/foggg_utm3zt.jpg');
   background-size: cover;
-  opacity: 0.06;
-  animation: fogDriftRight 80s linear infinite;
+  opacity: 0.12;
+  animation: fogBobA 90s ease-in-out infinite;
 }
-/* Middle band layers */
+/* Middle band layers — full width, drift vertically */
 #fog-mid-a {
-  top: 28%;
-  height: 35%;
+  top: 15%;
+  height: 55%;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776289459/fog_y0bq3z.png');
-  opacity: 0.35;
-  animation: fogDriftLeft 35s linear infinite;
+  opacity: 0.38;
+  animation: fogBobA 28s ease-in-out infinite;
 }
 #fog-mid-b {
-  top: 33%;
-  height: 32%;
+  top: 25%;
+  height: 50%;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776289712/fogg_fbmetw.png');
-  opacity: 0.25;
-  animation: fogDriftRight 50s linear infinite;
+  opacity: 0.28;
+  animation: fogBobB 42s ease-in-out infinite;
 }
 #fog-mid-c {
-  top: 23%;
-  height: 38%;
+  top: 10%;
+  height: 60%;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776289717/foggy_szh0ov.png');
-  opacity: 0.20;
-  animation: fogDriftLeft 65s linear infinite;
+  opacity: 0.22;
+  animation: fogBobC 58s ease-in-out infinite;
 }
 
-@keyframes fogDriftLeft {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(33.33%); }
+/* Vertical bobbing — each slightly different range */
+@keyframes fogBobA {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-3%); }
+  100% { transform: translateY(0); }
 }
-@keyframes fogDriftRight {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-33.33%); }
+@keyframes fogBobB {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(4%); }
+  100% { transform: translateY(0); }
+}
+@keyframes fogBobC {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5%); }
+  100% { transform: translateY(0); }
 }
 
 
