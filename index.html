@@ -656,18 +656,18 @@ body.tier-3 #pt-vignette {
   position: absolute;
   top: -50px;
   left: -50px;
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
   z-index: 20;
   pointer-events: none;
   overflow: visible;
 }
 #stamp-wax {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 160px;
-  height: 160px;
+  top: 32px;
+  left: 32px;
+  width: 128px;
+  height: 128px;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776378857/wax_imprint_hs10c5.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -681,8 +681,48 @@ body.tier-3 #pt-vignette {
   position: absolute;
   top: 0;
   left: 0;
-  width: 160px;
-  height: 160px;
+  width: 320px;
+  height: 320px;
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776379245/stamp1_oohmi6.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: translateY(-80px);
+  pointer-events: none;
+}
+/* End stamp — same as dx stamp */
+#stamp-container-end {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 320px;
+  height: 320px;
+  z-index: 20;
+  pointer-events: none;
+  overflow: visible;
+}
+#stamp-wax-end {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 128px;
+  height: 128px;
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776378857/wax_imprint_hs10c5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: none;
+  pointer-events: none;
+}
+#stamp-tool-end {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776379245/stamp1_oohmi6.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -1270,7 +1310,11 @@ body.tier-3 #pt-vignette {
             <div style="margin-top:12px" id="mgmt-stages"></div>
           </div>
 
-          <div class="note" id="endgame" style="display:none">
+          <div class="note" id="endgame" style="display:none;position:relative">
+            <div id="stamp-container-end">
+              <div id="stamp-wax-end"></div>
+              <div id="stamp-tool-end"></div>
+            </div>
             <div class="grade-circle" id="grade-circle">—</div>
             <div class="endgame-title" id="endgame-title">Case Complete</div>
             <div class="endgame-fennick-comment" id="endgame-comment">—</div>
@@ -1852,11 +1896,8 @@ window.revealWorkup=function(type){
   if(type==='addl-hx'&&currentCase.patient_quote_addl_hx){
     quoteHtml=`<div style="font-style:italic;color:var(--text-secondary);font-size:14px;border-left:2px solid rgba(160,120,40,0.5);padding-left:10px;margin-bottom:10px">${currentCase.patient_quote_addl_hx}</div>`;
   }
-  card.innerHTML=`<div class="hint-reveal-label">${c.label}</div>${quoteHtml}<div class="hint-reveal-text"></div>`;
+  card.innerHTML=`<div class="hint-reveal-label">${c.label}</div>${quoteHtml}<div class="hint-reveal-text">${c.text}</div>`;
   document.getElementById('workup-reveals').appendChild(card);
-  // Type out reveal text with ink sound
-  const _revealTextEl = card.querySelector('.hint-reveal-text');
-  if(_revealTextEl) setTimeout(()=>typewriterWrite(_revealTextEl, c.text, 14, true), 150);
 };
 
 window.toggleLabsPanel=function(){
@@ -2210,10 +2251,12 @@ function playStampSound() {
   } catch(e) {}
 }
 
-function triggerStamp() {
-  const wax = document.getElementById('stamp-wax');
-  const tool = document.getElementById('stamp-tool');
-  const panel = document.getElementById('dx-note');
+function triggerStamp(suffix) {
+  suffix = suffix || '';
+  const wax = document.getElementById('stamp-wax' + suffix);
+  const tool = document.getElementById('stamp-tool' + suffix);
+  const panelId = suffix === '-end' ? 'endgame' : 'dx-note';
+  const panel = document.getElementById(panelId);
   if (!wax || !tool) return;
 
   // Reset
@@ -2245,46 +2288,13 @@ function triggerStamp() {
   }, 80);
 }
 
-// ── TYPEWRITER INK SOUND ──
-let _inkAudioCtx = null;
-let _inkLastRate = 1.0;
+// ── TYPEWRITER INK SOUND — disabled ──
+function initInkSound() {}
+function playInkSound() {}
 
-function initInkSound() {
-  if (_inkAudioCtx) return;
-  try { _inkAudioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {}
-}
-
-function playInkSound() {
-  if (!_inkAudioCtx) return;
-  try {
-    const bufSize = Math.floor(_inkAudioCtx.sampleRate * 0.045);
-    const buf = _inkAudioCtx.createBuffer(1, bufSize, _inkAudioCtx.sampleRate);
-    const data = buf.getChannelData(0);
-    // Vary playback rate slightly each character for organic feel
-    _inkLastRate = 0.85 + Math.random() * 0.3;
-    for (let i = 0; i < bufSize; i++) {
-      const t = i / bufSize;
-      data[i] = (Math.random() * 2 - 1) * Math.pow(1 - t, 3) * 0.12;
-    }
-    const src = _inkAudioCtx.createBufferSource();
-    src.buffer = buf;
-    src.playbackRate.value = _inkLastRate;
-    const filter = _inkAudioCtx.createBiquadFilter();
-    filter.type = 'highpass';
-    filter.frequency.value = 3000;
-    const gain = _inkAudioCtx.createGain();
-    gain.gain.value = 0.5;
-    src.connect(filter);
-    filter.connect(gain);
-    gain.connect(_inkAudioCtx.destination);
-    src.start();
-  } catch(e) {}
-}
-
-// Patch typewriterWrite — ink sound only for chart/panel elements, not pt or fennick speech
+// typewriterWrite patch — clean, no ink sound
 const _origTypewriterWrite = typewriterWrite;
-window.typewriterWrite = function(el, text, speed, withInk) {
-  if (withInk) initInkSound();
+window.typewriterWrite = function(el, text, speed) {
   speed = speed || 22;
   return new Promise(resolve => {
     el.textContent = '';
@@ -2295,7 +2305,6 @@ window.typewriterWrite = function(el, text, speed, withInk) {
     function tick() {
       if (i < text.length) {
         el.insertBefore(document.createTextNode(text[i]), cursor);
-        if (withInk && text[i] !== ' ') playInkSound();
         i++;
         setTimeout(tick, speed + Math.random() * 8);
       } else {
@@ -2367,9 +2376,7 @@ window.submitDx = function() {
 const _origEndCaseStamp = window.endCase;
 window.endCase = function(failed) {
   _origEndCaseStamp(failed);
-  if (!failed) {
-    setTimeout(() => triggerStamp(), 600);
-  }
+  setTimeout(() => triggerStamp('-end'), 900);
 };
 
 </script>
