@@ -1616,7 +1616,7 @@
     "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776133245/apr13_des0bk.png"
   },
   "chart": {
-    "cc": "\"I don't know why I'm here, really. I'm just tired. All the time. And sad, I suppose. My supervisor sent me. She says I've been crying at my bench.\"",
+    "cc": "I don't know why I'm here, really. I'm just tired. All the time. And sad, I suppose. My supervisor sent me. She says I've been crying at my bench.",
     "hpi": "The Seamstress arrived alone, her coat buttoned to the collar despite the mild evening. She moves carefully, as if conserving something. She has been the lead embroiderer at the Threadneedle Textile Works for six years — fine detail work under lamplight, twelve-hour shifts. Over the past four months she has felt a creeping, total exhaustion that she cannot sleep off. She weeps without knowing why. She has lost interest in her embroidery patterns, which once consumed her. Her supervisor noticed she had been making errors — dropped stitches, misaligned seams — and sent her here with a note that reads simply: 'Something is wrong with her.' She was treated for depression at a guild physician two months ago. The sertraline has done nothing. Her menstrual cycles have always been heavy — she mentions this only when directly asked, as if it is too ordinary a detail to bother with.",
     "pmh": "Depression — diagnosed two months ago at guild physician. Dysmenorrhea.",
     "psh": "None.",
@@ -1632,8 +1632,8 @@
     "temp": "36.8",
     "o2": "98% RA"
   },
-  "cc_after_addl_hx": "\"The periods have always been heavy. Seven, eight days. I just thought — I thought that was normal. Nobody ever told me it wasn't.\"",
-  "cc_after_pe": "\"My nails have been like this for months. I kept filing them down. I didn't know they were trying to tell me something.\"",
+  "cc_after_addl_hx": "The periods have always been heavy. Seven, eight days. I just thought — I thought that was normal. Nobody ever told me it wasn't.",
+  "cc_after_pe": "My nails have been like this for months. I kept filing them down. I didn't know they were trying to tell me something.",
   "additional_hx": "She answers questions with the quiet precision of someone accustomed to following instructions, but her eyes are glassy with a tiredness that feels older than four months. When you ask about her periods, she pauses — then describes them as 'rather heavy, always have been.' Seven to eight days. Soaking through pads. Clots. She has never once sought help for it because no one told her she should. She craves ice — has been chewing it constantly from the ice cart outside the mill, which she finds embarrassing to admit. She has not been eating real meals since November. When you ask if she ever feels short of breath on the stairs, something shifts in her expression — recognition. Yes. Every morning. She thought she was just unfit. The sertraline hasn't touched the sadness. Nothing has. She looks at her hands when she says this — they are the hands of a woman who has spent her life making beautiful things, and right now her nails are brittle and she cannot hold a needle steady.",
   "patient_quote_addl_hx": "\"I keep thinking I should be able to push through it. I've always pushed through things. But it's like pushing through water. And the crying — I don't even know what I'm crying about. I just cry. The ice helps somehow. I know that sounds strange.\"",
   "pe_findings": "General: Pale, thin, fatigued-appearing woman. Quiet affect, appropriate. Skin: marked pallor of face, palms, and nail beds. Koilonychia — bilateral spoon-shaped nails, most pronounced on index and middle fingers. Angular cheilitis at bilateral mouth corners. Hair: diffuse thinning. Eyes: conjunctival pallor bilaterally — the palpebral conjunctivae are the colour of old linen. Tongue: mild glossitis, smooth and tender. Nails: brittle, longitudinally ridged. CV: tachycardic rate 108, regular. Soft systolic flow murmur at left sternal border — high-output state. No JVP elevation, no oedema. Resp: clear. Abdomen: soft, non-tender, no organomegaly. No lymphadenopathy.",
@@ -1856,4 +1856,5 @@
     "lab_buzzwords": "Low Hgb, low MCV (<80), low MCH, high RDW, low ferritin (most sensitive), low serum iron, high TIBC. Peripheral smear: pencil cells, target cells, hypochromic microcytic RBCs.",
     "treatment": "Oral ferrous sulfate 325mg TID with vitamin C (enhances absorption). Take on empty stomach if tolerated. Reticulocytosis in 5-10 days, Hgb normalises in 4-8 weeks. Continue 3-6 months after normalisation to replete stores. Treat underlying cause."
   }
+}
 ]
