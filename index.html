@@ -1865,6 +1865,16 @@ document.addEventListener('click',e=>{if(!e.target.closest('#dx-note'))document.
 window.submitDx=function(){
   if(dxSubmitted&&dxCorrect)return;
   const val=document.getElementById('dx-input').value.trim();if(!val)return;
+  // Validate against diagnoses list
+  const inList = DIAGNOSES.some(d => d.toLowerCase() === val.toLowerCase());
+  if(!inList){
+    const result=document.getElementById('dx-result');
+    result.className='dx-result wrong';
+    result.textContent='⚠ That diagnosis is not in our records. Check your spelling or search from the list.';
+    result.style.display='block';
+    const inp=document.getElementById('dx-input');inp.classList.add('wrong');setTimeout(()=>inp.classList.remove('wrong'),600);
+    return;
+  }
   const result=document.getElementById('dx-result');
   if(val.toLowerCase()===currentCase.dx_answer.toLowerCase()){
     dxSubmitted=true;dxCorrect=true;
