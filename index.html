@@ -651,6 +651,78 @@ body.tier-3 #pt-vignette {
 .report-text strong{font-style:normal;color:var(--text-secondary)}
 #disclaimer{text-align:center;padding:16px 20px 32px;font-size:12px;color:rgba(160,120,40,0.7);font-style:italic;position:relative;z-index:10}
 
+/* ── STAMP SYSTEM ── */
+#stamp-container {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 120px;
+  height: 120px;
+  z-index: 20;
+  pointer-events: none;
+  overflow: visible;
+}
+#stamp-wax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 110px;
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776378857/wax_imprint_hs10c5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: none;
+  pointer-events: none;
+}
+#stamp-tool {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776379245/stamp1_oohmi6.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: translateY(-80px);
+  pointer-events: none;
+}
+@keyframes stampDrop {
+  0%   { transform: translateY(-80px); opacity: 0; }
+  60%  { transform: translateY(8px);   opacity: 1; }
+  80%  { transform: translateY(-4px);  opacity: 1; }
+  100% { transform: translateY(0px);   opacity: 1; }
+}
+@keyframes stampFadeOut {
+  0%   { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(-40px); }
+}
+@keyframes waxReveal {
+  0%   { opacity: 0; transform: scale(0.5); }
+  60%  { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1.0); }
+}
+@keyframes panelShake {
+  0%   { transform: translateX(0) translateY(0); }
+  20%  { transform: translateX(-4px) translateY(2px); }
+  40%  { transform: translateX(4px) translateY(-2px); }
+  60%  { transform: translateX(-3px) translateY(1px); }
+  80%  { transform: translateX(2px) translateY(-1px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+@keyframes slideUpReveal {
+  0%   { opacity: 0; transform: translateY(18px) rotate(-0.8deg); }
+  70%  { opacity: 1; transform: translateY(-2px) rotate(0.1deg); }
+  100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+.note-slide-up {
+  animation: slideUpReveal 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* ── MEMORY FRAGMENTS ── */
 .memory-fragment {
   margin-top:6px;
@@ -1174,7 +1246,11 @@ body.tier-3 #pt-vignette {
             <div id="lab-results"></div>
           </div>
 
-          <div class="note" id="dx-note">
+          <div class="note" id="dx-note" style="position:relative">
+            <div id="stamp-container">
+              <div id="stamp-wax"></div>
+              <div id="stamp-tool"></div>
+            </div>
             <span class="section-tag">DIAGNOSIS</span>
             <div class="wrong-answers-list" id="wrong-answers-list"></div>
             <div style="position:relative">
@@ -2100,6 +2176,196 @@ window.endCase = function(failed) {
   _origEndCase(failed);
   if(!failed && currentCase && currentCase.fennick_case_complete) {
     setTimeout(()=>{ playFennickSpeech(currentCase.fennick_case_complete); }, 1200);
+  }
+};
+
+
+
+// ── STAMP SYSTEM ──
+function playStampSound() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    // Thud impact
+    const bufSize = ctx.sampleRate * 0.12;
+    const buf = ctx.createBuffer(1, bufSize, ctx.sampleRate);
+    const data = buf.getChannelData(0);
+    for (let i = 0; i < bufSize; i++) {
+      const t = i / bufSize;
+      data[i] = (Math.random() * 2 - 1) * Math.pow(1 - t, 1.5) * 0.6;
+    }
+    const src = ctx.createBufferSource();
+    src.buffer = buf;
+    const gain = ctx.createGain();
+    gain.gain.value = 0.9;
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = 600;
+    src.connect(filter);
+    filter.connect(gain);
+    gain.connect(ctx.destination);
+    src.start();
+  } catch(e) {}
+}
+
+function triggerStamp() {
+  const wax = document.getElementById('stamp-wax');
+  const tool = document.getElementById('stamp-tool');
+  const panel = document.getElementById('dx-note');
+  if (!wax || !tool) return;
+
+  // Reset
+  wax.style.animation = 'none';
+  tool.style.animation = 'none';
+  wax.style.opacity = '0';
+  tool.style.opacity = '0';
+  tool.style.transform = 'translateY(-80px)';
+
+  // Step 1: stamp drops in fast
+  setTimeout(() => {
+    tool.style.animation = 'stampDrop 0.22s cubic-bezier(0.22,1,0.36,1) forwards';
+    playStampSound();
+
+    // Step 2: shake panel on impact
+    setTimeout(() => {
+      if (panel) {
+        panel.style.animation = 'panelShake 0.18s ease-out';
+        setTimeout(() => { panel.style.animation = ''; }, 200);
+      }
+      // Step 3: wax appears
+      wax.style.animation = 'waxReveal 0.2s cubic-bezier(0.22,1,0.36,1) forwards';
+
+      // Step 4: stamp fades out after brief pause
+      setTimeout(() => {
+        tool.style.animation = 'stampFadeOut 0.3s ease-in forwards';
+      }, 350);
+    }, 180);
+  }, 80);
+}
+
+// ── TYPEWRITER INK SOUND ──
+let _inkAudioCtx = null;
+let _inkLastRate = 1.0;
+
+function initInkSound() {
+  if (_inkAudioCtx) return;
+  try { _inkAudioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {}
+}
+
+function playInkSound() {
+  if (!_inkAudioCtx) return;
+  try {
+    const bufSize = Math.floor(_inkAudioCtx.sampleRate * 0.045);
+    const buf = _inkAudioCtx.createBuffer(1, bufSize, _inkAudioCtx.sampleRate);
+    const data = buf.getChannelData(0);
+    // Vary playback rate slightly each character for organic feel
+    _inkLastRate = 0.85 + Math.random() * 0.3;
+    for (let i = 0; i < bufSize; i++) {
+      const t = i / bufSize;
+      data[i] = (Math.random() * 2 - 1) * Math.pow(1 - t, 3) * 0.12;
+    }
+    const src = _inkAudioCtx.createBufferSource();
+    src.buffer = buf;
+    src.playbackRate.value = _inkLastRate;
+    const filter = _inkAudioCtx.createBiquadFilter();
+    filter.type = 'highpass';
+    filter.frequency.value = 3000;
+    const gain = _inkAudioCtx.createGain();
+    gain.gain.value = 0.5;
+    src.connect(filter);
+    filter.connect(gain);
+    gain.connect(_inkAudioCtx.destination);
+    src.start();
+  } catch(e) {}
+}
+
+// Patch typewriterWrite to play ink sound per character
+const _origTypewriterWrite = typewriterWrite;
+window.typewriterWrite = function(el, text, speed) {
+  initInkSound();
+  speed = speed || 22;
+  return new Promise(resolve => {
+    el.textContent = '';
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    el.appendChild(cursor);
+    let i = 0;
+    function tick() {
+      if (i < text.length) {
+        el.insertBefore(document.createTextNode(text[i]), cursor);
+        if (text[i] !== ' ') playInkSound();
+        i++;
+        setTimeout(tick, speed + Math.random() * 8);
+      } else {
+        cursor.remove();
+        resolve();
+      }
+    }
+    tick();
+  });
+};
+
+// ── CHART SLIDE-UP ── patch hint reveal cards and lab results
+const _origAddLabResult = window.addLabResult;
+// Already defined inline — patch via MutationObserver on workup-reveals and lab-results
+(function() {
+  function observeAndAnimate(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const obs = new MutationObserver(mutations => {
+      mutations.forEach(m => {
+        m.addedNodes.forEach(node => {
+          if (node.nodeType === 1) {
+            node.classList.add('note-slide-up');
+            playPaperSound();
+          }
+        });
+      });
+    });
+    obs.observe(container, { childList: true });
+  }
+  function playPaperSound() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const bufSize = ctx.sampleRate * 0.07;
+      const buf = ctx.createBuffer(1, bufSize, ctx.sampleRate);
+      const data = buf.getChannelData(0);
+      for (let i = 0; i < bufSize; i++) {
+        const t = i / bufSize;
+        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - t, 2) * 0.18;
+      }
+      const src = ctx.createBufferSource();
+      src.buffer = buf;
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'highpass';
+      filter.frequency.value = 2500;
+      src.connect(filter);
+      filter.connect(ctx.destination);
+      src.start();
+    } catch(e) {}
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    observeAndAnimate('workup-reveals');
+    observeAndAnimate('lab-results');
+  });
+})();
+
+// Trigger stamp on correct Dx
+const _origSubmitDxStamp = window.submitDx;
+window.submitDx = function() {
+  const val = document.getElementById('dx-input') ? document.getElementById('dx-input').value.trim() : '';
+  const isCorrect = val && currentCase && val.toLowerCase() === currentCase.dx_answer.toLowerCase();
+  _origSubmitDxStamp();
+  if (isCorrect) {
+    setTimeout(() => triggerStamp(), 400);
+  }
+};
+
+// Trigger stamp again on case complete
+const _origEndCaseStamp = window.endCase;
+window.endCase = function(failed) {
+  _origEndCaseStamp(failed);
+  if (!failed) {
+    setTimeout(() => triggerStamp(), 600);
   }
 };
 
