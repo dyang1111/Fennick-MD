@@ -2149,13 +2149,13 @@ function applyTier3Scene(trigger) {
     // Swap patient portrait to smiling version
     if (currentCase.tier3_portrait_2_url) {
       setTimeout(() => {
-        const ptImg = document.getElementById('pt-portrait');
+        const ptImg = document.getElementById('pt-img');
         if (ptImg) {
           ptImg.style.transition = 'opacity 1.2s ease, filter 1.2s ease';
           ptImg.style.opacity = '0';
           setTimeout(() => {
             ptImg.src = currentCase.tier3_portrait_2_url;
-            ptImg.style.filter = 'none';
+            ptImg.style.filter = 'saturate(1) brightness(1) opacity(1)';
             ptImg.style.opacity = '1';
           }, 1200);
         }
@@ -2251,55 +2251,59 @@ function useHint(){
 function unlockNextStage(){}
 
 function endCase(failed){
-  // Tier 3: restore Ferrovane, then show Polaroid
+  // Tier 3: shutter → snap to Ferrovane → Polaroid
   if(currentCase && currentCase.tier === 3) {
     const bgEl = document.getElementById('bg');
-    // Shutter click sound
+    // Step 1: shutter sound at 400ms
     setTimeout(() => {
       try {
         const ctx = new (window.AudioContext||window.webkitAudioContext)();
-        const buf = ctx.createBuffer(1, ctx.sampleRate*0.04, ctx.sampleRate);
+        const buf = ctx.createBuffer(1, ctx.sampleRate*0.05, ctx.sampleRate);
         const d = buf.getChannelData(0);
-        for(let i=0;i<d.length;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,0.5)*0.7;
+        for(let i=0;i<d.length;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,0.4)*0.8;
         const s=ctx.createBufferSource(); s.buffer=buf;
         s.connect(ctx.destination); s.start();
       } catch(e){}
     }, 400);
-    // Fade back to Ferrovane
-    if(bgEl) {
-      bgEl.style.transition = 'opacity 1.2s ease';
-      setTimeout(()=>{ bgEl.style.opacity = '0'; }, 500);
-      setTimeout(()=>{
+    // Step 2: white flash at 450ms then snap bg to Ferrovane
+    setTimeout(() => {
+      const flash = document.createElement('div');
+      flash.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:white;z-index:9997;opacity:1;pointer-events:none;transition:opacity 0.5s ease;';
+      document.body.appendChild(flash);
+      // Snap bg behind the flash
+      if(bgEl) {
+        bgEl.style.transition = 'none';
         bgEl.style.backgroundImage = '';
-        bgEl.style.opacity = '1';
-      }, 1700);
-    }
-    // Show Polaroid in center panel after Ferrovane returns
+      }
+      // Fade flash out
+      setTimeout(()=>{ flash.style.opacity='0'; setTimeout(()=>flash.remove(),600); }, 100);
+    }, 450);
+    // Step 3: Polaroid drops in at 1400ms
     if(currentCase.polaroid_success_url) {
       setTimeout(() => {
         const polaroid = document.createElement('div');
         polaroid.id = 'tier3-polaroid';
-        polaroid.style.cssText = `
-          position:fixed; top:50%; left:50%;
-          transform:translate(-50%,-50%) translateY(40px);
-          z-index:9000; pointer-events:none;
-          display:flex; flex-direction:column; align-items:center;
-          opacity:0; transition:opacity 0.6s ease, transform 0.6s ease;
-        `;
+        polaroid.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) translateY(50px);z-index:9000;pointer-events:all;display:flex;flex-direction:column;align-items:center;opacity:0;transition:opacity 0.7s ease,transform 0.7s cubic-bezier(0.22,1,0.36,1);';
         polaroid.innerHTML = `
-          <div style="background:#f8f4ee;padding:14px 14px 40px 14px;box-shadow:0 8px 40px rgba(0,0,0,0.5);border-radius:2px;max-width:280px;">
-            <img src="${currentCase.polaroid_success_url}" style="width:252px;height:252px;object-fit:cover;display:block;">
-            <div style="margin-top:10px;font-family:'Crimson Pro',Georgia,serif;font-size:13px;color:#3a2a10;text-align:center;font-style:italic;line-height:1.5;padding:0 4px;">
+          <div style="background:#f8f4ee;padding:14px 14px 44px 14px;box-shadow:0 12px 50px rgba(0,0,0,0.55);border-radius:2px;max-width:290px;position:relative;">
+            <img src="${currentCase.polaroid_success_url}" style="width:262px;height:262px;object-fit:cover;display:block;">
+            <div style="margin-top:8px;font-family:'Crimson Pro',Georgia,serif;font-size:13px;color:#3a2a10;text-align:center;font-style:italic;line-height:1.5;padding:0 4px;">
               ${currentCase.polaroid_caption_success||''}
             </div>
+            <button onclick="document.getElementById('tier3-polaroid').style.opacity='0';setTimeout(()=>document.getElementById('tier3-polaroid')?.remove(),600);"
+              style="position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);background:none;border:1px solid rgba(160,120,40,0.5);color:rgba(160,120,40,0.8);font-family:'Crimson Pro',Georgia,serif;font-size:13px;padding:4px 20px;border-radius:20px;cursor:pointer;letter-spacing:0.05em;">
+              close
+            </button>
           </div>
         `;
         document.body.appendChild(polaroid);
         requestAnimationFrame(()=>{
-          polaroid.style.opacity='1';
-          polaroid.style.transform='translate(-50%,-50%) translateY(0)';
+          setTimeout(()=>{
+            polaroid.style.opacity='1';
+            polaroid.style.transform='translate(-50%,-50%) translateY(0)';
+          }, 30);
         });
-      }, 2200);
+      }, 1400);
     }
   }
   revealAllManagement();
