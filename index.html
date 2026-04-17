@@ -1820,9 +1820,39 @@ async function loadData() {
     const now = new Date();
     const ym = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0');
     const casesRes = await fetch(ym + 'cases.json');
+    const remarksRes = await fetch(ym + 'remarks.json').catch(()=>null);
+    let remarksData = {};
+    if(remarksRes && remarksRes.ok) remarksData = await remarksRes.json();
     if(casesRes.ok) {
       const casesData = await casesRes.json();
-      if(Array.isArray(casesData) && casesData.length > 0) CASES = casesData;
+      if(Array.isArray(casesData) && casesData.length > 0) {
+        CASES = casesData.map(c => {
+          const r = remarksData[c.id];
+          if(!r) return c;
+          const merged = Object.assign({}, c, r);
+          if(r.management && merged.management) {
+            merged.management = merged.management.map((stage, si) => {
+              const stageR = (r.management[si]) || [];
+              return Object.assign({}, stage, {
+                options: stage.options.map((opt, oi) => {
+                  const optR = stageR[oi] || {};
+                  const mo = Object.assign({}, opt, optR);
+                  if(opt.reactive_stage && optR.reactive_stage) {
+                    mo.reactive_stage = Object.assign({}, opt.reactive_stage, optR.reactive_stage);
+                    if(opt.reactive_stage.options && optR.reactive_stage.options) {
+                      mo.reactive_stage.options = opt.reactive_stage.options.map((ro,roi) =>
+                        Object.assign({}, ro, (optR.reactive_stage.options[roi]||{}))
+                      );
+                    }
+                  }
+                  return mo;
+                })
+              });
+            });
+          }
+          return merged;
+        });
+      }
     }
   } catch (err) {}
 }
