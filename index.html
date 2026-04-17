@@ -2068,6 +2068,10 @@ window.submitDx=function(){
   const result=document.getElementById('dx-result');
   if(val.toLowerCase()===currentCase.dx_answer.toLowerCase()){
     dxSubmitted=true;dxCorrect=true;
+    // Tier 3: dramatic fog clear on correct dx
+    if(currentCase.tier === 3) {
+      setTimeout(()=>{ try{ window.setFogDensity(0, 'warm'); }catch(e){} }, 300);
+    }
     result.className='dx-result correct';result.textContent='\u2713 Correct \u2014 '+currentCase.dx_answer;result.style.display='block';
     document.getElementById('dx-submit-btn').disabled=true;document.getElementById('dx-suggestions').style.display='none';
     try { window.setFogDensity(_fogTargetDensity * 0.30); } catch(e){}
@@ -2113,6 +2117,34 @@ function renderManagement(){
     </div>`).join('');
 }
 
+// ── TIER 3 SCENE TRANSITIONS ──
+function applyTier3Scene(trigger) {
+  if (!currentCase || currentCase.tier !== 3) return;
+  if (trigger === 'mgmt_bg' && currentCase.tier3_bg_url) {
+    // Bloom flash then bg swap
+    const bgEl = document.getElementById('bg');
+    if (!bgEl) return;
+    bgEl.style.transition = 'opacity 0.4s ease';
+    bgEl.style.opacity = '0';
+    setTimeout(() => {
+      bgEl.style.backgroundImage = `url('${currentCase.tier3_bg_url}')`;
+      bgEl.style.opacity = '1';
+    }, 400);
+  } else if (trigger === 'mgmt_silhouette' && currentCase.tier3_silhouette_url) {
+    // Silhouette fades in over bg
+    let sil = document.getElementById('tier3-silhouette');
+    if (!sil) {
+      sil = document.createElement('div');
+      sil.id = 'tier3-silhouette';
+      sil.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;background-repeat:no-repeat;background-position:center bottom;background-size:contain;opacity:0;transition:opacity 3s ease;';
+      document.body.appendChild(sil);
+    }
+    sil.style.backgroundImage = `url('${currentCase.tier3_silhouette_url}')`;
+    setTimeout(() => { sil.style.opacity = '0.7'; }, 200);
+  }
+}
+
+// ── REACTIVE MANAGEMENT INJECTION ──
 window.pickMgmt=function(stageIdx,optIdx){
   if(stageIdx!==currentStage)return;
   const stage=currentCase.management[stageIdx],opt=stage.options[optIdx];
@@ -2121,7 +2153,6 @@ window.pickMgmt=function(stageIdx,optIdx){
   if(opt.correct){
     optEl.classList.remove('locked-opt');optEl.classList.add('selected-correct');document.getElementById('stage-num-'+stageIdx).classList.add('done');
     if(fbEl){fbEl.style.cssText='display:block;background:rgba(180,230,160,0.4);border:1px solid rgba(80,160,60,0.4);color:#1a4a08;padding:8px 12px;border-radius:6px;margin-top:8px;font-size:14px';fbEl.textContent=opt.feedback_correct||'Correct.';}
-    // Check for Fennick speech (multi-line monologue)
     if(opt.fennick_speech && Array.isArray(opt.fennick_speech)) {
       playFennickSpeech(opt.fennick_speech);
     } else {
@@ -2129,7 +2160,33 @@ window.pickMgmt=function(stageIdx,optIdx){
     }
     const mgmtRemark = opt.pt_remark_correct || getGenericRemark('mgmt-correct');
     if(mgmtRemark) setTimeout(()=>setPtRemark(mgmtRemark), 700);
-    advanceStage(stageIdx+1);
+    // Scene trigger
+    if(opt.scene_trigger) setTimeout(()=>applyTier3Scene(opt.scene_trigger), 800);
+    // Reactive stage — inject new stage after current
+    if(opt.reactive_stage) {
+      const rs = opt.reactive_stage;
+      const delay = rs.delay_ms || 2500;
+      // Insert reactive stage right after current
+      currentCase.management.splice(stageIdx + 1, 0, rs);
+      // Transition: Fennick speaks the bridge, pt remark, vitals note
+      setTimeout(() => {
+        if(rs.fennick_transition) setFennick('concerned', rs.fennick_transition);
+        if(rs.pt_remark_transition) setTimeout(()=>setPtRemark(rs.pt_remark_transition), 800);
+        if(rs.vitals_note) {
+          const vn = document.createElement('div');
+          vn.style.cssText='background:rgba(230,200,150,0.3);border:1px solid rgba(160,120,40,0.35);border-radius:6px;padding:8px 12px;font-size:13px;color:#4a3010;margin:8px 0;font-style:italic;';
+          vn.textContent = '📋 ' + rs.vitals_note;
+          const mgmtStages = document.getElementById('mgmt-stages');
+          if(mgmtStages) mgmtStages.insertBefore(vn, mgmtStages.firstChild);
+          vn.classList.add('note-slide-up');
+        }
+        // Rebuild management UI to include new stage
+        renderManagement();
+        advanceStage(stageIdx + 1);
+      }, delay);
+    } else {
+      advanceStage(stageIdx+1);
+    }
   } else {
     optEl.classList.remove('locked-opt');optEl.classList.add('selected-wrong');errors++;drainHP(10);
     if(fbEl){fbEl.style.cssText='display:block;background:rgba(230,160,150,0.4);border:1px solid rgba(180,80,70,0.35);color:#4a1010;padding:8px 12px;border-radius:6px;margin-top:8px;font-size:14px';fbEl.textContent=opt.feedback_wrong||'Incorrect.';}
@@ -2174,6 +2231,20 @@ function useHint(){
 function unlockNextStage(){}
 
 function endCase(failed){
+  // Tier 3: restore Ferrovane background
+  if(currentCase && currentCase.tier === 3) {
+    const bgEl = document.getElementById('bg');
+    if(bgEl) {
+      bgEl.style.transition = 'opacity 0.6s ease';
+      bgEl.style.opacity = '0';
+      setTimeout(()=>{
+        bgEl.style.backgroundImage = '';
+        bgEl.style.opacity = '1';
+      }, 600);
+    }
+    const sil = document.getElementById('tier3-silhouette');
+    if(sil) { sil.style.opacity = '0'; setTimeout(()=>sil.remove(), 3000); }
+  }
   revealAllManagement();
   document.getElementById('endgame').style.display='block';document.getElementById('endgame').scrollIntoView({behavior:'smooth'});
   let grade,comment;
