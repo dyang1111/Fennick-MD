@@ -1833,6 +1833,7 @@ function initCase(){ _fennickLocked = false;
     ptImg.style.display = 'none'; 
   }
 
+  clearMgmtSelections();
   setFennick('chart', `"A new case has arrived. Take your time — but not too much of it."`); setTimeout(()=>setFennick('default',''), 2800);
   renderChart();
   renderLabsGrid();
@@ -1924,6 +1925,8 @@ function clearHpiBlur() {
 }
 
 const revealedWorkup=new Set(),orderedLabs=new Set(),wrongAnswers=new Set();
+// Cleared on each new case load
+function clearMgmtSelections(){ Object.keys(_mgmtSelections).forEach(k=>delete _mgmtSelections[k]); }
 
 window.revealWorkup=function(type){
   if(revealedWorkup.has(type))return;
@@ -2106,6 +2109,9 @@ function showReport(){
 
 function unlockManagement(){currentStage=0;renderManagement();document.getElementById('mgmt-note').scrollIntoView({behavior:'smooth',block:'nearest'});}
 
+// Track which option was selected per stage so re-renders restore the state
+const _mgmtSelections = {}; // { stageIdx: { optIdx, correct, feedback } }
+
 function renderManagement(){
   const stages=currentCase.management;if(!stages)return;
   document.getElementById('mgmt-progress').innerHTML=stages.map((_,i)=>`${i>0?'<div class="prog-line" id="prog-line-'+i+'"></div>':''}<div class="prog-dot ${i===0&&dxCorrect?'cur':''}" id="prog-dot-${i}"></div>`).join('');
@@ -2115,6 +2121,35 @@ function renderManagement(){
       <div class="mgmt-options" id="stage-opts-${si}">${s.options.map((o,oi)=>`<div class="mgmt-option ${!dxCorrect||si>0?'locked-opt':''}" id="opt-${si}-${oi}" onclick="pickMgmt(${si},${oi})"><div class="mgmt-ob">${String.fromCharCode(65+oi)}</div><div><div class="mgmt-on">${o.text}</div>${o.sub?`<div class="mgmt-oc">${o.sub}</div>`:''}</div></div>`).join('')}</div>
       <div id="stage-feedback-${si}" style="display:none"></div>
     </div>`).join('');
+
+  // Restore previous selections after re-render
+  Object.entries(_mgmtSelections).forEach(([si, sel]) => {
+    const idx = parseInt(si);
+    // Lock all options in this stage
+    stages[idx].options.forEach((_,oi)=>{
+      const el=document.getElementById(`opt-${idx}-${oi}`);
+      if(el) el.classList.add('locked-opt');
+    });
+    // Re-apply selected state
+    const selEl = document.getElementById(`opt-${idx}-${sel.optIdx}`);
+    if(selEl) {
+      selEl.classList.remove('locked-opt');
+      selEl.classList.add(sel.correct ? 'selected-correct' : 'selected-wrong');
+    }
+    // Re-show feedback
+    const fbEl = document.getElementById(`stage-feedback-${idx}`);
+    if(fbEl && sel.feedback) {
+      fbEl.style.cssText = sel.correct
+        ? 'display:block;background:rgba(180,230,160,0.4);border:1px solid rgba(80,160,60,0.4);color:#1a4a08;padding:8px 12px;border-radius:6px;margin-top:8px;font-size:14px'
+        : 'display:block;background:rgba(230,160,150,0.4);border:1px solid rgba(180,80,70,0.35);color:#4a1010;padding:8px 12px;border-radius:6px;margin-top:8px;font-size:14px';
+      fbEl.textContent = sel.feedback;
+    }
+    // Mark stage header done
+    const numEl = document.getElementById(`stage-num-${idx}`);
+    if(numEl) numEl.classList.add('done');
+    const titleEl = document.getElementById(`stage-title-${idx}`);
+    if(titleEl) titleEl.classList.remove('locked');
+  });
 }
 
 // ── TIER 3 SCENE TRANSITIONS ──
@@ -2180,6 +2215,8 @@ window.pickMgmt=function(stageIdx,optIdx){
     }
     const mgmtRemark = opt.pt_remark_correct || getGenericRemark('mgmt-correct');
     if(mgmtRemark) setTimeout(()=>setPtRemark(mgmtRemark), 700);
+    // Save selection state for re-render restoration
+    _mgmtSelections[stageIdx] = { optIdx, correct: true, feedback: opt.feedback_correct||'Correct.' };
     // Scene trigger
     if(opt.scene_trigger) setTimeout(()=>applyTier3Scene(opt.scene_trigger), 800);
     // Reactive stage — inject new stage after current
@@ -2213,6 +2250,8 @@ window.pickMgmt=function(stageIdx,optIdx){
     _perfectRun=false;const _wrongFace=(errors%2===0)?'concerned':'thinking';setFennick(_wrongFace,'"'+(opt.feedback_wrong||'Not quite.')+'"');updateFennickByErrors();
     const mgmtWrongRemark = opt.pt_remark_wrong || getGenericRemark('mgmt-wrong');
     if(mgmtWrongRemark) setTimeout(()=>setPtRemark(mgmtWrongRemark), 700);
+    // Save wrong selection for re-render
+    if(!_mgmtSelections[stageIdx]) _mgmtSelections[stageIdx] = { optIdx, correct: false, feedback: opt.feedback_wrong||'Incorrect.' };
     setTimeout(()=>advanceStage(stageIdx+1),800);
   }
 };
@@ -2265,15 +2304,15 @@ function endCase(failed){
         s.connect(ctx.destination); s.start();
       } catch(e){}
     }, 400);
-    // Step 2: white flash at 450ms then snap bg to Ferrovane
+    // Step 2: white flash at 450ms then snap bg back to Ferrovane
     setTimeout(() => {
       const flash = document.createElement('div');
       flash.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:white;z-index:9997;opacity:1;pointer-events:none;transition:opacity 0.5s ease;';
       document.body.appendChild(flash);
-      // Snap bg behind the flash
+      // Restore correct Ferrovane bg behind the flash
       if(bgEl) {
         bgEl.style.transition = 'none';
-        bgEl.style.backgroundImage = '';
+        applyTimeTheme();
       }
       // Fade flash out
       setTimeout(()=>{ flash.style.opacity='0'; setTimeout(()=>flash.remove(),600); }, 100);
@@ -2285,15 +2324,13 @@ function endCase(failed){
         polaroid.id = 'tier3-polaroid';
         polaroid.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) translateY(50px);z-index:9000;pointer-events:all;display:flex;flex-direction:column;align-items:center;opacity:0;transition:opacity 0.7s ease,transform 0.7s cubic-bezier(0.22,1,0.36,1);';
         polaroid.innerHTML = `
-          <div style="background:#f8f4ee;padding:14px 14px 44px 14px;box-shadow:0 12px 50px rgba(0,0,0,0.55);border-radius:2px;max-width:290px;position:relative;">
+          <div style="background:#f8f4ee;padding:14px 14px 36px 14px;box-shadow:0 12px 50px rgba(0,0,0,0.55);border-radius:2px;max-width:290px;position:relative;">
+            <button onclick="document.getElementById('tier3-polaroid').style.opacity='0';setTimeout(()=>document.getElementById('tier3-polaroid')?.remove(),600);"
+              style="position:absolute;top:6px;right:8px;background:none;border:none;color:rgba(80,50,10,0.5);font-size:18px;line-height:1;cursor:pointer;padding:2px 4px;z-index:1;">✕</button>
             <img src="${currentCase.polaroid_success_url}" style="width:262px;height:262px;object-fit:cover;display:block;">
             <div style="margin-top:8px;font-family:'Crimson Pro',Georgia,serif;font-size:13px;color:#3a2a10;text-align:center;font-style:italic;line-height:1.5;padding:0 4px;">
               ${currentCase.polaroid_caption_success||''}
             </div>
-            <button onclick="document.getElementById('tier3-polaroid').style.opacity='0';setTimeout(()=>document.getElementById('tier3-polaroid')?.remove(),600);"
-              style="position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);background:none;border:1px solid rgba(160,120,40,0.5);color:rgba(160,120,40,0.8);font-family:'Crimson Pro',Georgia,serif;font-size:13px;padding:4px 20px;border-radius:20px;cursor:pointer;letter-spacing:0.05em;">
-              close
-            </button>
           </div>
         `;
         document.body.appendChild(polaroid);
