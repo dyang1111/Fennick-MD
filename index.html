@@ -2120,27 +2120,47 @@ function renderManagement(){
 // ── TIER 3 SCENE TRANSITIONS ──
 function applyTier3Scene(trigger) {
   if (!currentCase || currentCase.tier !== 3) return;
+  const bgEl = document.getElementById('bg');
+
   if (trigger === 'mgmt_bg' && currentCase.tier3_bg_url) {
-    // Bloom flash then bg swap
-    const bgEl = document.getElementById('bg');
-    if (!bgEl) return;
-    bgEl.style.transition = 'opacity 0.4s ease';
-    bgEl.style.opacity = '0';
+    // Bloom flash — white overexposure — then bg swap to empty concert hall
+    const bloom = document.createElement('div');
+    bloom.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:white;z-index:9998;opacity:0;pointer-events:none;transition:opacity 0.3s ease;';
+    document.body.appendChild(bloom);
+    setTimeout(() => { bloom.style.opacity = '0.95'; }, 50);
     setTimeout(() => {
-      bgEl.style.backgroundImage = `url('${currentCase.tier3_bg_url}')`;
-      bgEl.style.opacity = '1';
-    }, 400);
+      if (bgEl) bgEl.style.backgroundImage = `url('${currentCase.tier3_bg_url}')`;
+      bloom.style.opacity = '0';
+      setTimeout(() => bloom.remove(), 400);
+    }, 350);
+    // Music: play most beautiful version if available
+    // (handled by audio system when implemented)
+
   } else if (trigger === 'mgmt_silhouette' && currentCase.tier3_silhouette_url) {
-    // Silhouette fades in over bg
-    let sil = document.getElementById('tier3-silhouette');
-    if (!sil) {
-      sil = document.createElement('div');
-      sil.id = 'tier3-silhouette';
-      sil.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;background-repeat:no-repeat;background-position:center bottom;background-size:contain;opacity:0;transition:opacity 3s ease;';
-      document.body.appendChild(sil);
+    // Swap background to bg2 (piano + old man playing)
+    if (bgEl) {
+      bgEl.style.transition = 'opacity 0.8s ease';
+      bgEl.style.opacity = '0';
+      setTimeout(() => {
+        bgEl.style.backgroundImage = `url('${currentCase.tier3_silhouette_url}')`;
+        bgEl.style.opacity = '1';
+      }, 800);
     }
-    sil.style.backgroundImage = `url('${currentCase.tier3_silhouette_url}')`;
-    setTimeout(() => { sil.style.opacity = '0.7'; }, 200);
+    // Swap patient portrait to smiling version
+    if (currentCase.tier3_portrait_2_url) {
+      setTimeout(() => {
+        const ptImg = document.getElementById('pt-portrait');
+        if (ptImg) {
+          ptImg.style.transition = 'opacity 1.2s ease, filter 1.2s ease';
+          ptImg.style.opacity = '0';
+          setTimeout(() => {
+            ptImg.src = currentCase.tier3_portrait_2_url;
+            ptImg.style.filter = 'none';
+            ptImg.style.opacity = '1';
+          }, 1200);
+        }
+      }, 900);
+    }
   }
 }
 
@@ -2231,19 +2251,56 @@ function useHint(){
 function unlockNextStage(){}
 
 function endCase(failed){
-  // Tier 3: restore Ferrovane background
+  // Tier 3: restore Ferrovane, then show Polaroid
   if(currentCase && currentCase.tier === 3) {
     const bgEl = document.getElementById('bg');
+    // Shutter click sound
+    setTimeout(() => {
+      try {
+        const ctx = new (window.AudioContext||window.webkitAudioContext)();
+        const buf = ctx.createBuffer(1, ctx.sampleRate*0.04, ctx.sampleRate);
+        const d = buf.getChannelData(0);
+        for(let i=0;i<d.length;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,0.5)*0.7;
+        const s=ctx.createBufferSource(); s.buffer=buf;
+        s.connect(ctx.destination); s.start();
+      } catch(e){}
+    }, 400);
+    // Fade back to Ferrovane
     if(bgEl) {
-      bgEl.style.transition = 'opacity 0.6s ease';
-      bgEl.style.opacity = '0';
+      bgEl.style.transition = 'opacity 1.2s ease';
+      setTimeout(()=>{ bgEl.style.opacity = '0'; }, 500);
       setTimeout(()=>{
         bgEl.style.backgroundImage = '';
         bgEl.style.opacity = '1';
-      }, 600);
+      }, 1700);
     }
-    const sil = document.getElementById('tier3-silhouette');
-    if(sil) { sil.style.opacity = '0'; setTimeout(()=>sil.remove(), 3000); }
+    // Show Polaroid in center panel after Ferrovane returns
+    if(currentCase.polaroid_success_url) {
+      setTimeout(() => {
+        const polaroid = document.createElement('div');
+        polaroid.id = 'tier3-polaroid';
+        polaroid.style.cssText = `
+          position:fixed; top:50%; left:50%;
+          transform:translate(-50%,-50%) translateY(40px);
+          z-index:9000; pointer-events:none;
+          display:flex; flex-direction:column; align-items:center;
+          opacity:0; transition:opacity 0.6s ease, transform 0.6s ease;
+        `;
+        polaroid.innerHTML = `
+          <div style="background:#f8f4ee;padding:14px 14px 40px 14px;box-shadow:0 8px 40px rgba(0,0,0,0.5);border-radius:2px;max-width:280px;">
+            <img src="${currentCase.polaroid_success_url}" style="width:252px;height:252px;object-fit:cover;display:block;">
+            <div style="margin-top:10px;font-family:'Crimson Pro',Georgia,serif;font-size:13px;color:#3a2a10;text-align:center;font-style:italic;line-height:1.5;padding:0 4px;">
+              ${currentCase.polaroid_caption_success||''}
+            </div>
+          </div>
+        `;
+        document.body.appendChild(polaroid);
+        requestAnimationFrame(()=>{
+          polaroid.style.opacity='1';
+          polaroid.style.transform='translate(-50%,-50%) translateY(0)';
+        });
+      }, 2200);
+    }
   }
   revealAllManagement();
   document.getElementById('endgame').style.display='block';document.getElementById('endgame').scrollIntoView({behavior:'smooth'});
