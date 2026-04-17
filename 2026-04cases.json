@@ -95,28 +95,28 @@
             "correct": false,
             "feedback_wrong": "Abrupt SSRI discontinuation causes withdrawal syndrome — dizziness, nausea, electric shock sensations. Always taper. Never stop abruptly.",
             "pt_remark_correct": "No emergency. Good. I have been waiting fourteen months — I can wait a little longer for the right answer.",
-            "pt_remark_wrong": "Stop the sertraline immediately. After fourteen months it has done nothing — but stopping it immediately sounds like something else could go wrong."
+            "pt_remark_wrong": "Stop it suddenly? After all this time? Won't that cause — I don't know — some kind of... rebound? My neighbour had a bad spell coming off hers."
           },
           {
             "text": "Emergent neurology consult",
             "sub": "Urgent inpatient",
             "correct": false,
             "feedback_wrong": "This has been progressing for 14 months. Urgent outpatient neurology yes. Emergent inpatient is not warranted.",
-            "pt_remark_correct": "Emergent. That word frightens me more than the tremor ever has."
+            "pt_remark_correct": "My husband is in the waiting room. Please don't say 'emergent' where he can hear you through the door."
           },
           {
             "text": "Admit for IV thiamine",
             "sub": "Wernicke protocol",
             "correct": false,
             "feedback_wrong": "Thiamine is for Wernicke encephalopathy — confusion, ophthalmoplegia, ataxia. None of those are present here.",
-            "pt_remark_wrong": "Thiamine. For the brain. I thought this was about my hands."
+            "pt_remark_wrong": "My neighbour gets those injections after her falls. I haven't fallen. The shaking is in my fingers, not my balance."
           },
           {
             "text": "Reassure and schedule outpatient follow-up",
             "sub": "No acute intervention needed",
             "correct": true,
             "feedback_correct": "Correct. This is a chronic, slowly progressive condition. No emergency exists. A calm and thorough outpatient approach is ideal.",
-            "pt_remark_correct": "Not an emergency. Good. My husband will be relieved. He has been catastrophising since January."
+            "pt_remark_correct": "Not an emergency. Good. I'll tell my husband. He's been losing sleep since January — he keeps saying things like 'we should have come sooner.'"
           }
         ]
       },
@@ -129,7 +129,7 @@
             "sub": "SSRI escalation",
             "correct": false,
             "feedback_wrong": "The depression was a misdiagnosis — masked facies and bradyphrenia from Parkinson Disease. More sertraline will not help a dopamine deficiency.",
-            "pt_remark_wrong": "More sertraline. Eight months of sertraline already. It did precisely nothing."
+            "pt_remark_wrong": "The same tablet I've been on for eight months. The one that hasn't moved a single degree on any of this."
           },
           {
             "text": "Levodopa / Carbidopa",
@@ -137,7 +137,7 @@
             "correct": true,
             "feedback_correct": "Correct. Levodopa crosses the BBB; carbidopa prevents peripheral conversion. Gold standard — nothing has surpassed it in fifty years.",
             "fennick_correct_comment": "\"Levodopa is the precursor. Carbidopa blocks peripheral decarboxylation — without it, 95% converts before reaching the brain.\"",
-            "pt_remark_correct": "A medication for the dopamine. Finally something that makes mechanical sense."
+            "pt_remark_correct": "Alright. If that's what's been missing from the system all along, then — yes. I'll take it."
           },
           {
             "text": "Haloperidol",
@@ -147,14 +147,14 @@
             "feedback_correct": "Haloperidol blocks D2 receptors. This patient needs dopamine restored, not blocked. This would catastrophically worsen every motor symptom.",
             "fennick_correct_comment": "\"A D2 antagonist for a D2 deficiency. Think about what you just prescribed.\"",
             "pt_remark_correct": "Haloperidol. That is for psychosis. Isn't it.",
-            "pt_remark_wrong": "Haloperidol. I looked that up once. That is for psychosis."
+            "pt_remark_wrong": "Isn't that what they give people when they're... you know. Hearing things. Seeing things. I'm not doing any of that."
           },
           {
             "text": "Propranolol",
             "sub": "Beta-blocker — for essential tremor",
             "correct": false,
             "feedback_wrong": "Propranolol is for essential tremor — an action tremor. This is a rest tremor from dopamine deficiency. Propranolol will not touch it.",
-            "pt_remark_wrong": "Propranolol. That is for tremor. But not — not this kind of tremor, is it."
+            "pt_remark_wrong": "My husband takes that for his shaking. His tremor goes away when he concentrates on something. Mine doesn't. Surely they can't be the same drug."
           }
         ]
       },
@@ -167,28 +167,28 @@
             "sub": "Histopathology for Lewy bodies",
             "correct": false,
             "feedback_wrong": "Brain biopsy for Parkinson Disease is not done in living patients. Lewy bodies are a post-mortem finding. This would be unconscionable.",
-            "pt_remark_wrong": "A biopsy of the brain. While I am alive. You cannot be serious."
+            "pt_remark_wrong": "I'm sorry — a biopsy of my brain. To check for... protein deposits. While I'm still alive and sitting here."
           },
           {
             "text": "Occupational therapy",
             "sub": "ADL assessment and adaptation",
             "correct": true,
             "feedback_correct": "Also correct — OT is essential. Fine motor tasks, handwriting aids, safety assessment. Both this and movement disorder referral are right answers.",
-            "pt_remark_correct": "Occupational therapy. So someone will help me find a way to work again. Yes. That matters."
+            "pt_remark_correct": "Someone who can help me work out a way to still do my job. I haven't told anyone — not even my husband — how much I miss it."
           },
           {
             "text": "Lumbar puncture",
             "sub": "CSF analysis",
             "correct": false,
             "feedback_wrong": "LP is not indicated in Parkinson Disease. This is a clinical diagnosis supported by DaTscan. CSF analysis will not change management.",
-            "pt_remark_wrong": "A lumbar puncture. For a tremor. That seems like a long road to an answer."
+            "pt_remark_wrong": "A needle in my spine. But the problem is my hands. I don't — I'm not following the connection."
           },
           {
             "text": "Movement disorder specialist",
             "sub": "Neurology subspecialty",
             "correct": true,
             "feedback_correct": "Correct. Movement disorder neurologists specialize in optimizing PD management — medication timing, DBS candidacy, motor complications.",
-            "pt_remark_correct": "A specialist. Someone who knows this specifically. Yes. That is what I have needed for fourteen months."
+            "pt_remark_correct": "Someone who only sees this. Not a physician who looks at me and immediately says 'depression' and sends me home with sertraline."
           }
         ]
       },
@@ -201,28 +201,28 @@
             "sub": "Outpatient management",
             "correct": true,
             "feedback_correct": "Exactly right. Stable chronic condition, clear diagnosis, outpatient management with appropriate follow-up.",
-            "pt_remark_correct": "Home. With a prescription and a referral. That is manageable. That I can do."
+            "pt_remark_correct": "Home. With something to try. That's honestly all I came here for."
           },
           {
             "text": "Admit for DaTscan",
             "sub": "Inpatient imaging",
             "correct": false,
             "feedback_wrong": "DaTscan is an outpatient nuclear medicine study. There is no indication for inpatient admission to obtain it.",
-            "pt_remark_wrong": "Admitted. For the scan. My husband will want to stay. The ward will not like that."
+            "pt_remark_wrong": "Admitted just for the scan. My husband can't manage the house alone. He doesn't know where anything is."
           },
           {
             "text": "Admit to neurology floor",
             "sub": "Inpatient workup",
             "correct": false,
             "feedback_wrong": "No indication for admission. This has been present for 14 months and she is hemodynamically stable. Admission wastes resources.",
-            "pt_remark_wrong": "Admitted. For the same tests I could have outpatient. My husband cannot afford to take more time off work."
+            "pt_remark_wrong": "Admitted for more tests. How long? He can manage three days. Maybe four if the neighbour helps."
           },
           {
             "text": "Discharge without treatment",
             "sub": "Watch and wait",
             "correct": false,
             "feedback_wrong": "The diagnosis is established. Withholding levodopa serves no purpose and leaves the patient suffering unnecessarily.",
-            "pt_remark_wrong": "No treatment. Just — watch it. Watch my hands get worse and do nothing."
+            "pt_remark_wrong": "Nothing. Just — monitor it. Watch my handwriting get smaller and smaller and do nothing."
           }
         ]
       }
@@ -359,7 +359,7 @@
             "sub": "Diurese the facial edema",
             "correct": false,
             "feedback_wrong": "Diuresis will not relieve SVC obstruction and risks dangerous volume depletion in an already compromised patient. The edema is obstructive, not fluid overload.",
-            "pt_remark_wrong": "A diuretic. You want to drain my face like a swamp. My collar is too tight because of a drug."
+            "pt_remark_wrong": "You want to drain my face like a blocked canal. That's not how you fix a blocked canal. You clear the obstruction."
           },
           {
             "text": "Elevate head of bed, IV dexamethasone, urgent oncology consult",
@@ -367,21 +367,21 @@
             "correct": true,
             "feedback_correct": "Correct. Head elevation reduces venous pressure. Dexamethasone reduces peritumoral edema acutely — the mass is not shrinking, the inflammatory response around it is.",
             "fennick_correct_comment": "\"Dexamethasone gives temporal relief while you establish histology. The mass is still there. The compression is still there. This buys time.\"",
-            "pt_remark_correct": "Head up. A steroid. Something to reduce the pressure. Fine. That at least sounds logical."
+            "pt_remark_correct": "Head up, a steroid to reduce the swelling. Fine. That at least addresses the actual problem."
           },
           {
             "text": "Start anticoagulation for presumed SVC thrombosis",
             "sub": "Heparin drip",
             "correct": false,
             "feedback_wrong": "The CT shows extrinsic compression by tumor, not primary thrombosis. Anticoagulation without histologic diagnosis and in the setting of hemoptysis is dangerous.",
-            "pt_remark_wrong": "A blood thinner. For a clot. You think this is a clot."
+            "pt_remark_wrong": "You think something is blocking the flow, so you thin the blood. Without knowing whether the blockage is even a clot."
           },
           {
             "text": "Urgent SVC stenting by interventional radiology",
             "sub": "Mechanical recanalization",
             "correct": false,
             "feedback_wrong": "SVC stenting is sometimes used for severe SVC syndrome but is not the first step — stabilization, diagnosis confirmation, and oncology input come first. Stenting before histology is premature.",
-            "pt_remark_wrong": "A stent. You want to put a device in a vein in my chest. Today. Without knowing what is causing this."
+            "pt_remark_wrong": "You want to put a device in my chest before you have a single biopsy result. No. Find what the cargo is before you redesign the warehouse."
           }
         ]
       },
@@ -394,7 +394,7 @@
             "sub": "Rapid sodium correction",
             "correct": false,
             "feedback_wrong": "Hypertonic saline is reserved for symptomatic severe hyponatremia (seizures, coma, Na <120). Na of 128 without neurological symptoms does not warrant hypertonic saline — too rapid correction risks osmotic demyelination syndrome.",
-            "pt_remark_wrong": "Hypertonic saline. You want to give me salt intravenously for a sodium of 128. My grandfather survived worse."
+            "pt_remark_wrong": "More salt into a body that's already holding too much water. My crew does that at sea when fresh water runs low. It makes things worse."
           },
           {
             "text": "Fluid restriction 800-1000 mL/day",
@@ -402,7 +402,7 @@
             "correct": true,
             "feedback_correct": "Correct. SIADH from ectopic ADH. Free water restriction — not sodium. The kidneys will excrete any sodium you give; the problem is inappropriate ADH, not sodium depletion.",
             "fennick_correct_comment": "\"Urine osmolality higher than serum despite hyponatraemia. That is SIADH in two numbers. The kidneys are retaining water they should be excreting.\"",
-            "pt_remark_correct": "Restrict the fluids. So the body corrects itself. That sounds like the sensible option."
+            "pt_remark_correct": "Less fluid in. So the body stops diluting itself. Alright, that tracks."
           },
           {
             "text": "Normal saline 1L bolus",
@@ -412,14 +412,14 @@
             "feedback_correct": "In SIADH, saline can worsen hyponatraemia — the kidneys excrete the sodium but retain the free water. Giving salt does not fix the ADH problem.",
             "fennick_correct_comment": "\"Normal saline in SIADH. The sodium will be excreted. The water will be retained. The sodium will drop further.\"",
             "pt_remark_correct": "Normal saline. That is just salt water. I've drunk saltwater before. It didn't help.",
-            "pt_remark_wrong": "Normal saline. That is just salt water. I've drunk saltwater before when the rations ran short. It didn't help then either."
+            "pt_remark_wrong": "Salt water into the vein. You're adding to the problem."
           },
           {
             "text": "Fludrocortisone",
             "sub": "Mineralocorticoid replacement",
             "correct": false,
             "feedback_wrong": "Fludrocortisone is for adrenal insufficiency with hyponatremia. This is SIADH from ectopic ADH production by the tumor. Completely different mechanism.",
-            "pt_remark_wrong": "Fludrocortisone. A steroid for the kidneys. I don't think that's what this is."
+            "pt_remark_wrong": "A kidney hormone. You think this is an adrenal problem. How did you get from my face to my adrenal gland."
           }
         ]
       },
@@ -432,28 +432,28 @@
             "sub": "Targeted therapy",
             "correct": false,
             "feedback_wrong": "EGFR-targeted therapy is for non-small cell lung cancer with EGFR mutations. SCLC does not harbor EGFR mutations and does not respond to EGFR inhibitors.",
-            "pt_remark_wrong": "Erlotinib. A targeted drug. For a specific mutation. You don't even know my mutation."
+            "pt_remark_wrong": "A drug designed for a specific mutation in the tumour. You haven't tested for the mutation."
           },
           {
             "text": "Stereotactic body radiotherapy (SBRT) alone",
             "sub": "Definitive local radiation",
             "correct": false,
             "feedback_wrong": "SBRT is for early-stage non-small cell lung cancer. Extensive stage SCLC requires systemic therapy. Local radiation does not address micrometastatic disease.",
-            "pt_remark_wrong": "Radiation. Local radiation. To a disease that is already in my bloodstream."
+            "pt_remark_wrong": "Local radiation. To one spot. When the CT showed it's already gone further than one spot."
           },
           {
             "text": "Surgical resection of right hilar mass",
             "sub": "Lobectomy",
             "correct": false,
             "feedback_wrong": "Surgery has no role in extensive stage SCLC. SCLC is a systemic disease at presentation in most cases — the problem is not just the primary tumor. Chemotherapy is the backbone of treatment.",
-            "pt_remark_wrong": "Surgery. On a six centimetre mass in my mediastinum. With a vein compressed 80 percent."
+            "pt_remark_wrong": "You want to cut me open. For a six centimetre mass in my chest. With a vein compressed 80 percent. No."
           },
           {
             "text": "Carboplatin + Etoposide + Atezolizumab",
             "sub": "Chemoimmunotherapy — current standard of care",
             "correct": true,
             "feedback_correct": "Correct. EP (etoposide + platinum) with atezolizumab (PD-L1 inhibitor) is the current first-line for extensive stage SCLC based on the IMpower133 trial. SCLC is exquisitely chemo-sensitive initially.",
-            "pt_remark_correct": "Chemotherapy and immunotherapy together. The standard. Fine. I have survived harder campaigns than this."
+            "pt_remark_correct": "Chemotherapy and the immunotherapy together. The standard approach. Fine. I've run trade routes through worse conditions than a hospital ward."
           }
         ]
       },
@@ -466,28 +466,28 @@
             "sub": "Follow-up in 1-2 weeks",
             "correct": false,
             "feedback_wrong": "Absolutely not. This patient has SVC syndrome, oxygen saturation of 94%, hemoptysis, and a sodium of 128. Sending him home risks acute decompensation from worsening SVC obstruction or hyponatremic seizure.",
-            "pt_remark_wrong": "Outpatient. With a referral. My wife will have something to say about that."
+            "pt_remark_wrong": "Come back in two weeks. With a face that looks like this and oxygen at 94."
           },
           {
             "text": "Admit to ICU for immediate chemo initiation",
             "sub": "Urgent treatment",
             "correct": false,
             "feedback_wrong": "Chemotherapy is not started without histologic confirmation. You need a tissue diagnosis first. Admitting to the general oncology floor for workup and stabilization is the appropriate level of care.",
-            "pt_remark_wrong": "ICU. For chemotherapy that requires a diagnosis first. That seems like getting ahead of things."
+            "pt_remark_wrong": "The intensive care unit. For treatment that requires a tissue result you don't have yet."
           },
           {
             "text": "Admit — oncology, IV dexamethasone, fluid restriction, urgent CT guided biopsy planning",
             "sub": "Inpatient workup and stabilization",
             "correct": true,
             "feedback_correct": "Correct. This is a new diagnosis of extensive stage SCLC with active SVC syndrome, hemoptysis, and hyponatremia. Inpatient admission is mandatory for stabilization and expedited workup.",
-            "pt_remark_correct": "Admitted. For the biopsy, the plan, the proper start. Yes. That is the right way to do this."
+            "pt_remark_correct": "Admitted. Properly. With the biopsy and the plan done right. Yes."
           },
           {
             "text": "Transfer to thoracic surgery for emergent resection",
             "sub": "OR today",
             "correct": false,
             "feedback_wrong": "Surgery has no role in SCLC management and would be catastrophic without histologic diagnosis. Extensive stage SCLC is managed medically.",
-            "pt_remark_wrong": "Surgery. Today. On a tumour that hasn't even been biopsied."
+            "pt_remark_wrong": "Open surgery today. On a tumour with no histology, no staging, no plan."
           }
         ]
       }
@@ -624,14 +624,14 @@
             "sub": "Outpatient oral therapy",
             "correct": false,
             "feedback_wrong": "Infective endocarditis requires IV antibiotics for 4-6 weeks. Oral therapy is not appropriate for native valve endocarditis with vegetation. This patient requires admission.",
-            "pt_remark_wrong": "Oral antibiotics. And I go home. With a vegetation on my valve and all of — this."
+            "pt_remark_wrong": "Go home on oral tablets. After what you just found on the scan and the echo. Is that — is the situation not more serious than that?"
           },
           {
             "text": "Urgent cardiac surgery consultation for valve replacement",
             "sub": "Emergent OR",
             "correct": false,
             "feedback_wrong": "Surgery is indicated for severe complications (heart failure, abscess, emboli, uncontrolled infection) — not as the first step. Medical therapy is initiated first. Surgery timing is decided after stabilization and culture results.",
-            "pt_remark_wrong": "Surgery first. Before you even know what is growing on the valve."
+            "pt_remark_wrong": "Open the chest before you've even grown the cultures. You'd never break into a foundation wall before you'd read the structural report."
           },
           {
             "text": "Draw 3 sets of blood cultures then start IV antibiotics",
@@ -639,7 +639,7 @@
             "correct": true,
             "feedback_correct": "Correct. Blood cultures before antibiotics in stable endocarditis — always. This guides 4-6 weeks of IV therapy. Starting antibiotics before cultures eliminates your ability to identify the organism.",
             "fennick_correct_comment": "\"15 minutes to draw cultures. He is not in septic shock. Every hour of antibiotics before cultures reduces identification probability.\"",
-            "pt_remark_correct": "The cultures first. Then the antibiotics. That's the correct sequence. I would have done the same on a construction site — diagnose before you fix."
+            "pt_remark_correct": "Okay — a few extra minutes to get the samples first. Can someone tell my wife I'm alright? She's been in the waiting room for three hours."
           },
           {
             "text": "Start IV vancomycin immediately",
@@ -648,7 +648,7 @@
             "feedback_wrong": "Do not start antibiotics before blood cultures in stable endocarditis. He is not in septic shock. He can wait 15 minutes for cultures. Starting vancomycin blindly eliminates your ability to identify the organism and optimize therapy.",
             "feedback_correct": "Vancomycin before cultures destroys the diagnostic pathway. He is hemodynamically stable.",
             "fennick_correct_comment": "\"You gave antibiotics before you knew what was growing. Now you may never know. That is 6 weeks of empiric therapy instead of targeted.\"",
-            "pt_remark_wrong": "Vancomycin immediately. Before anything else. Before you even know what organism you are treating."
+            "pt_remark_wrong": "The antibiotic before the cultures. Doesn't that — doesn't that mean you won't know what you're treating anymore?"
           }
         ]
       },
@@ -661,21 +661,21 @@
             "sub": "MRSA coverage",
             "correct": false,
             "feedback_wrong": "Vancomycin is appropriate for penicillin-allergic patients or MRSA. This organism is fully penicillin susceptible — using vancomycin is inferior to beta-lactam therapy and unnecessarily broad.",
-            "pt_remark_wrong": "Six weeks of vancomycin. For a fully penicillin-susceptible organism."
+            "pt_remark_wrong": "A different antibiotic. When the results said penicillin works perfectly well."
           },
           {
             "text": "IV Daptomycin monotherapy",
             "sub": "Lipopeptide antibiotic",
             "correct": false,
             "feedback_wrong": "Daptomycin is inactivated by pulmonary surfactant and cannot be used when pulmonary involvement is present (septic emboli). It is not first-line for Strep viridans endocarditis.",
-            "pt_remark_wrong": "Daptomycin. I have septic emboli in my lungs. Daptomycin is inactivated by surfactant."
+            "pt_remark_wrong": "I thought I read somewhere that one doesn't reach the lungs properly. Is that not — does that not matter here."
           },
           {
             "text": "Oral azithromycin continuation",
             "sub": "Macrolide coverage",
             "correct": false,
             "feedback_wrong": "He was already on azithromycin and worsened. Macrolides have poor activity against Strep viridans in a biofilm-protected cardiac vegetation. IV therapy is mandatory.",
-            "pt_remark_wrong": "More azithromycin. I have been on azithromycin for a week and I am sitting here with a vegetation on my valve."
+            "pt_remark_wrong": "The one I've been on for a week. The one that hasn't done anything."
           },
           {
             "text": "IV Penicillin G or Ceftriaxone x4 weeks",
@@ -683,7 +683,7 @@
             "correct": true,
             "feedback_correct": "Correct. Penicillin-susceptible Strep viridans on a native valve — penicillin G or ceftriaxone for 4 weeks. Gentamicin can be added for the first 2 weeks to shorten treatment.",
             "fennick_correct_comment": "\"Ceftriaxone has the advantage of once-daily dosing for outpatient completion. If he stabilizes, OPAT becomes possible — but not before the complications are addressed.\"",
-            "pt_remark_correct": "Four weeks of penicillin. For the organism it is actually susceptible to. That is the right answer."
+            "pt_remark_correct": "Four weeks. Whatever I need to take for four weeks, I'll take. My wife will make sure I don't miss a dose."
           }
         ]
       },
@@ -697,28 +697,28 @@
             "correct": true,
             "feedback_correct": "Correct and urgent. New PR prolongation in aortic endocarditis means possible perivalvular extension — the abscess interrupts conduction. TEE is far more sensitive than TTE. Abscess is a surgical indication.",
             "fennick_correct_comment": "\"The AV node sits millimetres from the aortic root. An abscess extending there delays conduction. That is what the EKG is showing you.\"",
-            "pt_remark_correct": "A deeper scan. Through the oesophagus. If that is what it takes to rule out an abscess near the conduction system, then yes."
+            "pt_remark_correct": "Another scan through the throat. If that gives you a clearer picture of what's happening near the wiring — yes. Whatever you need."
           },
           {
             "text": "Reassure — first-degree AV block is benign",
             "sub": "Observe only",
             "correct": false,
             "feedback_wrong": "A new PR prolongation in the context of aortic valve endocarditis is never benign — it is a red flag for perivalvular extension until proven otherwise. This is an indication for urgent TEE and possible surgery.",
-            "pt_remark_wrong": "First-degree AV block is benign. In a man with a vegetation on his aortic valve. You are calling this benign."
+            "pt_remark_wrong": "The heartbeat change is nothing to worry about. With an active infection sitting on my valve."
           },
           {
             "text": "Increase antibiotic duration to 8 weeks",
             "sub": "Empiric extension",
             "correct": false,
             "feedback_wrong": "Extending antibiotic duration empirically does not address the question of whether a perivalvular abscess has formed. You need imaging to answer that question, not more antibiotics.",
-            "pt_remark_wrong": "Eight weeks of antibiotics instead of six. Without even checking whether there is an abscess."
+            "pt_remark_wrong": "Two more weeks of antibiotics. Without checking first whether there's something else going on with the conduction."
           },
           {
             "text": "Cardiology consult for pacemaker placement",
             "sub": "Treat the AV block",
             "correct": false,
             "feedback_wrong": "Do not place a pacemaker in active endocarditis — the pacemaker wire becomes a nidus for further infection. The underlying cause (potential abscess) must be diagnosed and treated first.",
-            "pt_remark_wrong": "A pacemaker. In active endocarditis. You want to put a wire through a heart with an active infection on the valve."
+            "pt_remark_wrong": "A pacemaker wire. Threading a device through a valve that has an active infection on it."
           }
         ]
       },
@@ -731,28 +731,28 @@
             "sub": "OPAT — outpatient parenteral therapy",
             "correct": false,
             "feedback_wrong": "OPAT is appropriate only for stable, uncomplicated endocarditis after initial inpatient stabilization and when the organism and susceptibilities are known. This patient has active complications — PR prolongation, septic emboli — and is not a candidate for early discharge.",
-            "pt_remark_wrong": "PICC line and go home. With septic emboli on my chest X-ray and a PR that just changed."
+            "pt_remark_wrong": "A tube in my arm and home. With spots on the lung X-ray and the heartbeat change you mentioned."
           },
           {
             "text": "Emergency valve replacement tonight",
             "sub": "Immediate OR",
             "correct": false,
             "feedback_wrong": "Surgery is not emergent here. He is hemodynamically stable. Indications for urgent surgery include heart failure, uncontrolled infection, abscess, or recurrent emboli despite antibiotics. He needs TEE first to clarify anatomy before any surgical decision.",
-            "pt_remark_wrong": "Emergency valve replacement tonight. Without TEE, without knowing if there is an abscess, without being stabilised."
+            "pt_remark_wrong": "Emergency surgery tonight. Before the TEE, before you know what you're operating into."
           },
           {
             "text": "Admit to cardiology with cardiac surgery on standby",
             "sub": "Inpatient IV antibiotics + monitoring",
             "correct": true,
             "feedback_correct": "Correct. Native valve endocarditis with a visible vegetation, severe AR, PR prolongation, and septic emboli requires inpatient admission to cardiology with cardiac surgery availability. 4-6 weeks of IV antibiotics, daily EKGs, serial echos, and monitoring for surgical indications.",
-            "pt_remark_correct": "Cardiology. With surgery available. Four to six weeks. My wife will manage the site. She always does."
+            "pt_remark_correct": "Admitted. Cardiology. Surgery available if needed. Four to six weeks. My wife will run the site — she's done it before, she's good."
           },
           {
             "text": "Admit to general medicine floor only",
             "sub": "No cardiology or surgery involvement",
             "correct": false,
             "feedback_wrong": "The complexity of this case — new severe AR, EKG changes suggesting possible abscess, septic emboli — requires cardiology input and cardiac surgery availability. General medicine alone is insufficient.",
-            "pt_remark_wrong": "General medicine only. With a vegetation on an aortic valve and a new conduction delay."
+            "pt_remark_wrong": "General ward only. For something this complicated."
           }
         ]
       }
@@ -890,7 +890,7 @@
             "correct": true,
             "feedback_correct": "Correct. Alpha blockade first — always. Phenoxybenzamine or phentolamine controls catecholamine-driven hypertension. Beta blockers only after alpha blockade is established.",
             "fennick_correct_comment": "\"Phenoxybenzamine is irreversible and non-selective. That matters — you want sustained blockade before surgery. Do not stop it.\"",
-            "pt_remark_correct": "Alpha blockade. Before anything else. That is the protocol. I respect a clear protocol."
+            "pt_remark_correct": "Alpha before beta. There's a sequence. I can follow a sequence."
           },
           {
             "text": "IV Metoprolol",
@@ -899,21 +899,21 @@
             "feedback_wrong": "Never give beta-blockers first in pheochromocytoma. Blocking beta-2 vasodilation leaves unopposed alpha-1 vasoconstriction — you will precipitate a catastrophic hypertensive crisis. This is one of the classic dangerous drug errors in medicine.",
             "feedback_correct": "Beta blockade before alpha removes vasodilatory beta-2 effect and leaves unopposed alpha-1 constriction. Hypertensive crisis. A classic and potentially fatal error.",
             "fennick_correct_comment": "\"You removed beta-2 vasodilation and left alpha-1 vasoconstriction unopposed. What happens to the pressure now.\"",
-            "pt_remark_wrong": "Metoprolol. A beta blocker. First."
+            "pt_remark_wrong": "The heart rate drug. Before the blood pressure drug. The briefing I read on the way here said that order was wrong."
           },
           {
             "text": "IV Labetalol",
             "sub": "Combined alpha/beta blocker",
             "correct": false,
             "feedback_wrong": "Labetalol is combined alpha/beta blockade but its beta effect dominates. In pheochromocytoma it is not the preferred agent — the ratio of beta to alpha blockade is not adequate. Pure alpha-blockade first is the standard.",
-            "pt_remark_wrong": "Labetalol. Combined. You said that still favours beta. I heard you."
+            "pt_remark_wrong": "The combined one. You said the ratio is still wrong for this situation."
           },
           {
             "text": "Increase amlodipine dose",
             "sub": "Calcium channel blocker escalation",
             "correct": false,
             "feedback_wrong": "Amlodipine has already failed to control his blood pressure for two years. A calcium channel blocker alone is insufficient for catecholamine-driven hypertension of this magnitude. This is not the right move.",
-            "pt_remark_wrong": "More amlodipine. It has failed for two years. Doubling the dose of a failed medication is not a strategy."
+            "pt_remark_wrong": "Increasing the dosage of a compound that's been ineffective for two years. That is not a revised strategy. That is hope."
           }
         ]
       },
@@ -927,7 +927,7 @@
             "correct": true,
             "feedback_correct": "Correct. Plasma free metanephrines >97% sensitivity. Biochemical confirmation is mandatory before surgical planning — operating without it is dangerous.",
             "fennick_correct_comment": "\"Metanephrines are stable metabolites — they do not fluctuate with paroxysms the way catecholamines do. That is why they are more sensitive.\"",
-            "pt_remark_correct": "A urine collection. 24 hours. I have run supply lines in worse conditions. I can manage a 24-hour collection."
+            "pt_remark_correct": "Twenty-four hour collection. I have conducted resupply operations in worse conditions than a hospital bathroom."
           },
           {
             "text": "Adrenal biopsy",
@@ -937,21 +937,21 @@
             "feedback_correct": "Adrenal biopsy of a suspected pheo is absolutely contraindicated. Needle manipulation triggers massive catecholamine release. Potentially fatal on the table.",
             "fennick_correct_comment": "\"Do not touch it with a needle. Not until it is blocked, prepared, and on the surgical table.\"",
             "pt_remark_correct": "A needle directly into the adrenal. You want to put a needle directly into it.",
-            "pt_remark_wrong": "A needle into the adrenal. Directly into a tumour that is flooding me with catecholamines. You want to poke it."
+            "pt_remark_wrong": "A needle directly into the mass. Before it's been blocked, before it's been controlled. That concerns me."
           },
           {
             "text": "Urine cortisol",
             "sub": "Rule out Cushing syndrome",
             "correct": false,
             "feedback_wrong": "The clinical picture — paroxysmal hypertension, sweating, palpitations, adrenal mass — is pheochromocytoma, not Cushing syndrome. Cortisol testing is not the priority here.",
-            "pt_remark_wrong": "Urine cortisol. For Cushing syndrome. I do not have the moon face, the striae, the weakness pattern. That is not what this is."
+            "pt_remark_wrong": "The cortisol test. For episodes of pounding headache, sweating, and cardiac arrest on the way down. That doesn't add up."
           },
           {
             "text": "Proceed directly to adrenalectomy",
             "sub": "Remove the mass now",
             "correct": false,
             "feedback_wrong": "Operating on an unprepared pheochromocytoma patient is dangerous. Without adequate alpha-blockade preoperatively, surgical manipulation of the tumor causes a massive catecholamine surge on the table. Biochemical confirmation and medical preparation come first.",
-            "pt_remark_wrong": "Surgery immediately. Without knowing the biochemistry, without blocking the tumour first. On the table as I am right now."
+            "pt_remark_wrong": "Operate now. Without the blood test confirmed. Without the preparation complete."
           }
         ]
       },
@@ -964,28 +964,28 @@
             "sub": "Standard preoperative protocol",
             "correct": true,
             "feedback_correct": "Correct. Phenoxybenzamine for 10-14 days allows adequate alpha-blockade and volume expansion (catecholamines cause chronic vasoconstriction and volume depletion). High-salt diet and IV fluids help restore intravascular volume. Beta-blockers added only after alpha-blockade is established — to control reflex tachycardia.",
-            "pt_remark_correct": "Ten to fourteen days. Alpha first, then beta. High salt. I have had worse pre-mission preparation schedules."
+            "pt_remark_correct": "Fourteen days of preparation. Then the operation. A proper timeline with clear stages. I can work with that."
           },
           {
             "text": "Operate within 48 hours — the mass is large",
             "sub": "Urgent resection",
             "correct": false,
             "feedback_wrong": "Size does not change the requirement for preoperative preparation. Operating without adequate alpha-blockade risks intraoperative hypertensive crisis, arrhythmia, and death. 10-14 days of preparation is not negotiable.",
-            "pt_remark_wrong": "Operate within 48 hours. On an unblocked tumour. Because the mass is large."
+            "pt_remark_wrong": "Forty-eight hours because the mass is large. Size of the target does not change the preparation requirement."
           },
           {
             "text": "Start beta-blocker first to control tachycardia",
             "sub": "Rate control before surgery",
             "correct": false,
             "feedback_wrong": "Beta-blockers before alpha-blockade is the cardinal error in pheochromocytoma management. You will cause unopposed alpha vasoconstriction and potentially fatal hypertension. Alpha first. Always.",
-            "pt_remark_wrong": "Beta blocker first. For the tachycardia. Before alpha. We have just been over this."
+            "pt_remark_wrong": "The heart rate drug first. Before the blood pressure drug. We covered this."
           },
           {
             "text": "Radiation therapy to shrink the mass preoperatively",
             "sub": "Neoadjuvant radiation",
             "correct": false,
             "feedback_wrong": "Pheochromocytoma is not treated with radiation preoperatively. The standard approach is medical preparation followed by laparoscopic adrenalectomy. Radiation has no role here.",
-            "pt_remark_wrong": "Radiation. To shrink the mass before surgery. This is an adrenal tumour. Not a lymphoma."
+            "pt_remark_wrong": "Radiation to shrink it. Before surgery. This isn't a lymphoma."
           }
         ]
       },
@@ -998,28 +998,28 @@
             "sub": "Inpatient workup and preparation",
             "correct": true,
             "feedback_correct": "Correct. This patient requires inpatient admission for blood pressure stabilization, biochemical confirmation, and preoperative preparation. Endocrinology and surgical oncology consults are essential. He should not leave the building.",
-            "pt_remark_correct": "Admitted. Stabilised. Then the operation when I am properly prepared. I can accept that timeline."
+            "pt_remark_correct": "Admitted. Prepared correctly. Then the operation at the right time. I accept that plan."
           },
           {
             "text": "Discharge with outpatient endocrinology referral",
             "sub": "Follow-up next week",
             "correct": false,
             "feedback_wrong": "A BP of 188/112 with an uncontrolled catecholamine-secreting tumor and a history of collapse this morning is not an outpatient situation. The next paroxysm could be fatal. He stays.",
-            "pt_remark_wrong": "Outpatient endocrinology. Next week. With a BP of 188 and a history of collapse this morning."
+            "pt_remark_wrong": "Outpatient referral. After I lost consciousness against my desk this morning."
           },
           {
             "text": "Discharge with increased amlodipine and aspirin",
             "sub": "Optimize current medications",
             "correct": false,
             "feedback_wrong": "Amlodipine has failed for two years. Aspirin does nothing for a pheochromocytoma. Sending this man home with the same medications that have already failed is not a plan — it is negligence.",
-            "pt_remark_wrong": "The same medications that have failed for two years. With aspirin. And sent home."
+            "pt_remark_wrong": "The same two medications. And home. The ones that have been failing since 2024."
           },
           {
             "text": "Admit to ICU for immediate surgery prep",
             "sub": "Emergency OR planning",
             "correct": false,
             "feedback_wrong": "ICU is not immediately necessary unless he is in active hypertensive emergency. He needs medical stabilization over 10-14 days before surgery. Admit to a monitored bed on the endocrine or medical service, not the ICU.",
-            "pt_remark_wrong": "ICU. For emergency surgery preparation. I need blocking, not a catheter in my neck tonight."
+            "pt_remark_wrong": "The intensive care unit. Tonight. Before the fourteen days of preparation are even started."
           }
         ]
       }
@@ -1151,21 +1151,21 @@
             "feedback_correct": "Inadequate. Low-flow oxygen will not displace CO quickly enough. Maximum inspired oxygen is required — there is no benefit to titrating in CO poisoning.",
             "fennick_correct_comment": "\"2 litres per minute. You are moving his COHb half-life from 5 hours to perhaps 4 hours. That is not treatment.\"",
             "pt_remark_correct": "2 litres. Fine. I can manage with the nose prongs.",
-            "pt_remark_wrong": "Two litres by nasal cannula. I — yes. Fine. I can manage with the nose prongs."
+            "pt_remark_wrong": "The small nose prongs — yes, sorry. I'll manage. I don't want to be a bother."
           },
           {
             "text": "Intubate and mechanically ventilate",
             "sub": "Airway protection",
             "correct": false,
             "feedback_wrong": "He is encephalopathic but protecting his airway. Intubation is not the first step — 100% O2 via non-rebreather is. Reserve intubation for comatose patients or those unable to protect their airway.",
-            "pt_remark_wrong": "Intubated. I'm sorry — I'm not — I can still breathe on my own. I can still breathe."
+            "pt_remark_wrong": "A tube down my throat. I — I can breathe on my own. I'm sorry, I'm not trying to be difficult."
           },
           {
             "text": "IV sodium bicarbonate for metabolic acidosis",
             "sub": "Correct the acidosis directly",
             "correct": false,
             "feedback_wrong": "The acidosis is from cellular hypoxia caused by CO — treat the cause, not the number. Bicarbonate will not help if CO remains on hemoglobin. Fix the CO first; the acidosis will resolve.",
-            "pt_remark_wrong": "Bicarbonate. For the acidosis. Not for whatever is causing it."
+            "pt_remark_wrong": "Something to fix the acid reading. Not whatever made the reading wrong in the first place."
           },
           {
             "text": "100% O2 via non-rebreather mask, remove from source",
@@ -1173,7 +1173,7 @@
             "correct": true,
             "feedback_correct": "Correct. 100% O2 via NRB reduces COHb half-life from ~5 hours to 60-90 minutes. Remove from source immediately. The hall is still running.",
             "fennick_correct_comment": "\"Competitive displacement — at FiO2 1.0, oxygen outcompetes CO for haemoglobin binding sites. Every minute on room air adds to his half-life.\"",
-            "pt_remark_correct": "The mask. The full mask. And away from the furnace. Yes. Yes, I should have left the furnace."
+            "pt_remark_correct": "The full mask. And get me away from the building. I should have sealed those ducts differently. I'm sorry."
           }
         ]
       },
@@ -1187,7 +1187,7 @@
             "correct": true,
             "feedback_correct": "Correct. COHb 28% with neurological symptoms and cardiac injury meets HBO criteria. Reduces COHb half-life to ~20 minutes and reduces delayed neuropsychiatric sequelae.",
             "fennick_correct_comment": "\"Delayed neurological syndrome — memory loss, personality change, parkinsonism — can emerge 2-4 weeks after apparent recovery. HBO reduces that risk. That is the argument beyond the acute phase.\"",
-            "pt_remark_correct": "The pressure chamber. If my COHb is 28 and I have the symptoms — yes. I meet the criteria. I looked it up on the way here."
+            "pt_remark_correct": "The pressure chamber. I looked it up on the way here because I was worried I was wasting your time. I think I need it. I'm sorry if I'm wrong."
           },
           {
             "text": "Give IV methylene blue",
@@ -1196,21 +1196,21 @@
             "feedback_wrong": "Methylene blue is the antidote for methemoglobinemia, not carbon monoxide poisoning. Completely different condition. CO poisoning is treated with oxygen — high-flow normobaric and hyperbaric.",
             "feedback_correct": "Methylene blue reverses methemoglobinemia — ferric iron. CO poisoning produces carboxyhemoglobin — ferrous iron with CO bound. Different mechanism entirely.",
             "fennick_correct_comment": "\"Methaemoglobin and carboxyhemoglobin are not the same. Both confound pulse oximetry. That is where the similarity ends.\"",
-            "pt_remark_wrong": "Methylene blue. That is for — that is for a different thing. A different colour. A different problem."
+            "pt_remark_wrong": "The blue dye treatment. I thought that was for a different kind of blood problem — not this one."
           },
           {
             "text": "No — normobaric O2 is sufficient for all CO cases",
             "sub": "Continue current treatment only",
             "correct": false,
             "feedback_wrong": "Normobaric 100% O2 is appropriate for mild CO poisoning. However, with COHb 28%, neurological symptoms, near-syncope, and cardiac injury, this patient meets criteria for HBO therapy. The evidence supports HBO in reducing delayed neuropsychiatric sequelae.",
-            "pt_remark_wrong": "Just the mask. No chamber. For a COHb of 28 with everything I have."
+            "pt_remark_wrong": "Just the mask and no chamber. Even with the number at 28 and the symptoms I have."
           },
           {
             "text": "No — HBO is only for COHb >50%",
             "sub": "Threshold is too high",
             "correct": false,
             "feedback_wrong": "The threshold for HBO is not a single number. COHb >25% is one criterion — but neurological symptoms, cardiac involvement, loss of consciousness, and pregnancy are equally important indications. This patient qualifies on multiple grounds.",
-            "pt_remark_wrong": "The threshold is 50. My COHb is 28. I fall short of your threshold and yet I fell thirty seconds yesterday."
+            "pt_remark_wrong": "My number is 28 and the threshold is 50. I read that. I'm sorry — I know I'm not the doctor here."
           }
         ]
       },
@@ -1223,28 +1223,28 @@
             "sub": "Notify employer only",
             "correct": false,
             "feedback_wrong": "A note is not adequate. Active workers are currently being poisoned. This requires immediate evacuation and emergency response — not paperwork.",
-            "pt_remark_wrong": "A note to my employer. Whilst the men are still inside."
+            "pt_remark_wrong": "A letter to the employer. Whilst the other men are still down in that hall right now."
           },
           {
             "text": "Nothing — treat the patient, the worksite is not your concern",
             "sub": "Clinical focus only",
             "correct": false,
             "feedback_wrong": "Physicians have a duty to report environmental hazards causing patient harm. Active poisoning of multiple workers is absolutely your concern. You have both a professional and moral obligation to act.",
-            "pt_remark_wrong": "You treat me. The worksite is not your concern. I understand. But the men are still inside."
+            "pt_remark_wrong": "You treat me, and the worksite is not part of your job. I understand that. But the others are still in there."
           },
           {
             "text": "Advise him to take time off work",
             "sub": "Occupational health advice",
             "correct": false,
             "feedback_wrong": "Advising one worker to stay home does nothing for the men currently working in the poisoned environment. This is an active ongoing emergency. The hall must be evacuated now.",
-            "pt_remark_wrong": "I take time off. The men who are still working in that hall — they just take time off too."
+            "pt_remark_wrong": "I take time off. And the other men keep working the lower hall."
           },
           {
             "text": "Notify authorities, evacuate the furnace hall, test all co-workers",
             "sub": "Public safety response",
             "correct": true,
             "feedback_correct": "Correct and critical. This is not just one patient — it is an industrial CO poisoning event. The furnace hall must be evacuated immediately, the source identified and sealed, all co-workers tested for COHb, and public health authorities notified. Failure to do this could mean deaths.",
-            "pt_remark_correct": "Evacuate the hall. Yes. Get them out first. I should have — I should have said something sooner. I'm sorry."
+            "pt_remark_correct": "Please get them out first. I should have said something last week when Henrick started getting the headaches. I'm so sorry."
           }
         ]
       },
@@ -1257,28 +1257,28 @@
             "sub": "Inpatient with HBO planning",
             "correct": true,
             "feedback_correct": "Correct. Admission is mandatory. He needs cardiac monitoring for CO-induced myocardial injury, serial troponins, HBO therapy, and neurological follow-up for delayed CO sequelae (personality change, parkinsonism, cognitive impairment can emerge weeks later).",
-            "pt_remark_correct": "Admitted. With the cardiac monitoring and the chamber. And someone calls the hall. Someone has to call the hall."
+            "pt_remark_correct": "Admitted. With the monitoring. And someone has to call the hall — I can't stop thinking about the men in there."
           },
           {
             "text": "Discharge with nasal cannula O2 to use at home",
             "sub": "Outpatient oxygen therapy",
             "correct": false,
             "feedback_wrong": "Home oxygen at low flow is not adequate treatment for acute CO poisoning with neurological and cardiac involvement. This patient needs inpatient monitoring and HBO therapy.",
-            "pt_remark_wrong": "Home oxygen. By nasal cannula. After a COHb of 28 and a troponin."
+            "pt_remark_wrong": "Home oxygen by the small prongs. After the troponin result and everything else."
           },
           {
             "text": "Discharge after 2 hours of O2 in the ED",
             "sub": "Brief observation only",
             "correct": false,
             "feedback_wrong": "Absolutely not. Troponin elevation, neurological symptoms, and COHb 28% all require admission. Delayed neurological sequelae of CO poisoning can appear days to weeks later — this patient needs monitoring and follow-up.",
-            "pt_remark_wrong": "Two hours of oxygen and then home. I'm sorry — two hours is not enough for this. I know that now."
+            "pt_remark_wrong": "Two hours and then home. I don't want to be a burden, but — I fell yesterday. Is two hours really enough."
           },
           {
             "text": "Transfer immediately to hyperbaric chamber without admission workup",
             "sub": "HBO without stabilization",
             "correct": false,
             "feedback_wrong": "HBO is indicated but so is proper stabilization first — 100% O2 via NRB, IV access, cardiac monitoring, and admission workup. Transfer to HBO without this is premature and potentially dangerous.",
-            "pt_remark_wrong": "The hyperbaric chamber first. Without the cardiac monitoring, without the workup. I don't — I don't think that is the right order."
+            "pt_remark_wrong": "The chamber without the monitoring first. Is that — is that the right way to do it."
           }
         ]
       }
@@ -1406,14 +1406,15 @@
             "sub": "Conservative management",
             "correct": false,
             "feedback_wrong": "Observation alone is appropriate only for small (<20%) asymptomatic pneumothoraces. This patient is symptomatic with O2 95% and a 30% collapse. Active intervention is indicated.",
-            "pt_remark_wrong": "Just watch it. The first one resolved on its own. You want to wait again."
+            "pt_remark_wrong": "But the first one... went away on its own after two days. Can't we just... see if this one does the same."
           },
           {
             "text": "Emergency thoracotomy",
             "sub": "Open surgical decompression",
             "correct": false,
             "feedback_wrong": "Thoracotomy is not indicated for a stable primary spontaneous pneumothorax. There is no tension, no hemothorax, no mediastinal shift. Needle aspiration or chest tube are the appropriate interventions.",
-            "pt_remark_wrong": "Open surgery. For a 30 percent pneumothorax with a trachea in the midline."
+            "pt_remark_wrong": "Open surgery. For thirty percent.",
+            "pt_remark_correct": "Alright. Do what... you need to do. I just want to breathe properly again."
           },
           {
             "text": "Supplemental O2 and needle aspiration or small-bore chest tube",
@@ -1421,14 +1422,15 @@
             "correct": true,
             "feedback_correct": "Correct. 30% pneumothorax in a symptomatic patient warrants intervention. Needle aspiration first-line for primary spontaneous PTX. High-flow O2 accelerates nitrogen resorption.",
             "fennick_correct_comment": "\"Aspiration first. If the lung re-expands and stays up, you may avoid a chest tube. If it does not, or recurs, tube comes next.\"",
-            "pt_remark_correct": "A needle or a tube. Something to let the air out. That makes sense. Fix the mechanism."
+            "pt_remark_correct": "Alright. Do what you need to do.",
+            "pt_remark_wrong": "An operation? For a first... oh wait. Second time. Right. Still — open surgery seems like... a lot."
           },
           {
             "text": "Intubate and positive pressure ventilation",
             "sub": "Mechanical ventilation",
             "correct": false,
             "feedback_wrong": "Positive pressure ventilation in an undecompressed pneumothorax risks converting it to a tension pneumothorax. Never ventilate a patient with a known pneumothorax before decompression. This would be dangerous.",
-            "pt_remark_wrong": "Intubate. With a known pneumothorax. And positive pressure on a lung that already has a hole in it."
+            "pt_remark_wrong": "Push air in. To a lung... that already has too much air in the wrong place."
           }
         ]
       },
@@ -1442,28 +1444,28 @@
             "correct": true,
             "feedback_correct": "Correct. Second ipsilateral episode plus bilateral bleb disease on CT — VATS with bullectomy and pleurodesis. Recurrence rate after second episode exceeds 80%.",
             "fennick_correct_comment": "\"VATS allows direct resection of the blebs, not just pleurodesis through a tube. In a young patient with bilateral disease, mechanical pleurodesis at the time of bullectomy gives the best long-term outcome.\"",
-            "pt_remark_correct": "An operation. To remove the blebs and seal the lining. Second time round, same side — yes. That seems like the right answer."
+            "pt_remark_correct": "Cut out the... the little balloon things and seal the lining. So it can't happen again. Yeah. That makes sense."
           },
           {
             "text": "Long-term bronchodilator therapy",
             "sub": "Treat for underlying airway disease",
             "correct": false,
             "feedback_wrong": "This is primary spontaneous pneumothorax — there is no underlying airway disease to treat. Bronchodilators have no role here. This is a structural problem requiring surgical correction.",
-            "pt_remark_wrong": "Inhalers. For a structural problem that has nothing to do with my airways."
+            "pt_remark_wrong": "An inhaler. But my... my airways are fine. The air is just in the wrong... compartment."
           },
           {
             "text": "Discharge and advise to return if it recurs again",
             "sub": "Wait for third episode",
             "correct": false,
             "feedback_wrong": "Waiting for a third episode is not guideline-concordant and puts the patient at serious risk. A third spontaneous pneumothorax can be life-threatening. The second episode is the standard threshold for surgical referral.",
-            "pt_remark_wrong": "Wait for a third episode. For a recurrence rate you said is over 80 percent."
+            "pt_remark_wrong": "Wait for a third time. After two... on the same side."
           },
           {
             "text": "Chemical pleurodesis via chest tube only",
             "sub": "Talc or tetracycline via tube",
             "correct": false,
             "feedback_wrong": "Chemical pleurodesis via chest tube is less effective than VATS in young patients with bleb disease. VATS allows direct visualization and resection of blebs as well as mechanical and chemical pleurodesis — superior outcomes and lower recurrence rates.",
-            "pt_remark_wrong": "Talc through a tube instead of directly fixing the blebs. You said VATS was better. You just said that."
+            "pt_remark_wrong": "Powder through a tube... instead of just going in and sorting out the blebs properly."
           }
         ]
       },
@@ -1476,14 +1478,14 @@
             "sub": "Airway assessment",
             "correct": false,
             "feedback_wrong": "Bronchoscopy is not indicated for primary spontaneous pneumothorax in a young healthy patient. There is no clinical suspicion for an endobronchial lesion causing this presentation.",
-            "pt_remark_wrong": "A camera down my airway. For a collapsed lung with no wheeze, no cough, no fever."
+            "pt_remark_wrong": "A camera down my... throat. But there's nothing wrong with my... breathing tube. It's the lining."
           },
           {
             "text": "HIV testing",
             "sub": "Rule out immunocompromise",
             "correct": false,
             "feedback_wrong": "HIV-related pneumothorax is typically secondary to PCP pneumonia and presents differently — with bilateral infiltrates, hypoxia, and systemic illness. This young non-immunocompromised patient has primary spontaneous PTX with blebs. HIV testing is not the priority here.",
-            "pt_remark_wrong": "An HIV test. I'm 22, I've never been unwell, I don't have bilateral infiltrates."
+            "pt_remark_wrong": "A blood test for... for that. I've never — I don't think I'm in any of the... risk groups for that."
           },
           {
             "text": "Assess for Marfan syndrome — echocardiogram and genetics referral",
@@ -1491,14 +1493,14 @@
             "correct": true,
             "feedback_correct": "Correct. Marfan syndrome associated with spontaneous PTX. Formal assessment: arm span, segment ratio, echocardiogram for aortic root. The aortic root is the reason Marfan matters beyond the pneumothorax.",
             "fennick_correct_comment": "\"Aortic root dilation, progressive, dissection risk. You are not just screening for a diagnosis — you are looking for a potentially fatal complication he does not yet know he has.\"",
-            "pt_remark_correct": "A heart scan. And a genetics appointment. For Marfan syndrome. I'm tall. I've always been tall. I never thought it might mean something."
+            "pt_remark_correct": "A heart scan. And... genetics. Because I'm tall. I've just always been tall. I never thought... it might mean something was different inside."
           },
           {
             "text": "No workup needed — primary spontaneous PTX requires no further investigation",
             "sub": "Discharge after treatment",
             "correct": false,
             "feedback_wrong": "A second episode in a young patient always warrants investigation for secondary causes, particularly connective tissue disorders. Marfan syndrome specifically needs to be excluded — it carries serious aortic implications beyond the pneumothorax.",
-            "pt_remark_wrong": "No workup. Second episode in a young patient and no workup for secondary causes."
+            "pt_remark_wrong": "Nothing else checked. Just... treated and sent. Second time round."
           }
         ]
       },
@@ -1511,28 +1513,28 @@
             "sub": "Activity restrictions only",
             "correct": false,
             "feedback_wrong": "Activity restrictions alone are not definitive management for a second ipsilateral spontaneous pneumothorax with known bleb disease. This patient needs surgical referral and admission — not a list of things to avoid.",
-            "pt_remark_wrong": "Activity restrictions only. And a list of things to avoid. That is not a plan for someone with bilateral blebs."
+            "pt_remark_wrong": "A list of things... not to do. And home."
           },
           {
             "text": "Discharge immediately after aspiration if CXR improved",
             "sub": "Same-day discharge",
             "correct": false,
             "feedback_wrong": "Same-day discharge after aspiration is reasonable only for small first-episode pneumothoraces in reliable patients close to hospital. This is a second episode with bilateral blebs — he needs admission and surgical planning.",
-            "pt_remark_wrong": "Same day discharge if the X-ray improves. Second episode, bilateral blebs, same day."
+            "pt_remark_wrong": "Home the same day... if the X-ray's better. With the bleb results you just showed me."
           },
           {
             "text": "Transfer to thoracic surgery for immediate VATS today",
             "sub": "Operative today",
             "correct": false,
             "feedback_wrong": "VATS is not performed acutely on a fresh pneumothorax. The lung needs time to re-expand fully before surgery. Admit, decompress, re-expand, then plan elective VATS.",
-            "pt_remark_wrong": "VATS today. On a fresh pneumothorax. Before the lung has even fully re-expanded."
+            "pt_remark_wrong": "Operate today... before the lung's even settled back into place."
           },
           {
             "text": "Admit for observation, repeat CXR, thoracic surgery consult",
             "sub": "Inpatient with surgical planning",
             "correct": true,
             "feedback_correct": "Correct. After intervention, admit for 24-hour observation with repeat CXR to confirm re-expansion. Thoracic surgery consult for VATS planning given second episode. Marfan workup. Do not discharge until lung is fully re-expanded and stable.",
-            "pt_remark_correct": "Admitted. Repeat X-ray. Surgery consult. And the heart scan. Alright. I'll do it in the right order."
+            "pt_remark_correct": "Admitted. Proper scan... surgeon... heart check. In the right order. Yeah."
           }
         ]
       }
@@ -1660,7 +1662,7 @@
             "sub": "GI decontamination",
             "correct": false,
             "feedback_wrong": "Activated charcoal is not appropriate here — absorption has already occurred dermally and the exposure was hours ago. Furthermore, anticholinergic ileus means gut motility is absent, increasing aspiration risk. Contraindicated in this context.",
-            "pt_remark_wrong": "Activated charcoal. I didn't swallow it. It was through my skin. Through my skin for two hours."
+            "pt_remark_wrong": "Charcoal — that binds toxins in the stomach. But I didn't eat it. It went through... my skin. From my hands."
           },
           {
             "text": "IV access, benzodiazepines for agitation, urinary catheter, cooling measures",
@@ -1668,14 +1670,14 @@
             "correct": true,
             "feedback_correct": "Correct. Benzodiazepines for agitation — not haloperidol, which worsens QT. Catheter for 680mL retention. Active cooling — anhidrosis means she cannot thermoregulate.",
             "fennick_correct_comment": "\"She cannot sweat. Without diaphoresis, hyperthermia will continue to climb. Cooling is not comfort — it is treatment.\"",
-            "pt_remark_correct": "Benzos for the agitation. A catheter. Cooling. Yes. Deal with each problem directly. That is logical."
+            "pt_remark_correct": "Yes. The tube. The cooling. Whatever needs doing — please just do it."
           },
           {
             "text": "Induce emesis",
             "sub": "Remove ingested toxin",
             "correct": false,
             "feedback_wrong": "She did not ingest the plant — this was dermal exposure. Inducing emesis does nothing. Additionally, anticholinergics cause ileus and dry mucous membranes making emesis dangerous and ineffective.",
-            "pt_remark_wrong": "Induced emesis. I did not ingest the plant. I ground it bare-handed for two hours."
+            "pt_remark_wrong": "Make me sick. There's nothing to bring up. I ground the plant with my hands for two hours. It didn't go through my mouth."
           },
           {
             "text": "IV haloperidol for agitation",
@@ -1684,7 +1686,7 @@
             "feedback_wrong": "Haloperidol is contraindicated in anticholinergic toxidrome — it has additional anticholinergic activity and prolongs the QT interval further. This patient already has QT 480ms. Benzodiazepines are the correct sedative agent here.",
             "feedback_correct": "Haloperidol has anticholinergic activity and prolongs QT. She already has QT 480ms. This worsens the toxidrome and increases arrhythmia risk simultaneously.",
             "fennick_correct_comment": "\"QT 480 already. You gave her a drug with anticholinergic side effects and QT prolongation. The benzos work centrally without making any of this worse.\"",
-            "pt_remark_wrong": "Haloperidol. My QT is already prolonged and you want to give me something that prolongs it further."
+            "pt_remark_wrong": "That medication — it makes things worse in the heat, doesn't it. My hands are already on fire and I can't... produce any moisture at all."
           }
         ]
       },
@@ -1697,7 +1699,7 @@
             "sub": "Opioid reversal agent",
             "correct": false,
             "feedback_wrong": "Naloxone reverses opioid toxidrome — sedation, miosis, respiratory depression. This patient has anticholinergic toxidrome — mydriasis, tachycardia, hyperthermia, dry skin. Completely opposite picture. Naloxone will do nothing.",
-            "pt_remark_wrong": "Naloxone. For an anticholinergic toxidrome. I have the opposite of opioid symptoms in every possible way."
+            "pt_remark_wrong": "Opioids? Look at my eyes. Nightshade opens the pupils to let in more light. Poppies do the opposite — they close them down. This is nightshade."
           },
           {
             "text": "Physostigmine IV — reversible AChE inhibitor, crosses BBB",
@@ -1705,14 +1707,14 @@
             "correct": true,
             "feedback_correct": "Correct. Physostigmine inhibits acetylcholinesterase, raising ACh to overcome muscarinic blockade. Crosses BBB — effective centrally. Slow IV push — bradycardia and seizures if pushed too fast.",
             "fennick_correct_comment": "\"The dose matters. Push it fast and you create cholinergic crisis. Slow push, atropine at bedside. It is an antidote, not an emergency bolus.\"",
-            "pt_remark_correct": "Physostigmine. I know physostigmine. I have read about it. Crosses the BBB, slow push, atropine at bedside. Yes."
+            "pt_remark_correct": "Yes. Please. Give it slowly. I know it has to be given slowly."
           },
           {
             "text": "Flumazenil IV",
             "sub": "Benzodiazepine reversal",
             "correct": false,
             "feedback_wrong": "Flumazenil reverses benzodiazepines. She has not taken benzodiazepines — she has belladonna alkaloid poisoning. Flumazenil has no role here and would remove the benzodiazepines you just gave her for agitation control.",
-            "pt_remark_wrong": "Flumazenil. You would reverse the benzodiazepines you just gave me for the agitation."
+            "pt_remark_wrong": "That would take away the only thing... stopping me from clawing the walls right now."
           },
           {
             "text": "Atropine IV",
@@ -1721,7 +1723,7 @@
             "feedback_wrong": "Atropine IS the poison here — giving more atropine would catastrophically worsen the toxidrome. This is one of the most dangerous errors in toxicology. Never give atropine for anticholinergic toxidrome.",
             "feedback_correct": "Atropine is the toxin. Giving more atropine to an anticholinergic toxidrome is catastrophic.",
             "fennick_correct_comment": "\"You gave the poison as the antidote.\"",
-            "pt_remark_wrong": "Atropine. More atropine. For atropine poisoning. I cannot — I genuinely cannot."
+            "pt_remark_wrong": "More — you want to give me more of what I already have too much of."
           }
         ]
       },
@@ -1734,28 +1736,28 @@
             "sub": "Expectant management",
             "correct": false,
             "feedback_wrong": "Anticholinergic toxidrome can cause fatal arrhythmias, hyperthermia-induced seizures, and rhabdomyolysis. It requires active monitoring and management. 'Self-limiting' is only true with proper supportive care — it is not benign.",
-            "pt_remark_wrong": "Self-limiting. My QT is 480 and my heart rate is 128 and you are calling this self-limiting."
+            "pt_remark_wrong": "Nothing to watch for. My heart is going very fast and the interval on the screen is stretched. I can see it is stretched."
           },
           {
             "text": "Torsades de Pointes — QT prolongation monitoring and magnesium ready",
             "sub": "Ventricular arrhythmia risk",
             "correct": true,
             "feedback_correct": "Correct. QT 480ms with tachycardia creates significant risk of Torsades de Pointes — a polymorphic ventricular tachycardia that can degenerate into VF. Continuous cardiac monitoring is mandatory. IV magnesium sulfate should be available. Avoid any additional QT-prolonging agents.",
-            "pt_remark_correct": "Torsades. QT 480 and tachycardia. Yes. That is exactly what I would be watching for. Magnesium ready."
+            "pt_remark_correct": "The dangerous rhythm. Yes. I've read what happens when the interval stretches too far. Magnesium. Please have it close."
           },
           {
             "text": "Hyperkalemia from muscle breakdown",
             "sub": "Electrolyte monitoring",
             "correct": false,
             "feedback_wrong": "Hyperkalemia from rhabdomyolysis is not the primary concern in anticholinergic toxidrome. The immediate threat is QT prolongation and Torsades de Pointes from anticholinergic cardiotoxicity.",
-            "pt_remark_wrong": "Hyperkalemia. From rhabdomyolysis. That is not the immediate threat with a QT of 480."
+            "pt_remark_wrong": "High potassium from muscle breakdown. My muscles aren't breaking down — every muscle I have is locked in a spasm I can't release."
           },
           {
             "text": "Pulmonary edema from fluid overload",
             "sub": "Respiratory monitoring",
             "correct": false,
             "feedback_wrong": "Pulmonary edema is not the primary concern here. The main arrhythmia risk from anticholinergic QT prolongation is Torsades de Pointes. This patient needs cardiac monitoring, not respiratory precautions specifically.",
-            "pt_remark_wrong": "Pulmonary oedema. From fluid overload. I have dry mucous membranes and no sweat. I am the opposite of fluid overloaded."
+            "pt_remark_wrong": "Fluid on the lungs. I haven't been able to swallow properly in three hours. Look at my lips."
           }
         ]
       },
@@ -1768,28 +1770,28 @@
             "sub": "Outpatient antidote",
             "correct": false,
             "feedback_wrong": "Physostigmine is an IV medication used in acute toxidrome management — it is not dispensed as an outpatient oral prescription. This patient requires inpatient monitoring and IV management.",
-            "pt_remark_wrong": "Oral physostigmine. As an outpatient prescription. That is not how physostigmine is given."
+            "pt_remark_wrong": "Pills to take at home. For this."
           },
           {
             "text": "Discharge after 2 hours of observation if vitals improve",
             "sub": "Brief ED observation",
             "correct": false,
             "feedback_wrong": "Two hours is not adequate. Belladonna alkaloids have a prolonged duration of action — effects can last 24-48 hours. QT prolongation and hyperthermia require sustained monitoring. She needs admission.",
-            "pt_remark_wrong": "Two hours of observation. Belladonna alkaloids act for 24 to 48 hours. Two hours is not observation."
+            "pt_remark_wrong": "Two hours. And go. Belladonna stays active for a long time — longer than two hours. I know this plant."
           },
           {
             "text": "Transfer to psychiatry for agitation management",
             "sub": "Psychiatric admission",
             "correct": false,
             "feedback_wrong": "Her agitation is organic — caused by anticholinergic delirium. This is a medical emergency, not a psychiatric presentation. Psychiatric transfer would be inappropriate and dangerous without medical stabilization.",
-            "pt_remark_wrong": "Transfer to psychiatry. This is not psychiatric. I have tropane alkaloids in my blood."
+            "pt_remark_wrong": "A psychiatrist. My pupils are eight millimetres, I can't urinate, and my mouth is cracking. This is not in my head."
           },
           {
             "text": "Admit to monitored bed — toxicology, continuous telemetry, physostigmine if needed",
             "sub": "Inpatient with cardiac monitoring",
             "correct": true,
             "feedback_correct": "Correct. Admission with continuous telemetry is mandatory given QT prolongation and tachycardia. Toxicology consult. Serial vital signs and neuro assessments. She will likely improve over 12-24 hours as the alkaloids are metabolized, but the arrhythmia window requires monitoring.",
-            "pt_remark_correct": "Admitted. Telemetry. Toxicology. I need someone watching the QT through the night. Yes."
+            "pt_remark_correct": "Admitted. Heart monitor overnight. Yes. I don't want to be alone with this tonight. I really don't."
           }
         ]
       }
@@ -1932,7 +1934,7 @@
             "sub": "Iron studies — the definitive workup",
             "correct": true,
             "feedback_correct": "Confirmed. Ferritin depletes before Hgb falls — most sensitive marker. In iron deficiency: ferritin low, serum iron low, TIBC high.",
-            "pt_remark_correct": "So the numbers will prove it. That something is actually wrong. That I wasn't just weak.",
+            "pt_remark_correct": "So the test will show it. That something's actually been wrong. Not just... me being weak.",
             "fennick_correct_comment": "\"Ferritin is an acute phase reactant — it can be falsely normal in inflammation. At Hgb 7.4 with this history, you will not find a false normal. Check it.\""
           },
           {
@@ -1940,21 +1942,21 @@
             "sub": "Rule out hypothyroidism",
             "correct": false,
             "feedback_wrong": "Hypothyroidism causes fatigue and depression — but it causes macrocytic or normocytic anaemia, not microcytic. The CBC is already showing you the picture. Follow it.",
-            "pt_remark_wrong": "My thyroid. Could it be my thyroid? I hadn't thought of that."
+            "pt_remark_wrong": "My thyroid. My colleague Bess had a thyroid problem. She got very cold and slow. I'm not cold. I'm just... empty."
           },
           {
             "text": "Antidepressant level",
             "sub": "Check sertraline compliance",
             "correct": false,
             "feedback_wrong": "She is not depressed. Checking whether she is taking her sertraline misses the point entirely. The CBC is telling you what is wrong.",
-            "pt_remark_wrong": "You want to check if I've been taking the pills. I have. Every morning. They just... don't work."
+            "pt_remark_wrong": "You want to check if I've been taking them. I have. Every morning with my tea. They just don't do anything."
           },
           {
             "text": "MRI brain",
             "sub": "Rule out intracranial pathology",
             "correct": false,
             "feedback_wrong": "There is nothing in this presentation to suggest intracranial pathology. The CBC has already handed you the diagnosis. An MRI brain tells you nothing useful here.",
-            "pt_remark_wrong": "There's something in my brain? I — I don't think it's my brain."
+            "pt_remark_wrong": "Something in my brain. I don't think it's my brain. My hands are shaking at the loom and I'm crying without knowing why. That doesn't feel like my brain."
           }
         ]
       },
@@ -1973,7 +1975,7 @@
               "\"In a week her reticulocytes will surge. In four weeks her Hgb will climb. And somewhere around week six... she will reach for a needle without thinking about it. Not because she decided to. Because her hands will remember before she does.\"",
               "\"We did not treat depression today. We returned the thread to the woman who makes beautiful things.\""
             ],
-            "pt_remark_correct": "Iron. Red. I used to know what that felt like.",
+            "pt_remark_correct": "Iron. If it works — if it actually works — I want to know what that feels like again.",
             "fennick_correct_comment": "\"Vitamin C reduces ferric to ferrous iron in the gut — meaningfully increases absorption. It is not optional.\""
           },
           {
@@ -1981,21 +1983,21 @@
             "sub": "Intravenous iron sucrose",
             "correct": false,
             "feedback_wrong": "IV iron is for patients who cannot tolerate oral iron or have malabsorption. Hgb 7.4 with no haemodynamic compromise — oral iron is appropriate. Do not over-escalate.",
-            "pt_remark_wrong": "I can take anything. A drip, pills, whatever. I just want to feel like myself again."
+            "pt_remark_wrong": "Straight into the vein. Is it — is it that serious. I just thought it was tiredness."
           },
           {
             "text": "Blood transfusion",
             "sub": "2 units packed red blood cells",
             "correct": false,
             "feedback_wrong": "Transfusion threshold in stable non-bleeding patients is Hgb below 7.0 — and even then, only with cardiovascular compromise. She is tachycardic but maintaining. Oral iron is correct.",
-            "pt_remark_wrong": "A transfusion sounds frightening. Is it that bad?"
+            "pt_remark_wrong": "A transfusion. Like — blood. From someone else. Is it really that low."
           },
           {
             "text": "Continue sertraline and increase dose",
             "sub": "Treat the depression first",
             "correct": false,
             "feedback_wrong": "There is no depression to treat. The sadness, the anhedonia, the fog — all manifestations of severe anaemia. Increasing her sertraline will do precisely nothing.",
-            "pt_remark_wrong": "More sertraline. I knew you'd say more sertraline.",
+            "pt_remark_wrong": "More of it. The sertraline that hasn't changed anything in eight weeks.",
             "feedback_correct": "There is no depression to treat. Sadness, anhedonia, cognitive fog — all downstream of Hgb 7.4. Iron will lift the mood within weeks.",
             "fennick_correct_comment": "\"Eight weeks of sertraline already tried. Already failed. What does a higher dose accomplish.\"",
             "pt_remark_correct": "More sertraline. I knew you would say more sertraline."
@@ -2011,7 +2013,7 @@
             "sub": "Investigate and treat the source",
             "correct": true,
             "feedback_correct": "Correct. Heavy menstrual bleeding is the most common cause of IDA in premenopausal women. She has been losing blood every cycle for years without anyone asking. Gynaecology is not optional.",
-            "pt_remark_correct": "Someone is finally going to ask about it. In six years, no one has ever asked about it.",
+            "pt_remark_correct": "Someone's going to actually ask about it. No one has ever asked about it before. Not the guild physician, not anyone.",
             "fennick_correct_comment": "\"Oral iron without gynaecology referral means she is back here in six months with the same haemoglobin.\""
           },
           {
@@ -2019,21 +2021,21 @@
             "sub": "Improve iron intake through food",
             "correct": false,
             "feedback_wrong": "Diet is a contributing factor but dietary changes alone cannot compensate for seven days of heavy menstrual bleeding every month. Address the source.",
-            "pt_remark_wrong": "I'll eat more. I will. I know I haven't been."
+            "pt_remark_wrong": "Eat more. I know I haven't been eating. I'll try. But eating more isn't going to fix the periods."
           },
           {
             "text": "Upper GI endoscopy to rule out bleeding ulcer",
             "sub": "Investigate GI blood loss",
             "correct": false,
             "feedback_wrong": "GI investigation is appropriate in postmenopausal women or men where the source is not obvious. In a 29-year-old woman with heavy periods, the source is almost certainly menstrual. Do not scope her before addressing the obvious cause.",
-            "pt_remark_wrong": "A scope. Inside. I — alright. If you think it's necessary."
+            "pt_remark_wrong": "A camera inside me. Alright. I don't — alright."
           },
           {
             "text": "No further workup — iron stores will replete with supplements",
             "sub": "Treat and discharge",
             "correct": false,
             "feedback_wrong": "Treating the anaemia without finding why it keeps recurring means she will be back in six months with the same Hgb. The underlying cause is gynaecological. Patching a leak without finding the pipe.",
-            "pt_remark_wrong": "Alright. Just the iron then."
+            "pt_remark_wrong": "Just the iron and no further questions about the rest of it."
           }
         ]
       },
@@ -2053,21 +2055,21 @@
             "sub": "Inpatient admission",
             "correct": false,
             "feedback_wrong": "There is no indication for admission. She is haemodynamically stable, not actively bleeding, and oral iron will work.",
-            "pt_remark_wrong": "I don't need to stay here. I just need to go home."
+            "pt_remark_wrong": "I don't need to stay. I just want to go home and sleep."
           },
           {
             "text": "Discharge with increased sertraline dose and iron",
             "sub": "Treat both depression and anaemia",
             "correct": false,
             "feedback_wrong": "The depression is the anaemia. Once the iron is repleted, the mood will follow — reliably, within weeks. Continuing the sertraline perpetuates a misdiagnosis.",
-            "pt_remark_wrong": "More sertraline. I — I'll take it. If you think it's right."
+            "pt_remark_wrong": "The sertraline and the iron both. Alright. If that's what you think."
           },
           {
             "text": "Refer to psychiatry for treatment-resistant depression",
             "sub": "Escalate psychiatric care",
             "correct": false,
             "feedback_wrong": "Referring her to psychiatry now would be the final insult of a long diagnostic failure. She does not have treatment-resistant depression. She has a Hgb of 7.4 and empty iron stores.",
-            "pt_remark_wrong": "I can see a psychiatrist. If that's what you think is wrong."
+            "pt_remark_wrong": "A psychiatrist. If that's what you think is wrong."
           }
         ]
       }
