@@ -1915,7 +1915,7 @@
     },
     "chart": {
       "cc": "My student brought me. I told her I was fine. I am not sure what fine means anymore.",
-      "hpi": "he was brought in by his student, his student. His wife died seven months ago. He lives alone. his student visits three times a week — she finds him at the piano, playing. Always the same piece. On good days he is entirely himself. On bad days he asks where his wife is. He has fallen twice this month. He has been sleeping in the armchair. his student found him on the floor Thursday morning. He told her he had been performing.",
+      "hpi": "He was brought in by a former student who has visited three times a week since his wife died seven months ago. He lives alone. She finds him at the piano each time — always the same piece. On good days he is entirely himself. On bad days he asks where his wife is. He has fallen twice this month. He has been sleeping in the armchair. She found him on the floor Thursday morning. He told her he had been performing.",
       "pmh": "Hypertension — well controlled. No prior neurological history. No diabetes.",
       "psh": "None.",
       "meds": "Amlodipine 5mg daily.",
@@ -1938,7 +1938,7 @@
     "fennick_after_addl_hx": "\"Good days and bad days. Not a steady slope. That pattern is not arbitrary.\"",
     "fennick_after_pe": "\"Upper motor. Lower motor. Both. In the same patient. The cord is not the problem.\"",
     "fennick_after_imaging": "\"Posterior cortex. DaTscan. You have two pieces. Put them together.\"",
-    "additional_hx": "He corrects one detail immediately: he did not fall on Thursday. He was performing. He makes this distinction seriously. He describes some days as completely clear — last Monday he caught a fingering error in his student's Scarlatti. Other days the flat feels unfamiliar. Visitors take a moment to resolve. He mentions his wife once: 'She would have wanted me to keep playing.' No sadness. A fact. He has slept in the armchair for six weeks. The bed feels dangerous, he says, and cannot explain why. He woke with a bruised wrist two weeks ago. Doesn't know how. He mentions, as an afterthought, that sometimes when he plays there is someone watching. He considers this a good sign.",
+    "additional_hx": "He corrects one detail immediately: he did not fall on Thursday. He was performing. He makes this distinction seriously. He describes some days as completely clear — last Monday he caught a fingering error in a student's Scarlatti. Other days the flat feels unfamiliar. Visitors take a moment to resolve. He mentions his wife once: 'She would have wanted me to keep playing.' No sadness. A fact. He has slept in the armchair for six weeks. The bed feels dangerous, he says, and cannot explain why. He woke with a bruised wrist two weeks ago. Doesn't know how. He mentions, as an afterthought, that sometimes when he plays there is someone watching. He considers this a good sign.",
     "patient_quote_addl_hx": "\"I don't remember choosing the piece. I just play it.\"",
     "pe_findings": "Thin, upright. Mild masked facies, reduced blink rate. Cogwheel rigidity bilateral upper limbs, asymmetric R>L. Bradykinesia on finger tapping. Gait: stooped, reduced arm swing, short steps. Pull test: mildly positive. No resting tremor. MMSE 21/30 — orientation, recall, drawing. Clock drawing: severely impaired, posterior cortical pattern. Romberg negative. No focal weakness.",
     "imaging": "MRI Brain: Cortical atrophy, posterior predominant — parietal and occipital regions disproportionately affected. Mild hippocampal atrophy, less severe than expected for degree of cognitive impairment. No acute infarct. No mass lesion. No normal pressure hydrocephalus pattern. DaTscan (Dopamine Transporter Scan): Reduced dopamine transporter uptake in bilateral putamen and caudate — asymmetric, right greater than left. Markedly abnormal pattern.",
@@ -2008,9 +2008,10 @@
             "text": "Formal neuropsychological testing + polysomnography",
             "sub": "Characterize cognitive profile and confirm RBD",
             "correct": true,
-            "feedback_correct": "Correct. Neuropsychological testing confirms the posterior cortical pattern. Polysomnography confirms RBD as a diagnostic criterion.",
+            "feedback_correct": "Confirmed. Posterior cortical pattern on neuropsych — not hippocampal dominant. Polysomnography elevates RBD from symptom to diagnostic criterion.",
             "pt_remark_correct": "More tests. I don't mind tests. I mind not knowing.",
-            "scene_trigger": null
+            "scene_trigger": null,
+            "fennick_correct_comment": "\"The polysomnography is not optional. Without it you have a clinical impression. With it you have a diagnosis.\""
           },
           {
             "text": "Lumbar puncture for CSF tau and amyloid-beta",
@@ -2043,7 +2044,7 @@
             "text": "Rivastigmine — cholinesterase inhibitor, start low and titrate",
             "sub": "Cholinesterase inhibitor — start 1.5mg BID, titrate slowly",
             "correct": true,
-            "feedback_correct": "Correct. Strongest cholinesterase inhibitor evidence in this diagnosis specifically. Start low, titrate with food. It does not stop the disease.",
+            "feedback_correct": "Rivastigmine — strongest cholinesterase inhibitor evidence in this diagnosis. 1.5mg BID with food, titrate slowly. Set expectations: this manages symptoms. It does not alter the underlying progression.",
             "pt_remark_correct": "A patch. I can do a patch. Mira will make sure I use it.",
             "scene_trigger": "mgmt_bg",
             "reactive_stage": {
@@ -2090,7 +2091,8 @@
                 }
               ],
               "description": "Found on floor beside bed at 03:10 — arm extended, vocalizing. Second episode this week. Bruised right forearm."
-            }
+            },
+            "fennick_correct_comment": "\"The cholinergic deficit here is more severe than in most dementias. That is why this drug works better here than anywhere else. It is also why these patients decompensate so badly if you block those receptors instead.\""
           },
           {
             "text": "Memantine alone",
