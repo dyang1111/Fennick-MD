@@ -1563,8 +1563,8 @@ async function buildReport() {
   el.innerHTML = '<em style="color:#a08040">Loading...</em>';
   let tmpl = null;
   try {
-    const res = await fetch('report.json');
-    if(res.ok){ const data = await res.json(); tmpl = data[currentCase.date]; }
+    const res = await fetch('case_reference.json');
+    if(res.ok){ const data = await res.json(); tmpl = data[currentCase.date]?.report; }
   } catch(e) {}
   if(!tmpl){ el.textContent = 'Report not available for this case.'; return; }
   let parts = [];
@@ -1582,8 +1582,8 @@ async function buildExplanation() {
   body.innerHTML = '<em style="color:#a08040">Loading...</em>';
   let exp = null;
   try {
-    const res = await fetch('explanations.json');
-    if(res.ok){ const data = await res.json(); exp = data[currentCase.date]; }
+    const res = await fetch('case_reference.json');
+    if(res.ok){ const data = await res.json(); exp = data[currentCase.date]?.explanation; }
   } catch(e) {}
   if(!exp){ body.innerHTML = '<div style="color:#7a5010;font-size:14px;font-style:italic">No explanation available for this case yet.</div>'; return; }
   const rows = [
