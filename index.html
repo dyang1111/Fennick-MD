@@ -654,8 +654,8 @@ body.tier-3 #pt-vignette {
 /* ── STAMP SYSTEM ── */
 #stamp-container {
   position: absolute;
-  top: -50px;
-  left: -50px;
+  top: -80px;
+  left: -70px;
   width: 320px;
   height: 320px;
   z-index: 20;
@@ -664,10 +664,10 @@ body.tier-3 #pt-vignette {
 }
 #stamp-wax {
   position: absolute;
-  top: 32px;
-  left: 32px;
-  width: 128px;
-  height: 128px;
+  top: 80px;
+  left: 80px;
+  width: 120px;
+  height: 120px;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776378857/wax_imprint_hs10c5.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -694,8 +694,8 @@ body.tier-3 #pt-vignette {
 /* End stamp — same as dx stamp */
 #stamp-container-end {
   position: absolute;
-  top: -50px;
-  left: -50px;
+  top: -80px;
+  left: -70px;
   width: 320px;
   height: 320px;
   z-index: 20;
@@ -704,10 +704,10 @@ body.tier-3 #pt-vignette {
 }
 #stamp-wax-end {
   position: absolute;
-  top: 32px;
-  left: 32px;
-  width: 128px;
-  height: 128px;
+  top: 80px;
+  left: 80px;
+  width: 120px;
+  height: 120px;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776378857/wax_imprint_hs10c5.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -1892,12 +1892,13 @@ window.revealWorkup=function(type){
   const ct={'addl-hx':{label:'ADDITIONAL HISTORY',cls:'hx-card',text:currentCase.additional_hx},'pe':{label:'PHYSICAL EXAM FINDINGS',cls:'pe-card',text:currentCase.pe_findings},'imaging':{label:'IMAGING',cls:'img-card',text:currentCase.imaging}};
   const c=ct[type];if(!c||!c.text)return;
   const card=document.createElement('div');card.className='hint-reveal-card '+c.cls;
-  let quoteHtml='';
-  if(type==='addl-hx'&&currentCase.patient_quote_addl_hx){
-    quoteHtml=`<div style="font-style:italic;color:var(--text-secondary);font-size:14px;border-left:2px solid rgba(160,120,40,0.5);padding-left:10px;margin-bottom:10px">${currentCase.patient_quote_addl_hx}</div>`;
-  }
-  card.innerHTML=`<div class="hint-reveal-label">${c.label}</div>${quoteHtml}<div class="hint-reveal-text">${c.text}</div>`;
+  let quoteText = (type==='addl-hx' && currentCase.patient_quote_addl_hx) ? currentCase.patient_quote_addl_hx : '';
+  card.innerHTML=`<div class="hint-reveal-label">${c.label}</div>${quoteText ? '<div class="addl-hx-quote" style="font-style:italic;color:var(--text-secondary);font-size:14px;border-left:2px solid rgba(160,120,40,0.5);padding-left:10px;margin-bottom:10px"></div>' : ''}<div class="hint-reveal-text">${c.text}</div>`;
   document.getElementById('workup-reveals').appendChild(card);
+  if(quoteText){
+    const qEl = card.querySelector('.addl-hx-quote');
+    if(qEl) setTimeout(()=>typewriterWrite(qEl, quoteText, 22), 200);
+  }
 };
 
 window.toggleLabsPanel=function(){
