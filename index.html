@@ -651,6 +651,29 @@ body.tier-3 #pt-vignette {
 .report-text strong{font-style:normal;color:var(--text-secondary)}
 #disclaimer{text-align:center;padding:16px 20px 32px;font-size:12px;color:rgba(160,120,40,0.7);font-style:italic;position:relative;z-index:10}
 
+/* ── INK SPLATTER ── */
+#ink-splatter {
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%) scale(0);
+  width: 180px;
+  height: 140px;
+  background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776395438/_ink-removebg_deq3v6.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+}
+@keyframes inkSplat {
+  0%   { transform: translateX(-50%) scale(0.2); opacity: 0; }
+  25%  { transform: translateX(-50%) scale(1.15); opacity: 0.85; }
+  55%  { transform: translateX(-50%) scale(1.0);  opacity: 0.75; }
+  100% { transform: translateX(-50%) scale(1.05); opacity: 0; }
+}
+
 /* ── LANTERN CURSOR ── */
 #lantern-cursor {
   position: fixed;
@@ -701,7 +724,7 @@ body.tier-3 #pt-vignette {
 #stamp-tool {
   position: absolute;
   top: -110px;
-  left: -66px;
+  left: -68px;
   width: 320px;
   height: 320px;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776379245/stamp1_oohmi6.png');
@@ -741,7 +764,7 @@ body.tier-3 #pt-vignette {
 #stamp-tool-end {
   position: absolute;
   top: -110px;
-  left: -66px;
+  left: -68px;
   width: 320px;
   height: 320px;
   background-image: url('https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776379245/stamp1_oohmi6.png');
@@ -1305,6 +1328,10 @@ body.tier-3 #pt-vignette {
             </div>
             <div id="workup-reveals"></div>
             <div id="lab-results"></div>
+          </div>
+
+          <div id="ink-splatter-wrap" style="position:relative;height:0;overflow:visible;z-index:10;pointer-events:none">
+            <div id="ink-splatter"></div>
           </div>
 
           <div class="note" id="dx-note" style="position:relative">
@@ -2049,7 +2076,7 @@ window.submitDx=function(){
     setFennick('good_job','"That is the diagnosis. Now let us see how you manage it."');
     unlockManagement(); setTimeout(()=>switchTab('management'), 2600);
   } else {
-    errors++;drainHP(10);wrongAnswers.add(val);
+    errors++;drainHP(10);wrongAnswers.add(val);triggerInkSplat();
     result.className='dx-result wrong';result.textContent='\u2717 Incorrect. Try again.';result.style.display='block';
     document.getElementById('dx-input').value='';
     const inp=document.getElementById('dx-input');inp.classList.add('wrong');setTimeout(()=>inp.classList.remove('wrong'),600);
@@ -2261,6 +2288,16 @@ window.endCase = function(failed) {
 };
 
 
+
+// ── INK SPLATTER ──
+function triggerInkSplat() {
+  const el = document.getElementById('ink-splatter');
+  if (!el) return;
+  el.style.animation = 'none';
+  el.style.opacity = '0';
+  void el.offsetWidth; // reflow
+  el.style.animation = 'inkSplat 0.9s cubic-bezier(0.22,1,0.36,1) forwards';
+}
 
 // ── STAMP SYSTEM ──
 function playStampSound() {
