@@ -1621,6 +1621,33 @@ let currentTrackType = 'day';
 let currentTrackIdx = 0;
 let musicStarted = false;
 
+function switchMusicTrack(trackName) {
+  // Find by name in TRACKS (case insensitive)
+  let found = null;
+  for(const type of Object.keys(TRACKS)) {
+    const match = TRACKS[type].findIndex(t => t.name.toLowerCase() === trackName.toLowerCase());
+    if(match >= 0) { found = { type, idx: match }; break; }
+  }
+  if(!found) return;
+  const audio = document.getElementById('music-player');
+  if(!audio) return;
+  const targetVol = audio.volume || 0.5;
+  const fade = setInterval(()=>{
+    if(audio.volume > 0.04) { audio.volume = Math.max(0, audio.volume - 0.04); }
+    else {
+      clearInterval(fade);
+      currentTrackType = found.type;
+      currentTrackIdx = found.idx;
+      audio.src = TRACKS[found.type][found.idx].url;
+      audio.play().catch(()=>{});
+      const fadeIn = setInterval(()=>{
+        if(audio.volume < targetVol) audio.volume = Math.min(targetVol, audio.volume + 0.04);
+        else clearInterval(fadeIn);
+      }, 80);
+    }
+  }, 80);
+}
+
 function initMusic(isNight) {
   currentTimeOfDay = isNight ? 'night' : 'day';
   const saved = localStorage.getItem('fennick_music_state');
@@ -1836,6 +1863,10 @@ function initCase(){ _fennickLocked = false;
   clearMgmtSelections();
   const _opening = currentCase.fennick_opening || '"A new case has arrived. Take your time — but not too much of it."';
   setFennick('chart', _opening); setTimeout(()=>setFennick('default',''), 2800);
+  // Case-specific music — delay slightly so audio is initialized
+  if(currentCase.music_default) {
+    setTimeout(()=>{ try { switchMusicTrack(currentCase.music_default); } catch(e) {} }, 1500);
+  }
   renderChart();
   renderLabsGrid();
   renderManagement();
@@ -2182,6 +2213,10 @@ function applyTier3Scene(trigger) {
         bgEl.style.opacity = '1';
       }, 800);
     }
+    // Switch to scene 2 music if defined
+    if(currentCase.music_tier3_scene2) {
+      setTimeout(()=>{ try { switchMusicTrack(currentCase.music_tier3_scene2); } catch(e) {} }, 1200);
+    }
     // Swap patient portrait to smiling version
     if (currentCase.tier3_portrait_2_url) {
       setTimeout(() => {
@@ -2211,6 +2246,8 @@ window.pickMgmt=function(stageIdx,optIdx){
     if(fbEl){fbEl.style.cssText='display:block;background:rgba(180,230,160,0.4);border:1px solid rgba(80,160,60,0.4);color:#1a4a08;padding:8px 12px;border-radius:6px;margin-top:8px;font-size:14px';fbEl.textContent=opt.feedback_correct||'Correct.';}
     if(opt.fennick_speech && Array.isArray(opt.fennick_speech)) {
       playFennickSpeech(opt.fennick_speech);
+    } else if(opt.fennick_correct_comment) {
+      setFennick('good_job', opt.fennick_correct_comment);
     } else {
       setFennick('good_job','"'+(opt.feedback_correct||'Good call.')+'"');
     }
@@ -2230,10 +2267,10 @@ window.pickMgmt=function(stageIdx,optIdx){
       setTimeout(() => {
         if(rs.fennick_transition) setFennick('concerned', rs.fennick_transition);
         if(rs.pt_remark_transition) setTimeout(()=>setPtRemark(rs.pt_remark_transition), 800);
-        if(rs.vitals_note) {
+        if(rs.description || rs.vitals_note) {
           const vn = document.createElement('div');
           vn.style.cssText='background:rgba(230,200,150,0.3);border:1px solid rgba(160,120,40,0.35);border-radius:6px;padding:8px 12px;font-size:13px;color:#4a3010;margin:8px 0;font-style:italic;';
-          vn.textContent = '📋 ' + rs.vitals_note;
+          vn.textContent = '📋 ' + (rs.description || rs.vitals_note);
           const mgmtStages = document.getElementById('mgmt-stages');
           if(mgmtStages) mgmtStages.insertBefore(vn, mgmtStages.firstChild);
           vn.classList.add('note-slide-up');
@@ -2248,7 +2285,9 @@ window.pickMgmt=function(stageIdx,optIdx){
   } else {
     optEl.classList.remove('locked-opt');optEl.classList.add('selected-wrong');errors++;drainHP(10);
     if(fbEl){fbEl.style.cssText='display:block;background:rgba(230,160,150,0.4);border:1px solid rgba(180,80,70,0.35);color:#4a1010;padding:8px 12px;border-radius:6px;margin-top:8px;font-size:14px';fbEl.textContent=opt.feedback_wrong||'Incorrect.';}
-    _perfectRun=false;const _wrongFace=(errors%2===0)?'concerned':'thinking';setFennick(_wrongFace,'"'+(opt.feedback_wrong||'Not quite.')+'"');updateFennickByErrors();
+    _perfectRun=false;const _wrongFace=(errors%2===0)?'concerned':'thinking';
+    const _wrongComment = opt.fennick_wrong_comment || ('"'+(opt.feedback_wrong||'Not quite.')+'"');
+    setFennick(_wrongFace, _wrongComment);updateFennickByErrors();
     const mgmtWrongRemark = opt.pt_remark_wrong || getGenericRemark('mgmt-wrong');
     if(mgmtWrongRemark) setTimeout(()=>setPtRemark(mgmtWrongRemark), 700);
     // Save wrong selection for re-render
