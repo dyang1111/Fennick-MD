@@ -1966,7 +1966,11 @@ function renderChart(){
     const blurred = c.hpi.slice(splitAt);
     hpiHtml = clear + '<span id="hpi-blur" style="filter:blur(3.5px);opacity:0.6;transition:filter 1.2s ease,opacity 1.2s ease;">' + blurred + '</span>';
   }
-  const rows=[['HPI',hpiHtml],['PMH',c.pmh],['PSH',c.psh],['Medications',c.meds],['Allergies',c.allergies],['Family Hx',c.fh],['Social Hx',c.sh]];
+  let medsDisplay = c.meds || 'None';
+  if(c.meds_on_addl_hx) {
+    medsDisplay += ' <span id="meds-hidden" style="filter:blur(3.5px);opacity:0.6;transition:filter 1.2s ease,opacity 1.2s ease;">' + c.meds_on_addl_hx + '</span>';
+  }
+  const rows=[['HPI',hpiHtml],['PMH',c.pmh],['PSH',c.psh],['Medications',medsDisplay],['Allergies',c.allergies],['Family Hx',c.fh],['Social Hx',c.sh]];
   document.getElementById('chart-grid').innerHTML=rows.map(([l,val])=>`<div class="chart-label">${l}</div><div class="chart-val">${val||'None'}</div>`).join('');
 }
 
@@ -1989,27 +1993,15 @@ window.revealWorkup=function(type){
   const fennickLine = workupFennickLines[type];
   if(fennickLine) setTimeout(()=>setFennick('chart', fennickLine), 300);
   if(type==='addl-hx') {
-    // Just unblur the HPI tail — no separate card
     clearHpiBlur();
+    // Reveal meds_on_addl_hx if present
+    const medsHidden = document.getElementById('meds-hidden');
+    if(medsHidden) {
+      medsHidden.style.filter='blur(0)';
+      medsHidden.style.opacity='1';
+    }
     const remark = currentCase.cc_after_addl_hx || getGenericRemark('addl-hx');
     if(remark) setTimeout(()=>setPtRemark(remark), 400);
-    // Show patient quote as a small note beneath HPI if present
-    if(currentCase.patient_quote_addl_hx) {
-      const chartGrid = document.getElementById('chart-grid');
-      if(chartGrid && !document.getElementById('addl-hx-quote-row')) {
-        const lbl = document.createElement('div');
-        lbl.className = 'chart-label';
-        lbl.id = 'addl-hx-quote-row';
-        lbl.style.cssText = 'font-style:italic;color:var(--text-secondary);font-size:12px;padding-top:8px;border-bottom:none;';
-        lbl.textContent = '';
-        const val = document.createElement('div');
-        val.className = 'chart-val';
-        val.style.cssText = 'font-style:italic;color:var(--text-secondary);font-size:14px;padding-top:8px;border-bottom:none;border-left:2px solid rgba(160,120,40,0.4);padding-left:10px;';
-        chartGrid.appendChild(lbl);
-        chartGrid.appendChild(val);
-        setTimeout(()=>typewriterWrite(val, currentCase.patient_quote_addl_hx, 20), 400);
-      }
-    }
     drainHP(5);
     try { window.setFogDensity(_fogTargetDensity - 10); } catch(e){}
     revealedWorkup.add(type);
