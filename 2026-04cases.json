@@ -14,7 +14,7 @@
     },
     "chart": {
       "cc": "My hands won't stop shaking. It started about a year ago — just the right one at first. I had to stop winding the city clock. My husband thinks I'm depressed but I told him this feels different.",
-      "hpi": "The Clockmaker arrived by horse cart, her husband at her side. She has not been able to wind the Grand Meridian Tower clock in fourteen months — the tremor in her right hand makes the delicate mechanism impossible. The shaking is worst when her hands are at rest; it quiets, oddly, when she reaches for something. She walks now with short, shuffling steps and has difficulty rising from chairs. She was treated for depression at the Irongate Infirmary for eight months — the sertraline did nothing.",
+      "hpi": "The Clockmaker arrived by horse cart, her husband at her side. She has not been able to wind the Grand Meridian Tower clock in fourteen months. The shaking is worst at rest and quiets when she reaches for something. She walks with short, shuffling steps and has difficulty rising from chairs. She was treated for depression at the Irongate Infirmary for eight months — the sertraline did nothing. The tremor began in the right hand. Then the left. She measures every word carefully before she speaks. Her handwriting has shrunk to near illegible. She rises from chairs using both arms, moves slowly on cobblestones. She lost her sense of smell two years ago and mentioned it only when asked.",
       "pmh": "Depression (misdiagnosed at the Irongate Infirmary). Hypertension.",
       "psh": "Appendectomy, age 34.",
       "meds": "Sertraline 50mg daily. Amlodipine 5mg daily.",
@@ -279,7 +279,7 @@
     },
     "chart": {
       "cc": "I've had this cough for three months and my wife finally dragged me in. I kept telling her it was the dust from the roads. But last week there was blood in it. And my face looks puffy in the mornings, my collar's too tight.",
-      "hpi": "The Merchant arrived from the eastern trade routes, visibly thinner than his last visit and reluctant to be here. He has had a persistent dry cough for three months — initially dismissed as road dust from the Ashgate lowlands. Over the past two weeks he has coughed up small amounts of bright red blood on two occasions. His face has taken on a deep red-purple hue that worsens when he leans forward over his ledgers. He has lost twelve pounds without trying and reports his arms have grown weak — he struggled to lift his traveling case this morning.",
+      "hpi": "The Merchant arrived from the eastern trade routes, visibly thinner and reluctant to be here. He has had a persistent cough for three months — dismissed as road dust. Over the past two weeks he has coughed up small amounts of bright red blood. His face has taken on a deep red-purple hue that worsens leaning forward over his ledgers. He has lost twelve pounds without trying. He answers with the fewest words possible. Facial swelling worse mornings, worse hunching. Collar an inch too tight. Morning headaches. Arms gone weak — trouble lifting his traveling case this morning. Double vision started a month ago. He attributes everything to the roads.",
       "pmh": "Hypertension. Acid reflux.",
       "psh": "Appendectomy, age 28.",
       "meds": "Lisinopril 10mg daily. Omeprazole 20mg daily.",
@@ -544,7 +544,7 @@
     },
     "chart": {
       "cc": "I've had a fever every single night for three weeks. I thought it was just a bad flu that wouldn't quit. But I'm exhausted, I've lost weight, and two days ago this painful red spot appeared on my finger. My wife said my eyes looked yellow. I'm scared something is seriously wrong.",
-      "hpi": "The Engineer arrived pale and drenched in night sweat, having lost nine pounds in three weeks. He had a routine tooth cleaning at the guild dentist five weeks ago — his gums bled considerably during the procedure. The fevers began a fortnight later, nightly, with drenching sweats by morning. He noticed a painful red nodule on his right index fingertip two days ago and dark lines beneath two fingernails. His wife remarked yesterday that his eyes looked faintly yellow. He has developed a sharp chest pain that worsens when he breathes deeply.",
+      "hpi": "The Engineer arrived pale and drenched in sweat, having lost nine pounds in three weeks. He had a routine tooth cleaning five weeks ago — his gums bled considerably. The fevers began a fortnight later, nightly, breaking by morning. He noticed a painful red nodule on his right index fingertip two days ago and dark lines beneath two fingernails. His wife said his eyes looked faintly yellow yesterday. He has developed a sharp chest pain worsening with deep breath. He remembers the dental visit precisely and tracks his temperature on a chart he brought. When you mention the heart, he looks up with sudden attention.",
       "pmh": "Bicuspid aortic valve — found incidentally at age 22. Never required intervention.",
       "psh": "None.",
       "meds": "Azithromycin 250mg (ongoing). Ibuprofen PRN.",
@@ -809,7 +809,7 @@
     },
     "chart": {
       "cc": "I don't need to be here. My aide insisted. I've had a few dizzy spells — nothing a soldier can't manage. Though I'll admit the last one knocked me off my feet.",
-      "hpi": "The General was escorted in by his aide, who looked considerably more alarmed than the patient. He has had episodic attacks over the past eight months — each lasting twenty to forty minutes — consisting of a severe pounding headache, profuse sweating, and a sensation that his heart is 'trying to escape his chest.' He initially attributed these to battlefield stress and the pressures of his current campaign. The episodes have increased in frequency: once monthly at first, now nearly weekly. The last attack occurred this morning when he bent down to retrieve a map from the floor — he collapsed briefly and struck his desk. His face remains flushed even now, at rest.",
+      "hpi": "The General was escorted in by his aide, who looked considerably more alarmed than the patient. He has had episodic attacks over eight months — severe pounding headache, profuse sweating, heart 'trying to escape his chest,' each lasting twenty to forty minutes then completely resolving. Episodes have increased from monthly to nearly weekly. This morning he bent down for a map, straightened up, and briefly collapsed against his desk. His face remains flushed even now at rest. He files his own symptoms like a damage report on someone else. This morning he calls a brief interruption. His mother died of something near the kidney — he was overseas and never learned the details.",
       "pmh": "Hypertension — diagnosed two years ago, poorly controlled on medication. No prior cardiac history.",
       "psh": "Shrapnel removal, left shoulder, age 34.",
       "meds": "Amlodipine 5mg daily. Aspirin 81mg daily.",
@@ -1067,7 +1067,7 @@
     },
     "chart": {
       "cc": "S-sorry to bother you. It's probably nothing. I've just had this headache for... well, a few weeks now. My foreman told me to come. I wouldn't have come on my own.",
-      "hpi": "The Furnace Keeper arrived still wearing his work collar, smelling faintly of soot, and apologizing before he'd even sat down. He has had a dull, pressure-like frontal headache daily for three weeks — worse at work, better on his days off, which he mentioned hesitantly, as if unsure whether that was relevant. He has felt nauseated most mornings and his thinking has been slow — he forgot to seal two pressure valves last week, which has never happened in eleven years. Two of his fellow workers in the lower furnace hall have complained of similar headaches. He nearly lost consciousness briefly yesterday while adjusting the main flue.",
+      "hpi": "The Furnace Keeper arrived still in his work collar, smelling faintly of soot, and apologizing before he'd sat down. He has had a dull frontal headache daily for three weeks — worse at work, better on days off, which he mentioned hesitantly. He has felt nauseated most mornings and his thinking has been slow — he forgot to seal two pressure valves last week, which has never happened in eleven years. Two fellow workers have similar headaches. He nearly lost consciousness briefly yesterday adjusting the main flue. He apologizes before every sentence. Headaches start within an hour of shift and resolve over a day off. Last Sunday he felt nearly normal. He has not told his foreman how bad it has gotten.",
       "pmh": "No significant medical history.",
       "psh": "None.",
       "meds": "None.",
@@ -1325,7 +1325,7 @@
     },
     "chart": {
       "cc": "I was just sitting at my workbench this morning and something... popped. In my chest. Now it hurts to breathe.",
-      "hpi": "The Locksmith arrived on foot, slightly hunched and breathing shallowly. He was at his workbench in the Meridian Key Works when he felt a sudden sharp pain in his left chest — he describes it precisely as a pop, followed immediately by shortness of breath. There was no exertion, no trauma, no coughing. He is tall and lean, and this is actually his second such episode — the first occurred eighteen months ago, resolved on its own, and he never sought attention for it.",
+      "hpi": "The Locksmith arrived slightly hunched and breathing shallowly. He was at his workbench when he felt a sudden sharp pop in his left chest, followed immediately by shortness of breath — no exertion, no trauma. He is tall and lean. This is his second such episode — the first occurred eighteen months ago, resolved on its own, and he never sought care for it. He answers directly, no embellishment. This time has not improved and breathlessness is more noticeable. He never smoked. No illness, no cough. He asks matter-of-factly whether he will need an operation.",
       "pmh": "None. No prior lung disease.",
       "psh": "None.",
       "meds": "None.",
@@ -1581,7 +1581,7 @@
     },
     "chart": {
       "cc": "Something is very wrong. My mouth has gone completely dry, I can't see properly, and I feel like my heart is going to come through my chest. I've been working with belladonna all morning.",
-      "hpi": "The Herbalist arrived flushed and frightened, still holding dried belladonna stems, her pupils so dilated she walked into the doorframe. She has been preparing a belladonna tincture in her apothecary workshop in the Ashgate botanical quarter since early morning — grinding the berries and leaves without gloves. Over the past two hours she has developed profound dry mouth, blurred vision, palpitations, and confusion that is worsening. She also reports that she cannot urinate despite feeling she needs to. Her skin is hot and dry. She has not ingested the plant deliberately but significant dermal and possible mucosal absorption has occurred.",
+      "hpi": "The Herbalist arrived flushed and frightened, still holding dried belladonna stems, her pupils so dilated she walked into the doorframe. She has been preparing a tincture since early morning — grinding berries and leaves bare-handed for two hours. Over the past two hours she has developed profound dry mouth, blurred vision, palpitations, and worsening confusion. She cannot urinate despite feeling she needs to. She volunteers the exposure history before you ask. Vision went first, then dry mouth, then heart racing. She rubbed her face with her hands. Has not urinated in four hours. Warm all over, completely dry.",
       "pmh": "No significant medical history. Works with botanical compounds daily.",
       "psh": "None.",
       "meds": "None prescribed. Uses various herbal preparations — none containing atropine or anticholinergics.",
@@ -1839,7 +1839,7 @@
     },
     "chart": {
       "cc": "I don't know why I'm here, really. I'm just tired. All the time. And sad, I suppose. My supervisor sent me. She says I've been crying at my bench.",
-      "hpi": "The Seamstress arrived alone, her coat buttoned to the collar despite the mild evening. She moves carefully, as if conserving something. She has been the lead embroiderer at the Threadneedle Textile Works for six years — fine detail work under lamplight, twelve-hour shifts. Over the past four months she has felt a creeping, total exhaustion that she cannot sleep off. She weeps without knowing why. She has lost interest in her embroidery patterns, which once consumed her. Her supervisor noticed she had been making errors — dropped stitches, misaligned seams — and sent her here with a note that reads simply: 'Something is wrong with her.' She was treated for depression at a guild physician two months ago. The sertraline has done nothing. Her menstrual cycles have always been heavy — she mentions this only when directly asked, as if it is too ordinary a detail to bother with.",
+      "hpi": "The Seamstress arrived alone, her coat buttoned to the collar despite the mild evening. She moves carefully, as if conserving something. She has been the lead embroiderer at the Threadneedle Textile Works for six years. Over the past four months she has felt a creeping exhaustion she cannot sleep off, weeps without knowing why, and has lost interest in her patterns. Her supervisor sent her after noticing dropped stitches and misaligned seams. She was treated for depression two months ago — the sertraline has done nothing. Her periods have always been heavy. She answers with quiet precision. She craves ice from the cart outside the mill and is embarrassed to mention it. Short of breath on the stairs every morning.",
       "pmh": "Depression — diagnosed two months ago at guild physician. Dysmenorrhea.",
       "psh": "None.",
       "meds": "Sertraline 50mg daily (started 8 weeks ago). Iron-poor diet — skips meals during busy production seasons.",
@@ -2129,7 +2129,7 @@
     },
     "chart": {
       "cc": "My student brought me. I told her I was fine. I am not sure what fine means anymore.",
-      "hpi": "He was brought in by a former student who has visited three times a week since his wife died seven months ago. He lives alone. She finds him at the piano each time — always the same piece. On good days he is entirely himself. On bad days he asks where his wife is. He has fallen twice this month. He has been sleeping in the armchair. She found him on the floor Thursday morning. He told her he had been performing.",
+      "hpi": "He was brought in by a former student who visits three times a week since his wife died seven months ago. She finds him at the piano each time — always the same piece. On good days he is entirely himself. On bad days he asks where his wife is. He has fallen twice this month. He has been sleeping in the armchair. She found him on the floor Thursday morning. He corrects one detail immediately: he did not fall. He was performing. He describes some days as completely clear. Other days the flat feels unfamiliar, visitors take a moment to resolve. He has slept in the armchair six weeks because the bed feels dangerous — he cannot explain why. He woke with a bruised wrist two weeks ago and doesn't know how. He mentions, as an afterthought, that sometimes when he plays there is someone watching.",
       "pmh": "Hypertension — well controlled. No prior neurological history. No diabetes.",
       "psh": "None.",
       "meds": "Amlodipine 5mg daily.",
@@ -2417,7 +2417,7 @@
     },
     "chart": {
       "cc": "My master sent me. Said my lips are the wrong colour. They've been like this for a few days — I don't know why it's suddenly worth stopping work for.",
-      "hpi": "The Dye Apprentice arrived alone, despite his master having walked him to the door. He is six months into his first year at the Ashgate Textile Works — vat dyeing, aniline-based dyes for the winter wool run. He handles the dye baths bare-handed for eight to ten hours a day, stirring, pressing, wringing. He eats his midday meal at the bench. Over the past three days his lips and fingernail beds have developed a grey-blue tinge that worsens toward the end of shift. He denies shortness of breath. He reports a mild headache — attributed to the smell. He has not fainted but says the stairs at the works feel longer than they used to. His master noticed the lip colour this morning and sent him without asking.",
+      "hpi": "The Dye Apprentice arrived alone, despite his master having walked him to the door. He is six months into his first year at the Ashgate Textile Works — aniline vat dyeing, bare hands eight to ten hours daily. He eats his midday meal at the bench. Over the past three days his lips and fingernails have developed a grey-blue tinge worsening toward end of shift. He denies shortness of breath. He reports a mild headache attributed to the smell. The stairs at the works feel longer than they used to. His master noticed the lip colour this morning and sent him. He answers like every question is a formality. His forearms are stained dark blue-grey to the elbow. When you ask if anyone else looks like him — he pauses. Mikkel's lips are a bit grey. He's been there two years.",
       "pmh": "No significant medical history.",
       "psh": "None.",
       "meds": "None.",
@@ -2715,7 +2715,7 @@
     },
     "chart": {
       "cc": "My tailor flagged it first, which I found embarrassing. I've gained considerable weight over the past year, centralised I'm told. My face has changed. I assumed stress. I have a significant schedule so I'd appreciate efficiency.",
-      "hpi": "The Politician arrived with his aide, who was asked to wait outside and visibly was not used to being asked to wait outside. He has gained fourteen pounds over eighteen months — weight he describes as redistributing rather than generalising. His face is rounder than his Assembly portrait, which he mentions twice. He has noted easy bruising, which he attributed to a recent campaign event. His blood pressure has been elevated at his last three private consultations, managed with an increased antihypertensive dose. He reports muscle fatigue on stairs — 'not weakness, fatigue, there is a distinction.' He has had intermittent low mood and irritability, which he attributes to the political climate. He has not brought a medication list. He considers his private healthcare arrangements his own business.",
+      "hpi": "The Politician arrived with his aide, who was asked to wait outside and was not used to being asked to wait outside. He has gained fourteen pounds over eighteen months — weight he describes as redistributing rather than generalising. His face is rounder than his Assembly portrait. He has noted easy bruising, attributed to a campaign event. His blood pressure has been elevated at three consecutive private consultations. He reports muscle fatigue on stairs — 'not weakness, fatigue, there is a distinction.' He has had intermittent irritability, attributed to the political climate. He has not brought a medication list. He considers his private healthcare arrangements his own business. He asks three times whether this consultation is confidential.",
       "pmh": "Hypertension — diagnosed age 37. Chronic low back pain.",
       "psh": "None.",
       "meds": "Amlodipine 10mg daily. Prednisone 20mg daily — ongoing, prescribed by private physician for lumbar radiculopathy eighteen months ago. He does not mention this until directly asked.",
