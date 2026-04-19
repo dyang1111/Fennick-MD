@@ -1981,7 +1981,6 @@ function clearMgmtSelections(){ Object.keys(_mgmtSelections).forEach(k=>delete _
 
 window.revealWorkup=function(type){
   if(revealedWorkup.has(type))return;
-  // Fennick reacts to each workup type
   const workupFennickLines = {
     'addl-hx': currentCase.fennick_after_addl_hx || '"Good. Now we are actually listening."',
     'pe':      currentCase.fennick_after_pe      || '"The body does not lie. Read it carefully."',
@@ -1989,11 +1988,33 @@ window.revealWorkup=function(type){
   };
   const fennickLine = workupFennickLines[type];
   if(fennickLine) setTimeout(()=>setFennick('chart', fennickLine), 300);
-  clearHpiBlur();
-  // Update patient CC dynamically
   if(type==='addl-hx') {
+    // Just unblur the HPI tail — no separate card
+    clearHpiBlur();
     const remark = currentCase.cc_after_addl_hx || getGenericRemark('addl-hx');
     if(remark) setTimeout(()=>setPtRemark(remark), 400);
+    // Show patient quote as a small note beneath HPI if present
+    if(currentCase.patient_quote_addl_hx) {
+      const chartGrid = document.getElementById('chart-grid');
+      if(chartGrid && !document.getElementById('addl-hx-quote-row')) {
+        const lbl = document.createElement('div');
+        lbl.className = 'chart-label';
+        lbl.id = 'addl-hx-quote-row';
+        lbl.style.cssText = 'font-style:italic;color:var(--text-secondary);font-size:12px;padding-top:8px;border-bottom:none;';
+        lbl.textContent = '';
+        const val = document.createElement('div');
+        val.className = 'chart-val';
+        val.style.cssText = 'font-style:italic;color:var(--text-secondary);font-size:14px;padding-top:8px;border-bottom:none;border-left:2px solid rgba(160,120,40,0.4);padding-left:10px;';
+        chartGrid.appendChild(lbl);
+        chartGrid.appendChild(val);
+        setTimeout(()=>typewriterWrite(val, currentCase.patient_quote_addl_hx, 20), 400);
+      }
+    }
+    drainHP(5);
+    try { window.setFogDensity(_fogTargetDensity - 10); } catch(e){}
+    revealedWorkup.add(type);
+    document.getElementById('btn-addl-hx').classList.add('used');
+    return;
   }
   if(type==='pe') {
     const remark = currentCase.cc_after_pe || getGenericRemark('pe');
@@ -2003,19 +2024,14 @@ window.revealWorkup=function(type){
     const remark = currentCase.cc_after_imaging || getGenericRemark('imaging');
     if(remark) setTimeout(()=>setPtRemark(remark), 400);
   }
-  drainHP({'addl-hx':5,'pe':8,'imaging':15}[type]||5);
+  drainHP({'pe':8,'imaging':15}[type]||5);
   try { window.setFogDensity(_fogTargetDensity - 10); } catch(e){}
   revealedWorkup.add(type);document.getElementById('btn-'+type).classList.add('used');
-  const ct={'addl-hx':{label:'ADDITIONAL HISTORY',cls:'hx-card',text:currentCase.additional_hx},'pe':{label:'PHYSICAL EXAM FINDINGS',cls:'pe-card',text:currentCase.pe_findings},'imaging':{label:'IMAGING',cls:'img-card',text:currentCase.imaging}};
+  const ct={'pe':{label:'PHYSICAL EXAM FINDINGS',cls:'pe-card',text:currentCase.pe_findings},'imaging':{label:'IMAGING',cls:'img-card',text:currentCase.imaging}};
   const c=ct[type];if(!c||!c.text)return;
   const card=document.createElement('div');card.className='hint-reveal-card '+c.cls;
-  let quoteText = (type==='addl-hx' && currentCase.patient_quote_addl_hx) ? currentCase.patient_quote_addl_hx : '';
-  card.innerHTML=`<div class="hint-reveal-label">${c.label}</div>${quoteText ? '<div class="addl-hx-quote" style="font-style:italic;color:var(--text-secondary);font-size:14px;border-left:2px solid rgba(160,120,40,0.5);padding-left:10px;margin-bottom:10px"></div>' : ''}<div class="hint-reveal-text">${c.text}</div>`;
+  card.innerHTML=`<div class="hint-reveal-label">${c.label}</div><div class="hint-reveal-text">${c.text}</div>`;
   document.getElementById('workup-reveals').appendChild(card);
-  if(quoteText){
-    const qEl = card.querySelector('.addl-hx-quote');
-    if(qEl) setTimeout(()=>typewriterWrite(qEl, quoteText, 22), 200);
-  }
 };
 
 window.toggleLabsPanel=function(){
