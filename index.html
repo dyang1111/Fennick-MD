@@ -1548,6 +1548,35 @@ document.addEventListener('click', function _initAudio(){
   document.removeEventListener('click', _initAudio);
 }, {once:true});
 
+// ── IDLE COFFEE TIMER ──
+let _idleTimer = null;
+let _idleCoffeeShown = false;
+const IDLE_DELAY = 25000; // 25 seconds
+
+const IDLE_COFFEE_LINES = [
+  '',
+  '',
+  '',
+];
+
+function resetIdleTimer() {
+  clearTimeout(_idleTimer);
+  // If coffee was showing, restore to default
+  if(_idleCoffeeShown) {
+    _idleCoffeeShown = false;
+    setFennick('default', '');
+  }
+  _idleTimer = setTimeout(()=>{
+    _idleCoffeeShown = true;
+    document.getElementById('fennick-img').src = FOX.coffee;
+  }, IDLE_DELAY);
+}
+
+['mousemove','keydown','click','scroll','touchstart'].forEach(evt => {
+  document.addEventListener(evt, resetIdleTimer, {passive: true});
+});
+resetIdleTimer();
+
 // ── OVERLAYS ──
 window.openOverlay = function(type) {
   if(type === 'report') buildReport();
@@ -2156,8 +2185,10 @@ window.submitDx=function(){
     }
     const dxRemark = (currentCase && currentCase.cc_after_dx) || getGenericRemark('dx-correct');
     if(dxRemark) setTimeout(()=>setPtRemark(dxRemark), 600);
-    setFennick('good_job','"That is the diagnosis. Now let us see how you manage it."');
-    unlockManagement(); setTimeout(()=>switchTab('management'), 2600);
+    // Coffee moment — brief, then good_job
+    setTimeout(()=>setFennick('coffee',''), 1000);
+    setTimeout(()=>setFennick('good_job','"That is the diagnosis. Now let us see how you manage it."'), 2200);
+    unlockManagement(); setTimeout(()=>switchTab('management'), 3800);
   } else {
     errors++;drainHP(10);wrongAnswers.add(val);triggerInkSplat();
     try { window.setFogDensity(Math.min(100, _fogTargetDensity + 12)); } catch(e){}
