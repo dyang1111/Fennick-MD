@@ -116,7 +116,8 @@
             "sub": "Watchful waiting",
             "correct": true,
             "feedback_correct": "Correct. This is a chronic, slowly progressive condition. No emergency exists. A calm and thorough outpatient approach is ideal.",
-            "pt_remark_correct": "Not an emergency. Good. I'll tell my husband. He's been losing sleep since January."
+            "pt_remark_correct": "Not an emergency. Good. I'll tell my husband. He's been losing sleep since January.",
+            "fennick_correct_comment": "\"Fourteen months progressing. Hemodynamically stable. There is no emergency here — and treating it like one does the patient no favours.\""
           }
         ]
       },
@@ -176,7 +177,8 @@
             "sub": "Functional rehabilitation",
             "correct": true,
             "feedback_correct": "Also correct — OT is essential. Fine motor tasks, handwriting aids, safety assessment. Both this and movement disorder referral are right answers.",
-            "pt_remark_correct": "Someone who can help me work out a way to still do my job. I haven't told anyone — not even my husband — how much I miss it."
+            "pt_remark_correct": "Someone who can help me work out a way to still do my job. I haven't told anyone — not even my husband — how much I miss it.",
+            "fennick_correct_comment": "\"OT is not a soft referral. Fine motor adaptation, writing aids, safety assessment. For a clockmaker, her hands are her life. Someone needs to work with them specifically.\""
           },
           {
             "text": "Lumbar puncture",
@@ -190,7 +192,8 @@
             "sub": "Subspecialty neurology",
             "correct": true,
             "feedback_correct": "Correct. Movement disorder neurologists specialize in optimizing PD management — medication timing, DBS candidacy, motor complications.",
-            "pt_remark_correct": "Someone who only sees this. Not a physician who looks at me and immediately says depression and sends me home with sertraline."
+            "pt_remark_correct": "Someone who only sees this. Not a physician who looks at me and immediately says depression and sends me home with sertraline.",
+            "fennick_correct_comment": "\"Movement disorder neurologists manage medication timing, DBS candidacy, motor fluctuations. A general neurologist sees this once a year. A movement disorder specialist sees it every day.\""
           }
         ]
       },
@@ -203,7 +206,8 @@
             "sub": "Outpatient follow-up",
             "correct": true,
             "feedback_correct": "Exactly right. Stable chronic condition, clear diagnosis, outpatient management with appropriate follow-up.",
-            "pt_remark_correct": "Home. With something to try. That's honestly all I came here for."
+            "pt_remark_correct": "Home. With something to try. That's honestly all I came here for.",
+            "fennick_correct_comment": "\"Stable chronic condition. Clear diagnosis. Outpatient management. She came here for a name and a plan — not an admission.\""
           },
           {
             "text": "Admit for DaTscan",
@@ -457,7 +461,8 @@
             "sub": "Platinum-based chemoimmunotherapy",
             "correct": true,
             "feedback_correct": "Correct. EP (etoposide + platinum) with atezolizumab (PD-L1 inhibitor) is the current first-line for extensive stage SCLC based on the IMpower133 trial. SCLC is exquisitely chemo-sensitive initially.",
-            "pt_remark_correct": "Chemotherapy and the immunotherapy together. The standard approach. Fine. I've run trade routes through worse than a hospital ward."
+            "pt_remark_correct": "Chemotherapy and the immunotherapy together. The standard approach. Fine. I've run trade routes through worse than a hospital ward.",
+            "fennick_correct_comment": "\"IMpower133 trial. Atezolizumab added to EP chemotherapy improved median overall survival. SCLC is exquisitely chemo-sensitive initially — the problem is it almost universally relapses.\""
           }
         ]
       },
@@ -487,7 +492,8 @@
             "sub": "Inpatient admission",
             "correct": true,
             "feedback_correct": "Correct. This is a new diagnosis of extensive stage SCLC with active SVC syndrome, hemoptysis, and hyponatremia. Inpatient admission is mandatory for stabilization and expedited workup.",
-            "pt_remark_correct": "Admitted. Properly. With the biopsy and the plan done right. Yes."
+            "pt_remark_correct": "Admitted. Properly. With the biopsy and the plan done right. Yes.",
+            "fennick_correct_comment": "\"SVC syndrome, hemoptysis, hyponatremia, O2 94%. There is no version of this that goes home today.\""
           },
           {
             "text": "Transfer to thoracic surgery for emergent resection",
@@ -760,7 +766,8 @@
             "sub": "Cardiology admission",
             "correct": true,
             "feedback_correct": "Correct. Native valve endocarditis with a visible vegetation, severe AR, PR prolongation, and septic emboli requires inpatient admission to cardiology with cardiac surgery availability. 4-6 weeks of IV antibiotics, daily EKGs, serial echos, and monitoring for surgical indications.",
-            "pt_remark_correct": "Admitted. Cardiology. Surgery available if needed. Four to six weeks. My wife will run the site — she's done it before."
+            "pt_remark_correct": "Admitted. Cardiology. Surgery available if needed. Four to six weeks. My wife will run the site — she's done it before.",
+            "fennick_correct_comment": "\"Visible vegetation, severe AR, PR prolongation, septic emboli. Cardiology needs to own this. Cardiac surgery needs to be available. Neither is optional.\""
           },
           {
             "text": "Admit to general medicine floor only",
@@ -983,7 +990,8 @@
             "sub": "Staged preoperative preparation",
             "correct": true,
             "feedback_correct": "Correct. Phenoxybenzamine for 10-14 days allows adequate alpha-blockade and volume expansion (catecholamines cause chronic vasoconstriction and volume depletion). High-salt diet and IV fluids help restore intravascular volume. Beta-blockers added only after alpha-blockade is established — to control reflex tachycardia.",
-            "pt_remark_correct": "Fourteen days of preparation. Then the operation. A proper timeline with clear stages. I can work with that."
+            "pt_remark_correct": "Fourteen days of preparation. Then the operation. A proper timeline with clear stages. I can work with that.",
+            "fennick_correct_comment": "\"Catecholamines cause chronic vasoconstriction — he is volume depleted despite normal vitals. High-salt diet and IV fluids restore intravascular volume before surgery. Without that, the post-operative drop will be severe.\""
           },
           {
             "text": "Operate within 48 hours — the mass is large",
@@ -1019,7 +1027,8 @@
             "sub": "Inpatient stabilisation",
             "correct": true,
             "feedback_correct": "Correct. This patient requires inpatient admission for blood pressure stabilization, biochemical confirmation, and preoperative preparation. Endocrinology and surgical oncology consults are essential. He should not leave the building.",
-            "pt_remark_correct": "Admitted. Prepared correctly. Then the operation at the right time. I accept that plan."
+            "pt_remark_correct": "Admitted. Prepared correctly. Then the operation at the right time. I accept that plan.",
+            "fennick_correct_comment": "\"He collapsed this morning. The next paroxysm could come at any moment. He does not leave this building.\""
           },
           {
             "text": "Discharge with outpatient endocrinology referral",
@@ -1268,7 +1277,8 @@
             "sub": "Mandatory public health reporting",
             "correct": true,
             "feedback_correct": "Correct and critical. This is not just one patient — it is an industrial CO poisoning event. The furnace hall must be evacuated immediately, the source identified and sealed, all co-workers tested for COHb, and public health authorities notified. Failure to do this could mean deaths.",
-            "pt_remark_correct": "Please get them out first. I should have said something last week when Henrick started getting the headaches. I'm so sorry."
+            "pt_remark_correct": "Please get them out first. I should have said something last week when Henrick started getting the headaches. I'm so sorry.",
+            "fennick_correct_comment": "\"This is not one patient. This is an industrial event. The hall is still running. Every minute you spend only treating him, the others continue to be poisoned.\""
           }
         ]
       },
@@ -1281,7 +1291,8 @@
             "sub": "Inpatient with HBO",
             "correct": true,
             "feedback_correct": "Correct. Admission is mandatory. He needs cardiac monitoring for CO-induced myocardial injury, serial troponins, HBO therapy, and neurological follow-up for delayed CO sequelae (personality change, parkinsonism, cognitive impairment can emerge weeks later).",
-            "pt_remark_correct": "Admitted. With the monitoring. And someone has to call the hall — I can't stop thinking about the men in there."
+            "pt_remark_correct": "Admitted. With the monitoring. And someone has to call the hall — I can't stop thinking about the men in there.",
+            "fennick_correct_comment": "\"CO-induced myocardial injury requires monitoring. Delayed neurological syndrome — personality change, parkinsonism, cognitive impairment — can emerge weeks after apparent recovery. He needs to be watched.\""
           },
           {
             "text": "Discharge with nasal cannula O2 to use at home",
@@ -1564,7 +1575,8 @@
             "sub": "Inpatient with surgical planning",
             "correct": true,
             "feedback_correct": "Correct. After intervention, admit for 24-hour observation with repeat CXR to confirm re-expansion. Thoracic surgery consult for VATS planning given second episode. Marfan workup. Do not discharge until lung is fully re-expanded and stable.",
-            "pt_remark_correct": "Admitted. Proper scan, surgeon, heart check. In the right order. Yeah."
+            "pt_remark_correct": "Admitted. Proper scan, surgeon, heart check. In the right order. Yeah.",
+            "fennick_correct_comment": "\"Second episode, bilateral blebs, surgical threshold met. He needs 24 hours of observation before anyone talks about operating — the lung has to re-expand fully first.\""
           }
         ]
       }
@@ -1777,7 +1789,8 @@
             "sub": "Continuous cardiac monitoring + magnesium",
             "correct": true,
             "feedback_correct": "Correct. QT 480ms with tachycardia creates significant risk of Torsades de Pointes — a polymorphic ventricular tachycardia that can degenerate into VF. Continuous cardiac monitoring is mandatory. IV magnesium sulfate should be available. Avoid any additional QT-prolonging agents.",
-            "pt_remark_correct": "The dangerous rhythm. Yes. I've read about what happens when the interval stretches too far. Please have the magnesium close."
+            "pt_remark_correct": "The dangerous rhythm. Yes. I've read about what happens when the interval stretches too far. Please have the magnesium close.",
+            "fennick_correct_comment": "\"QT 480 with tachycardia. Torsades de Pointes is a polymorphic ventricular tachycardia — it can degenerate into ventricular fibrillation without warning. Magnesium at bedside is not optional.\""
           },
           {
             "text": "Hyperkalemia from muscle breakdown",
@@ -1826,7 +1839,8 @@
             "sub": "Inpatient with telemetry",
             "correct": true,
             "feedback_correct": "Correct. Admission with continuous telemetry is mandatory given QT prolongation and tachycardia. Toxicology consult. Serial vital signs and neuro assessments. She will likely improve over 12-24 hours as the alkaloids are metabolized, but the arrhythmia window requires monitoring.",
-            "pt_remark_correct": "Admitted. Heart monitor overnight. Yes. I don't want to be alone with this tonight. I really don't."
+            "pt_remark_correct": "Admitted. Heart monitor overnight. Yes. I don't want to be alone with this tonight. I really don't.",
+            "fennick_correct_comment": "\"Belladonna alkaloids act for 24 to 48 hours. The arrhythmia window does not close after two hours. She needs to be monitored for the full duration.\""
           }
         ]
       }
@@ -2075,7 +2089,8 @@
             "sub": "Outpatient with follow-up",
             "correct": true,
             "feedback_correct": "Exactly right. She goes home with iron, a clear explanation of what was actually wrong with her, instructions to stop the sertraline, and a referral to gynaecology. Recheck CBC and iron studies in 4 weeks. Tell her the ice cravings will go away once her iron is repleted. Tell her she is not broken.",
-            "pt_remark_correct": "Four weeks. I can hold on for four weeks. And then — the needles again. The red thread."
+            "pt_remark_correct": "Four weeks. I can hold on for four weeks. And then — the needles again. The red thread.",
+            "fennick_correct_comment": "\"Iron without addressing the source means she is back in six months with the same haemoglobin. The gynaecology referral is not optional — it is half the treatment.\""
           },
           {
             "text": "Admit for IV iron and monitoring",
@@ -2373,7 +2388,8 @@
             "correct": true,
             "feedback_correct": "Correct. Stable enough to go home. Familiar environment is protective. The medication alert card follows him everywhere — no haloperidol, no typical antipsychotics.",
             "scene_trigger": null,
-            "pt_remark_correct": "I want to go home. The piano is there. I need to finish the piece."
+            "pt_remark_correct": "I want to go home. The piano is there. I need to finish the piece.",
+            "fennick_correct_comment": "\"The medication alert card follows him everywhere — every ED, every GP, every locum. The one time someone gives him haloperidol for agitation because they didn't know, it may be the last time.\""
           },
           {
             "text": "Admit to memory care ward indefinitely",
@@ -2684,7 +2700,8 @@
             "sub": "Inpatient monitoring",
             "correct": true,
             "feedback_correct": "Correct. MetHb 38% with tachycardia warrants admission. Serial co-oximetry to confirm falling levels — rebound can occur. Cardiac monitoring. Methylene blue may need repeating. He is sixteen and was still absorbing dye on arrival.",
-            "pt_remark_correct": "How long. Someone needs to tell my family. Not my master. My family. There's a difference."
+            "pt_remark_correct": "How long. Someone needs to tell my family. Not my master. My family. There's a difference.",
+            "fennick_correct_comment": "\"Serial co-oximetry to confirm falling levels. Rebound can occur as aniline continues to absorb from skin. Cardiac monitoring for the myocardial injury. And someone needs to call the hall.\""
           },
           {
             "text": "Discharge once MetHb falls below 20% post-treatment",
@@ -2847,7 +2864,7 @@
             "sub": "Cortisol excess confirmation",
             "correct": true,
             "feedback_correct": "Correct. Cortisol normally nadirs at midnight. Elevated late-night salivary cortisol on two separate collections confirms loss of diurnal rhythm. 24hr urine free cortisol is an alternative. Either establishes hypercortisolism biochemically before imaging.",
-            "fennick_correct_comment": "\"Biochemistry before anatomy. Confirm the hormone excess before you image anything.\"",
+            "fennick_correct_comment": "\"Late-night cortisol because cortisol nadirs at midnight. A random daytime level proves nothing — stress alone raises it. You need the trough.\"",
             "pt_remark_correct": "You want me to spit into a tube at midnight, twice, at home? I have a sitting at nine the morning after both times, you understand that."
           },
           {
@@ -2882,7 +2899,7 @@
             "sub": "ACTH-dependent vs independent",
             "correct": true,
             "feedback_correct": "Correct. Low or suppressed ACTH means the cortisol is not being driven by the pituitary or ectopic source — adrenal autonomous production or exogenous source. High ACTH means pituitary or ectopic. This single result dictates the entire subsequent workup.",
-            "fennick_correct_comment": "\"Suppressed ACTH means the signal from above has stopped. Exogenous or adrenal. One question settles it.\"",
+            "fennick_correct_comment": "\"Low ACTH means the signal from the pituitary has stopped. The cortisol is coming from somewhere else — adrenal autonomous production, or something he is putting in his body. Both are possible until you ask the right question.\"",
             "pt_remark_correct": "More blood, fine. What's this one actually measuring."
           },
           {
@@ -2917,7 +2934,7 @@
             "sub": "Iatrogenic Cushing syndrome confirmed",
             "correct": true,
             "feedback_correct": "Correct. Suppressed ACTH plus eighteen months of exogenous prednisone is the complete picture. The adrenal gland is healthy but dormant. No CT, no MRI, no IPSS. The diagnosis is in the medication history.",
-            "fennick_correct_comment": "\"Suppressed ACTH. Exogenous steroid. The adrenal is fine. The diagnosis is done.\"",
+            "fennick_correct_comment": "\"Suppressed ACTH. Eighteen months of exogenous prednisone. The adrenal is healthy and dormant. The diagnosis is in the medication history. No CT required.\"",
             "pt_remark_correct": "So the prednisone did all of this. The one that was renewed every three months without anyone asking questions."
           },
           {
@@ -2952,7 +2969,7 @@
             "sub": "Slow HPA axis recovery taper",
             "correct": true,
             "feedback_correct": "Correct. Eighteen months of supraphysiological glucocorticoid suppresses the adrenal cortex. Abrupt cessation causes acute adrenal insufficiency — hypotension, vomiting, collapse. The taper must be slow enough to allow HPA axis recovery — weeks to months. Endocrinology must be involved.",
-            "fennick_correct_comment": "\"Eighteen months of suppression. The axis needs time. Taper slowly.\"",
+            "fennick_correct_comment": "\"The axis needs time. Weeks to months. The speed of the taper depends on how long it was suppressed and how the patient tolerates each step.\"",
             "pt_remark_correct": "Months to stop a tablet. So I keep taking it while stopping it? That's going to be difficult to explain to my schedule."
           },
           {
@@ -2991,7 +3008,7 @@
             "correct": true,
             "feedback_correct": "Correct. He is clinically stable. He needs a formal taper plan, endocrinology follow-up, blood pressure optimisation, monitoring for steroid-induced diabetes, and potassium supplementation for the hypokalaemia. Also counsel on bone protection given 18 months of steroid exposure.",
             "pt_remark_correct": "Discharge with a plan, fine. I need written documentation — not for legal reasons, I just need to know what to tell my private physician. Who should have flagged this.",
-            "fennick_correct_comment": "\"Stable. Outpatient taper. Endocrinology. He needs a plan he can follow.\""
+            "fennick_correct_comment": "\"Stable. Outpatient. The complications — glucose, potassium, blood pressure, bone — all need follow-up. But none of them need a hospital bed.\""
           },
           {
             "text": "Admit for immediate supervised steroid cessation",
@@ -3160,7 +3177,7 @@
             "sub": "Pattern-led targeted workup",
             "correct": true,
             "feedback_correct": "Correct. DIP involvement, pain worse with use, stiffness under 30 minutes — this pattern should direct you toward degenerative rather than inflammatory arthritis before you order anything. Targeted workup rather than a broad inflammatory panel.",
-            "fennick_correct_comment": "\"Which joints. That is always the first question in hand pain. The distribution decides everything that follows.\"",
+            "fennick_correct_comment": "\"Distribution before diagnosis. DIP involvement, pain worse with use, stiffness under thirty minutes. That pattern is already narrowing your differential before the first test result.\"",
             "pt_remark_correct": "You're asking about which joints specifically. Nobody's asked me that before — they just look at the hands as a whole."
           },
           {
@@ -3195,7 +3212,7 @@
             "sub": "Context-appropriate interpretation",
             "correct": true,
             "feedback_correct": "Correct. ESR rises with age — a level of 22 in a 61-year-old is not meaningful evidence of active synovitis. Paired with negative RF, negative anti-CCP, and a radiological picture without erosions, this does not support inflammatory arthritis.",
-            "fennick_correct_comment": "\"ESR 22 at 61 is the city noise, not the diagnosis. Don't let a borderline number override a clear pattern.\"",
+            "fennick_correct_comment": "\"ESR 22 at 61. That is age. That is the city. It is not synovitis until the rest of the picture says it is.\"",
             "pt_remark_correct": "So the number being slightly up doesn't mean what I thought it meant. It just means I'm 61."
           },
           {
@@ -3230,7 +3247,7 @@
             "sub": "Correct diagnosis",
             "correct": true,
             "feedback_correct": "Correct. Osteophytes and joint space narrowing at DIP and CMC joints with no erosions is the radiological hallmark of OA. The absence of periarticular osteopenia rules against inflammatory arthritis. The distribution confirms it.",
-            "fennick_correct_comment": "\"Osteophytes where the joint has been asking to survive. Erosions where the immune system has been eating it alive. These are not the same picture.\"",
+            "fennick_correct_comment": "\"Osteophytes at the margins. Narrowing at the surface. No erosions eating through the bone. The joint has been worn down, not attacked.\"",
             "pt_remark_correct": "So the X-ray shows wear. Not attack. Just — forty years of asking the same joints to do the same thing."
           },
           {
@@ -3265,7 +3282,7 @@
             "sub": "Conservative multimodal management",
             "correct": true,
             "feedback_correct": "Correct. Topical diclofenac directly to the affected joints — avoids systemic NSAID exposure. Splinting the first CMC joint reduces pain at the wheel. OT for adaptive techniques preserves the craft. This is the right approach for a stable, active man whose goal is to keep working.",
-            "fennick_correct_comment": "\"Topical first. The joint is accessible. There is no reason to expose the whole body to what you can put directly where it hurts.\"",
+            "fennick_correct_comment": "\"Topical first — the joint is accessible. Diclofenac gel directly where it hurts, systemic exposure avoided. The splint protects the CMC at the wheel. OT teaches him how to keep working around it.\"",
             "pt_remark_correct": "Something on the joint itself. A splint for the thumb. Someone to help me adapt the way I work. I can do all of that. I just want to keep throwing."
           },
           {
@@ -3302,7 +3319,7 @@
             "sub": "Outpatient with OT and follow-up",
             "correct": true,
             "feedback_correct": "Exactly right. This is an outpatient condition. He goes home with a treatment plan that addresses the pain, protects the joint, and preserves the craft. OT is not optional — adaptive technique at the wheel is the difference between continuing and stopping.",
-            "fennick_correct_comment": "\"OT is not a soft referral. For a man whose hands are his livelihood, it is the most important part of the plan.\"",
+            "fennick_correct_comment": "\"OT is the most important referral on this plan. For a man whose entire identity is in his hands, adaptive technique at the wheel is the difference between continuing and stopping.\"",
             "pt_remark_correct": "Home. With something to try. And someone who can help me figure out how to keep working around it. I picked up the rib this morning — just to see. It still knows where to go."
           },
           {
