@@ -2189,7 +2189,7 @@ window.submitDx=function(){
     // Coffee sip — 2 seconds then good_job, management tab original timing
     setTimeout(()=>{ document.getElementById('fennick-img').src = FOX.coffee; }, 400);
     setTimeout(()=>setFennick('good_job','"That is the diagnosis. Now let us see how you manage it."'), 2400);
-    unlockManagement(); setTimeout(()=>switchTab('management'), 2600);
+    unlockManagement(); setTimeout(()=>switchTab('management'), 2000);
   } else {
     errors++;drainHP(10);wrongAnswers.add(val);triggerInkSplat();
     try { window.setFogDensity(Math.min(100, _fogTargetDensity + 12)); } catch(e){}
