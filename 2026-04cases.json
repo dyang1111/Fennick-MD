@@ -3383,5 +3383,288 @@
     "fennick_after_addl_hx": "\"Pain worse with use, better with rest. Stiffness gone in twenty minutes. The distribution and the pattern are already telling you which direction to go.\"",
     "fennick_after_pe": "\"Heberden's nodes. First CMC tenderness. No synovitis, no boggy swelling, no ulnar drift. Bony, not inflamed. Read the joint, not just the hand.\"",
     "fennick_after_imaging": "\"Osteophytes and narrowing. No erosions. No periarticular osteopenia. This is a joint that has been used, not attacked.\""
+  },
+  {
+    "id": "014",
+    "date": "2026-04-19",
+    "tier": 1,
+    "urgency": "urgent",
+    "title": "The Stoker's PR",
+    "dx_answer": "Rhabdomyolysis",
+    "patient_anchor": "the squats",
+    "personality": {
+      "archetype": "Gym rat",
+      "voice": "Completely sincere. Every concern is about performance and recovery. Never trying to be funny — just operating on different priorities than everyone else in the room.",
+      "crack": "When told he lost muscle. That's the only thing that lands."
+    },
+    "patient": {
+      "name": "The Stoker",
+      "age": 28,
+      "sex": "M",
+      "occupation": "Steam Engine Stoker, Ferrovane Central Rail",
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776718947/the_stoker_qykmra.png"
+    },
+    "chart": {
+      "cc": "I hit a PR yesterday and this morning my urine is a strange colour. I think they might be related. I wanted to confirm.",
+      "hpi": "The Stoker arrived in work clothes, slightly stiff in the legs but otherwise appearing entirely well. He shovels coal for ten-hour shifts at the Ferrovane Central Rail depot — physical work, daily. Yesterday after his shift he set out to complete a personal goal he has been working toward for some time. He achieved it. This morning he noticed his urine was a dark brown colour, which he found interesting rather than alarming. He has bilateral thigh and lower back pain which he rates as acceptable. He is not sure the pain and the urine are connected but thought it worth mentioning together. He has had no fever, no burning on urination, no prior kidney problems.",
+      "pmh": "No significant medical history.",
+      "psh": "None.",
+      "meds": "Protein supplement daily. Creatine monohydrate. No prescribed medications.",
+      "allergies": "NKDA.",
+      "fh": "Father: hypertension.",
+      "sh": "Steam engine stoker, Ferrovane Central Rail. Lives alone. Non-smoker. Does not drink — interferes with recovery."
+    },
+    "vitals": {
+      "bp": "134/82",
+      "hr": "96",
+      "rr": "16",
+      "temp": "37.3",
+      "o2": "99% RA"
+    },
+    "additional_hx": "He is precise about the numbers. One thousand squats. One hour. No rest periods — rest periods are for the return journey, not the work. He drank approximately half a cup of water during. Leg sensation disappeared around repetition seven hundred, which he interpreted as a positive sign — he had heard of the zone and believed he had entered it. The last three hundred he describes as automatic. He finished, walked home, ate a large meal, slept well. He is proud of this. He would like it noted.",
+    "patient_quote_addl_hx": "\"One thousand. One hour. I have been working toward this for four months. The legs stopped feeling anything around seven hundred but I have read that is normal. That is the zone.\"",
+    "pe_findings": "Well-built, muscular. Bilateral quadriceps and hamstring tenderness on palpation — significant, though patient rates pain as acceptable and attributes it to successful training. Mild lower back paraspinal tenderness. No joint swelling. Urine dipstick at bedside: 3+ blood with no red cells on microscopy — consistent with myoglobinuria. HR 96, BP 134/82. Mild pitting oedema bilateral ankles.",
+    "imaging": "Renal ultrasound: bilateral kidneys normal size and echogenicity. No obstruction, no hydronephrosis, no stones. The kidneys appear structurally intact — the threat here is biochemical, not anatomical.",
+    "special_test": {
+      "name": "Creatine Kinase (CK) Level",
+      "result": "CK 48,200 U/L (CRITICAL — normal <200 U/L). Confirms severe rhabdomyolysis. Myoglobin released from destroyed muscle fibres is precipitating in renal tubules and causing acute kidney injury. Creatinine 2.1 mg/dL (elevated from baseline). BUN 34. Potassium 5.8 mEq/L (elevated — myocyte breakdown releases intracellular potassium). LDH markedly elevated. AST elevated — muscle source, not hepatic."
+    },
+    "memory_fragments": {
+      "pe": "Seven hundred repetitions in, his legs went quiet. He kept going. He thought that was the point."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "WBC 13.2 (mildly elevated — stress response). Hgb 15.8 (normal, hemoconcentration from volume depletion). Plt 334. No infection pattern."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Creatinine 2.1 (HIGH — AKI from myoglobin precipitation). BUN 34 (elevated). K 5.8 (HIGH — intracellular potassium released from destroyed myocytes). Ca 7.2 (LOW — calcium deposits in necrotic muscle). Glucose normal. LFTs: AST 680 (markedly elevated — muscle origin, not liver). ALT mildly elevated."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Sinus tachycardia rate 96. Peaked T waves in precordial leads — consistent with hyperkalaemia K 5.8. No PR prolongation yet. No sine wave pattern. Monitor closely — hyperkalaemia can progress to fatal arrhythmia."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Mildly elevated at 0.06 — demand from tachycardia and hyperkalaemia stress. Not a primary ACS pattern. Monitor."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. Not relevant."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Dipstick: 3+ blood. Microscopy: NO red blood cells — this is not haematuria. This is myoglobinuria. Myoglobin cross-reacts with the haem dipstick but is not visible on microscopy. Urine appears dark brown — cola coloured. Urine myoglobin positive on specific assay.",
+        "memory_fragment": "Oh yeah — the dark urine. I thought that was normal. Like engine oil. When the machine is working hard."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "pH 7.32 (low — metabolic acidosis from lactic acid and renal impairment). Bicarbonate 18 (low). Lactate 3.8 (elevated). Consistent with severe muscle breakdown and early AKI."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "PT/INR 1.2 (mildly elevated). PTT 36. Monitor — severe rhabdomyolysis can rarely precipitate DIC."
+      }
+    ],
+    "hints": [
+      "Cola-coloured urine with 3+ blood on dipstick but no red cells on microscopy. That is not haematuria. Something else is cross-reacting with the haem test. What does muscle breakdown release that looks like blood on dipstick?",
+      "CK 48,200. That number is not a lab error. Normal is under 200. His quadriceps ran out of fuel somewhere around repetition seven hundred and kept going anyway. What happens to muscle that contracts without oxygen?",
+      "Creatinine 2.1, potassium 5.8, peaked T waves on EKG. The kidneys are being hit from two directions — myoglobin precipitating in the tubules, and volume depletion from not drinking water for an hour of maximum exertion. The treatment is aggressive hydration to flush the tubes before they block completely.",
+      "The goal is to get urine output above 200-300mL per hour and keep urine pH alkaline — alkalinisation reduces myoglobin precipitation. The hyperkalaemia needs monitoring because it can reach fatal levels as more myocytes continue to break down."
+    ],
+    "management": [
+      {
+        "title": "Immediate management",
+        "hint": "CK 48,200. AKI. Hyperkalaemia with EKG changes. What do you do first?",
+        "options": [
+          {
+            "text": "Aggressive IV fluid resuscitation — normal saline or Hartmann's",
+            "sub": "High-volume IV hydration",
+            "correct": true,
+            "feedback_correct": "Correct. The goal is urine output 200-300mL/hour. Myoglobin precipitates in acidic concentrated urine — dilute it and flush it before the tubules block completely. This is the single most important intervention.",
+            "fennick_correct_comment": "\"The kidney is not broken yet. It is being poisoned by what is arriving in the tubule. Flood it out before it blocks.\"",
+            "pt_remark_correct": "I can still have protein with this, right doc. I have a shake in my bag."
+          },
+          {
+            "text": "Catheterise and monitor urine output only — await CK trend",
+            "sub": "Watchful waiting",
+            "correct": false,
+            "feedback_wrong": "Watching without treating while CK is 48,200 and creatinine is rising wastes the window to prevent complete renal tubular obstruction. Aggressive hydration must start now.",
+            "pt_remark_wrong": "Wait and see. How long are we waiting. I have a shift tomorrow."
+          },
+          {
+            "text": "Treat as UTI — start antibiotics",
+            "sub": "Antibiotic therapy",
+            "correct": false,
+            "feedback_wrong": "There is no infection here. The dipstick blood is myoglobin, not bacteria. No dysuria, no fever, no cells on microscopy. Antibiotics treat nothing in this patient and waste time.",
+            "pt_remark_wrong": "A urine infection. From squats."
+          },
+          {
+            "text": "Urgent dialysis referral",
+            "sub": "Renal replacement therapy",
+            "correct": false,
+            "feedback_wrong": "Dialysis is a last resort for refractory AKI that does not respond to aggressive hydration. His kidneys are not there yet — creatinine is 2.1, not anuric failure. Aggressive IV fluids are the first intervention. Dialysis may never be needed if you act now.",
+            "pt_remark_wrong": "Dialysis. Is that like a machine that does what the kidneys do. Can it also build muscle.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"Creatinine 2.1 with a rising trend is not dialysis territory yet. You bypassed the intervention that could have prevented it entirely.\""
+          }
+        ]
+      },
+      {
+        "title": "Urine alkalinisation",
+        "hint": "Myoglobin precipitates in acidic urine. How do you reduce that precipitation while the fluids are running?",
+        "options": [
+          {
+            "text": "Add sodium bicarbonate to IV fluids — target urine pH >6.5",
+            "sub": "Urinary alkalinisation",
+            "correct": true,
+            "feedback_correct": "Correct. Alkaline urine reduces myoglobin precipitation in the tubules. Add sodium bicarbonate to the IV fluid regimen and monitor urine pH. Target above 6.5.",
+            "fennick_correct_comment": "\"Myoglobin is less soluble in acid. You are changing the chemistry of what arrives at the tubule, not just the volume.\"",
+            "pt_remark_correct": "So the goal is to make the urine less acidic. Like adjusting the pH of a training environment."
+          },
+          {
+            "text": "Give furosemide to force diuresis",
+            "sub": "Loop diuretic",
+            "correct": false,
+            "feedback_wrong": "Furosemide in rhabdomyolysis is not first-line and can worsen volume depletion. The diuresis you want comes from aggressive fluid loading, not from forcing the kidney to excrete what it already can't handle.",
+            "pt_remark_wrong": "More output. Yeah I want maximum output too."
+          },
+          {
+            "text": "Nothing further — IV fluids alone are sufficient",
+            "sub": "Fluids only",
+            "correct": false,
+            "feedback_wrong": "Fluids alone are the foundation but alkalinisation significantly reduces tubular precipitation of myoglobin. Adding bicarbonate is standard of care in severe rhabdomyolysis.",
+            "pt_remark_wrong": "Just the drip. Keep it simple."
+          },
+          {
+            "text": "Vitamin C infusion — antioxidant protection",
+            "sub": "Antioxidant therapy",
+            "correct": false,
+            "feedback_wrong": "No evidence supports routine vitamin C infusion in rhabdomyolysis. The mechanism of tubular injury is physical precipitation, not oxidative damage. Fluids and alkalinisation are the proven interventions.",
+            "pt_remark_wrong": "Vitamin C. For recovery. Yeah I actually take that already."
+          }
+        ]
+      },
+      {
+        "title": "Manage the hyperkalaemia",
+        "hint": "K 5.8 with peaked T waves. Creatinine rising. More myocytes are still breaking down. What do you do?",
+        "options": [
+          {
+            "text": "Cardiac monitoring, calcium gluconate if K rises further, salbutamol nebuliser, consider kayexalate",
+            "sub": "Hyperkalaemia management",
+            "correct": true,
+            "feedback_correct": "Correct. Peaked T waves at K 5.8 means you are watching an EKG that could deteriorate. Calcium gluconate stabilises the myocardium if K rises. Salbutamol drives K into cells temporarily. Aggressive hydration itself will help as renal excretion improves.",
+            "fennick_correct_comment": "\"Every myocyte that continues to break down is releasing more potassium. The number will keep rising until the process stops. Stay ahead of it.\"",
+            "pt_remark_correct": "So the real question is — when can I get back to the squats."
+          },
+          {
+            "text": "Reassure — K 5.8 is only mildly elevated",
+            "sub": "Observation only",
+            "correct": false,
+            "feedback_wrong": "K 5.8 with EKG changes in a patient whose CK is 48,200 and still rising is not reassurance territory. This number will keep climbing as muscle breakdown continues. Peaked T waves are the warning before it becomes fatal.",
+            "pt_remark_wrong": "It's fine. I feel fine.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"K 5.8 with peaked T waves and ongoing muscle breakdown. You reassured him. The potassium continued to rise.\""
+          },
+          {
+            "text": "Immediate haemodialysis for hyperkalaemia",
+            "sub": "Emergency dialysis",
+            "correct": false,
+            "feedback_wrong": "Dialysis is not first-line for K 5.8. Medical management — calcium, salbutamol, hydration — should be attempted first. Dialysis is reserved for refractory hyperkalaemia that does not respond to these measures.",
+            "pt_remark_wrong": "The machine again. Is the machine also going to tell me when I can squat."
+          },
+          {
+            "text": "Oral potassium binders only",
+            "sub": "Oral therapy",
+            "correct": false,
+            "feedback_wrong": "Oral binders act slowly over hours. With EKG changes and ongoing muscle breakdown, you need faster-acting interventions — IV calcium gluconate and salbutamol — while hydration improves renal excretion.",
+            "pt_remark_wrong": "A tablet. For the heart thing. Yeah sure."
+          }
+        ]
+      },
+      {
+        "title": "Disposition",
+        "hint": "CK 48,200, AKI, hyperkalaemia with EKG changes. Where does he go?",
+        "options": [
+          {
+            "text": "Admit — aggressive IV fluids, telemetry, serial CK, creatinine, and potassium every 4-6 hours",
+            "sub": "Inpatient with monitoring",
+            "correct": true,
+            "feedback_correct": "Correct. CK 48,200 with AKI and hyperkalaemia requires inpatient admission for aggressive hydration and close monitoring. CK will continue to rise for 24-48 hours before peaking. He needs telemetry for the hyperkalaemia and serial renal function.",
+            "fennick_correct_comment": "\"CK peaks 24 to 48 hours after the insult. He is not at the worst of it yet. He needs to be here when it arrives.\"",
+            "pt_remark_correct": "How long. I have a shift on Thursday. And I need to know — did I lose muscle. Specifically how much."
+          },
+          {
+            "text": "Discharge with oral hydration and GP follow-up in one week",
+            "sub": "Discharge with oral fluids",
+            "correct": false,
+            "feedback_wrong": "Absolutely not. CK 48,200, creatinine rising, potassium 5.8 with EKG changes. He cannot drink enough water at home to achieve the urine output required. He needs IV fluids at a rate that oral intake cannot match.",
+            "pt_remark_wrong": "I can drink more at home. I have a two litre bottle.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"CK still rising. Kidneys still failing. Potassium climbing toward an arrhythmia. You sent him home with a water bottle.\""
+          },
+          {
+            "text": "Discharge once urine clears — visual inspection sufficient",
+            "sub": "Discharge when urine looks normal",
+            "correct": false,
+            "feedback_wrong": "Urine colour normalising does not mean CK has normalised. CK peaks 24-48 hours after the insult and the renal injury continues beyond when the urine clears. Visual inspection is not a discharge criterion.",
+            "pt_remark_wrong": "The colour's already getting better I think. I checked this morning.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"The urine cleared. The CK continued to rise for another 36 hours. The kidneys did not know the urine looked better.\""
+          },
+          {
+            "text": "ICU admission for immediate dialysis",
+            "sub": "ICU and dialysis",
+            "correct": false,
+            "feedback_wrong": "ICU and dialysis are not yet indicated. He is not anuric, not haemodynamically unstable, and has not failed medical management. Monitored ward bed with aggressive IV fluids is the appropriate level of care right now.",
+            "pt_remark_wrong": "ICU. That sounds serious. Can I still have my shake in there."
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 28,
+      "sex": "M",
+      "pmh": "no significant past medical history",
+      "presenting": "cola-coloured urine and bilateral leg pain following one thousand squats in one hour",
+      "pertinent_positives": {
+        "addl-hx": "one thousand squats completed in one hour, minimal water intake during, loss of leg sensation around repetition seven hundred interpreted as positive sign",
+        "pe": "significant bilateral quadriceps and hamstring tenderness, myoglobinuria on dipstick with no red cells on microscopy, mild ankle oedema",
+        "labs": "CK 48,200 critically elevated, creatinine 2.1 AKI, potassium 5.8 hyperkalaemia, metabolic acidosis, AST elevated from muscle origin",
+        "imaging": "renal ultrasound normal structure bilaterally — biochemical injury not anatomical",
+        "special": "CK 48,200 confirming severe rhabdomyolysis with myoglobinuria and acute kidney injury"
+      },
+      "assessment": "Rhabdomyolysis — exertional, severe, complicated by AKI and hyperkalaemia",
+      "plan": "aggressive IV fluid resuscitation targeting urine output 200-300mL/hr, sodium bicarbonate alkalinisation, cardiac monitoring for hyperkalaemia, serial CK and renal function every 4-6 hours, admit to monitored ward"
+    },
+    "explanation": "Rhabdomyolysis is the breakdown of skeletal muscle releasing myoglobin, CK, potassium, and other intracellular contents into the bloodstream. Myoglobin precipitates in renal tubules causing AKI. Classic triad: muscle pain, weakness, dark urine. Key: dipstick blood with no RBCs = myoglobinuria not haematuria. CK >1000 is diagnostic; >10,000 carries high AKI risk. Treatment: aggressive IV hydration to achieve urine output 200-300mL/hr. Alkalinise urine. Monitor potassium — hyperkalaemia can be fatal.",
+    "explanation_detail": {
+      "who_gets_it": "Exertional: extreme unaccustomed exercise, crush injury, seizures. Non-exertional: statin myopathy, viral myositis, metabolic myopathies, heatstroke, alcohol, cocaine.",
+      "risk_factors": "Unaccustomed extreme exercise, volume depletion during exertion, heat, stimulants, statins, genetic muscle enzyme deficiencies.",
+      "typical_presentation": "Muscle pain and weakness, dark cola-coloured urine, elevated CK. May present with AKI (creatinine rise), hyperkalaemia (peaked T waves, arrhythmia risk), hypocalcaemia (calcium deposits in necrotic muscle), elevated AST (muscle source).",
+      "moa": "Muscle cell membrane disruption → myoglobin, CK, K, Ca, phosphate release → myoglobin filtered by kidney → precipitates in acidic tubules → tubular obstruction and direct toxicity → AKI. Hyperkalaemia from intracellular K release can cause fatal arrhythmia.",
+      "step1_buzzwords": "Cola urine, dipstick blood no RBCs, CK markedly elevated, myoglobinuria, AKI, hyperkalaemia, aggressive IV fluids, alkalinise urine.",
+      "lab_buzzwords": "CK >1000 diagnostic, >10,000 high AKI risk. UA: dipstick 3+ blood, microscopy no RBCs. CMP: elevated creatinine, K, low Ca, high phosphate, elevated AST (muscle). EKG: peaked T waves from hyperkalaemia.",
+      "treatment": "Aggressive IV fluids — normal saline or Hartmann's, target urine output 200-300mL/hr. Sodium bicarbonate alkalinisation — target urine pH >6.5. Monitor K closely — calcium gluconate if EKG changes, salbutamol, consider kayexalate. Dialysis only if refractory AKI or hyperkalaemia."
+    },
+    "fennick_opening": "\"He achieved something yesterday. He is not entirely sure what.\"",
+    "music_default": "Foxfire at Midnight",
+    "cc_after_addl_hx": "One thousand. One hour. The legs went quiet around seven hundred. I thought that was the zone.",
+    "cc_after_pe": "More pain more gain, right doc.",
+    "cc_after_imaging": "Are my kidneys big? I wish I could train them. Imagine kidney day.",
+    "cc_after_hint": "So the urine thing is connected to the squats. I thought it might be.",
+    "cc_after_dx": "So I lost muscle. ... How much. Specifically. That is important information.",
+    "fennick_after_addl_hx": "\"One thousand repetitions in one hour. Minimal hydration. Sensation loss at seven hundred interpreted as progress. The muscle did not stop because he did.\"",
+    "fennick_after_pe": "\"Dipstick 3+ blood. No red cells on microscopy. That is not haematuria. Something else cross-reacts with the haem test. Order the CK before anything else.\"",
+    "fennick_after_imaging": "\"Kidneys structurally intact. The threat is not anatomical. It is what is arriving in the tubule from the bloodstream. The CK will tell you how much.\""
   }
 ]
