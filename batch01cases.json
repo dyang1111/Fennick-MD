@@ -3671,7 +3671,7 @@
     "tier": 2,
     "urgency": "urgent",
     "title": "The Madame's Breath",
-    "dx_answer": "Pulmonary Arterial Hypertension",
+    "dx_answer": "Pulmonary Hypertension",
     "patient_anchor": "the stairs",
     "breathless_typing": true,
     "personality": {
