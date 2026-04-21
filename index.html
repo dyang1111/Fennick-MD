@@ -1520,6 +1520,9 @@ function getGenericRemark(type) {
 
 function typewriterWrite(el, text, speed){
   speed = speed || 22;
+  // Breathless typing: slow speed + long pause at '...'
+  const breathless = currentCase && currentCase.breathless_typing;
+  if(breathless) speed = 42;
   return new Promise(resolve => {
     el.textContent = '';
     const cursor = document.createElement('span');
@@ -1528,9 +1531,16 @@ function typewriterWrite(el, text, speed){
     let i = 0;
     function tick(){
       if(i < text.length){
-        el.insertBefore(document.createTextNode(text[i]), cursor);
-        i++;
-        setTimeout(tick, speed + Math.random()*8);
+        // Check for '...' pause in breathless mode
+        if(breathless && text[i] === '.' && text[i+1] === '.' && text[i+2] === '.') {
+          el.insertBefore(document.createTextNode('...'), cursor);
+          i += 3;
+          setTimeout(tick, 1100 + Math.random()*400);
+        } else {
+          el.insertBefore(document.createTextNode(text[i]), cursor);
+          i++;
+          setTimeout(tick, speed + Math.random()*12);
+        }
       } else {
         cursor.remove();
         resolve();
@@ -1911,7 +1921,13 @@ function initCase(){
   document.getElementById('pt-name').textContent = currentCase.patient.name + ', ' + currentCase.patient.age + currentCase.patient.sex;
   document.getElementById('pt-occ').textContent = currentCase.patient.occupation;
   const ptCcEl = document.getElementById('pt-cc');
-  if(ptCcEl) typewriterWrite(ptCcEl, '"' + currentCase.chart.cc + '"', 18);
+  if(ptCcEl) // pt_opening fires first if defined, then CC after a delay
+  if(currentCase.pt_opening) {
+    typewriterWrite(ptCcEl, '"' + currentCase.pt_opening + '"', 20);
+    setTimeout(()=>{ typewriterWrite(ptCcEl, '"' + currentCase.chart.cc + '"', 20); }, 3200);
+  } else {
+    typewriterWrite(ptCcEl, '"' + currentCase.chart.cc + '"', 18);
+  }
 
   const ptImg = document.getElementById('pt-img');
   if(currentCase.patient.image_url){
