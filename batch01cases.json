@@ -3664,5 +3664,337 @@
     "fennick_after_addl_hx": "\"One thousand repetitions in one hour. Minimal hydration. Sensation loss at seven hundred interpreted as progress. The muscle did not stop because he did.\"",
     "fennick_after_pe": "\"Dipstick 3+ blood. No red cells on microscopy. That is not haematuria. Something else cross-reacts with the haem test. Order the CK before anything else.\"",
     "fennick_after_imaging": "\"Kidneys structurally intact. The threat is not anatomical. It is what is arriving in the tubule from the bloodstream. The CK will tell you how much.\""
+  },
+  {
+    "id": "014",
+    "date": "2026-04-20",
+    "tier": 2,
+    "urgency": "urgent",
+    "title": "The Madame's Breath",
+    "dx_answer": "Pulmonary Arterial Hypertension",
+    "patient_anchor": "the stairs",
+    "breathless_typing": true,
+    "personality": {
+      "archetype": "Wealthy dismissive optimist",
+      "voice": "Acknowledges everything, takes nothing seriously. Discomfort is a mild inconvenience. Symptoms are someone else's problem to interpret. Makes her breathlessness sound like a rhetorical pause.",
+      "crack": "When she hears the severity. Just — 'I see.' That is all."
+    },
+    "patient": {
+      "name": "The Madame",
+      "age": 42,
+      "sex": "F",
+      "occupation": "Irongate District, Ferrovane",
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776737903/the_madame_y36wsz.png"
+    },
+    "chart": {
+      "cc": "I am... fine. ... This is what not fine feels like, I assume.",
+      "hpi": "The Madame arrived alone, unhurried, in clothes that cost more than the ward's monthly coal budget. She has had progressive exertional breathlessness for approximately two years — initially only on the stairs, now on moderate exertion. She has no cough, no fever, no chest pain. She has had two episodes of near-fainting in the past six months, attributed at the time to not eating enough. She has noted her ankles swell by evening. She delayed coming because she was busy and assumed it would pass. She answers questions with perfect composure and occasional detachment, as if describing someone else's body.",
+      "pmh": "No significant medical history. No prior cardiac or respiratory diagnoses.",
+      "psh": "None.",
+      "meds": "Occasional herbal supplements. Nothing prescribed.",
+      "allergies": "NKDA.",
+      "fh": "Mother had heart problems in her sixties. Details unknown.",
+      "sh": "Irongate district. Married, no children. Non-smoker. Does not work. Travels occasionally by carriage."
+    },
+    "vitals": {
+      "bp": "104/68",
+      "hr": "96",
+      "rr": "20",
+      "temp": "37.0",
+      "o2": "93% RA"
+    },
+    "memory_fragments": {
+      "pe": "She noticed the stairs last winter. Not the breathlessness — the pause at the top. She had never paused before. She started leaving earlier so no one would see.",
+      "imaging": "The Irongate house has four floors. She has been sleeping on the second for eight months. She told her husband the upper rooms were too cold."
+    },
+    "additional_hx": "She is precise when asked directly. The breathlessness started on exertion — specifically the stairs at home. Four flights. She now stops at the second floor. She attributes this to being less active than she used to be. The near-fainting episodes occurred after standing quickly from a chair and after walking briskly to a carriage. Both resolved in minutes. The ankle swelling is bilateral, worse by evening, gone by morning. She has not told her husband how limited she has become. She mentions this as an afterthought, with no particular emotion.",
+    "patient_quote_addl_hx": "\"The stairs became... a project. I thought I was simply getting older. One does, I'm told.\"",
+    "pe_findings": "Well-dressed, calm, mildly dyspnoeic at rest — she does not appear to notice. JVP elevated at 5cm above sternal angle. Loud P2 on auscultation. Right ventricular heave palpable at left sternal border. Mild pitting oedema bilateral ankles. No crackles, no wheeze. No clubbing. Peripherally cool.",
+    "imaging": "CXR: enlarged main pulmonary artery. Peripheral pruning of pulmonary vessels. Mild cardiomegaly — right-sided. No pulmonary oedema. No consolidation. No pleural effusion.",
+    "special_test": {
+      "name": "Echocardiogram",
+      "result": "RVSP estimated 74 mmHg. Right ventricular dilation and hypertrophy. Paradoxical septal motion. Tricuspid regurgitation moderate. Left ventricular function normal. Left heart structurally normal. Pericardial effusion trace."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "WBC 7.2. Hgb 13.8. Plt 312. Mild erythrocytosis — Hct 42%."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Sodium 138. Creatinine 1.1. BUN 18. LFTs: AST 44, ALT 38, bilirubin 1.4 (mildly elevated). Uric acid 7.2 (elevated)."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Sinus tachycardia rate 96. Right axis deviation. Right bundle branch block. RV strain pattern — T wave inversions V1-V4. P pulmonale."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Troponin I 0.04. Mildly elevated. Serial recommended."
+      },
+      {
+        "name": "NT-proBNP",
+        "cost": 5,
+        "result": "NT-proBNP 1,840 pg/mL (elevated)."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Normal. No protein. No blood. No infection."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "pH 7.46. pO2 62 on room air. pCO2 32. HCO3 22. O2 sat 93%."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "PT/INR 1.1. PTT 30. Normal."
+      }
+    ],
+    "hints": [
+      "O2 93% at rest. JVP elevated. Loud P2. RV heave. No crackles, no wheeze. The lungs are clear — the problem is upstream of them.",
+      "Right axis deviation, RBBB, T wave inversions V1-V4. The right heart is under sustained pressure. Something is making it work harder than it should.",
+      "RVSP 74 mmHg on echo. Normal is under 25. The pulmonary vasculature is severely obstructed. This has been building for years. The left heart is entirely normal.",
+      "Progressive exertional dyspnoea, syncope, right heart strain on EKG and echo, elevated RVSP, clear lungs, no left heart disease. Two years of symptoms. The pulmonary arterial pressure is critically elevated."
+    ],
+    "management": [
+      {
+        "title": "Initial workup",
+        "hint": "O2 93% at rest. JVP elevated. Loud P2. Clear lungs. Right heart strain on EKG. Where do you start?",
+        "options": [
+          {
+            "text": "Echocardiogram, ECG, NT-proBNP, full bloods",
+            "sub": "Non-invasive cardiac and biochemical workup",
+            "correct": true,
+            "feedback_correct": "Correct. The presentation points to right heart pathology — elevated JVP, loud P2, RV heave, clear lungs. Echo is the critical first step. NT-proBNP quantifies right heart stress. ECG has already shown right axis deviation and RV strain.",
+            "fennick_correct_comment": "\"Clear lungs, right heart strain. You are not looking at a lung problem. You are looking at what is happening to the right heart.\"",
+            "pt_remark_correct": "A heart scan. ... I had the house surveyed last month for structural problems. ... Perhaps I should have surveyed the heart instead."
+          },
+          {
+            "text": "Spirometry and peak flow — assess for asthma or COPD",
+            "sub": "Pulmonary function testing first",
+            "correct": false,
+            "feedback_wrong": "Spirometry will be near normal in PAH — the airways are not the problem. The clinical findings point to the right heart, not obstructive or restrictive lung disease. Asthma and COPD do not cause elevated JVP, loud P2, or RV heave.",
+            "pt_remark_wrong": "Blow into a tube. ... My husband has a very good wind instrument specialist. ... I assume that is not relevant."
+          },
+          {
+            "text": "CT pulmonary angiogram — rule out pulmonary embolism",
+            "sub": "CTPA",
+            "correct": false,
+            "feedback_wrong": "PE is reasonable in the differential but the chronic two-year progression, RV hypertrophy on examination, and absence of acute onset argue against acute PE. Echo and ECG first to characterise the right heart before committing to radiation and contrast.",
+            "pt_remark_wrong": "A scan. How long does that take. ... I have a dinner. ... I will have the dinner moved."
+          },
+          {
+            "text": "Reassure — likely anxiety and deconditioning, discharge with lifestyle advice",
+            "sub": "Discharge",
+            "correct": false,
+            "feedback_wrong": "O2 93% at rest. Elevated JVP. RV heave. Loud P2. This is not anxiety. Discharging this patient risks decompensation within days.",
+            "pt_remark_wrong": "Anxiety. ... Yes. ... My decorator said the same thing about the wallpaper. ... He was also wrong.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"O2 93% at rest. Right heart under critical pressure. You sent her home with lifestyle advice. She would not have made it to the end of the week.\""
+          }
+        ]
+      },
+      {
+        "title": "Interpret the echo — next step",
+        "hint": "RVSP 74 mmHg. RV dilation and hypertrophy. Normal left heart. What does this tell you and what needs to happen next?",
+        "options": [
+          {
+            "text": "Right heart catheterisation — gold standard confirmation of PAH",
+            "sub": "Invasive haemodynamic assessment",
+            "correct": true,
+            "feedback_correct": "Correct. Echo strongly suggests pulmonary hypertension but right heart catheterisation is required for definitive diagnosis and classification — mean pulmonary arterial pressure, pulmonary vascular resistance, wedge pressure. You cannot start PAH-specific therapy without it.",
+            "fennick_correct_comment": "\"Echo suggests. Catheter confirms. You cannot start the right treatment without the right number.\"",
+            "pt_remark_correct": "A catheter into the heart. ... Is that strictly necessary. ... Yes. ... I thought so. ... I will need a private room."
+          },
+          {
+            "text": "Start diuretics and discharge — right heart failure management",
+            "sub": "Diuretics only",
+            "correct": false,
+            "feedback_wrong": "Diuretics address the congestion but not the underlying elevated pulmonary vascular resistance. Without PAH-specific therapy the right heart will continue to fail. And you have not yet confirmed the diagnosis or excluded secondary causes.",
+            "pt_remark_wrong": "A water tablet. ... I have been to three spas this year. ... None of them helped either."
+          },
+          {
+            "text": "Start beta blocker — control heart rate",
+            "sub": "Beta blocker therapy",
+            "correct": false,
+            "feedback_wrong": "Beta blockers are contraindicated in PAH. The right ventricle is compensating for massively elevated pulmonary pressures through tachycardia and hypertrophy. Blocking that compensatory response can precipitate acute right heart failure.",
+            "pt_remark_wrong": "Something for the heart rate. ... My jeweller recommended something similar once. ... That also did not work.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"The right ventricle is surviving on tachycardia. You removed it. The RV had nothing left to compensate with.\""
+          },
+          {
+            "text": "Repeat echo in three months — monitor progression",
+            "sub": "Watchful waiting",
+            "correct": false,
+            "feedback_wrong": "RVSP 74 mmHg with RV dilation and O2 93% at rest is not a watch-and-wait situation. This patient needs urgent specialist input and haemodynamic confirmation now.",
+            "pt_remark_wrong": "Come back in three months. ... Yes. ... I will have my secretary arrange it.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"RVSP 74. RV dilation. O2 93% at rest. You scheduled a follow-up appointment. She decompensated before it.\""
+          }
+        ]
+      },
+      {
+        "title": "Exclude secondary causes",
+        "hint": "PAH confirmed on catheter. Before starting therapy — what underlying causes need to be ruled out?",
+        "options": [
+          {
+            "text": "Connective tissue disease screen, HIV, LFTs, TFTs, V/Q scan for CTEPH",
+            "sub": "Full secondary cause workup",
+            "correct": true,
+            "feedback_correct": "Correct. PAH is frequently secondary — connective tissue disease, HIV, portal hypertension, thyroid disease, and chronic thromboembolic disease all cause pulmonary hypertension and require different management. V/Q scan specifically rules out CTEPH which is surgically treatable.",
+            "fennick_correct_comment": "\"CTEPH is operable. If you miss it you have treated the wrong disease with the wrong drugs.\"",
+            "pt_remark_correct": "More tests. A lung scan. ... I had the air quality tested in every room last spring. ... Apparently that is not the same thing."
+          },
+          {
+            "text": "Skip secondary workup — start PAH therapy immediately",
+            "sub": "Empirical treatment without cause identification",
+            "correct": false,
+            "feedback_wrong": "Starting PAH-specific therapy without ruling out secondary causes risks missing a treatable underlying condition — particularly CTEPH, which is potentially curable with surgery. Connective tissue disease changes the prognosis and monitoring requirements.",
+            "pt_remark_wrong": "Skip the tests. Just treat it. ... I prefer that approach. ... My tailor works the same way."
+          },
+          {
+            "text": "Lung biopsy to confirm diagnosis",
+            "sub": "Surgical lung biopsy",
+            "correct": false,
+            "feedback_wrong": "Lung biopsy is not part of PAH workup and carries serious risk in a patient with severely elevated pulmonary pressures. The diagnosis is haemodynamic, not histological.",
+            "pt_remark_wrong": "A biopsy. Of the lung. ... While it is still in use.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"Biopsy in severely elevated pulmonary pressures. The bleeding risk alone. This was not a histological diagnosis.\""
+          },
+          {
+            "text": "Refer to psychiatry — symptom exaggeration cannot be excluded",
+            "sub": "Psychiatric referral",
+            "correct": false,
+            "feedback_wrong": "O2 93%, RVSP 74 mmHg, right heart failure on examination. There is nothing psychiatric about this presentation.",
+            "pt_remark_wrong": "A psychiatrist. ... I am not sure whether to be offended or amused. ... Both, I think. ... I will send him a gift either way.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"The right heart was in failure. You sent her to psychiatry.\""
+          }
+        ]
+      },
+      {
+        "title": "First-line PAH therapy",
+        "hint": "Idiopathic PAH confirmed. Secondary causes excluded. WHO functional class III. What do you start?",
+        "options": [
+          {
+            "text": "PDE-5 inhibitor (sildenafil) + endothelin receptor antagonist (ambrisentan) — combination therapy",
+            "sub": "Combination PAH-specific therapy",
+            "correct": true,
+            "feedback_correct": "Correct. AMBITION trial demonstrated superiority of upfront combination therapy over monotherapy in treatment-naive PAH. Sildenafil reduces pulmonary vascular resistance via cGMP pathway. Ambrisentan blocks endothelin-1 vasoconstriction. WHO class III warrants aggressive initial therapy.",
+            "fennick_correct_comment": "\"Two pathways. Both obstructed. Two drugs. This is not overtreatment — this is the trial data.\"",
+            "pt_remark_correct": "Two medications. Daily. ... I see. ... I will have a cabinet made for them."
+          },
+          {
+            "text": "Sildenafil monotherapy only",
+            "sub": "PDE-5 inhibitor alone",
+            "correct": false,
+            "feedback_wrong": "Monotherapy is no longer first-line for WHO class III PAH in treatment-naive patients. AMBITION trial showed combination therapy significantly reduces clinical worsening events. Class III disease warrants upfront combination.",
+            "pt_remark_wrong": "One tablet. ... That seems more proportionate."
+          },
+          {
+            "text": "Long-term anticoagulation only",
+            "sub": "Anticoagulation as primary therapy",
+            "correct": false,
+            "feedback_wrong": "Anticoagulation may be considered as adjunct therapy in idiopathic PAH but it is not primary treatment. It does not address the elevated pulmonary vascular resistance. The vasculopathy requires PAH-specific agents.",
+            "pt_remark_wrong": "A blood thinner. ... I had the carpets thinned last year as well. ... The house keeps requiring maintenance."
+          },
+          {
+            "text": "Calcium channel blocker — vasoreactivity testing positive",
+            "sub": "CCB without vasoreactivity confirmation",
+            "correct": false,
+            "feedback_wrong": "Calcium channel blockers are only appropriate in the small subset of PAH patients who demonstrate a positive vasoreactivity test on right heart catheterisation. Starting CCB empirically without confirmed vasoreactivity can be harmful.",
+            "pt_remark_wrong": "Something my mother took. ... She died at sixty-one. ... I am not sure that's relevant. ... Probably worth mentioning."
+          }
+        ]
+      },
+      {
+        "title": "Disposition",
+        "hint": "Treatment initiated. WHO class III PAH, RVSP 74, RV failure. Where does she go?",
+        "options": [
+          {
+            "text": "Admit — cardiology, pulmonology, diuresis, oxygen, urgent specialist centre referral",
+            "sub": "Inpatient with specialist referral",
+            "correct": true,
+            "feedback_correct": "Correct. WHO class III PAH with right heart failure requires admission. Diuresis for the congestion, supplemental oxygen, cardiac monitoring, and urgent referral to a specialist PAH centre for ongoing management and transplant assessment if needed.",
+            "fennick_correct_comment": "\"She needs a centre that sees this every week, not every year.\"",
+            "pt_remark_correct": "Admitted. ... I suppose I should tell my husband. ... He will worry. ... Good. He should. ... He also widened the stairs."
+          },
+          {
+            "text": "Discharge with prescriptions — outpatient PAH clinic in 6 weeks",
+            "sub": "Discharge with outpatient follow-up",
+            "correct": false,
+            "feedback_wrong": "O2 93% at rest, right heart failure, RVSP 74. She cannot wait 6 weeks. Outpatient initiation of PAH therapy is appropriate for stable class II patients — not class III with active right heart failure.",
+            "pt_remark_wrong": "Six weeks. ... Yes. That suits my schedule. ... I have the stairs to deal with in the meantime.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"Class III. Active right heart failure. O2 93% at rest. You sent her home with a prescription and a six-week appointment.\""
+          },
+          {
+            "text": "Discharge — reassure that medication will resolve symptoms within days",
+            "sub": "Discharge with false reassurance",
+            "correct": false,
+            "feedback_wrong": "PAH therapy improves symptoms over weeks to months — it does not resolve them within days. And this patient cannot safely be discharged with active right heart failure.",
+            "pt_remark_wrong": "Better in a few days. ... Excellent. ... I will tell my husband the stairs were the problem after all.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"You told her she would feel better in a few days. She deteriorated overnight.\""
+          },
+          {
+            "text": "ICU admission — intubation and mechanical ventilation",
+            "sub": "ICU and intubation",
+            "correct": false,
+            "feedback_wrong": "Intubation in severe PAH can precipitate acute right heart failure and cardiovascular collapse — positive pressure ventilation dramatically increases pulmonary vascular resistance. Intubation is a last resort, not a first step in a conscious, communicating patient.",
+            "pt_remark_wrong": "A tube in the throat. ... That does seem excessive. ... Though I did once commission a very aggressive renovation.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"Positive pressure ventilation in severe PAH. The right ventricle had nothing left to push against the increased resistance.\""
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 42,
+      "sex": "F",
+      "pmh": "no significant past medical history",
+      "presenting": "two years of progressive exertional dyspnoea, two syncopal episodes, bilateral ankle oedema",
+      "pertinent_positives": {
+        "addl-hx": "progressive limitation from four flights to two floors over eight months, two near-syncopal episodes, bilateral ankle oedema worse by evening",
+        "pe": "elevated JVP, loud P2, right ventricular heave, mild pitting oedema, O2 93% on room air, peripherally cool, clear lungs",
+        "labs": "NT-proBNP 1840, mildly elevated troponin, right axis deviation and RV strain on EKG, mild erythrocytosis",
+        "imaging": "CXR enlarged main pulmonary artery, peripheral pruning, right-sided cardiomegaly",
+        "special": "RVSP 74 mmHg on echo, RV dilation and hypertrophy, normal left heart"
+      },
+      "assessment": "Pulmonary Arterial Hypertension — idiopathic, WHO functional class III, right heart failure",
+      "plan": "right heart catheterisation, secondary cause exclusion, upfront combination PDE-5i and ERA therapy, admit cardiology with specialist PAH centre referral"
+    },
+    "explanation": "Pulmonary Arterial Hypertension is abnormally elevated pressure in the pulmonary arterial circulation (mPAP >20mmHg at rest on RHC) causing progressive RV failure. Idiopathic PAH affects women more than men, peak onset 20-50. Symptoms: progressive exertional dyspnoea, fatigue, syncope, right heart failure. Examination: loud P2, RV heave, elevated JVP, peripheral oedema. ECG: right axis deviation, RBBB, RV strain. Echo: elevated RVSP, RV dilation. Confirmed by right heart catheterisation. Treatment: PDE-5i + ERA combination, anticoagulation, diuretics, oxygen.",
+    "explanation_detail": {
+      "who_gets_it": "Women > men (2:1), age 20-50. Idiopathic, heritable (BMPR2 mutation), or associated with CTD, HIV, portal hypertension, congenital heart disease.",
+      "risk_factors": "Female sex, BMPR2 mutation, connective tissue disease (especially scleroderma), HIV, portal hypertension, anorexigen use.",
+      "typical_presentation": "Progressive exertional dyspnoea over months-years. Syncope on exertion. Right heart failure: elevated JVP, RV heave, loud P2, peripheral oedema. O2 reduced. Clear lungs.",
+      "moa": "Pulmonary vascular remodelling — endothelial dysfunction, smooth muscle proliferation, vasoconstriction. Elevated PVR → RV pressure overload → RV hypertrophy → RV failure → reduced cardiac output.",
+      "step1_buzzwords": "Loud P2, RV heave, right axis deviation, RBBB, RV strain V1-V4, RVSP >25mmHg, clear lungs, young-middle aged woman, exertional dyspnoea and syncope.",
+      "lab_buzzwords": "Elevated NT-proBNP, mildly elevated troponin (RV strain), ECG right axis + RBBB + T inversions V1-V4, Echo RVSP elevated + RV dilation, RHC gold standard mPAP >20mmHg + PAWP <15mmHg.",
+      "treatment": "WHO class I-II: monotherapy PDE-5i or ERA. WHO class III-IV: upfront combination therapy (AMBITION trial). Adjunct: diuretics, anticoagulation, oxygen. Advanced: IV prostacyclin (epoprostenol), lung transplant."
+    },
+    "fennick_opening": "\"Two years. She came after two years.\"",
+    "music_default": "Foxfire at Midnight",
+    "cc_after_addl_hx": "The stairs became... a project. ... I had them widened. ... It did not help.",
+    "cc_after_pe": "You keep listening to my chest. ... I had the same concern. ... I bought a new mattress. ... Also did not help.",
+    "cc_after_imaging": "The vessels look wrong. ... I thought it might be the ceiling. ... Should I buy a different house.",
+    "cc_after_hint": "You look concerned. ... I find that more alarming than the breathing, frankly.",
+    "cc_after_dx": "I see. ... How long has this been happening. ... I see. ... I should have bought a different house earlier.",
+    "fennick_after_addl_hx": "\"Two years of stairs. She slept on a lower floor and told no one.\"",
+    "fennick_after_pe": "\"Loud P2. RV heave. Elevated JVP. Clear lungs. The right heart has been working against something for a long time.\"",
+    "fennick_after_imaging": "\"Enlarged pulmonary artery. Peripheral pruning. The vessels have been narrowing. This did not start last week.\"",
+    "fennick_case_complete": [
+      "\"Two years. She adapted around it until she couldn't.\"",
+      "\"She will need a specialist centre. Make sure she goes.\""
+    ],
+    "pt_opening": "You look stressed. ... I have a physician for that. Shall I give you his name."
   }
 ]
