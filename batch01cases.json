@@ -34,7 +34,7 @@
     "imaging": "MRI Brain (non-contrast): No mass lesion, no acute infarct, no hydrocephalus. Mild age-appropriate cortical atrophy. Standard sequences cannot visualize dopaminergic neurons — DaTscan is the appropriate functional study. No midbrain atrophy to suggest PSP.",
     "special_test": {
       "name": "DaTscan (Dopamine Transporter Scan)",
-      "result": "Reduced dopamine transporter uptake in bilateral putamen, asymmetric — right greater than left. Classic comma-to-period sign. Consistent with nigrostriatal dopaminergic degeneration, confirming Parkinson Disease."
+      "result": "Reduced dopamine transporter uptake in bilateral putamen, asymmetric — right greater than left. Comma-to-period pattern."
     },
     "tests": [
       {
@@ -307,7 +307,7 @@
     "imaging": "CXR: Large right hilar mass with widened superior mediastinum. Right upper lobe infiltrate/atelectasis. No pleural effusion. CT Chest with contrast: 6.2cm right hilar mass with direct invasion of the superior vena cava and significant extrinsic compression — SVC lumen reduced by approximately 80%. Extensive mediastinal and paratracheal lymphadenopathy. No pulmonary emboli.",
     "special_test": {
       "name": "Bronchoscopy with Biopsy",
-      "result": "Endobronchial lesion right upper lobe completely obstructing the bronchus. Biopsy: Small cell carcinoma — sheets of small round blue cells, salt-and-pepper chromatin, nuclear molding, scant cytoplasm. Ki-67 >80%. Positive: synaptophysin, chromogranin A, CD56, TTF-1. SCLC extensive stage confirmed."
+      "result": "Endobronchial lesion right upper lobe, completely obstructing the bronchus. Biopsy: small round blue cells, salt-and-pepper chromatin, nuclear molding, scant cytoplasm. Ki-67 >80%. Synaptophysin positive. Chromogranin A positive. CD56 positive. TTF-1 positive."
     },
     "tests": [
       {
@@ -343,7 +343,7 @@
       {
         "name": "ABG/VBG",
         "cost": 5,
-        "result": "pH 7.44, pO2 68 (low) on room air. Mild hypoxemia consistent with mediastinal compression and atelectasis."
+        "result": "pH 7.44. pO2 68 on room air. pCO2 38."
       },
       {
         "name": "Coags",
@@ -579,7 +579,7 @@
     "imaging": "CXR: Multiple bilateral peripheral nodular opacities — septic emboli pattern. Mild cardiomegaly. Transthoracic Echocardiogram (TTE): Bicuspid aortic valve with a 1.4cm oscillating vegetation on the non-coronary cusp. Severe aortic regurgitation — wide pulse pressure confirmed. EF 55%. No perivalvular abscess on TTE (TEE recommended to exclude).",
     "special_test": {
       "name": "Blood Cultures x3",
-      "result": "All 3 sets positive within 12 hours: Streptococcus viridans (mitis group) — gram-positive cocci in chains. Penicillin MIC 0.06 (fully susceptible). Ampicillin susceptible. Classic cause of native valve endocarditis post-dental procedure."
+      "result": "All 3 sets positive within 12 hours: Streptococcus viridans (mitis group) — gram-positive cocci in chains. Penicillin MIC 0.06. Ampicillin susceptible."
     },
     "tests": [
       {
@@ -610,12 +610,12 @@
       {
         "name": "UA",
         "cost": 5,
-        "result": "RBC 45/hpf (HIGH — microscopic hematuria). RBC casts present — immune complex glomerulonephritis. Protein 2+. Classic endocarditis finding."
+        "result": "RBC 45/hpf. RBC casts present. Protein 2+."
       },
       {
         "name": "ABG/VBG",
         "cost": 5,
-        "result": "pH 7.42, pO2 82 on room air. Mild hypoxemia from septic pulmonary emboli."
+        "result": "pH 7.42. pO2 82 on room air."
       },
       {
         "name": "Coags",
@@ -851,13 +851,13 @@
     "imaging": "CT Abdomen/Pelvis with contrast: 4.8cm heterogeneous right adrenal mass with central necrosis and peripheral enhancement — highly suspicious for adrenal neoplasm. No liver metastases identified. No lymphadenopathy. Left adrenal gland normal. Incidental note: mild atherosclerosis of the abdominal aorta.",
     "special_test": {
       "name": "24-Hour Urine Metanephrines",
-      "result": "Urine metanephrines: 4,820 mcg/24hr (normal <900). Urine normetanephrines: 3,110 mcg/24hr (normal <600). Urine catecholamines markedly elevated. Plasma free metanephrines: 2.8 nmol/L (normal <0.5). Results confirm biochemical diagnosis of pheochromocytoma. Genetic testing recommended (RET, VHL, SDHB mutations)."
+      "result": "Urine metanephrines: 4,820 mcg/24hr. Urine normetanephrines: 3,110 mcg/24hr. Plasma free metanephrines: 2.8 nmol/L. Genetic testing recommended."
     },
     "tests": [
       {
         "name": "CBC",
         "cost": 5,
-        "result": "WBC 11.4 (mildly elevated — stress response). Hgb 15.2 (normal). Plt 312 (normal). Hematocrit mildly elevated — possible volume contraction from catecholamine-induced vasoconstriction."
+        "result": "WBC 11.4. Hgb 15.2. Plt 312. Hematocrit mildly elevated."
       },
       {
         "name": "CMP",
@@ -867,12 +867,12 @@
       {
         "name": "EKG",
         "cost": 5,
-        "result": "Sinus tachycardia rate 108. LVH voltage criteria. Diffuse ST changes consistent with catecholamine-induced cardiomyopathy. Frequent PVCs. No STEMI pattern."
+        "result": "Sinus tachycardia rate 108. LVH voltage criteria. Diffuse ST changes. Frequent PVCs. No STEMI pattern."
       },
       {
         "name": "Troponin",
         "cost": 5,
-        "result": "Troponin I 0.08 (mildly elevated) — demand ischemia and catecholamine-induced myocardial injury. Not a primary ACS pattern. Serial troponins recommended."
+        "result": "Troponin I 0.08. Serial troponins recommended."
       },
       {
         "name": "Lipase",
@@ -882,7 +882,7 @@
       {
         "name": "UA",
         "cost": 5,
-        "result": "Glucose 2+ (spillover from hyperglycemia). No RBCs, no casts, no protein. Urine appears concentrated. No infection."
+        "result": "Glucose 2+. No RBCs. No casts. No protein. Urine concentrated."
       },
       {
         "name": "ABG/VBG",
@@ -1121,23 +1121,23 @@
     "imaging": "CXR: Normal. No pulmonary edema, no infiltrate. CT Head: no acute intracranial process, no hemorrhage, no mass. Mild diffuse cerebral edema — subtle, consistent with toxic encephalopathy. MRI would show bilateral globus pallidus hyperintensity on T2 — classic delayed CO finding.",
     "special_test": {
       "name": "Carboxyhemoglobin Level (COHb)",
-      "result": "COHb 28% (CRITICAL — normal <3%, symptomatic >20%, loss of consciousness >40%). Confirms carbon monoxide poisoning. Note: pulse oximetry was 97% — SpO2 cannot distinguish oxyhemoglobin from carboxyhemoglobin and is dangerously misleading in CO poisoning. Co-workers must be evacuated and tested."
+      "result": "COHb 28%. Note: concurrent SpO2 97% on pulse oximetry."
     },
     "tests": [
       {
         "name": "CBC",
         "cost": 5,
-        "result": "WBC 10.2 (normal). Hgb 16.8 (HIGH — compensatory polycythemia from chronic CO exposure). Plt 310. Elevated hematocrit — body trying to compensate for impaired oxygen delivery."
+        "result": "WBC 10.2. Hgb 16.8. Plt 310. Hematocrit elevated."
       },
       {
         "name": "CMP",
         "cost": 5,
-        "result": "Lactate 4.2 mmol/L (HIGH — tissue hypoxia despite normal SpO2). BMP otherwise normal. Cr 1.1. Glucose 108. Anion gap 18 (mildly elevated — lactic acidosis from cellular hypoxia)."
+        "result": "Lactate 4.2 mmol/L. Cr 1.1. Glucose 108. Anion gap 18."
       },
       {
         "name": "EKG",
         "cost": 5,
-        "result": "Sinus tachycardia rate 102. Diffuse ST depression — myocardial ischemia from CO binding to cardiac myoglobin. No STEMI pattern. CO cardiotoxicity is a serious complication."
+        "result": "Sinus tachycardia rate 102. Diffuse ST depression. No STEMI pattern."
       },
       {
         "name": "Troponin",
@@ -1152,7 +1152,7 @@
       {
         "name": "UA",
         "cost": 5,
-        "result": "Myoglobinuria trace positive — rhabdomyolysis from prolonged cellular hypoxia. RBCs absent. No infection."
+        "result": "Trace blood on dipstick. RBCs absent on microscopy. No infection."
       },
       {
         "name": "ABG/VBG",
@@ -1385,7 +1385,7 @@
     "imaging": "CXR PA: Left-sided pneumothorax — visible pleural line with absent lung markings peripheral to it. Estimated 30% left lung collapse. No mediastinal shift. No effusion. Right lung clear. No underlying parenchymal disease or blebs visible on plain film. CT chest recommended to assess for subpleural blebs.",
     "special_test": {
       "name": "CT Chest (High Resolution)",
-      "result": "Multiple bilateral subpleural blebs — largest 1.4cm at left upper lobe apex. Left pneumothorax confirmed at 30% collapse. No underlying parenchymal disease. No evidence of Marfan syndrome changes on vascular imaging. Findings consistent with primary spontaneous pneumothorax with bilateral bleb disease — significantly elevated recurrence risk. Surgical referral (VATS pleurodesis) strongly recommended given second episode."
+      "result": "Multiple bilateral subpleural blebs — largest 1.4cm at left upper lobe apex. Left pneumothorax at 30% collapse. No underlying parenchymal disease."
     },
     "tests": [
       {
@@ -1401,12 +1401,12 @@
       {
         "name": "EKG",
         "cost": 5,
-        "result": "Sinus tachycardia rate 94. Low voltage QRS left-sided leads — consistent with left pneumothorax. No ischemic changes. No right heart strain pattern. Not a PE pattern."
+        "result": "Sinus tachycardia rate 94. Low voltage QRS left-sided leads. No ischemic changes. No right heart strain."
       },
       {
         "name": "Troponin",
         "cost": 5,
-        "result": "Negative. No myocardial injury. This is not a cardiac event."
+        "result": "Negative."
       },
       {
         "name": "Lipase",
@@ -1421,7 +1421,7 @@
       {
         "name": "ABG/VBG",
         "cost": 5,
-        "result": "pH 7.44. pO2 78 (mildly reduced on room air — consistent with 30% lung collapse and V/Q mismatch). pCO2 34. Mild hypoxemia but compensated. Not immediately life-threatening."
+        "result": "pH 7.44. pO2 78 on room air. pCO2 34."
       },
       {
         "name": "Coags",
@@ -1644,7 +1644,7 @@
     "imaging": "CXR: Normal. No aspiration pneumonia. CT Head: No acute intracranial process. Performed given altered mentation — normal. Bladder ultrasound: 680mL retained urine — acute urinary retention confirmed.",
     "special_test": {
       "name": "Serum and Urine Toxicology Screen",
-      "result": "Serum: atropine/scopolamine detected — consistent with Atropa belladonna alkaloid absorption. No other toxins detected. No acetaminophen, no salicylates, no ethanol, no opiates. Urine toxicology: positive for tropane alkaloids (atropine, scopolamine, hyoscyamine). Confirms anticholinergic toxidrome from belladonna alkaloid absorption. Quantitative levels not immediately available but clinical syndrome is diagnostic."
+      "result": "Serum: atropine detected. No acetaminophen, no salicylates, no ethanol, no opiates. Urine: tropane alkaloids positive — atropine, scopolamine, hyoscyamine."
     },
     "tests": [
       {
@@ -1665,12 +1665,12 @@
       {
         "name": "Troponin",
         "cost": 5,
-        "result": "Negative. No primary myocardial injury. Tachycardia is from anticholinergic effect, not myocardial damage."
+        "result": "Negative."
       },
       {
         "name": "Lipase",
         "cost": 5,
-        "result": "Normal. Absent bowel sounds are from anticholinergic ileus, not pancreatitis."
+        "result": "Normal."
       },
       {
         "name": "UA",
@@ -1909,7 +1909,7 @@
     "imaging": "CXR: Normal cardiac silhouette. No infiltrate, no effusion. Mild cardiomegaly not present — the flow murmur is functional. No bony abnormalities. No hilar lymphadenopathy. Not the diagnostic study of choice here — blood work is what you need.",
     "special_test": {
       "name": "Peripheral Blood Smear",
-      "result": "Hypochromic microcytic red blood cells — pale centres larger than normal, pencil cells, occasional target cells. Marked anisocytosis and poikilocytosis. RDW elevated. Platelets mildly elevated (reactive thrombocytosis — classic in iron deficiency). No spherocytes, no schistocytes, no hypersegmented neutrophils. Morphology is unambiguously consistent with iron deficiency anaemia."
+      "result": "Hypochromic microcytic red blood cells. Pencil cells. Occasional target cells. Marked anisocytosis and poikilocytosis. RDW elevated. Platelets mildly elevated. No spherocytes, no schistocytes, no hypersegmented neutrophils."
     },
     "memory_fragments": {
       "cbc": "The last dress she finished without noticing her hands — a deep red, January commission, the thread catching the lamplight just right. She remembers thinking: I could do this forever. That was four months ago. She has not touched red thread since.",
@@ -1920,7 +1920,7 @@
       {
         "name": "CBC",
         "cost": 5,
-        "result": "Hgb 7.4 g/dL (CRITICALLY LOW). MCV 64 fL (LOW — microcytic). MCH 19 pg (LOW). MCHC 28 g/dL (LOW — hypochromic). RDW 18.2% (HIGH). WBC 7.1 (normal). Platelets 487 (mildly elevated — reactive thrombocytosis, classic in iron deficiency).",
+        "result": "Hgb 7.4. MCV 64. MCH 19. MCHC 28. RDW 18.2%. WBC 7.1. Plt 487.",
         "memory_fragment": "The last dress she finished without noticing her hands — a deep red, January commission, the thread catching the lamplight just right. She remembers thinking: I could do this forever. That was four months ago. She has not touched red thread since."
       },
       {
@@ -1936,7 +1936,7 @@
       {
         "name": "Troponin",
         "cost": 5,
-        "result": "Negative. No myocardial injury. The flow murmur is not from structural cardiac disease."
+        "result": "Negative."
       },
       {
         "name": "Lipase",
@@ -1956,7 +1956,7 @@
       {
         "name": "Coags",
         "cost": 5,
-        "result": "Normal. PT/INR 1.0, PTT 28. No coagulopathy. Heavy menstrual bleeding is not from a clotting disorder in this case."
+        "result": "PT/INR 1.0. PTT 28."
       }
     ],
     "hints": [
@@ -2201,7 +2201,7 @@
     "imaging": "MRI Brain: Cortical atrophy, posterior predominant — parietal and occipital regions disproportionately affected. Mild hippocampal atrophy, less severe than expected for degree of cognitive impairment. No acute infarct. No mass lesion. No normal pressure hydrocephalus pattern. DaTscan (Dopamine Transporter Scan): Reduced dopamine transporter uptake in bilateral putamen and caudate — asymmetric, right greater than left. Markedly abnormal pattern.",
     "special_test": {
       "name": "Polysomnography (Sleep Study)",
-      "result": "REM sleep without atonia confirmed. During REM sleep: complex vocalizations, limb movements, brief episode of sitting up with arms extended — posture consistent with performing. No seizure activity. No apnoea. Findings confirm REM sleep behavior disorder."
+      "result": "REM sleep without atonia confirmed. During REM: complex vocalizations, limb movements, brief episode of sitting up with arms extended. No seizure activity. No apnoea."
     },
     "memory_fragments": {
       "cbc": "There is a photograph on top of the piano. Third row, center seat. He knows the face in it perfectly. He has known it for forty-one years. This morning he stood in front of it for a long time before he could remember her name.",
@@ -2445,8 +2445,6 @@
       "treatment": "Rivastigmine (strongest evidence of all dementias). Clonazepam or melatonin for RBD. Levodopa cautiously for motor symptoms. ABSOLUTE CONTRAINDICATION: typical antipsychotics, many atypicals (risperidone, olanzapine — high sensitivity risk). Quetiapine or clozapine if antipsychotic unavoidable."
     },
     "polaroid_success_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776401074/poloarid_p9ovhf.png",
-    "music_default": "Fox's Midnight Walk",
-    "music_tier3_scene2": "Soft Lights, Quiet Hearts",
     "fennick_opening": "\"He was brought in by someone else. Note that.\"",
     "cc_after_addl_hx": "I don't remember choosing the piece. I just play it. Whoever chose it — he knew what he was doing.",
     "cc_after_pe": "You want me to walk with my eyes closed. On a good day I could do that. I'm not certain which kind of day today is.",
@@ -2500,7 +2498,7 @@
     "imaging": "CXR: Normal. Clear lung fields bilaterally. No infiltrate, no effusion, no pneumothorax. Normal cardiac silhouette. The lungs are not the problem.",
     "special_test": {
       "name": "Co-oximetry (Arterial MetHb Level)",
-      "result": "MetHb 38% (CRITICAL — normal <1%, symptomatic >10%, severe >30%, potentially lethal >70%). Confirms methemoglobinemia. Standard pulse oximetry reads MetHb as approximately 85% regardless of true saturation — the SpO2 of 85% is an artefact, not a true oxygen saturation. ABG co-oximetry is the only reliable measurement. Blood sample appeared chocolate-brown on draw."
+      "result": "MetHb 38%. Note: concurrent SpO2 85% on pulse oximetry."
     },
     "tests": [
       {
@@ -2536,7 +2534,7 @@
       {
         "name": "ABG/VBG",
         "cost": 5,
-        "result": "pH 7.41, pO2 98 (NORMAL — dissolved oxygen is entirely unaffected). pCO2 38. HCO3 24. Normal acid-base. Standard pulse oximetry calculated from this pO2 would predict SpO2 ~99% — directly contradicting the pulse ox reading of 85%. This paradox is the diagnosis. Co-oximetry required to directly measure MetHb."
+        "result": "pH 7.41. pO2 98 on room air. pCO2 38. HCO3 24."
       },
       {
         "name": "Coags",
@@ -2804,13 +2802,13 @@
     "imaging": "CXR: Normal. No adrenal mass visible — CT is the appropriate modality. Not indicated on plain film.",
     "special_test": {
       "name": "Late-Night Salivary Cortisol x2 + Overnight Dexamethasone Suppression Test",
-      "result": "Late-night salivary cortisol: elevated on both collections — 14.2 nmol/L and 13.8 nmol/L (normal <4.0). Overnight dexamethasone suppression: morning cortisol 480 nmol/L — fails to suppress (normal <50 nmol/L). Confirms hypercortisolism. Plasma ACTH: <1 pg/mL (SUPPRESSED — normal 10-60). ACTH suppression with elevated cortisol confirms ACTH-independent source. In context of 18 months exogenous prednisone: diagnosis is iatrogenic Cushing syndrome. Endogenous axis is suppressed."
+      "result": "Late-night salivary cortisol: 14.2 nmol/L and 13.8 nmol/L on two collections. Morning cortisol post-dexamethasone: 480 nmol/L. Plasma ACTH: <1 pg/mL."
     },
     "tests": [
       {
         "name": "CBC",
         "cost": 5,
-        "result": "WBC 13.4 (mildly elevated — glucocorticoid-induced leukocytosis, neutrophilia with relative lymphopenia). Hgb 15.8 (high-normal — polycythaemia from cortisol stimulation). Plt 420 (mildly elevated). Classic cortisol excess pattern."
+        "result": "WBC 13.4. Hgb 15.8. Plt 420."
       },
       {
         "name": "CMP",
@@ -2820,7 +2818,7 @@
       {
         "name": "EKG",
         "cost": 5,
-        "result": "Normal sinus rhythm. No ischemic changes. LVH voltage criteria — consistent with prolonged hypertension. Not an acute finding."
+        "result": "Normal sinus rhythm. LVH voltage criteria. No ischemic changes."
       },
       {
         "name": "Troponin",
@@ -2835,7 +2833,7 @@
       {
         "name": "UA",
         "cost": 5,
-        "result": "Glucose 2+ (spillover from hyperglycaemia). No protein, no blood, no infection. Consistent with glucocorticoid-induced impaired glucose tolerance."
+        "result": "Glucose 2+. No protein. No blood. No infection."
       },
       {
         "name": "ABG/VBG",
@@ -3117,7 +3115,7 @@
     "imaging": "Hand X-rays bilateral: joint space narrowing at first CMC joints and DIP joints bilaterally. Osteophyte formation. Subchondral sclerosis. No erosive changes. No periarticular osteopenia. No periosteal reaction. Pattern is consistent with degenerative change — not inflammatory arthritis.",
     "special_test": {
       "name": "Anti-CCP Antibody + Rheumatoid Factor",
-      "result": "Rheumatoid factor: negative. Anti-CCP antibody: negative. Both negative makes seronegative RA possible but significantly less likely given the clinical and radiological picture. ESR 22 mm/hr (mildly elevated — nonspecific at age 61, consistent with age-related change or minor chronic inflammation). CRP 4.1 mg/L (borderline — within normal range for age). Inflammatory markers do not support active synovitis."
+      "result": "RF negative. Anti-CCP negative. ESR 22 mm/hr. CRP 4.1 mg/L."
     },
     "tests": [
       {
@@ -3427,7 +3425,7 @@
     "imaging": "Renal ultrasound: bilateral kidneys normal size and echogenicity. No obstruction, no hydronephrosis, no stones. The kidneys appear structurally intact — the threat here is biochemical, not anatomical.",
     "special_test": {
       "name": "Creatine Kinase (CK) Level",
-      "result": "CK 48,200 U/L (CRITICAL — normal <200 U/L). Confirms severe rhabdomyolysis. Myoglobin released from destroyed muscle fibres is precipitating in renal tubules and causing acute kidney injury. Creatinine 2.1 mg/dL (elevated from baseline). BUN 34. Potassium 5.8 mEq/L (elevated — myocyte breakdown releases intracellular potassium). LDH markedly elevated. AST elevated — muscle source, not hepatic."
+      "result": "CK 48,200 U/L. Creatinine 2.1 mg/dL. BUN 34. Potassium 5.8 mEq/L. LDH elevated. AST 680 U/L. ALT mildly elevated. Urine myoglobin positive."
     },
     "memory_fragments": {
       "pe": "Seven hundred repetitions in, his legs went quiet. He kept going. He thought that was the point."
@@ -3436,22 +3434,22 @@
       {
         "name": "CBC",
         "cost": 5,
-        "result": "WBC 13.2 (mildly elevated — stress response). Hgb 15.8 (normal, hemoconcentration from volume depletion). Plt 334. No infection pattern."
+        "result": "WBC 13.2. Hgb 15.8. Plt 334."
       },
       {
         "name": "CMP",
         "cost": 5,
-        "result": "Creatinine 2.1 (HIGH — AKI from myoglobin precipitation). BUN 34 (elevated). K 5.8 (HIGH — intracellular potassium released from destroyed myocytes). Ca 7.2 (LOW — calcium deposits in necrotic muscle). Glucose normal. LFTs: AST 680 (markedly elevated — muscle origin, not liver). ALT mildly elevated."
+        "result": "Creatinine 2.1 (elevated). BUN 34. K 5.8 (elevated). Ca 7.2 (low). Glucose normal. AST 680 (elevated). ALT mildly elevated. LFTs otherwise normal."
       },
       {
         "name": "EKG",
         "cost": 5,
-        "result": "Sinus tachycardia rate 96. Peaked T waves in precordial leads — consistent with hyperkalaemia K 5.8. No PR prolongation yet. No sine wave pattern. Monitor closely — hyperkalaemia can progress to fatal arrhythmia."
+        "result": "Sinus tachycardia rate 96. Peaked T waves in precordial leads. No PR prolongation. No sine wave pattern."
       },
       {
         "name": "Troponin",
         "cost": 5,
-        "result": "Mildly elevated at 0.06 — demand from tachycardia and hyperkalaemia stress. Not a primary ACS pattern. Monitor."
+        "result": "Troponin I 0.06. Serial monitoring recommended."
       },
       {
         "name": "Lipase",
@@ -3461,13 +3459,13 @@
       {
         "name": "UA",
         "cost": 5,
-        "result": "Dipstick: 3+ blood. Microscopy: NO red blood cells — this is not haematuria. This is myoglobinuria. Myoglobin cross-reacts with the haem dipstick but is not visible on microscopy. Urine appears dark brown — cola coloured. Urine myoglobin positive on specific assay.",
+        "result": "Dipstick: 3+ blood. Microscopy: no red blood cells. Urine dark brown in colour. Urine myoglobin assay positive.",
         "memory_fragment": "Oh yeah — the dark urine. I thought that was normal. Like engine oil. When the machine is working hard."
       },
       {
         "name": "ABG/VBG",
         "cost": 5,
-        "result": "pH 7.32 (low — metabolic acidosis from lactic acid and renal impairment). Bicarbonate 18 (low). Lactate 3.8 (elevated). Consistent with severe muscle breakdown and early AKI."
+        "result": "pH 7.32. Bicarbonate 18. Lactate 3.8. pO2 96 on room air."
       },
       {
         "name": "Coags",
