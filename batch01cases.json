@@ -3996,5 +3996,320 @@
       "\"She will need a specialist centre. Make sure she goes.\""
     ],
     "pt_opening": "You look stressed. ... I have a physician for that. Shall I give you his name."
+  },
+  {
+    "id": "015",
+    "date": "2026-04-21",
+    "tier": 1,
+    "urgency": "stable",
+    "title": "The Banker's Certainty",
+    "dx_answer": "Tension Headache",
+    "anxious_typing": true,
+    "personality": {
+      "archetype": "Overresearching nervous nerd",
+      "voice": "Completely convinced he is dying. Has done the reading. Has prepared documentation. Speaks in complete sentences with citations. Falls apart slightly when told he is fine.",
+      "crack": "\"I don't? ... My documents say otherwise.\" and at the end: \"So I really, really don't have cancer.\""
+    },
+    "patient": {
+      "name": "The Banker",
+      "age": 24,
+      "sex": "M",
+      "occupation": "Ledger Clerk, Ferrovane Bank of Commerce, Ledger Row",
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1776743542/the_banker_qwlbm1.png"
+    },
+    "chart": {
+      "cc": "I have had a progressive bilateral headache for three weeks. (pulls out a document) It is consistent with my symptoms.",
+      "hpi": "The Banker arrived precisely on time, carrying a leather folder. He has had a bilateral pressing headache for three weeks, worst by end of shift, improved somewhat on rest days. No vomiting, no visual disturbance, no fever, no neck stiffness, no focal neurological symptoms. He works ten-hour days reviewing ledgers at the Ferrovane Bank of Commerce. He has not missed a day of work in six months until today. He took a half-day for personal reasons. He has brought documentation.",
+      "pmh": "No significant medical history. No prior headaches of note.",
+      "psh": "None.",
+      "meds": "None. He considered taking something but wanted to establish the diagnosis first.",
+      "allergies": "NKDA.",
+      "fh": "Father: hypertension. No family history of malignancy that he is aware of, though he notes this absence of evidence is not evidence of absence.",
+      "sh": "Ledger clerk, Ledger Row. Lives alone. Non-smoker. Occasional drink on Fridays — suspended since the headaches began, as a precaution."
+    },
+    "vitals": {
+      "bp": "122/76",
+      "hr": "78",
+      "rr": "14",
+      "temp": "37.0",
+      "o2": "99% RA"
+    },
+    "additional_hx": "On direct questioning he confirms the headache is bilateral, pressing or tightening in quality, mild to moderate intensity. It does not throb. It is not worsened by routine activity. No nausea, no photophobia, no phonophobia beyond mild sensitivity. Duration: four to six hours per episode, sometimes all day. Onset correlates precisely with extended desk work — he has cross-referenced this against his work schedule. He sleeps poorly and has increased his reading hours in the evenings since the headaches began, which he acknowledges may not have helped. He presents a handwritten table of symptom onset times, duration, and associated activities. It is remarkably well-organised.",
+    "patient_quote_addl_hx": "\"I brought evidence. (places a substantial stack of papers on the desk) The symptom onset pattern is on page two.\"",
+    "pe_findings": "Alert, well-dressed, visibly anxious. Cranial nerves II-XII intact. No papilloedema on fundoscopy. No focal neurological deficit. Neck supple — no meningism. Bilateral pericranial muscle tenderness on palpation — frontalis, temporalis, trapezius. No scalp lesions. Pupils equal and reactive. Vision 6/6 bilaterally. No lymphadenopathy.",
+    "imaging": "CT head without contrast: no intracranial mass, no haemorrhage, no midline shift, no hydrocephalus, no bony abnormality. Normal study.",
+    "special_test": {
+      "name": "Fundoscopy",
+      "result": "No papilloedema. Disc margins sharp bilaterally. Vessels normal calibre. No haemorrhage, no exudates."
+    },
+    "memory_fragments": {
+      "pe": "He noticed the headaches start exactly at the three-hour mark of ledger work. He wrote this down. He also wrote down that writing it down gave him a headache."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "Normal. WBC 6.8, Hgb 15.2, Plt 298."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Normal. Sodium 140, creatinine 0.9, glucose 88. LFTs normal."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Normal sinus rhythm. Not indicated for this presentation."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Negative. Not indicated."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. Not indicated."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Normal. No abnormalities."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "Normal. Not indicated."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "Normal. Not indicated."
+      }
+    ],
+    "hints": [
+      "Bilateral, pressing, non-pulsating headache. Not worsened by routine activity. No nausea, no photophobia, no aura. Onset after prolonged desk work, improved on rest days. Pericranial muscle tenderness on examination. The pattern is consistent and reproducible.",
+      "No papilloedema, no focal deficit, no meningism, no fever, no thunderclap onset. The neurological examination is entirely normal. Red flags are absent.",
+      "CT head is normal. No mass, no bleed, no raised intracranial pressure. The imaging is there to reassure — not because the presentation warrants it clinically.",
+      "Bilateral pressing headache, work-related onset, muscle tenderness, normal examination, normal imaging. The diagnosis is clinical. It does not require further workup."
+    ],
+    "management": [
+      {
+        "title": "Initial approach",
+        "hint": "Normal examination, normal vitals. Bilateral pressing headache, work-triggered. What do you do first?",
+        "options": [
+          {
+            "text": "Clinical diagnosis — take full headache history and examine",
+            "sub": "History and examination led",
+            "correct": true,
+            "feedback_correct": "Correct. Tension headache is a clinical diagnosis. The history — bilateral, pressing, non-pulsating, work-related, no associated features — is characteristic. Examination confirms no red flags. No imaging required at this stage.",
+            "fennick_correct_comment": "\"Bilateral. Pressing. No aura. No nausea. Work-related. The diagnosis is in the history.\"",
+            "pt_remark_correct": "You're just going to ask me questions? (pause) I have a document. (pause) It has graphs."
+          },
+          {
+            "text": "Urgent MRI brain — exclude intracranial mass",
+            "sub": "Immediate neuroimaging",
+            "correct": false,
+            "feedback_wrong": "No red flags are present — no thunderclap onset, no papilloedema, no focal deficit, no fever, no progressive worsening over days. MRI is not indicated as the first step for a classic tension-type headache presentation.",
+            "pt_remark_wrong": "Yes. The MRI. That's what I came for. (pause) Page four of my document recommends it."
+          },
+          {
+            "text": "Lumbar puncture — exclude subarachnoid haemorrhage",
+            "sub": "CSF analysis",
+            "correct": false,
+            "feedback_wrong": "LP is indicated for thunderclap headache or suspected meningitis — not a three-week progressive bilateral pressing headache with a clear precipitant and normal examination. There is no clinical indication here.",
+            "pt_remark_wrong": "A needle in the spine. (pause) That does seem proportionate to my situation."
+          },
+          {
+            "text": "Reassure and discharge without assessment",
+            "sub": "Discharge without workup",
+            "correct": false,
+            "feedback_wrong": "A three-week headache warrants proper assessment before discharge, even if the likely diagnosis is benign. History and examination should be completed first.",
+            "pt_remark_wrong": "You haven't even looked at my document."
+          }
+        ]
+      },
+      {
+        "title": "Red flag assessment",
+        "hint": "Three weeks of headache. What red flags need to be excluded before diagnosing tension headache?",
+        "options": [
+          {
+            "text": "Exclude: thunderclap onset, progressive worsening, fever/meningism, focal deficit, papilloedema, age >50 new headache",
+            "sub": "Systematic red flag exclusion",
+            "correct": true,
+            "feedback_correct": "Correct. None of these are present. Onset was gradual over weeks, not thunderclap. No fever, no neck stiffness. Neurological exam normal. No papilloedema on fundoscopy. The headache improves on rest days. Red flags are absent.",
+            "fennick_correct_comment": "\"No red flags. The examination is normal. The pattern is benign. Move forward.\"",
+            "pt_remark_correct": "So none of the serious things. (pause) That's what my document said too. (pause) Different conclusion though."
+          },
+          {
+            "text": "Order CT head immediately — three weeks is too long to ignore",
+            "sub": "CT without red flags",
+            "correct": false,
+            "feedback_wrong": "Duration alone does not indicate CT. Three weeks of bilateral pressing headache with a clear work-related pattern and normal examination does not meet imaging criteria. Red flags drive imaging decisions, not anxiety.",
+            "pt_remark_wrong": "Yes. The CT. I've been waiting for someone to say CT. (pause) I've been waiting three weeks."
+          },
+          {
+            "text": "Refer to neurology before making any diagnosis",
+            "sub": "Immediate neurology referral",
+            "correct": false,
+            "feedback_wrong": "Tension headache is a primary care diagnosis. Neurology referral is appropriate for atypical features, treatment-refractory cases, or diagnostic uncertainty — not a textbook presentation with no red flags.",
+            "pt_remark_wrong": "A specialist. Yes. (pause) I had assumed this would require a team."
+          },
+          {
+            "text": "Check inflammatory markers — exclude temporal arteritis",
+            "sub": "ESR/CRP for vasculitis",
+            "correct": false,
+            "feedback_wrong": "Temporal arteritis presents in patients over 50 with new unilateral temporal headache, jaw claudication, and elevated ESR. This patient is 24 with bilateral pressing headache. Temporal arteritis is not in the differential.",
+            "pt_remark_wrong": "I did consider vasculitis. (pause) It was on page seven."
+          }
+        ]
+      },
+      {
+        "title": "Diagnosis",
+        "hint": "Bilateral pressing headache, work-related, muscle tenderness, normal examination, no red flags. What is the diagnosis?",
+        "options": [
+          {
+            "text": "Tension-type headache — episodic, work-related",
+            "sub": "Clinical diagnosis",
+            "correct": true,
+            "feedback_correct": "Correct. Bilateral, pressing or tightening quality, mild to moderate intensity, not aggravated by routine activity, no nausea or vomiting, pericranial muscle tenderness. Episodic tension-type headache, likely triggered by prolonged visual concentration and poor posture.",
+            "fennick_correct_comment": "\"Pericranial muscle tension. Prolonged near work. Poor sleep. This is the diagnosis.\"",
+            "pt_remark_correct": "I don't have a tumour? (pause) ... My documents say otherwise. (pause) Are you certain."
+          },
+          {
+            "text": "Migraine without aura",
+            "sub": "Migraine",
+            "correct": false,
+            "feedback_wrong": "Migraine is unilateral, pulsating, moderate to severe, worsened by activity, with nausea or photo/phonophobia. This headache is bilateral, pressing, mild to moderate, not worsened by activity. The pattern does not fit migraine.",
+            "pt_remark_wrong": "Migraine. (pause) I hadn't considered migraine. (pause) Does migraine have a high mortality rate."
+          },
+          {
+            "text": "Intracranial hypertension — refer for LP",
+            "sub": "Raised ICP",
+            "correct": false,
+            "feedback_wrong": "Raised ICP causes progressive headache worse in the morning, worse lying down, with papilloedema. This patient has normal fundoscopy, headache that improves on rest days, and a clear work-related pattern. Raised ICP does not fit.",
+            "pt_remark_wrong": "High pressure in the brain. (pause) That sounds about right actually."
+          },
+          {
+            "text": "Cluster headache",
+            "sub": "Trigeminal autonomic cephalalgia",
+            "correct": false,
+            "feedback_wrong": "Cluster headache is strictly unilateral, excruciating, periorbital, with autonomic features — lacrimation, nasal congestion, ptosis. Episodes last 15-180 minutes. This presentation shares none of those features.",
+            "pt_remark_wrong": "Cluster. (pause) Is that worse than what I thought I had."
+          }
+        ]
+      },
+      {
+        "title": "Management",
+        "hint": "Tension headache confirmed. What is appropriate first-line management?",
+        "options": [
+          {
+            "text": "Simple analgesia, posture advice, screen breaks, sleep hygiene, reassurance",
+            "sub": "Conservative multimodal management",
+            "correct": true,
+            "feedback_correct": "Correct. Simple analgesia — paracetamol or ibuprofen — for acute episodes. Identify and address triggers: prolonged near work, poor posture, sleep disruption. Regular screen breaks. Reassurance is a significant part of the treatment in this case.",
+            "fennick_correct_comment": "\"Paracetamol. Screen breaks. Sleep. And stop reading medical textbooks after hours.\"",
+            "pt_remark_correct": "Paracetamol. (pause) I have been avoiding it in case it masked the symptoms. (pause) I see. (pause) So I have been having headaches about having headaches."
+          },
+          {
+            "text": "Start prophylactic topiramate",
+            "sub": "Preventive anticonvulsant",
+            "correct": false,
+            "feedback_wrong": "Topiramate prophylaxis is for frequent migraine or chronic daily headache. Episodic tension headache triggered by a clear occupational cause does not require prophylactic medication — it requires addressing the cause.",
+            "pt_remark_wrong": "A daily medication. (pause) For how long. (pause) I'll need to log this."
+          },
+          {
+            "text": "Refer for neurology and MRI before any treatment",
+            "sub": "Defer treatment pending specialist",
+            "correct": false,
+            "feedback_wrong": "The diagnosis is clear, the examination is normal, red flags are absent. Deferring treatment while awaiting neurology and MRI is not appropriate for episodic tension headache with an identifiable trigger.",
+            "pt_remark_wrong": "More waiting. (pause) I can wait. (pause) I brought more documents."
+          },
+          {
+            "text": "Prescribe triptans",
+            "sub": "Triptan therapy",
+            "correct": false,
+            "feedback_wrong": "Triptans are for migraine and cluster headache — not tension headache. They act on serotonin receptors to abort a migraine attack. They are not effective for tension headache and are not indicated here.",
+            "pt_remark_wrong": "Something stronger. (pause) Yes. That seems more appropriate for my situation."
+          }
+        ]
+      },
+      {
+        "title": "Disposition",
+        "hint": "Tension headache, no red flags, triggers identified. Where does he go?",
+        "options": [
+          {
+            "text": "Discharge — analgesia, lifestyle advice, GP follow-up if no improvement in 4-6 weeks",
+            "sub": "Discharge with safety net",
+            "correct": true,
+            "feedback_correct": "Correct. Episodic tension headache with identified triggers is managed outpatient. Safety net: return if headache character changes, new neurological symptoms, or no improvement with conservative measures.",
+            "fennick_correct_comment": "\"No. You have a job. ... And a headache.\"",
+            "pt_remark_correct": "So I really, really don't have cancer. (pause) ... (pause) I wrote a will. (pause) It was quite good actually."
+          },
+          {
+            "text": "Admit for observation and serial neurological examinations",
+            "sub": "Inpatient admission",
+            "correct": false,
+            "feedback_wrong": "There is no indication for admission. Tension headache is an outpatient condition. Normal examination, no red flags, identified triggers, and a clear management plan make admission entirely unnecessary.",
+            "pt_remark_wrong": "Admitted. (pause) For how long. (pause) I'll need to notify the bank.",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"Admitted for tension headache. You occupied a bed that someone else needed.\""
+          },
+          {
+            "text": "Discharge with no advice or follow-up plan",
+            "sub": "Discharge without safety net",
+            "correct": false,
+            "feedback_wrong": "Discharging without advice on triggers, analgesia guidance, and a safety net misses the point of the consultation. He needs to understand what caused the headaches and what to do if they change.",
+            "pt_remark_wrong": "Just go. (pause) That's it. (pause) I spent three weeks on this."
+          },
+          {
+            "text": "Emergency CT head before discharge",
+            "sub": "CT without indication",
+            "correct": false,
+            "feedback_wrong": "No red flags. Normal examination. Clear diagnosis. CT adds radiation exposure and no clinical value here. The diagnosis does not require imaging confirmation.",
+            "pt_remark_wrong": "The CT. Finally. (pause) Can I keep the images."
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 24,
+      "sex": "M",
+      "pmh": "no significant past medical history",
+      "presenting": "three weeks of bilateral pressing headache, worst after prolonged desk work, improved on rest days",
+      "pertinent_positives": {
+        "addl-hx": "work-related onset, ten-hour shifts of ledger review, poor sleep, bilateral pressing quality, duration four to six hours, no associated features",
+        "pe": "bilateral pericranial muscle tenderness, no papilloedema, no focal deficit, no meningism, normal cranial nerves",
+        "labs": "all investigations normal",
+        "imaging": "CT head normal — no mass, no haemorrhage, no raised intracranial pressure",
+        "special": "fundoscopy normal — no papilloedema, sharp disc margins"
+      },
+      "assessment": "Episodic tension-type headache, occupationally triggered",
+      "plan": "simple analgesia PRN, posture correction, regular screen breaks, sleep hygiene, GP follow-up in 4-6 weeks if no improvement"
+    },
+    "explanation": "Tension-type headache is the most common primary headache disorder. Bilateral, pressing or tightening quality, mild to moderate intensity, not aggravated by routine activity, no nausea/vomiting, no more than one of photophobia or phonophobia. Episodic: under 15 days per month. Common triggers: stress, poor posture, sleep disruption, prolonged near work. Management: simple analgesia, trigger identification, lifestyle modification. No imaging required in absence of red flags.",
+    "explanation_detail": {
+      "who_gets_it": "Most common headache disorder — affects up to 78% of the general population at some point. All ages, slight female predominance.",
+      "risk_factors": "Stress, poor posture, sleep disruption, dehydration, prolonged near work, anxiety, depression.",
+      "typical_presentation": "Bilateral pressing or tightening headache, mild to moderate. Not pulsating. Not worsened by routine activity. No nausea. Pericranial muscle tenderness. Duration 30 minutes to several hours.",
+      "moa": "Peripheral sensitisation of pericranial myofascial tissues. Central sensitisation in chronic cases. Serotonin, nitric oxide, and CGRP pathways implicated.",
+      "step1_buzzwords": "Bilateral pressing headache, not pulsating, not worsened by activity, no nausea, pericranial tenderness, stress/posture trigger, normal examination, no red flags.",
+      "lab_buzzwords": "All normal. Diagnosis is clinical. Imaging only if red flags present: thunderclap, progressive, fever, focal deficit, papilloedema, age >50 new headache.",
+      "treatment": "Acute: paracetamol, NSAIDs, aspirin. Prophylaxis for chronic TTH: amitriptyline (first line), mirtazapine, venlafaxine. Lifestyle: trigger avoidance, posture, sleep, stress management."
+    },
+    "fennick_opening": "\"He took a half-day. First time in six months. Note that.\"",
+    "music_default": "Foxfire at Midnight",
+    "cc_after_addl_hx": "The onset correlates with shift length. I have a table. (pause) Would you like to see the table.",
+    "cc_after_pe": "You're pressing on my head. (pause) Is that diagnostic or are you just checking.",
+    "cc_after_imaging": "No mass. (pause) The scan says no mass. (pause) The books said there would be a mass.",
+    "cc_after_hint": "So the pattern matters more than the individual data points. (pause) I understand. (pause) I still think you should see the table.",
+    "cc_after_dx": "I don't have a tumour. (pause) ... (pause) My documents say otherwise. (pause) Are you certain.",
+    "fennick_after_addl_hx": "\"Work-triggered. Improves on rest. He cross-referenced his shift schedule. The diagnosis is already in his own notes.\"",
+    "fennick_after_pe": "\"No papilloedema. No focal signs. Pericranial muscle tenderness. The examination is entirely normal except for the part that explains the headache.\"",
+    "fennick_after_imaging": "\"Normal CT. He did not need it. But he needed it.\"",
+    "fennick_case_complete": [
+      "\"No. You have a job. ... And a headache.\"",
+      "\"Tell him to go home. And to sleep.\""
+    ]
   }
 ]
