@@ -2747,7 +2747,8 @@ const _origEndCase = endCase;
 window.endCase = function(failed) {
   _origEndCase(failed);
   if(!failed && currentCase && currentCase.fennick_case_complete) {
-    setTimeout(()=>{ window._isCaseComplete = true; playFennickSpeech(currentCase.fennick_case_complete); }, 1200);
+    const _ccDelay = (currentCase.fennick_case_complete_delay || 1200);
+    setTimeout(()=>{ window._isCaseComplete = true; playFennickSpeech(currentCase.fennick_case_complete); }, _ccDelay);
   }
 };
 
