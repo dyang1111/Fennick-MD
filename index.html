@@ -1522,7 +1522,7 @@ function typewriterWrite(el, text, speed){
   speed = speed || 22;
   // Breathless typing: slow speed + long pause at '...'
   const breathless = currentCase && currentCase.breathless_typing;
-  if(breathless) speed = 42;
+  if(breathless) speed = 55;
   return new Promise(resolve => {
     el.textContent = '';
     const cursor = document.createElement('span');
@@ -1535,7 +1535,7 @@ function typewriterWrite(el, text, speed){
         if(breathless && text[i] === '.' && text[i+1] === '.' && text[i+2] === '.') {
           el.insertBefore(document.createTextNode('...'), cursor);
           i += 3;
-          setTimeout(tick, 1100 + Math.random()*400);
+          setTimeout(tick, 1800 + Math.random()*500);
         } else {
           el.insertBefore(document.createTextNode(text[i]), cursor);
           i++;
