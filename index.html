@@ -2366,7 +2366,8 @@ window.pickMgmt=function(stageIdx,optIdx){
     if(opt.fennick_speech && Array.isArray(opt.fennick_speech)) {
       playFennickSpeech(opt.fennick_speech);
     } else if(opt.fennick_correct_comment) {
-      setFennick('good_job', opt.fennick_correct_comment);
+      const _delay = (currentCase && currentCase.tier === 3) ? 600 : 0;
+      setTimeout(()=>setFennick('good_job', opt.fennick_correct_comment), _delay);
     } else {
       setFennick('good_job','"'+(opt.feedback_correct||'Good call.')+'"');
     }
