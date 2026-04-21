@@ -1638,6 +1638,9 @@ const TRACKS = {
     { name: "Fox's Midnight Walk", url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1775606862/Fox_s_Midnight_Walk_hkrhoo.mp3' },
     { name: 'Soft Lights, Quiet Hearts', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1775606867/Soft_Lights_Quiet_Hearts_vrorda.mp3' }
   ],
+  tier3: [
+    { name: 'Starlight Through the Fog', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1776732757/Hello_Dr_Fox_o2jfaj.mp3' }
+  ],
   day: [
     { name: 'Main Theme', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1775606963/Main_Theme_nlfas1.mp3' },
     { name: 'Foxfire Morning Waltz', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1775606970/Foxfire_Morning_Waltz_x1dl5d.mp3' },
@@ -1788,6 +1791,10 @@ window.setVolume = function(val) {
 };
 
 window.toggleMusicModal = function() {
+  if(_tier3MusicDisabled) {
+    setFennick('pause', '"The patient comes first."');
+    return;
+  }
   document.getElementById('music-modal').classList.toggle('open');
   updateTrackUI();
 };
@@ -1802,6 +1809,7 @@ let dxCorrect = false;
 let _perfectRun = true;
 let _hasCriticalError = false;
 let _criticalErrorComment = null;
+let _tier3MusicDisabled = false;
 let currentStage = 0; 
 let orderedTests = new Set();
 let currentHintIdx = 0;
@@ -1882,7 +1890,25 @@ function applyTimeTheme(bgOnly){
   if(!bgOnly) initMusic(isNight);
 }
 
-function initCase(){ _fennickLocked = false; _hasCriticalError = false; _criticalErrorComment = null;
+function initCase(){
+  _fennickLocked = false; _hasCriticalError = false; _criticalErrorComment = null;
+  _tier3MusicDisabled = false;
+  // Tier 3: fade out music after 5s, disable music button until first bg trigger
+  if(currentCase && currentCase.tier === 3) {
+    _tier3MusicDisabled = false;
+    setTimeout(()=>{
+      _tier3MusicDisabled = true;
+      const audio = document.getElementById('bg-audio');
+      if(audio) {
+        let vol = audio.volume;
+        const fadeOut = setInterval(()=>{
+          vol = Math.max(0, vol - 0.05);
+          audio.volume = vol;
+          if(vol <= 0){ clearInterval(fadeOut); audio.pause(); audio.volume = 0; }
+        }, 100);
+      }
+    }, 5000);
+  }
   const urlDate = new URLSearchParams(window.location.search).get('date');
   const todayCST = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   if(urlDate){
@@ -2270,6 +2296,23 @@ function applyTier3Scene(trigger) {
   const bgEl = document.getElementById('bg');
 
   if (trigger === 'mgmt_bg' && currentCase.tier3_bg_url) {
+    // Re-enable music and drop Starlight Through the Fog
+    _tier3MusicDisabled = false;
+    setTimeout(()=>{
+      const audio = document.getElementById('bg-audio');
+      if(audio) {
+        audio.src = TRACKS.tier3[0].url;
+        audio.volume = 0;
+        audio.play().catch(()=>{});
+        let vol = 0;
+        const targetVol = parseFloat(document.getElementById('vol-slider').value) || 0.5;
+        const fadeIn = setInterval(()=>{
+          vol = Math.min(targetVol, vol + 0.03);
+          audio.volume = vol;
+          if(vol >= targetVol) clearInterval(fadeIn);
+        }, 80);
+      }
+    }, 400);
     // Bloom flash — white overexposure — then bg swap to empty concert hall
     const bloom = document.createElement('div');
     bloom.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:white;z-index:9998;opacity:0;pointer-events:none;transition:opacity 0.3s ease;';
@@ -2293,10 +2336,7 @@ function applyTier3Scene(trigger) {
         bgEl.style.opacity = '1';
       }, 800);
     }
-    // Switch to scene 2 music if defined
-    if(currentCase.music_tier3_scene2) {
-      setTimeout(()=>{ try { switchMusicTrack(currentCase.music_tier3_scene2); } catch(e) {} }, 1200);
-    }
+
     // Swap patient portrait to smiling version
     if (currentCase.tier3_portrait_2_url) {
       setTimeout(() => {
