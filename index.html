@@ -2627,6 +2627,8 @@ function endCase(failed){
   revealAllManagement();
   document.getElementById('endgame').style.display='block';document.getElementById('endgame').scrollIntoView({behavior:'smooth'});
   let grade,comment;
+  // Case-specific grade override
+  const _gradeOverride = currentCase && currentCase.fennick_grade_override;
   if(failed){
     grade='F';comment='"That drug would have destroyed the patient. Do not forget this."';setFennick('lose',comment);
   } else if(_hasCriticalError){
@@ -2645,6 +2647,11 @@ function endCase(failed){
     grade='C';comment='"You got there. The road was longer than it needed to be."';setFennick('concerned',comment);
   } else {
     grade='F';comment='"We will not speak of this."';setFennick('lose',comment);
+  }
+  // Apply case-specific grade override if present
+  if(_gradeOverride && !failed && !_hasCriticalError) {
+    comment = _gradeOverride;
+    setFennick('answer', comment);
   }
   document.getElementById('grade-circle').textContent=grade;document.getElementById('endgame-title').textContent=failed?'Case Lost':'Case Complete';document.getElementById('endgame-comment').textContent=comment;document.getElementById('end-hp').textContent=HP;document.getElementById('end-errors').textContent=errors;document.getElementById('end-grade').textContent=grade;
 }
