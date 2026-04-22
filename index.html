@@ -2015,9 +2015,26 @@ function initCase(){
     const trackToPlay = isNight
       ? (currentCase.music_night || 'Foxfire at Midnight')
       : (currentCase.music_default || 'Paws, Pipes & Possibilities');
-    // Clear saved music state so localStorage doesn't override
     localStorage.removeItem('fennick_music_state');
-    setTimeout(()=>switchMusicTrack(trackToPlay), 300);
+    // Directly set audio src and play — don't wait for switchMusicTrack
+    const audio = document.getElementById('bg-audio');
+    if(audio) {
+      let found = null;
+      for(const type of Object.keys(TRACKS)) {
+        const idx = TRACKS[type].findIndex(t => t.name.toLowerCase() === trackToPlay.toLowerCase());
+        if(idx >= 0) { found = { type, idx }; break; }
+      }
+      if(found) {
+        currentTrackType = found.type;
+        currentTrackIdx = found.idx;
+        const track = TRACKS[found.type][found.idx];
+        if(audio.src !== track.url) {
+          audio.src = track.url;
+          audio.play().catch(()=>{});
+        }
+        updateTrackUI();
+      }
+    }
   }
   // Tier 3: fade out music after 5s
   if(currentCase.tier === 3) {
