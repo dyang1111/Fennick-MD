@@ -2896,33 +2896,13 @@ const _origAddLabResult = window.addLabResult;
         m.addedNodes.forEach(node => {
           if (node.nodeType === 1) {
             node.classList.add('note-slide-up');
-            playPaperSound();
           }
         });
       });
     });
     obs.observe(container, { childList: true });
   }
-  function playPaperSound() {
-    try {
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
-      const bufSize = ctx.sampleRate * 0.07;
-      const buf = ctx.createBuffer(1, bufSize, ctx.sampleRate);
-      const data = buf.getChannelData(0);
-      for (let i = 0; i < bufSize; i++) {
-        const t = i / bufSize;
-        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - t, 2) * 0.18;
-      }
-      const src = ctx.createBufferSource();
-      src.buffer = buf;
-      const filter = ctx.createBiquadFilter();
-      filter.type = 'highpass';
-      filter.frequency.value = 2500;
-      src.connect(filter);
-      filter.connect(ctx.destination);
-      src.start();
-    } catch(e) {}
-  }
+
   document.addEventListener('DOMContentLoaded', () => {
     observeAndAnimate('workup-reveals');
     observeAndAnimate('lab-results');
