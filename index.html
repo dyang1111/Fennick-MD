@@ -1423,6 +1423,7 @@ function playPaperFlip(){
 }
 
 window.switchTab = function(tab){
+  playSFX('tab_switch');
   if(tab === _currentTab) return;
   if(tab === 'management' && !dxCorrect){
     setFennick('pause','"Reach a diagnosis first."');
@@ -1893,6 +1894,23 @@ let hints = [];
 
 let _defaultCallCount = 0;
 function getDefaultImg(){ _defaultCallCount++; return (_defaultCallCount % 7 === 0) ? FOX.default_alt : FOX.default; }
+// ── SOUND EFFECTS ──
+const SFX = {
+  mgmt_click:   'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1776891010/scribble_die6q1.wav',
+  workup_click: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1776891000/envelop_u74yul.wav',
+  tab_switch:   'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1776891005/paperflip_loswsb.wav',
+};
+function playSFX(name) {
+  const url = SFX[name];
+  if(!url) return;
+  try {
+    const a = new Audio(url);
+    const vol = parseFloat(document.getElementById('vol-slider')?.value || 0.5);
+    a.volume = Math.min(1, vol * 0.8);
+    a.play().catch(()=>{});
+  } catch(e) {}
+}
+
 const FOX = {
   default:        'https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775854007/default2_bwxelk.png',
   default_alt:    'https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1775527220/FOX_default_ne8mxu.png',
@@ -2122,6 +2140,7 @@ function clearMgmtSelections(){ Object.keys(_mgmtSelections).forEach(k=>delete _
 
 window.revealWorkup=function(type){
   if(revealedWorkup.has(type))return;
+  playSFX('workup_click');
   const workupFennickLines = {
     'addl-hx': currentCase.fennick_after_addl_hx || '"Good. Now we are actually listening."',
     'pe':      currentCase.fennick_after_pe      || '"The body does not lie. Read it carefully."',
@@ -2436,6 +2455,7 @@ function applyTier3Scene(trigger) {
 
 // ── REACTIVE MANAGEMENT INJECTION ──
 window.pickMgmt=function(stageIdx,optIdx){
+  playSFX('mgmt_click');
   if(stageIdx!==currentStage)return;
   const stage=currentCase.management[stageIdx],opt=stage.options[optIdx];
   const optEl=document.getElementById(`opt-${stageIdx}-${optIdx}`),fbEl=document.getElementById(`stage-feedback-${stageIdx}`);
