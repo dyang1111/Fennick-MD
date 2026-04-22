@@ -1686,8 +1686,8 @@ const TRACKS = {
   ],
   day: [
     { name: 'Main Theme', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1775606963/Main_Theme_nlfas1.mp3' },
-    { name: 'Foxfire Morning Waltz', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1775606970/Foxfire_Morning_Waltz_x1dl5d.mp3' },
-    { name: 'Paws, Pipes & Possibilities', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1775606974/Paws_Pipes_and_Possibilities_blnxsk.mp3' }
+    { name: 'Foxfire Morning Waltz', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1776892580/fox_morning_waltz_eqw2jy.mp3' },
+    { name: 'Paws, Pipes & Possibilities', url: 'https://res.cloudinary.com/djiap51xq/video/upload/q_auto/f_auto/v1776892678/paws_pipes_and_possibilities_hgpe5z.mp3' }
   ]
 };
 
@@ -2009,6 +2009,14 @@ function initCase(){
   // Apply tier to body class
   document.body.classList.remove('tier-1','tier-2','tier-3');
   if(currentCase.tier) document.body.classList.add('tier-'+currentCase.tier);
+  // Apply case-specific music (skip tier 3 — it handles music itself)
+  if(currentCase.tier !== 3) {
+    const isNight = document.body.classList.contains('night');
+    const trackToPlay = isNight
+      ? (currentCase.music_night || 'Foxfire at Midnight')
+      : (currentCase.music_default || 'Paws, Pipes & Possibilities');
+    setTimeout(()=>switchMusicTrack(trackToPlay), 300);
+  }
   // Tier 3: fade out music after 5s
   if(currentCase.tier === 3) {
     setTimeout(()=>{
