@@ -1765,8 +1765,12 @@ function initMusic(isNight) {
       return;
     } catch(e) {}
   }
+  // Don't random pick — let case load handle the track
+  // Just set a safe default and let the case music switch override it
+  const defaultTrack = (currentTimeOfDay === 'night') ? 'Foxfire at Midnight' : 'Paws, Pipes & Possibilities';
   currentTrackType = currentTimeOfDay;
-  currentTrackIdx = Math.floor(Math.random() * TRACKS[currentTrackType].length);
+  currentTrackIdx = TRACKS[currentTimeOfDay].findIndex(t => t.name === defaultTrack);
+  if(currentTrackIdx < 0) currentTrackIdx = 0;
   loadAndPlay();
 }
 
