@@ -44,14 +44,49 @@
       "result": "UDS: negative. TSH 1.8. FBC normal. CMP normal. Calcium normal. QTc 402ms on EKG."
     },
     "tests": [
-      {"name": "CBC", "cost": 5, "result": "WBC 7.2, Hgb 13.4, Plt 310. Normal."},
-      {"name": "CMP", "cost": 5, "result": "Sodium 139, creatinine 0.8, glucose 84, calcium 9.4. LFTs normal."},
-      {"name": "TFTs", "cost": 5, "result": "TSH 1.8. Free T4 normal."},
-      {"name": "EKG", "cost": 5, "result": "Normal sinus rhythm rate 76. QTc 402ms."},
-      {"name": "Troponin", "cost": 5, "result": "Negative. Not indicated."},
-      {"name": "Lipase", "cost": 5, "result": "Normal. Not indicated."},
-      {"name": "UA", "cost": 5, "result": "Normal."},
-      {"name": "Coags", "cost": 5, "result": "Normal. Not indicated."}
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "WBC 7.2, Hgb 13.4, Plt 310. Normal."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Sodium 139, creatinine 0.8, glucose 84, calcium 9.4. LFTs normal.",
+        "pt_remark": "I had wine last night. Two glasses. It was a very good vintage. I assume that is not a problem."
+      },
+      {
+        "name": "TFTs",
+        "cost": 5,
+        "result": "TSH 1.8. Free T4 normal.",
+        "pt_remark": "Is that the thyroid one. My mother had thyroid problems. She was always cold. I am never cold."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Normal sinus rhythm rate 76. QTc 402ms."
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Negative. Not indicated."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. Not indicated."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Normal.",
+        "pt_remark": "A urine test. Really. What exactly are you looking for in that."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "Normal. Not indicated."
+      }
     ],
     "hints": [
       "Visual hallucinations in mirrors, auditory hallucinations narrating her actions, thought insertion. Count the Criterion A symptoms — you need at least two, with at least one being hallucinations, delusions, or disorganised speech.",
@@ -274,7 +309,6 @@
       "treatment": "SGAs first-line: risperidone, olanzapine, quetiapine, aripiprazole. Clozapine for treatment resistance only (2+ failed trials). EPS → benztropine. Metabolic effects → switch or metformin. Hyperprolactinaemia (risperidone) → switch to aripiprazole. CBT adjunct. Early intervention improves outcomes."
     },
     "fennick_opening": "\"She came because the mirror woman is annoying her. Remember that detail.\"",
-    "music_default": "Foxfire Morning Waltz",
     "cc_after_addl_hx": "Three months. Not that I have been counting. I noticed when she started appearing in the shop windows as well.",
     "cc_after_pe": "You are looking at me very carefully. Most people do. Though usually with more admiration.",
     "cc_after_imaging": "A brain scan. To confirm there is nothing wrong with my brain. There is not. The problem is the mirror.",
@@ -286,6 +320,7 @@
     "fennick_case_complete": [
       "\"The mirror woman is quieter now.\"",
       "\"She will need watching for six months. The diagnosis may change. The person will not.\""
-    ]
+    ],
+    "music_default": "Foxfire Morning Waltz"
   }
 ]
