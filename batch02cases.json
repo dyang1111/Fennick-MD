@@ -288,21 +288,19 @@
       "lab_buzzwords": "Exclude organic: UDS, TFTs, metabolic, CBC, CT/MRI. QTc before antipsychotics. Fasting glucose and lipids before SGAs.",
       "treatment": "SGAs first-line: risperidone, olanzapine, quetiapine, aripiprazole. Clozapine for treatment resistance only (2+ failed trials). EPS → benztropine. Metabolic effects → switch or metformin. Hyperprolactinaemia (risperidone) → switch to aripiprazole. CBT adjunct. Early intervention improves outcomes."
     },
-    "fennick_opening": "\"She came because the mirror woman is annoying her. Remember that detail.\"",
+    "fennick_opening": "\"She adjusted her hat twice before sitting.\"",
     "cc_after_addl_hx": "Three months. Yes. The woman appeared in my hand mirror first. She has since made herself at home in every reflective surface I own, which is many.",
     "cc_after_pe": "Are you examining me or admiring the hat. Both are acceptable but I would like to know which.",
     "cc_after_imaging": "A brain scan. To confirm I am in perfect condition. I assumed so but it is nice to have documentation.",
     "cc_after_hint": "You keep asking about time. I am a very busy person. Three months. Write it down.",
     "cc_after_dx": "Schizophreniform. ... That is an extremely ugly word for someone this put-together.",
-    "fennick_after_addl_hx": "\"Three months. Criterion A present. Medical causes pending. Duration is the diagnostic axis.\"",
-    "fennick_after_pe": "\"Circumstantial but coherent. Insight partial — she knows something is wrong. She frames it as the mirror being wrong.\"",
-    "fennick_after_imaging": "\"CT clear. Organic cause excluded. Primary psychiatric presentation.\"",
     "fennick_case_complete": [
       "\"The mirror woman is quieter now.\"",
       "\"She will need watching for six months. The diagnosis may change. The person will not.\""
     ],
     "music_default": "Foxfire Morning Waltz",
-    "pt_opening": "You look like you have never seen anyone this well-dressed in a medical setting. That is understandable."
+    "pt_opening": "You look like you have never seen anyone this well-dressed in a medical setting. That is understandable.",
+    "generic_lab_remark": "As long as none of this affects my complexion."
   },
   {
     "id": "017",
@@ -562,20 +560,18 @@
       "lab_buzzwords": "Low thiamine, macrocytic anaemia (B12/folate deficiency co-occurring), low magnesium, elevated GGT/AST (alcoholic hepatopathy), elevated INR (hepatic dysfunction), low glucose.",
       "treatment": "IV thiamine (Pabrinex) BEFORE glucose. 500mg TID for 3-5 days then oral maintenance. IV magnesium replacement. Correct all electrolytes. Alcohol withdrawal monitoring (CIWA protocol). Nutritional support. Alcohol liaison. Monitor for Korsakoff development."
     },
-    "fennick_opening": "\"He smells of the Lower Gears. Both of them do. Focus on the one who cannot speak.\"",
+    "fennick_opening": "\"Focus on the one who cannot speak.\"",
     "music_default": "Foxfire Morning Waltz",
     "cc_after_addl_hx": "COMPANION: Two weeks. Maybe — look it might have been longer I wasn't keeping track I'm not his — we just drink together. That's not — is that bad that I didn't notice. God.",
     "cc_after_pe": "...light... bright...",
     "cc_after_imaging": "COMPANION: His brain is okay? The picture of his brain is okay? So why isn't he — why does he look like that.",
     "cc_after_hint": "COMPANION: Vitamins. He needs vitamins. My mother always said that. She was right about everything.",
     "cc_after_dx": "COMPANION: That's — I know that one. That's the vitamin one. From drinking. Oh no. Oh no he's going to be so embarrassed when he wakes up.",
-    "fennick_after_addl_hx": "\"Two weeks of confusion. Three days of diplopia. Days without food. The timeline was always there.\"",
-    "fennick_after_pe": "\"Lateral gaze palsy. Nystagmus. Ataxia. Confusion. You have the triad. Now think about what caused it and what you must not do next.\"",
-    "fennick_after_imaging": "\"No bleed. No mass. The damage here is metabolic, not structural. The CT was to exclude, not to diagnose.\"",
     "fennick_case_complete": [
       "\"He asked about the barrels before he asked where he was. That is either confabulation or loyalty. Possibly both.\"",
       "\"The companion should be seen before he leaves. Quietly.\""
-    ]
+    ],
+    "generic_lab_remark": "COMPANION: Whatever labs you need mate. Just wake him up."
   },
   {
     "id": "018",
@@ -741,8 +737,8 @@
             "text": "Non-accidental injury — findings are incompatible with the reported mechanism",
             "sub": "Abusive head trauma",
             "correct": true,
-            "feedback_correct": "Correct. This constellation — bilateral retinal haemorrhages, bilateral subdurals, posterior rib fractures highly specific for chest compression during shaking, metaphyseal bucket-handle fractures, acute on chronic pattern indicating repeated trauma — is the signature of abusive head trauma. The reported mechanism is not credible.",
-            "fennick_correct_comment": "\"The fractures are in three different stages of healing. This morning's fall did not cause all of this.\"",
+            "feedback_correct": "Correct. Acceleration-deceleration forces tear bridging veins — bilateral subdurals. Vitreoretinal traction causes retinal haemorrhages. Posterior rib fractures from chest compression during shaking. The acute-on-chronic pattern means this has happened before.",
+            "fennick_correct_comment": "\"The fractures are in three different stages of healing. This morning did not cause all of this.\"",
             "pt_remark_correct": "MOTHER: What are you — what are you saying. Are you saying I — you need to be very careful what you say next.",
             "portrait_swap": "image_url_flustered"
           },
@@ -750,24 +746,24 @@
             "text": "Accidental head injury — falls can cause subdural haematomas",
             "sub": "Accidental mechanism",
             "correct": false,
-            "feedback_wrong": "Low-height falls in infants rarely cause subdural haematomas, virtually never cause bilateral retinal haemorrhages extending to the periphery, and cannot explain posterior rib fractures in multiple stages of healing. The biomechanics do not support the reported history.",
-            "pt_remark_wrong": "MOTHER: Thank you. I told them. I told them it was a fall.",
+            "feedback_wrong": "A sixty-centimetre fall cannot generate the forces required for bilateral retinal haemorrhages or posterior rib fractures. The biomechanics don't support it.",
+            "pt_remark_wrong": "MOTHER: Thank you. I told them it was just a fall.",
             "fennick_wrong_comment": "\"Posterior rib fractures in multiple stages of healing. A sixty-centimetre fall does not do this.\""
           },
           {
             "text": "Bleeding disorder — exclude before concluding non-accidental",
             "sub": "Coagulopathy first",
             "correct": false,
-            "feedback_wrong": "Coagulation studies are already normal. A bleeding disorder does not explain posterior rib fractures, metaphyseal fractures, or a frenulum tear. It does not explain the acute-on-chronic pattern. The findings are not attributable to a bleeding disorder.",
-            "pt_remark_wrong": "MOTHER: Yes. A bleeding disorder. I said that. Someone said that could cause bruising.",
+            "feedback_wrong": "Coags are normal. And a bleeding disorder cannot fracture ribs or cause bilateral subdurals.",
+            "pt_remark_wrong": "MOTHER: Yes. A bleeding disorder. I mentioned that. Someone agreed with me earlier.",
             "fennick_wrong_comment": "\"Coags are normal. A bleeding disorder does not explain rib fractures.\""
           },
           {
             "text": "Osteogenesis imperfecta — brittle bones could explain the fractures",
             "sub": "OI",
             "correct": false,
-            "feedback_wrong": "OI causes fractures from minimal trauma but does not cause bilateral retinal haemorrhages, bilateral subdural haematomas, or the specific metaphyseal and posterior rib fracture pattern seen here. There are no blue sclerae, no dentinogenesis imperfecta, no family history. OI does not explain this picture.",
-            "pt_remark_wrong": "MOTHER: Brittle bones. She could have brittle bones. Has anyone tested for that.",
+            "feedback_wrong": "No blue sclerae, no family history, no dentinogenesis imperfecta. And OI doesn't cause retinal haemorrhages.",
+            "pt_remark_wrong": "MOTHER: Brittle bones. Has anyone actually tested for that properly.",
             "fennick_wrong_comment": "\"OI does not cause retinal haemorrhages or bilateral subdurals.\""
           }
         ]
@@ -843,21 +839,19 @@
       "lab_buzzwords": "Normal coags (excludes bleeding disorder). Skeletal survey mandatory. Ophthalmology for retinal haemorrhage documentation. LFTs/lipase for occult visceral injury. CT head first, MRI if stable.",
       "treatment": "Acute: airway, ICP management, neurosurgery. Mandatory child protection report. Infant must not be returned to caregiver pending investigation. Full NAI workup: skeletal survey, ophthalmology, social work. Document everything."
     },
-    "fennick_opening": "\"Eight months old. The mother is speaking. Listen to what she is not saying.\"",
+    "fennick_opening": "\"Eight months old.\"",
     "music_default": null,
     "cc_after_addl_hx": "MOTHER: I don't understand why you need to know all of this. She fell off a bed. It happens. I just want to know she's alright and go home.",
     "cc_after_pe": "MOTHER: Why are you looking at her eyes like that. What are you looking for. Is something wrong with her eyes.",
     "cc_after_imaging": "MOTHER: What does that mean. Both sides. How does that happen from one fall. Can that happen from one fall.",
     "cc_after_hint": "MOTHER: You keep looking at me like that. I don't like how you're looking at me.",
     "cc_after_dx": "MOTHER: That is not — no. No. I want another doctor. I want someone else. She fell off the bed. That is what happened.",
-    "fennick_after_addl_hx": "\"The story is changing. It changes because it is not true. Stay with the examination.\"",
-    "fennick_after_pe": "\"Bilateral retinal haemorrhages to the periphery. Acute on chronic subdurals. She has been here before. Not in this ward.\"",
-    "fennick_after_imaging": "\"Acute on chronic. The older collection already has a membrane. This morning's fall did not cause all of this.\"",
     "fennick_case_complete": [
       "\"The infant did not cry when her mother left the room.\"",
       "\"Document everything. Every fracture. Every stage of healing. It will matter in court.\""
     ],
     "portrait_on_imaging": "image_url_flustered",
-    "portrait_on_pe": "image_url_flustered"
+    "portrait_on_pe": "image_url_flustered",
+    "generic_lab_remark": "MOTHER: Do you really need all of that. She just fell off a bed."
   }
 ]
