@@ -1514,5 +1514,301 @@
     "cc_after_imaging": "The machine did not find my father's problem in me. Good. I told my daughter it would not.",
     "cc_after_hint": "You are getting warmer. I would tell you but then what would be the point of you.",
     "cc_after_dx": "(looks at you with something that might be satisfaction) I had a name for it too. Mine was older. But yes. Same thing."
+  },
+  {
+    "id": "023",
+    "date": "2026-04-23",
+    "tier": 1,
+    "urgency": "stable",
+    "title": "The Postman's Foot",
+    "dx_answer": "Common Fibular (Peroneal) Nerve Palsy",
+    "anxious_typing": true,
+    "personality": {
+      "archetype": "ADHD postman. Enthusiastic. Tangential. Genuinely tries to answer but gets there via three other topics.",
+      "voice": "Sentences start with confidence and end somewhere else entirely. Not unintelligent — just parallel processing out loud. The cats are a constant.",
+      "crack": "When he realises the squatting is the cause. He goes quiet for exactly one beat. Then: 'Oh no. The cats.'"
+    },
+    "patient": {
+      "name": "The Postman",
+      "age": 34,
+      "sex": "M",
+      "occupation": "Royal Mail Courier, Lower Gears — Ashgate route",
+      "image_url": "PLACEHOLDER"
+    },
+    "pt_opening": "Hello! Oh wow this place smells like old paper. I like it. Anyway —",
+    "chart": {
+      "cc": "My foot is doing something weird! Also I think I have a bad — oh that is a nice lamp, doc — uhh where was I. Right. The foot.",
+      "hpi": "The Postman presented in high spirits, having apparently stopped to greet two cats on the way in. He reports three weeks of progressive right foot weakness and an unusual gait — his foot drags when he walks and he has tripped on three separate occasions. He describes a numb patch on the top of his foot and outer lower leg. He has been compensating by lifting his knee higher when he walks, which he demonstrated unprompted. He is concerned because it is making the route take longer and he does not like being late. He has no back pain. No preceding trauma. No recent illness. He takes methylphenidate for ADHD, prescribed.",
+      "pmh": "ADHD — on methylphenidate. No other conditions.",
+      "psh": "None.",
+      "meds": "Methylphenidate. Nothing else unless vitamins count — he is not sure if they count.",
+      "allergies": "Penicillin. He found out the hard way. He would rather not revisit that.",
+      "fh": "Father had 'something with his back.' Mother is fine. He has a fish called Gerald.",
+      "sh": "Royal Mail courier, Lower Gears to Ashgate route. On his feet six to eight hours daily. Non-smoker. Occasional ale on Fridays. Lives with a housemate and two cats (visiting)."
+    },
+    "vitals": {
+      "bp": "118/74",
+      "hr": "82",
+      "rr": "14",
+      "temp": "37.0",
+      "o2": "99% RA"
+    },
+    "additional_hx": "On direct questioning: the foot weakness started gradually about three weeks ago, no single precipitating event he can identify. Pressed on activities that involve prolonged squatting or leg compression — he brightens considerably. He squats to talk to cats. Every cat on the route. He estimates he spends between forty minutes and two hours per shift in a deep squat position, knees fully flexed, chatting to local cats. He has done this for years. It is not new, he clarifies, but he has been making an extra effort recently because Mrs. Henderson's new kitten was shy. He does not see the relevance. He is asked to note the relevance.",
+    "patient_quote_addl_hx": "I mean... I like talking to the cats. For hours sometimes. ... Is that relevant? They are very good listeners. Especially Mr. Fluffy — he does this thing where he tilts his head. Actually do you want to see a picture —",
+    "pe_findings": "Right foot drop on walking — inability to dorsiflex the right foot against gravity. Eversion weakness. Inversion preserved. Sensory loss over the dorsum of the right foot and lateral lower leg. Sensation intact on the sole of the foot. Ankle reflex intact and equal bilaterally. Knee reflex intact. No lower back tenderness. No straight leg raise positivity. Tinel's sign positive at the fibular head on the right.",
+    "imaging": "MRI right knee/fibular head: no mass lesion, no bony abnormality at the fibular head, no cystic lesion. Normal study. (Patient asked if the machine was taking his picture and whether he could see it.)",
+    "special_test": {
+      "name": "Nerve Conduction Study",
+      "result": "Reduced conduction velocity and amplitude of the common fibular (peroneal) nerve at the fibular head. Tibial nerve conduction normal. L4/L5 nerve root conduction normal. Localised compression neuropathy confirmed at the fibular head."
+    },
+    "memory_fragments": {
+      "pe": "He has been lifting his right knee higher for three weeks. He thought he was just walking enthusiastically. He told Mrs. Henderson's kitten about it. The kitten was not concerned.",
+      "imaging": "The fibular head is where the nerve wraps around. There is nothing wrong with the bone. The bone did nothing. The squatting did everything."
+    },
+    "tests": [
+      {
+        "name": "CBC",
+        "cost": 5,
+        "result": "Normal. WBC 7.1, Hgb 15.4, Plt 280.",
+        "pt_remark": "All normal? Okay cool. Hey does this mean my blood is good? Like, generally? I feel like it should come with a score."
+      },
+      {
+        "name": "CMP",
+        "cost": 5,
+        "result": "Normal. Glucose 88, sodium 139, creatinine 0.9. LFTs normal.",
+        "pt_remark": "Normal again. You know what else is normal? Mr. Fluffy's vet results last month. We have that in common now."
+      },
+      {
+        "name": "EKG",
+        "cost": 5,
+        "result": "Normal sinus rhythm. Not indicated for this presentation.",
+        "pt_remark": "Is that my heartbeat? That is so cool. Can I get a printout? For the fridge?"
+      },
+      {
+        "name": "Troponin",
+        "cost": 5,
+        "result": "Negative. Not indicated for this presentation.",
+        "pt_remark": "My heart is fine though right? Because I did think about that. I Googled foot drop and it said — actually I should not have Googled."
+      },
+      {
+        "name": "Lipase",
+        "cost": 5,
+        "result": "Normal. Not indicated.",
+        "pt_remark": "Is that the pancreas one? My housemate had pancreas trouble once. Very dramatic. Mine is fine though obviously."
+      },
+      {
+        "name": "UA",
+        "cost": 5,
+        "result": "Normal. Not indicated.",
+        "pt_remark": "Normal. Great. Can we move on? I feel like we are running out of things to test and I still have a broken foot."
+      },
+      {
+        "name": "ABG/VBG",
+        "cost": 5,
+        "result": "Normal. Not indicated for this presentation.",
+        "pt_remark": "Okay that one hurt a bit. I am not complaining. I am just noting it for the record."
+      },
+      {
+        "name": "Coags",
+        "cost": 5,
+        "result": "Normal. Not indicated.",
+        "pt_remark": "Also normal. You know what, I am starting to think the problem is specifically the foot."
+      }
+    ],
+    "hints": [
+      "Right foot drop. Weakness on dorsiflexion and eversion. Inversion preserved. Sensory loss on the dorsum of the foot and lateral lower leg. Sensation on the sole intact. Ankle reflex normal. No back signs.",
+      "The sensory distribution matters. Dorsum of foot and lateral lower leg — not the sole. The sole is a different territory.",
+      "Tinel's at the fibular head. The nerve wraps around the neck of the fibula at that point. Prolonged external compression at that location produces a very specific pattern.",
+      "Forty minutes to two hours per shift in a deep squat. Knee fully flexed, fibular head compressed against whatever surface he is on. The nerve conduction localises it. The history explains it."
+    ],
+    "management": [
+      {
+        "title": "What structure is affected and at what level?",
+        "hint": "Foot drop. Dorsiflexion and eversion weak. Inversion preserved. Sensory loss dorsum foot and lateral lower leg, sole intact. Tinel's at fibular head. Where is the lesion?",
+        "options": [
+          {
+            "text": "Common fibular nerve at the fibular head — compression neuropathy",
+            "sub": "Localised nerve compression",
+            "correct": true,
+            "feedback_correct": "Correct. Common fibular nerve wraps around the fibular neck — uniquely vulnerable to compression here. Dorsiflexion (deep peroneal) and eversion (superficial peroneal) both affected because both branches arise distal to the compression. Inversion (tibial) and sole sensation (sural/tibial) preserved. Ankle reflex intact (tibial nerve). No back signs exclude L4/L5 root.",
+            "fennick_correct_comment": "\"The nerve turns the corner at the fibular head. That is where corners get cut.\"",
+            "pt_remark_correct": "Oh! So it is like... a traffic jam. In my knee. For my foot. ... Oh no. ... The cats."
+          },
+          {
+            "text": "L4/L5 nerve root compression — disc herniation with foot drop",
+            "sub": "Radicular pattern",
+            "correct": false,
+            "feedback_wrong": "L4/L5 radiculopathy can cause foot drop but also causes back pain, positive straight leg raise, and altered knee or ankle reflexes depending on level. No back pain, no SLR positivity, normal reflexes. Nerve conduction localises to the fibular head, not the root.",
+            "pt_remark_wrong": "My back is fine though! I have excellent posture. I deliver mail. I have thought about this.",
+            "fennick_wrong_comment": "\"No back pain. No SLR. Normal reflexes. The root is not the problem.\""
+          },
+          {
+            "text": "Sciatic nerve palsy — proximal lesion affecting both peroneal and tibial divisions",
+            "sub": "Proximal nerve lesion",
+            "correct": false,
+            "feedback_wrong": "Sciatic palsy affects both divisions — peroneal and tibial. Inversion and plantar flexion would also be weak, and sole sensation would be lost. His inversion is intact and sole sensation is normal. The tibial division is spared.",
+            "pt_remark_wrong": "Is that the big one? The one that goes all the way up? That sounds much worse.",
+            "fennick_wrong_comment": "\"Sole sensation intact. Inversion intact. The tibial division is working fine.\""
+          },
+          {
+            "text": "Deep peroneal nerve palsy — isolated dorsiflexion weakness only",
+            "sub": "Branch-level lesion",
+            "correct": false,
+            "feedback_wrong": "Deep peroneal palsy causes isolated dorsiflexion weakness and sensory loss only in the first web space. He also has eversion weakness and lateral lower leg sensory loss — indicating both branches are affected, which localises the lesion proximal to the bifurcation, at the common fibular nerve.",
+            "pt_remark_wrong": "Is that different from what I have? Because my foot is still broken either way.",
+            "fennick_wrong_comment": "\"Eversion is also weak. That is the superficial branch. Both branches means the lesion is proximal to the split.\""
+          }
+        ]
+      },
+      {
+        "title": "Nerve conduction confirms fibular head compression. What is the cause?",
+        "hint": "34-year-old postman. No trauma. No mass on MRI. Progressive over three weeks. The history has the answer.",
+        "options": [
+          {
+            "text": "Prolonged external compression from habitual deep squatting — occupational/behavioural cause",
+            "sub": "Positional compression",
+            "correct": true,
+            "feedback_correct": "Correct. Prolonged deep squatting compresses the common fibular nerve against the fibular head from the outside. Classic causes: habitual squatting, prolonged leg crossing, weight loss exposing the nerve, plaster casts. No trauma, no mass, no systemic disease — the cause is purely mechanical and modifiable.",
+            "fennick_correct_comment": "\"The nerve does not know it is being compressed by a cat conversation. It just stops conducting.\"",
+            "pt_remark_correct": "Wait... so... the cats... did this to me? (beat) I mean. Not ON PURPOSE. They are cats. But. Oh no. Wait— so I just... I cannot squat anymore? ... Mr. Fluffy is going to think I am ignoring him."
+          },
+          {
+            "text": "Diabetic mononeuropathy — check HbA1c",
+            "sub": "Metabolic cause",
+            "correct": false,
+            "feedback_wrong": "Diabetic mononeuropathy is a vasculitic infarct of a single nerve — typically presents more acutely, often with pain, and in a diabetic patient. He has no diabetes history, normal CMP, and a clear mechanical cause on history. HbA1c is not indicated here.",
+            "pt_remark_wrong": "I do not have diabetes. I eat quite a lot of vegetables actually. Well. Sometimes.",
+            "fennick_wrong_comment": "\"Acute onset, painless, clear mechanical history. The cause is already in the room.\""
+          },
+          {
+            "text": "Vasculitic neuropathy — systemic inflammatory cause",
+            "sub": "Inflammatory cause",
+            "correct": false,
+            "feedback_wrong": "Vasculitic neuropathy typically causes painful mononeuropathy multiplex — multiple nerves, painful, associated with systemic features. He has isolated painless mononeuropathy with a compelling mechanical explanation.",
+            "pt_remark_wrong": "Vasculitis. That sounds bad. I Googled vasculitis once by accident. Very bad Google.",
+            "fennick_wrong_comment": "\"Painless. Single nerve. Clear history. Vasculitis does not hide in cat conversations.\""
+          },
+          {
+            "text": "Mass lesion at the fibular head — MRI excluded but consider ganglion cyst",
+            "sub": "Structural cause",
+            "correct": false,
+            "feedback_wrong": "MRI already excludes mass lesion. Ganglion cysts at the fibular head are a recognised cause but MRI would show them. The mechanical history with normal MRI makes positional compression the diagnosis.",
+            "pt_remark_wrong": "A lump? I would have noticed a lump. I notice everything. Well. Most things. Well. The cats definitely.",
+            "fennick_wrong_comment": "\"MRI is clear. The lump is not there. The squatting is.\""
+          }
+        ]
+      },
+      {
+        "title": "Initial management",
+        "hint": "Common fibular compression from habitual squatting. No structural cause. What is first-line?",
+        "options": [
+          {
+            "text": "Activity modification — cease prolonged squatting, padding at the fibular head, ankle foot orthosis (AFO) for foot drop, physiotherapy",
+            "sub": "Conservative management",
+            "correct": true,
+            "feedback_correct": "Correct. The cause is modifiable — stop the compression. AFO prevents tripping and maintains gait while the nerve recovers. Physiotherapy for strengthening and gait retraining. Most compressive fibular palsies recover fully with conservative management over weeks to months if the cause is removed.",
+            "fennick_correct_comment": "\"Remove the cause. The nerve will do the rest. Nerves are patient.\"",
+            "pt_remark_correct": "Wait... so I just... try harder at walking? ... That feels like motivational speech medicine. (beat) Also I cannot squat. ... Wait. You are telling me I cannot talk to my cat friends for hours anymore? ... No. ... Ms. Whiskers and Mr. Fluffy. ... They will miss me."
+          },
+          {
+            "text": "Surgical decompression at the fibular head — definitive treatment",
+            "sub": "Immediate surgery",
+            "correct": false,
+            "feedback_wrong": "Surgery is reserved for cases with structural compression (mass, cyst, bony abnormality) or failure of conservative management after adequate trial. No structural cause, no trauma, modifiable lifestyle cause — conservative management first.",
+            "pt_remark_wrong": "Surgery?! On my knee? I have a route tomorrow. Can they do it fast?",
+            "fennick_wrong_comment": "\"No structural cause. No failed conservative trial. The knife is not the first tool here.\""
+          },
+          {
+            "text": "High-dose oral corticosteroids — reduce nerve inflammation",
+            "sub": "Steroid course",
+            "correct": false,
+            "feedback_wrong": "Steroids are used for inflammatory neuropathies and vasculitic causes. This is mechanical compression — removing the compression source is the treatment. Steroids do not prevent ongoing compression.",
+            "pt_remark_wrong": "Steroids? My housemate took steroids once for his back. He said it made him hungry. I am already quite hungry.",
+            "fennick_wrong_comment": "\"Mechanical compression is not inflammation. Removing the cause is.\""
+          },
+          {
+            "text": "EMG-guided botulinum toxin — relax spastic foot musculature",
+            "sub": "Botulinum toxin",
+            "correct": false,
+            "feedback_wrong": "Botulinum toxin is used for spasticity — upper motor neurone lesions. This is a lower motor neurone/peripheral nerve lesion. Foot drop here is from weakness, not spasticity. Botox would worsen it.",
+            "pt_remark_wrong": "Is that the one they use for faces? Because if so, absolutely not. I need my face.",
+            "fennick_wrong_comment": "\"Spastic foot drop is UMN. This foot is not spastic. It is weak. Different problem.\""
+          }
+        ]
+      },
+      {
+        "title": "Disposition and follow-up",
+        "hint": "Conservative management initiated. Nerve conduction confirms compressive neuropathy. Where does he go?",
+        "options": [
+          {
+            "text": "Outpatient physiotherapy referral, neurology or orthopaedics follow-up in 6-8 weeks, safety advice on tripping hazards, AFO fitted",
+            "sub": "Outpatient with follow-up",
+            "correct": true,
+            "feedback_correct": "Correct. Stable, modifiable cause, no emergency. Outpatient physio. Follow-up in 6-8 weeks to reassess nerve recovery — if no improvement, repeat NCS and consider surgical review. Safety counselling important — foot drop is a significant fall risk especially on a postal route.",
+            "fennick_correct_comment": "\"Nerves recover slowly. Weeks to months. Tell him not to count by cats.\"",
+            "pt_remark_correct": "Okay. Okay. So. Six to eight weeks. I can do that. I will explain to Ms. Whiskers. She is very understanding. (thinks) Actually she mostly just stares. But I choose to read that as understanding. (stands up, immediately trips slightly on his own foot, catches himself) ... Still doing that. Yeah. Okay. Let's get that brace thing."
+          },
+          {
+            "text": "Admit for inpatient physiotherapy and monitoring",
+            "sub": "Inpatient admission",
+            "correct": false,
+            "feedback_wrong": "Stable compressive mononeuropathy with a clear modifiable cause does not require inpatient admission. Outpatient management is entirely appropriate.",
+            "pt_remark_wrong": "Admitted? Can I bring the cats? They are not technically mine but they know me.",
+            "fennick_wrong_comment": "\"Stable. Modifiable cause. A bed is not what the nerve needs.\""
+          },
+          {
+            "text": "Discharge with no follow-up — likely to resolve spontaneously",
+            "sub": "Discharge without review",
+            "correct": false,
+            "feedback_wrong": "Follow-up is necessary to confirm recovery and identify the minority who do not improve and require surgical review. Discharge without follow-up misses the safety net.",
+            "pt_remark_wrong": "Oh, just go? Okay! (already heading for the door) Wait do I get a note for the post office? Because my route efficiency has been terrible.",
+            "fennick_wrong_comment": "\"If it does not recover, the next step is surgery. He needs a review point.\""
+          },
+          {
+            "text": "Urgent neurosurgery referral — foot drop requires surgical decompression",
+            "sub": "Urgent surgical referral",
+            "correct": false,
+            "feedback_wrong": "Urgent neurosurgery is not indicated for compressive mononeuropathy with a clear modifiable cause and no structural lesion. Conservative management first, surgical referral only if it fails.",
+            "pt_remark_wrong": "Neurosurgery? That is the brain one, right? My foot is not in my brain. I checked.",
+            "fennick_wrong_comment": "\"No structural cause. No failed conservative trial. Urgent surgery is not the level of response.\""
+          }
+        ]
+      }
+    ],
+    "report_template": {
+      "age": 34,
+      "sex": "M",
+      "pmh": "ADHD on methylphenidate",
+      "presenting": "three weeks of progressive right foot drop and lateral leg numbness",
+      "pertinent_positives": {
+        "addl-hx": "habitual prolonged deep squatting while talking to cats on postal route, 40 mins to 2 hours per shift, three weeks duration",
+        "pe": "right foot drop, dorsiflexion and eversion weakness, inversion intact, sensory loss dorsum foot and lateral lower leg, sole intact, ankle reflex normal, Tinel's at fibular head",
+        "labs": "all normal — not diagnostically relevant",
+        "imaging": "MRI fibular head normal — no mass, no bony abnormality",
+        "special": "nerve conduction study: reduced velocity and amplitude at fibular head, tibial nerve normal, L4/L5 root normal"
+      },
+      "assessment": "Common fibular nerve compressive mononeuropathy at the fibular head, secondary to habitual prolonged squatting",
+      "plan": "cease prolonged squatting, AFO for foot drop, physiotherapy, follow-up 6-8 weeks, safety advice re: tripping"
+    },
+    "explanation": "Common fibular (peroneal) nerve wraps around the fibular neck — the most exposed peripheral nerve in the body. Compressive mononeuropathy here causes foot drop (dorsiflexion weakness), eversion weakness, and sensory loss over the dorsum of the foot and lateral lower leg. Inversion and sole sensation preserved (tibial). Ankle reflex intact. Distinguished from L4/L5 radiculopathy by absence of back pain, normal SLR, normal reflexes, and NCS localisation. Treatment: remove cause, AFO, physio. Recovers in weeks to months.",
+    "explanation_detail": {
+      "who_gets_it": "Classically: prolonged squatting, leg crossing, weight loss (loss of protective fat pad), plaster cast pressure, trauma to fibular head. Also: ganglion cysts, tumours at fibular head.",
+      "risk_factors": "Prolonged compression at fibular head — any cause. Thin patients (less protective tissue). Rapid weight loss.",
+      "typical_presentation": "Foot drop — can't dorsiflex, high-stepping gait. Eversion weak. Inversion intact (tibial). Sensory loss dorsum foot and lateral lower leg. Sole spared. Ankle reflex intact. Tinel's at fibular head.",
+      "moa": "Common fibular nerve wraps around the fibular neck just below the knee — subcutaneous, tethered, no protective muscle. External compression → demyelination → conduction block → weakness and sensory loss distal to lesion.",
+      "step1_buzzwords": "Foot drop + eversion weakness + intact inversion + dorsum sensory loss + intact sole + intact ankle reflex + Tinel's fibular head = common fibular. Distinguish from L4/L5 (back pain, SLR, reflex changes) and sciatic (tibial also affected). NCS localises.",
+      "lab_buzzwords": "NCS: reduced velocity/amplitude at fibular head. MRI: exclude structural cause (ganglion, mass). EMG: denervation if axonal loss.",
+      "treatment": "Conservative: remove compression source, AFO, physiotherapy. Recovery weeks to months. Surgery if structural cause or failed conservative management. Botox NOT indicated (LMN, not UMN)."
+    },
+    "fennick_opening": "\"He arrived already talking.\"",
+    "fennick_after_pe": "\"Dorsiflexion gone. Eversion gone. Inversion intact. Sole intact.\"",
+    "fennick_after_imaging": "\"No mass. No bone. The fibular head is clean.\"",
+    "generic_lab_remark": "All normal? Okay. So it is definitely just the foot thing.",
+    "music_default": "Foxfire Morning Waltz",
+    "fennick_case_complete": [
+      "\"He tripped on the way out.\"",
+      "\"Caught himself.\"",
+      "\"Asked if the cats would understand.\""
+    ]
   }
 ]
