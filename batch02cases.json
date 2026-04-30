@@ -1538,7 +1538,7 @@
     "pt_opening": "Hello! Oh wow this place smells like old paper. I like it. Anyway —",
     "chart": {
       "cc": "My foot is doing something weird! Also I think I have a bad — oh that is a nice lamp, doc — uhh where was I. Right. The foot.",
-      "hpi": "The Postman presented in high spirits, having apparently stopped to greet two cats on the way in. He reports three weeks of progressive right foot weakness and an unusual gait — his foot drags when he walks and he has tripped on three separate occasions. He describes a numb patch on the top of his foot and outer lower leg. He has been compensating by lifting his knee higher when he walks, which he demonstrated unprompted. He is concerned because it is making the route take longer and he does not like being late. He has no back pain. No preceding trauma. No recent illness. He takes methylphenidate for ADHD, prescribed.",
+      "hpi": "The Postman presented in high spirits, having apparently stopped to greet two cats on the way in. He reports three weeks of progressive right foot weakness and an unusual gait — his foot drags when he walks and he has tripped on three separate occasions. It is his routine to squat and talk with cats he encounters on his route, sometimes for extended periods. He has no back pain. No preceding trauma. No recent illness. He takes methylphenidate for ADHD, prescribed.",
       "pmh": "ADHD — on methylphenidate. No other conditions.",
       "psh": "None.",
       "meds": "Methylphenidate. Nothing else unless vitamins count — he is not sure if they count.",
@@ -1562,7 +1562,7 @@
       "result": "Reduced conduction velocity and amplitude of the common fibular (peroneal) nerve at the fibular head. Tibial nerve conduction normal. L4/L5 nerve root conduction normal. Localised compression neuropathy confirmed at the fibular head."
     },
     "memory_fragments": {
-      "pe": "He has been lifting his right knee higher for three weeks. He thought he was just walking enthusiastically. He told Mrs. Henderson's kitten about it. The kitten was not concerned.",
+      "pe": "He has been lifting his right knee higher for three weeks. He thought he was just walking enthusiastically. He told a kitten about it. The kitten was not concerned.",
       "imaging": "The fibular head is where the nerve wraps around. There is nothing wrong with the bone. The bone did nothing. The squatting did everything."
     },
     "tests": [
@@ -1588,7 +1588,7 @@
         "name": "Troponin",
         "cost": 5,
         "result": "Negative. Not indicated for this presentation.",
-        "pt_remark": "My heart is fine though right? Because I did think about that. I Googled foot drop and it said — actually I should not have Googled."
+        "pt_remark": "My heart is fine though right? Because I did think about that. I asked around. People said various things."
       },
       {
         "name": "Lipase",
@@ -1806,9 +1806,11 @@
     "generic_lab_remark": "All normal? Okay. So it is definitely just the foot thing.",
     "music_default": "Foxfire Morning Waltz",
     "fennick_case_complete": [
-      "\"He tripped on the way out.\"",
-      "\"Caught himself.\"",
-      "\"Asked if the cats would understand.\""
-    ]
+      "\"He tripped on the way out. Caught himself.\"",
+      "\"He asked if the cats would understand. We will have to see about that.\""
+    ],
+    "cc_after_pe": "Okay, I will follow your directions. Uhh. Actually I should not promise that.",
+    "cc_after_dx": "Foot drop? Wait — so my foot is just... quitting its job? That is kind of dramatic actually.",
+    "fennick_speech_delay": 1800
   }
 ]
