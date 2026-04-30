@@ -1318,7 +1318,6 @@
         "options": [
           {
             "text": "\"I hear that you already know. I am not here to take that from you. My only role is to make sure nothing dangerous is happening. Would you allow me to check just a few things — for safety, not for doubt.\"",
-            "sub": "Opening response A",
             "correct": true,
             "feedback_correct": "Correct. Confronting her belief system directly produces resistance. Validating without agreeing, framing the examination as safety-focused rather than diagnostic, and asking permission rather than asserting authority are the evidence-based approaches to patients with strongly held alternative belief frameworks.",
             "fennick_correct_comment": "\"Permission first. Always permission first.\"",
@@ -1326,7 +1325,6 @@
           },
           {
             "text": "\"I understand that is how you feel. However there is a risk this could be dangerous and I need to examine you. Please cooperate so we can proceed.\"",
-            "sub": "Opening response B",
             "correct": false,
             "feedback_wrong": "Confronting a patient's belief system directly — especially one this entrenched — produces immediate and total resistance. She will leave. The temporal artery will remain unexamined.",
             "pt_remark_wrong": "(stands immediately) Dangerous. Yes yes. (picks up her bag) You sound like my daughter.",
@@ -1336,7 +1334,6 @@
           },
           {
             "text": "\"Your safety takes priority here. I am going to proceed with the examination now.\"",
-            "sub": "Opening response C",
             "correct": false,
             "feedback_wrong": "A competent adult has the right to refuse examination. Proceeding without consent is assault regardless of clinical urgency. The correct approach is to persuade, not to override.",
             "pt_remark_wrong": "(pulls back sharply) I said no. I was very clear about no.",
@@ -1346,7 +1343,6 @@
           },
           {
             "text": "\"It sounds like you have a strong sense of what is happening. Could you tell me more about what you believe this is, and why you feel that way?\"",
-            "sub": "Opening response D",
             "correct": false,
             "feedback_wrong": "Exploring her belief system first delays the safety assessment and does not move her toward allowing examination. Validation of her perspective combined with a safety frame and explicit permission request is more effective.",
             "pt_remark_wrong": "(settles back with visible pleasure) Oh good. Finally. (begins at length) It started with a dream in the third week of —",
@@ -1404,7 +1400,7 @@
             "correct": true,
             "feedback_correct": "Correct. In GCA with visual symptoms, steroid treatment must not wait for biopsy confirmation. The window before irreversible ischaemic optic neuropathy is narrow. High-dose corticosteroids (IV methylprednisolone 500-1000mg for 3 days in vision-threatened GCA) should be started immediately. Biopsy remains valid up to 2 weeks after steroid initiation.",
             "fennick_correct_comment": "\"Ophthalmic artery is a branch of the internal carotid. Not the external. That is why it is at risk.\"",
-            "pt_remark_correct": "(looks at the syringe) The cards kept pointing to a needle. I kept hoping it meant something else. (pause) The eye. You are saying this changes what is coming."
+            "pt_remark_correct": "(looks at the syringe) The cards kept pointing to a needle. I kept hoping it meant something else. The eye. You are saying this changes what is coming."
           },
           {
             "text": "Wait for temporal artery biopsy result before starting steroids",
@@ -1446,14 +1442,14 @@
             "correct": true,
             "feedback_correct": "Correct. Vision-threatened GCA requires inpatient admission for IV steroid course (3 days), ophthalmology review, and rheumatology involvement for long-term management planning. Temporal artery biopsy arranged as inpatient or urgent outpatient within 2 weeks.",
             "fennick_correct_comment": "\"Three days IV. Then oral taper over twelve to eighteen months. ESR and CRP to monitor.\"",
-            "pt_remark_correct": "(stands. picks up her bag unhurriedly.) This was not in the cards. (pause) I may need to recalibrate."
+            "pt_remark_correct": "(stands. picks up her bag unhurriedly.) This was not in the cards. I may need to recalibrate."
           },
           {
             "text": "Discharge with oral prednisolone and GP follow-up",
             "sub": "Discharge with oral steroids",
             "correct": false,
             "feedback_wrong": "Vision-threatened GCA requires IV methylprednisolone inpatient, not oral prednisolone outpatient. Discharging at this stage risks further visual episodes without adequate steroid coverage.",
-            "pt_remark_wrong": "For how long. (pause) I have clients on Thursday.",
+            "pt_remark_wrong": "For how long. I have clients on Thursday.",
             "fennick_wrong_comment": "\"Transient visual loss this morning. Oral absorption is too slow.\"",
             "critical_error": true,
             "fennick_endgame_comment": "\"Vision-threatened GCA discharged on oral steroids. She lost the eye two days later at home.\""
