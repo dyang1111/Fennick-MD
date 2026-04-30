@@ -985,7 +985,7 @@
             "fennick_correct_comment": "\"You removed beta-2 vasodilation and left alpha-1 vasoconstriction unopposed. What happens to the pressure now.\"",
             "critical_error": true,
             "fennick_endgame_comment": "\"You removed beta-2 vasodilation and left alpha-1 constriction unopposed. His pressure during the next paroxysm would have been unsurvivable.\"",
-            "fennick_wrong_comment": "\"Beta-blocker before alpha-blockade in phaeochromocytoma causes unopposed alpha vasoconstriction. Hypertensive crisis.\""
+            "fennick_wrong_comment": "\"Alpha blocks first. Beta before alpha leaves the vasoconstrictors unopposed.\""
           },
           {
             "text": "IV Labetalol",
@@ -1381,7 +1381,7 @@
             "pt_remark_wrong": "Two hours and then home. I don't want to be a burden, but — I fell yesterday. Is two hours really enough.",
             "critical_error": true,
             "fennick_endgame_comment": "\"Two hours and discharge. The troponin was elevated. The delayed neurological sequelae would have appeared three weeks later with no one watching.\"",
-            "fennick_wrong_comment": "\"COHb 28%. Two hours is not enough. The half-life on 100% O2 is 60-90 minutes — the rest still needs clearing.\""
+            "fennick_wrong_comment": "\"COHb 28 needs more than two hours. The half-life math does not work.\""
           },
           {
             "text": "Transfer immediately to hyperbaric chamber without admission workup",
@@ -2466,7 +2466,7 @@
             "pt_remark_wrong": "Something to calm the difficult days. Yes. Those days are very difficult.",
             "critical_error": true,
             "fennick_endgame_comment": "\"Haloperidol in Lewy Body Dementia. Neuroleptic sensitivity reaction — rigidity, impaired consciousness, autonomic instability. It occurs in over half of cases. He may not have recovered.\"",
-            "fennick_wrong_comment": "\"High-potency FGA in Lewy body dementia. Severe neuroleptic sensitivity — potentially fatal.\""
+            "fennick_wrong_comment": "\"Lewy body patients can die from antipsychotics. This is the one diagnosis where that warning is not theoretical.\""
           }
         ]
       },
@@ -3080,7 +3080,7 @@
             "correct": false,
             "feedback_wrong": "Abrupt cessation of long-term high-dose steroids causes acute adrenal insufficiency — a life-threatening emergency. His HPA axis has been suppressed for eighteen months. The adrenal cortex cannot produce cortisol on demand. Never stop abruptly.",
             "pt_remark_wrong": "Stop it today — remove the problem. That's reasonable isn't it.",
-            "fennick_wrong_comment": "\"Acute adrenal insufficiency within 24 hours. His axis has been idle for eighteen months.\"",
+            "fennick_wrong_comment": "\"Eighteen months of exogenous cortisol. The adrenal glands forgot how to work.\"",
             "critical_error": true,
             "fennick_endgame_comment": "\"His adrenal cortex had been idle for eighteen months. You stopped the tablet and asked it to produce cortisol by morning. It could not. He would have collapsed within 24 hours.\""
           },
