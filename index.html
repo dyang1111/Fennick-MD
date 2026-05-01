@@ -2067,7 +2067,8 @@ function initCase(){
   if(currentCase.tier) document.body.classList.add('tier-'+currentCase.tier);
   // Apply case-specific music (skip tier 3 — it handles music itself)
   if(currentCase.tier !== 3) {
-    const isNight = document.body.classList.contains('night');
+    const _hr = new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'})).getHours();
+    const isNight = _hr >= 20 || _hr < 6;
     const trackToPlay = isNight
       ? (currentCase.music_night || 'Foxfire at Midnight')
       : (currentCase.music_default || 'Paws, Pipes & Possibilities');
