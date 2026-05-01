@@ -1934,7 +1934,7 @@
         "options": [
           {
             "text": "ATP7B mutation — autosomal recessive",
-            "sub": "Option A",
+            "sub": "Transport protein mutation",
             "correct": true,
             "feedback_correct": "Correct. Wilson disease is caused by mutations in ATP7B — encoding a copper-transporting ATPase in the liver. Autosomal recessive. Defective copper excretion into bile leads to hepatic accumulation, then overflow into brain, eyes, kidneys, and blood. Ceruloplasmin synthesis also impaired.",
             "fennick_correct_comment": "\"ATP7B. The liver cannot move the copper out. So the copper moves itself — everywhere.\"",
@@ -1942,7 +1942,7 @@
           },
           {
             "text": "ATP7A mutation — X-linked recessive",
-            "sub": "Option B",
+            "sub": "Membrane transporter defect",
             "correct": false,
             "feedback_wrong": "ATP7A mutations cause Menkes disease — X-linked recessive copper deficiency, not excess. Kinky hair, neurodegeneration in infancy. Opposite problem, different gene.",
             "pt_remark_wrong": "... (the eyes shift.) ... That is not the right one.",
@@ -1950,7 +1950,7 @@
           },
           {
             "text": "HEXA mutation — autosomal recessive",
-            "sub": "Option C",
+            "sub": "Enzyme deficiency",
             "correct": false,
             "feedback_wrong": "HEXA mutations cause Tay-Sachs disease — hexosaminidase A deficiency, GM2 gangliosidosis. Not copper metabolism.",
             "pt_remark_wrong": "(slow blink.) ... That sounds like a different kingdom entirely.",
@@ -1958,7 +1958,7 @@
           },
           {
             "text": "HFE mutation — autosomal recessive",
-            "sub": "Option D",
+            "sub": "Metabolic regulation defect",
             "correct": false,
             "feedback_wrong": "HFE mutations cause hereditary haemochromatosis — iron overload, not copper. Elevated ferritin, transferrin saturation. This patient has copper accumulation.",
             "pt_remark_wrong": "... Iron. ... I could have been the iron king. ... (recovers) ... Apparently not.",
@@ -1972,7 +1972,7 @@
         "options": [
           {
             "text": "D-penicillamine",
-            "sub": "Option A",
+            "sub": "Targeted pharmacotherapy",
             "correct": true,
             "feedback_correct": "Correct. D-penicillamine is a copper chelator — binds free copper and promotes urinary excretion. First-line for Wilson disease. Monitor for side effects: nephrotic syndrome, lupus-like reaction, bone marrow suppression. Zinc acetate is an alternative (blocks intestinal copper absorption) and is preferred in pre-symptomatic or pregnant patients.",
             "fennick_correct_comment": "\"Penicillamine binds what the liver cannot move. The kidneys finish the job.\"",
@@ -1980,7 +1980,7 @@
           },
           {
             "text": "Phlebotomy",
-            "sub": "Option B",
+            "sub": "Removal-based therapy",
             "correct": false,
             "feedback_wrong": "Phlebotomy reduces iron load — it is the treatment for haemochromatosis. It does not significantly reduce copper. Wilson disease requires chelation.",
             "pt_remark_wrong": "... Blood removal. ... Is that what passes for medicine here.",
@@ -1988,7 +1988,7 @@
           },
           {
             "text": "Corticosteroids",
-            "sub": "Option C",
+            "sub": "Immunomodulatory therapy",
             "correct": false,
             "feedback_wrong": "Wilson disease can mimic autoimmune hepatitis on biopsy and biochemistry — a common diagnostic trap. Steroids do not treat the underlying copper accumulation and would delay appropriate therapy.",
             "pt_remark_wrong": "(tilts head.) ... Inflammation. ... Is that what this is.",
@@ -1996,7 +1996,7 @@
           },
           {
             "text": "Liver transplant",
-            "sub": "Option D",
+            "sub": "Definitive intervention",
             "correct": false,
             "feedback_wrong": "Liver transplant is curative in Wilson disease but reserved for acute liver failure or failed medical management. Medical therapy with chelation is first-line. Transplant is not the first step in a stable patient.",
             "pt_remark_wrong": "(goes very quiet.) ... The liver. ... (does not finish the sentence.)",
@@ -2009,32 +2009,32 @@
         "hint": "Wilson disease affects more than the liver and brain. What else needs monitoring?",
         "options": [
           {
-            "text": "Eyes (Kayser-Fleischer rings), kidneys (Fanconi syndrome), bone marrow (haemolytic anaemia), bone (osteoporosis)",
-            "sub": "Option A",
+            "text": "Eyes, kidneys, bone marrow, bone",
+            "sub": "Multi-organ involvement",
             "correct": true,
             "feedback_correct": "Correct. Wilson disease is a multisystem copper deposition disorder. Eyes: Kayser-Fleischer rings (corneal copper deposition — slit lamp required, absent in ~50% of hepatic-only presentations). Kidneys: Fanconi syndrome — proximal tubular dysfunction causing aminoaciduria, phosphaturia, glucosuria. Haematological: Coombs-negative haemolytic anaemia. Skeletal: osteoporosis, arthropathy. Cardiac: cardiomyopathy (rare).",
             "fennick_correct_comment": "\"Copper deposits wherever the blood goes. Eyes, kidney tubules, bone marrow. Follow all of them.\"",
             "pt_remark_correct": "All of those places. ... I did not— ... physician, I am sorry. ... I should have come sooner. ... Can it still be fixed."
           },
           {
-            "text": "Lungs and thyroid only — systemic inflammatory screen",
-            "sub": "Option B",
+            "text": "Lungs and thyroid only",
+            "sub": "Selective organ involvement",
             "correct": false,
             "feedback_wrong": "Pulmonary and thyroid involvement is not characteristic of Wilson disease. The target organs are liver, brain, eyes, kidneys, blood, and bone.",
             "pt_remark_wrong": "... The lungs work. ... The thyroid is not the concern.",
             "fennick_wrong_comment": "\"Wilson does not target the lungs or thyroid. Follow the copper.\""
           },
           {
-            "text": "Cardiac monitoring only — copper cardiomyopathy is the main risk",
-            "sub": "Option C",
+            "text": "Cardiac monitoring only",
+            "sub": "Single-system focus",
             "correct": false,
             "feedback_wrong": "Cardiac involvement occurs but is rare. Renal Fanconi syndrome, haemolytic anaemia, and Kayser-Fleischer rings are more consistent and important monitoring targets.",
             "pt_remark_wrong": "... The heart is strong. ... Probably.",
             "fennick_wrong_comment": "\"Cardiac is rare. Renal Fanconi and haemolytic anaemia are the consistent findings.\""
           },
           {
-            "text": "No additional monitoring — liver and brain are the only organs affected",
-            "sub": "Option D",
+            "text": "No additional monitoring beyond liver and brain",
+            "sub": "Localised pathology",
             "correct": false,
             "feedback_wrong": "Wilson disease is explicitly multisystem. Fanconi syndrome (already evidenced by proteinuria and aminoaciduria here), haemolytic anaemia (already present), and Kayser-Fleischer rings are all present or likely in this patient.",
             "pt_remark_wrong": "... If only.",
@@ -2048,7 +2048,7 @@
         "options": [
           {
             "text": "Admit for initiation of chelation therapy, hepatology and neurology referral, social work involvement for housing and follow-up support",
-            "sub": "Option A",
+            "sub": "Comprehensive inpatient management",
             "correct": true,
             "feedback_correct": "Correct. Initiation of D-penicillamine requires monitoring for early side effects and baseline organ function assessment. Hepatology and neurology for ongoing management. Social work is essential — he has no fixed abode and will not maintain outpatient follow-up without support. Neurological symptoms may initially worsen with chelation (paradoxical worsening from mobilisation of copper).",
             "fennick_correct_comment": "\"Chelation can worsen neurology initially. Start slowly. Watch closely.\"",
@@ -2056,7 +2056,7 @@
           },
           {
             "text": "Discharge with oral D-penicillamine prescription and outpatient hepatology in 4 weeks",
-            "sub": "Option B",
+            "sub": "Routine outpatient care",
             "correct": false,
             "feedback_wrong": "No fixed abode. No support structure. D-penicillamine initiation requires monitoring and follow-up he cannot maintain without housing. Outpatient discharge here is not a realistic management plan.",
             "pt_remark_wrong": "(four weeks.) ... (very quietly.) ... I may not be findable in four weeks.",
@@ -2066,7 +2066,7 @@
           },
           {
             "text": "Refer to psychiatry for bipolar disorder — mood symptoms are the primary presentation",
-            "sub": "Option C",
+            "sub": "Specialty-focused referral",
             "correct": false,
             "feedback_wrong": "Mood symptoms in Wilson disease are secondary to copper deposition in the basal ganglia and limbic system. Treating as primary bipolar disorder misses the underlying cause. Chelation addresses the mood symptoms alongside the rest.",
             "pt_remark_wrong": "... Psychiatry. ... You think this is madness.",
@@ -2074,7 +2074,7 @@
           },
           {
             "text": "Urgent liver transplant assessment — Wilson disease is progressive without transplant",
-            "sub": "Option D",
+            "sub": "Escalated definitive care",
             "correct": false,
             "feedback_wrong": "Transplant is reserved for acute liver failure or medical treatment failure. This patient has elevated transaminases and mild synthetic dysfunction — not acute failure. Chelation first.",
             "pt_remark_wrong": "(almost inaudible.) ... Right now. ... Is it that urgent.",
