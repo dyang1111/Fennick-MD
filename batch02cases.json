@@ -1224,7 +1224,7 @@
       "age": 67,
       "sex": "F",
       "occupation": "Seer and Diviner, Lower Gears District",
-      "image_url": "PLACEHOLDER"
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1777594607/the_fortune_teller_sasnj9.png"
     },
     "chart": {
       "cc": "Headache. I know what it is already but my daughter made me come.",
@@ -1533,7 +1533,7 @@
       "age": 34,
       "sex": "M",
       "occupation": "Royal Mail Courier, Lower Gears — Ashgate route",
-      "image_url": "PLACEHOLDER"
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1777594605/the_postman_nuzeuy.png"
     },
     "pt_opening": "Hello! Oh wow this place smells like old paper. I like it. Anyway —",
     "chart": {
@@ -1818,7 +1818,7 @@
     "date": "2026-04-24",
     "tier": 1,
     "urgency": "stable",
-    "title": "The King of the Alley",
+    "title": "The Beggar King's Humour",
     "dx_answer": "Wilson Disease",
     "breathless_typing": true,
     "typing_speed_on_dx": "anxious",
@@ -1830,13 +1830,13 @@
       "post_dx": "Complete collapse of the persona. Fast, frightened, genuinely human. The king was always a performance. The fear underneath was always real."
     },
     "patient": {
-      "name": "The King of the Alley",
+      "name": "The Beggar King",
       "age": 33,
       "sex": "M",
       "occupation": "Sovereign of the Lower Gears Eastern Alley (self-proclaimed). No fixed abode.",
-      "image_url": "PLACEHOLDER_REGAL",
-      "image_url_alert": "PLACEHOLDER_FRIGHTENED",
-      "image_url_flustered": "PLACEHOLDER_FLUSTERED"
+      "image_url": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1777593402/the_beggar_king_1_bkjoas.png",
+      "image_url_alert": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1777593401/the_beggar_king_3_dhec2f.png",
+      "image_url_flustered": "https://res.cloudinary.com/djiap51xq/image/upload/q_auto/f_auto/v1777593402/the_beggar_king_2_x9t3ra.png"
     },
     "portrait_on_pe": "image_url_flustered",
     "chart": {
