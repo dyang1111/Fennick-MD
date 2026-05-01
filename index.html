@@ -2199,22 +2199,66 @@ function clearMgmtSelections(){ Object.keys(_mgmtSelections).forEach(k=>delete _
 window.revealWorkup=function(type){
   if(revealedWorkup.has(type))return;
   playSFX('workup_click');
-  // Portrait swap on PE/imaging reveal
-  if(type === 'pe' && currentCase && currentCase.portrait_on_pe) {
-    const url = currentCase.patient[currentCase.portrait_on_pe];
-    if(url) setTimeout(()=>{
-      const ptImg = document.getElementById('pt-img');
-      if(ptImg){ ptImg.style.transition='opacity 0.6s'; ptImg.style.opacity='0';
-        setTimeout(()=>{ ptImg.src=url; ptImg.style.opacity='1'; },600); }
-    }, 1200);
+  // ── PORTRAIT FLASH (temporary swap then return) ──
+  function flashPortrait(swapUrl, duration) {
+    const ptImg = document.getElementById('pt-img');
+    if(!ptImg || !swapUrl) return;
+    const origUrl = ptImg.src;
+    // Fast in
+    ptImg.style.transition = 'opacity 0.12s';
+    ptImg.style.opacity = '0';
+    setTimeout(()=>{ ptImg.src = swapUrl; ptImg.style.opacity = '1'; }, 120);
+    // Fast out after duration
+    setTimeout(()=>{
+      ptImg.style.transition = 'opacity 0.12s';
+      ptImg.style.opacity = '0';
+      setTimeout(()=>{ ptImg.src = origUrl; ptImg.style.opacity = '1'; }, 120);
+    }, duration);
   }
-  if(type === 'imaging' && currentCase && currentCase.portrait_on_imaging) {
-    const url2 = currentCase.patient[currentCase.portrait_on_imaging];
-    if(url2) setTimeout(()=>{
-      const ptImg = document.getElementById('pt-img');
-      if(ptImg){ ptImg.style.transition='opacity 0.6s'; ptImg.style.opacity='0';
-        setTimeout(()=>{ ptImg.src=url2; ptImg.style.opacity='1'; },600); }
-    }, 1200);
+
+  // Portrait swap on PE/imaging reveal
+  if(type === 'pe') {
+    const flashDur = (currentCase && currentCase.portrait_flash_duration) || 3000;
+    if(currentCase && currentCase.portrait_flash_on_pe) {
+      // Flash: temporary swap then return
+      const furl = currentCase.patient[currentCase.portrait_flash_on_pe];
+      if(furl) {
+        setTimeout(()=>flashPortrait(furl, flashDur), 400);
+        // Flash remark then after flashDur fire normal remark
+        if(currentCase.cc_after_pe_flash) {
+          setTimeout(()=>setPtRemark(currentCase.cc_after_pe_flash), 600);
+          if(currentCase.cc_after_pe) setTimeout(()=>setPtRemark(currentCase.cc_after_pe), 600 + flashDur + 400);
+        }
+      }
+    } else if(currentCase && currentCase.portrait_on_pe) {
+      // Permanent swap
+      const url = currentCase.patient[currentCase.portrait_on_pe];
+      if(url) setTimeout(()=>{
+        const ptImg = document.getElementById('pt-img');
+        if(ptImg){ ptImg.style.transition='opacity 0.6s'; ptImg.style.opacity='0';
+          setTimeout(()=>{ ptImg.src=url; ptImg.style.opacity='1'; },600); }
+      }, 1200);
+    }
+  }
+  if(type === 'imaging') {
+    const flashDur2 = (currentCase && currentCase.portrait_flash_duration) || 3000;
+    if(currentCase && currentCase.portrait_flash_on_imaging) {
+      const furl2 = currentCase.patient[currentCase.portrait_flash_on_imaging];
+      if(furl2) {
+        setTimeout(()=>flashPortrait(furl2, flashDur2), 400);
+        if(currentCase.cc_after_imaging_flash) {
+          setTimeout(()=>setPtRemark(currentCase.cc_after_imaging_flash), 600);
+          if(currentCase.cc_after_imaging) setTimeout(()=>setPtRemark(currentCase.cc_after_imaging), 600 + flashDur2 + 400);
+        }
+      }
+    } else if(currentCase && currentCase.portrait_on_imaging) {
+      const url2 = currentCase.patient[currentCase.portrait_on_imaging];
+      if(url2) setTimeout(()=>{
+        const ptImg = document.getElementById('pt-img');
+        if(ptImg){ ptImg.style.transition='opacity 0.6s'; ptImg.style.opacity='0';
+          setTimeout(()=>{ ptImg.src=url2; ptImg.style.opacity='1'; },600); }
+      }, 1200);
+    }
   }
   const workupFennickLines = {
     'addl-hx': currentCase.fennick_after_addl_hx || '"Good. Now we are actually listening."',
@@ -2341,14 +2385,20 @@ function addLabResult(name,result){
     const labSwapKey = currentCase.portrait_on_labs[name.toLowerCase()];
     if(labSwapKey && currentCase.patient) {
       const labSwapUrl = currentCase.patient[labSwapKey];
-      if(labSwapUrl) setTimeout(()=>{
-        const ptImg = document.getElementById('pt-img');
-        if(ptImg) {
-          ptImg.style.transition = 'opacity 0.6s';
-          ptImg.style.opacity = '0';
-          setTimeout(()=>{ ptImg.src = labSwapUrl; ptImg.style.opacity = '1'; }, 600);
-        }
-      }, 800);
+      const _labIsFlash = currentCase.portrait_flash_labs && currentCase.portrait_flash_labs[_labKey];
+      if(_labIsFlash) {
+        const _labFlashDur = currentCase.portrait_flash_duration || 3000;
+        setTimeout(()=>flashPortrait(labSwapUrl, _labFlashDur), 400);
+      } else if(labSwapUrl) {
+        setTimeout(()=>{
+          const ptImg = document.getElementById('pt-img');
+          if(ptImg) {
+            ptImg.style.transition = 'opacity 0.6s';
+            ptImg.style.opacity = '0';
+            setTimeout(()=>{ ptImg.src = labSwapUrl; ptImg.style.opacity = '1'; }, 600);
+          }
+        }, 800);
+      }
     }
   }
   card.innerHTML=`<div class="test-result-name">${name.toUpperCase()}</div><div class="test-result-val">${result}</div>${fragHtml}`;
