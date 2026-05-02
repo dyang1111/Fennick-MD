@@ -2381,7 +2381,8 @@
             "pt_remark_correct": "Two more. Loading doses. (considers the vials) You are being aggressive. ... Good. In my experience, half-measures produce half-results.",
             "feedback_wrong": "PCI is the preferred strategy when available within 120 minutes of first medical contact. The nearest cath lab is 140 minutes away — transfer would exceed the window. Fibrinolytic therapy is now the appropriate strategy. Transfer after fibrinolysis for pharmacoinvasive PCI within 3-24 hours.",
             "fennick_wrong_comment": "\"140 minutes. The threshold is 120. The balloon cannot get here in time.\"",
-            "pt_remark_wrong": "Transfer. To another facility. Now. ... How far. ... That is too far."
+            "pt_remark_wrong": "Transfer. To another facility. Now. ... How far. ... That is too far.",
+            "triggers_crisis": true
           },
           {
             "text": "Alteplase IV — fibrinolytic reperfusion",
@@ -2395,13 +2396,13 @@
             "pt_remark_correct": "A dissolving agent. Through the vein. And the cath lab cannot reach us in time. ... That is a logistical failure. I would have planned better routes. But we work with what we have. Proceed."
           },
           {
-            "text": "Tenecteplase IV — weight-based fibrinolytic, easier to administer",
-            "sub": "Single-bolus thrombolysis",
+            "text": "Unfractionated heparin alone — anticoagulation without reperfusion",
+            "sub": "Anticoagulation only",
             "correct": false,
-            "feedback_wrong": "Tenecteplase is also an acceptable fibrinolytic — single bolus, weight-based, less chance of dosing error. However alteplase is the more established agent with broader evidence. Either is acceptable in practice — for this question, alteplase is the preferred answer.",
-            "pt_remark_wrong": "A single injection. Efficient. I appreciate efficiency.",
-            "fennick_wrong_comment": "\"Tenecteplase is acceptable. Alteplase has the longer evidence base in this setting.\"",
-            "triggers_crisis": false
+            "feedback_wrong": "Heparin is an anticoagulant — it prevents new clot formation but does not dissolve the existing thrombus. Reperfusion therapy (fibrinolysis or PCI) is still required. Anticoagulation alone is insufficient for STEMI.",
+            "pt_remark_wrong": "A blood thinner. That is all. Without the dissolving part. ... That does seem insufficient even to me, Doctor.",
+            "fennick_wrong_comment": "\"Heparin prevents clot extension. It does not dissolve the one already blocking the artery.\"",
+            "triggers_crisis": true
           },
           {
             "text": "Streptokinase IV — first-generation fibrinolytic",
@@ -2410,7 +2411,7 @@
             "feedback_wrong": "Streptokinase is a first-generation fibrinolytic — antigenic, cannot be given twice, lower efficacy than alteplase or tenecteplase. Not the preferred agent when others are available.",
             "pt_remark_wrong": "An older medication. I respect. The classics.",
             "fennick_wrong_comment": "\"Streptokinase is antigenic. Cannot be repeated. Alteplase or tenecteplase are preferred.\"",
-            "triggers_crisis": false
+            "triggers_crisis": true
           },
           {
             "text": "Argatroban — direct thrombin inhibitor anticoagulation",
@@ -2419,7 +2420,7 @@
             "feedback_wrong": "Argatroban is a direct thrombin inhibitor used in HIT — not a fibrinolytic and not indicated for STEMI reperfusion.",
             "pt_remark_wrong": "I do not recognise that name. Should I.",
             "fennick_wrong_comment": "\"Argatroban is for HIT. No heparin indication here. Use heparin.\"",
-            "triggers_crisis": false
+            "triggers_crisis": true
           },
           {
             "text": "Clopidogrel + enoxaparin",
@@ -2428,7 +2429,7 @@
             "feedback_wrong": "Clopidogrel and enoxaparin are antithrombotic adjuncts — they do not dissolve the existing clot. Reperfusion therapy is still required.",
             "pt_remark_wrong": "Those I know. From the textbooks. I used to recommend them to the school nurse.",
             "fennick_wrong_comment": "\"Clopidogrel onset 2-6 hours. Ticagrelor onset 30 minutes. The door-to-balloon clock does not pause.\"",
-            "triggers_crisis": false
+            "triggers_crisis": true
           }
         ]
       },
