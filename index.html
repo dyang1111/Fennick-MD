@@ -3175,11 +3175,13 @@ window.endCase = function(failed) {
     lantern.style.opacity = '0'; visible = false;
   });
 })();
-</script>
-</body>
-</html>// Dynamic vitals update
+
+// Dynamic vitals update
 function updateVitals(vitalsObj) {
   if(!vitalsObj || !currentCase) return;
-  const v = {...currentCase.vitals, ...vitalsObj};
+  const v = Object.assign({}, currentCase.vitals, vitalsObj);
   renderVitals(v);
 }
+</script>
+</body>
+</html>
