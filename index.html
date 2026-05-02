@@ -2656,7 +2656,17 @@ window.pickMgmt=function(stageIdx,optIdx){
     if(currentCase && currentCase.vital_progression) {
       const vKey = opt.vital_update_on_correct || ('on_mng_' + (stageIdx + 1) + '_correct');
       const vUpdate = currentCase.vital_progression[vKey];
-      if(vUpdate) setTimeout(()=>updateVitals(vUpdate), 1200);
+      if(vUpdate) {
+        setTimeout(()=>updateVitals(vUpdate), 1200);
+        // If crisis resolved, swap back to default portrait
+        if(vKey === 'on_crisis_resolved' && currentCase.patient && currentCase.patient.image_url) {
+          setTimeout(()=>{
+            const ptImg = document.getElementById('pt-img');
+            if(ptImg){ ptImg.style.transition='opacity 0.4s'; ptImg.style.opacity='0';
+              setTimeout(()=>{ ptImg.src=currentCase.patient.image_url; ptImg.style.opacity='1'; },400); }
+          }, 2000);
+        }
+      }
     }
     // Typing speed change on correct management stage
     if(opt.typing_speed_after) {
@@ -2731,6 +2741,14 @@ window.pickMgmt=function(stageIdx,optIdx){
     if(opt.triggers_crisis && currentCase) {
       if(currentCase.vital_progression && currentCase.vital_progression.on_crisis) {
         setTimeout(()=>updateVitals(currentCase.vital_progression.on_crisis), 800);
+        // Swap to crisis portrait if defined
+        if(currentCase.patient && currentCase.patient.image_url_crisis) {
+          setTimeout(()=>{
+            const ptImg = document.getElementById('pt-img');
+            if(ptImg){ ptImg.style.transition='opacity 0.15s'; ptImg.style.opacity='0';
+              setTimeout(()=>{ ptImg.src=currentCase.patient.image_url_crisis; ptImg.style.opacity='1'; },150); }
+          }, 1000);
+        }
       }
       if(currentCase.crisis_stage) {
         currentCase.management.splice(stageIdx + 1, 0, currentCase.crisis_stage);
