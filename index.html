@@ -2545,7 +2545,7 @@ function renderManagement(){
   const stages=currentCase.management;if(!stages)return;
   document.getElementById('mgmt-progress').innerHTML=stages.map((_,i)=>`${i>0?'<div class="prog-line" id="prog-line-'+i+'"></div>':''}<div class="prog-dot ${i===0&&dxCorrect?'cur':''}" id="prog-dot-${i}"></div>`).join('');
   document.getElementById('mgmt-stages').innerHTML=stages.map((s,si)=>`
-    <div class="mgmt-stage" id="stage-wrap-${si}">${si>0?'<div class="stage-divider"></div>':''}
+    <div class="mgmt-stage" id="stage-wrap-${si}" style="${s.hidden_until_crisis?'display:none':''}">${si>0?'<div class="stage-divider"></div>':''}
       <div class="mgmt-stage-header"><div class="stage-num ${!dxCorrect||si>0?'locked':''}" id="stage-num-${si}">${si+1}</div><div class="stage-title ${!dxCorrect||si>0?'locked':''}" id="stage-title-${si}">${s.title}</div></div>
       ${s.description ? `<div style="font-size:13px;color:#6a4a18;font-style:italic;margin:4px 0 8px 36px;line-height:1.5;opacity:0.85;">${s.description}</div>` : ''}
       <div class="mgmt-options" id="stage-opts-${si}">${s.options.map((o,oi)=>`<div class="mgmt-option ${!dxCorrect||si>0?'locked-opt':''}" id="opt-${si}-${oi}" onclick="pickMgmt(${si},${oi})"><div class="mgmt-ob">${String.fromCharCode(65+oi)}</div><div><div class="mgmt-on">${o.text}</div>${o.sub?`<div class="mgmt-oc">${o.sub}</div>`:''}</div></div>`).join('')}</div>
@@ -2768,7 +2768,25 @@ window.pickMgmt=function(stageIdx,optIdx){
             if(fel) typewriterWrite(fel, cs.fennick_transition.replace(/^"|"$/g,''), 18);
           }, 1200);
         }
-        setTimeout(()=>advanceStage(stageIdx + 1), csDelay);
+        // Find the crisis stage index and show it
+        const csIdx = currentCase.management.findIndex(s=>s.crisis_insert && s.hidden_until_crisis);
+        if(csIdx !== -1) {
+          currentCase.management[csIdx].hidden_until_crisis = false;
+          setTimeout(()=>{
+            const wrap = document.getElementById('stage-wrap-'+csIdx);
+            if(wrap) {
+              wrap.style.display='';
+              // Unlock the options
+              const ne=document.getElementById('stage-num-'+csIdx);if(ne)ne.classList.remove('locked');
+              const te=document.getElementById('stage-title-'+csIdx);if(te)te.classList.remove('locked');
+              currentCase.management[csIdx].options.forEach((_,i)=>{
+                const el=document.getElementById('opt-'+csIdx+'-'+i);if(el)el.classList.remove('locked-opt');
+              });
+              currentStage = csIdx;
+              wrap.scrollIntoView({behavior:'smooth',block:'nearest'});
+            }
+          }, csDelay);
+        }
       }
     }
     if(opt.critical_error) {
