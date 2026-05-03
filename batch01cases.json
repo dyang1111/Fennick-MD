@@ -1164,7 +1164,7 @@
     "fennick_after_pe": "\"190 over 118 at rest. Consider what it reaches during an episode.\"",
     "fennick_after_imaging": "\"Right adrenal. 4.8 centimetres. Central necrosis.\"",
     "memory_fragments": {
-      "addl-hx": "He described the episodes as his body running a drill without orders. He has been trying to countermand them for two years. The body has not listened."
+      "pe": "He described the episodes as his body running a drill without orders. He has been trying to countermand them for two years. The body has not listened."
     },
     "tier": 1
   },
@@ -1437,7 +1437,7 @@
     "fennick_after_pe": "\"Oxygen saturation 97. Look at the patient, not the number.\"",
     "fennick_after_imaging": "\"Clear chest. Normal brain. The problem is elsewhere.\"",
     "memory_fragments": {
-      "addl-hx": "He apologised for coming in. He said the others at the furnace probably felt the same and he did not want to cause a fuss. The others at the furnace felt the same."
+      "pe": "He apologised for coming in. He said the others at the furnace probably felt the same and he did not want to cause a fuss. The others at the furnace felt the same."
     },
     "tier": 1
   },
@@ -1980,7 +1980,7 @@
     "fennick_after_pe": "\"Every secretion suppressed. Every smooth muscle relaxed.\"",
     "fennick_after_imaging": "\"Clear CT. The CNS is the remaining concern.\"",
     "memory_fragments": {
-      "addl-hx": "She brought the plant that caused it. She placed it on the desk and said it might be helpful for identification. It was already identified. It was the evidence."
+      "pe": "She brought the plant that caused it. She placed it on the desk and said it might be helpful for identification. It was already identified. It was the evidence."
     },
     "tier": 1
   },
@@ -3209,7 +3209,7 @@
     "fennick_after_pe": "\"The skin tells you what the bloods will confirm.\"",
     "fennick_after_imaging": "\"Clear chest. Metabolic process.\"",
     "memory_fragments": {
-      "addl-hx": "He attributed the weight gain to parliamentary dinners. He attributed the bruising to a vigorous handshake campaign. He had a prepared answer for every finding. He did not have one for the cortisol."
+      "imaging": "He attributed the weight gain to parliamentary dinners. He attributed the bruising to a vigorous handshake campaign. He had a prepared answer for every finding. He did not have one for the cortisol."
     },
     "tier": 1
   },
@@ -3574,7 +3574,7 @@
       "result": "CK 48,200 U/L. Creatinine 2.1 mg/dL. BUN 34. Potassium 5.8 mEq/L. LDH elevated. AST 680 U/L. ALT mildly elevated. Urine myoglobin positive."
     },
     "memory_fragments": {
-      "addl-hx": "He brought his training log. He wanted to show it was working. The urine colour in the corner of his notes said otherwise."
+      "pe": "He brought his training log. He wanted to show it was working. The urine colour in the corner of his notes said otherwise."
     },
     "tests": [
       {
@@ -3893,12 +3893,6 @@
         "result": "Troponin I 0.04. Mildly elevated. Serial recommended."
       },
       {
-        "name": "NT-proBNP",
-        "cost": 5,
-        "result": "NT-proBNP 1,840 pg/mL (elevated).",
-        "pt_remark": "That one has a very long name. What is it measuring."
-      },
-      {
         "name": "UA",
         "cost": 5,
         "result": "Normal. No protein. No blood. No infection."
@@ -3912,6 +3906,12 @@
         "name": "Coags",
         "cost": 5,
         "result": "PT/INR 1.1. PTT 30. Normal."
+      },
+      {
+        "name": "NT-proBNP",
+        "cost": 5,
+        "result": "NT-proBNP 1,840 pg/mL (elevated).",
+        "pt_remark": "That one has a very long name. What is it measuring."
       }
     ],
     "hints": [
@@ -4208,7 +4208,7 @@
       "result": "No papilloedema. Disc margins sharp bilaterally. Vessels normal calibre. No haemorrhage, no exudates."
     },
     "memory_fragments": {
-      "addl-hx": "He called it the worst headache of his life, then immediately pulled out a ledger to track his symptoms. He had already cross-referenced three other causes. He refused to look at the one that required a lumbar puncture."
+      "pe": "He called it the worst headache of his life, then immediately pulled out a ledger to track his symptoms. He had already cross-referenced three other causes. He refused to look at the one that required a lumbar puncture."
     },
     "tests": [
       {
