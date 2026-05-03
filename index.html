@@ -2789,7 +2789,7 @@ window.pickMgmt=function(stageIdx,optIdx){
     const mgmtWrongRemark = opt.pt_remark_wrong || getGenericRemark('mgmt-wrong');
     if(mgmtWrongRemark) setTimeout(()=>setPtRemark(mgmtWrongRemark), 1200);
     if(!_mgmtSelections[stageIdx]) _mgmtSelections[stageIdx] = { optIdx, correct: false, feedback: opt.feedback_wrong||'Incorrect.' };
-    setTimeout(()=>advanceStage(stageIdx+1), opt.critical_error ? 5000 : 3500);
+    if(!opt.triggers_crisis) setTimeout(()=>advanceStage(stageIdx+1), opt.critical_error ? 5000 : 3500);
   }
 };
 
