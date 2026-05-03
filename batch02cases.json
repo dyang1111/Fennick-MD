@@ -302,7 +302,10 @@
     "pt_opening": "You look like you have never seen anyone this well-dressed in a medical setting. That is understandable.",
     "generic_lab_remark": "As long as none of this affects my complexion.",
     "fennick_after_pe": "\"Fluent. Circumstantial. She keeps returning to the mirror.\"",
-    "fennick_after_imaging": "\"No structural lesion. Organic cause excluded.\""
+    "fennick_after_imaging": "\"No structural lesion. Organic cause excluded.\"",
+    "memory_fragments": {
+      "pe": "She straightened her hat in the reflection of the examination light three times during the consultation. Each time she seemed surprised it needed straightening."
+    }
   },
   {
     "id": "017",
@@ -355,7 +358,7 @@
       "result": "Blood glucose 3.2 mmol/L (low). Thiamine (Vitamin B1): <7 nmol/L (severely low — normal 70-180 nmol/L). Lactate 3.1 mmol/L. These results returned after initial management decision — thiamine level confirms clinical suspicion."
     },
     "memory_fragments": {
-      "pe": "He has been opening that pub at six in the morning and closing at midnight for twenty-two years. He stopped tasting the ale about three years ago. He keeps pouring it anyway."
+      "pe": "His eyes drifted left when he tried to look right. He laughed it off. His companion stopped laughing before he did."
     },
     "tests": [
       {
@@ -670,8 +673,7 @@
       "result": "Posterior rib fractures bilateral — multiple, in various stages of healing. Classic bucket-handle metaphyseal fractures bilateral distal femora. Right clavicle fracture — callus formation, approximately two to three weeks old. These fracture patterns are not consistent with a single fall from a low height. Posterior rib fractures in infants are highly specific for non-accidental injury — they occur from anterior-posterior chest compression during forceful shaking."
     },
     "memory_fragments": {
-      "pe": "She stopped crying about a week ago. Not because she was better. Because she had learned that crying did not help.",
-      "imaging": "The subdural on the left is acute. The one on the right has a membrane forming around it. It is older. This did not start this morning."
+      "imaging": "Three fractures at three different stages of healing. She had an explanation for each one. Each explanation described a different day."
     },
     "tests": [
       {
@@ -950,8 +952,7 @@
       "result": "B12: 310 pmol/L (normal). Folate: 18 nmol/L (normal). Peripheral smear: oval macrocytes, hyposegmented neutrophils (pseudo-Pelger-Huet anomaly — bilobed nuclei), occasional teardrop cells. No hypersegmented neutrophils. No blast cells seen. No schistocytes. Dysplastic changes in multiple cell lines. B12 and folate deficiency excluded."
     },
     "memory_fragments": {
-      "pe": "She has been taking the long route to avoid the stairs for three weeks. She catalogued seventeen new acquisitions last Tuesday. She did not tell anyone about the stairs.",
-      "imaging": "The imaging shows no recurrence. She already knew it would not. She was not worried about the cancer coming back. She was worried about something she could not name."
+      "pe": "She has been taking the long route to avoid the archive stairs for three weeks. She catalogued seventeen new acquisitions last Tuesday. Nobody noticed the route had changed."
     },
     "tests": [
       {
@@ -1252,8 +1253,7 @@
       "result": "ESR: 98 mm/hr (markedly elevated — normal <20). CRP: 64 mg/L (markedly elevated — normal <5). CBC: normocytic anaemia, Hgb 10.8. WBC and platelets normal. Pattern consistent with significant systemic inflammatory process."
     },
     "memory_fragments": {
-      "pe": "She stopped mid-sentence when the temporal artery was palpated. She did not finish what she was saying. She did not start a new sentence for eleven seconds.",
-      "imaging": "She has been touching the left side of her face for three weeks. She thought it was something she was meant to feel. She was right about that part."
+      "pe": "She stopped mid-sentence when the temporal artery was palpated. She did not finish what she was saying. She did not start a new sentence for eleven seconds."
     },
     "tests": [
       {
@@ -1562,8 +1562,7 @@
       "result": "Reduced conduction velocity and amplitude of the common fibular (peroneal) nerve at the fibular head. Tibial nerve conduction normal. L4/L5 nerve root conduction normal. Localised compression neuropathy confirmed at the fibular head."
     },
     "memory_fragments": {
-      "pe": "He has been lifting his right knee higher for three weeks. He thought he was just walking enthusiastically. He told a kitten about it. The kitten was not concerned.",
-      "imaging": "The fibular head is where the nerve wraps around. There is nothing wrong with the bone. The bone did nothing. The squatting did everything."
+      "addl-hx": "He has been lifting his right knee higher for three weeks. He thought he was just walking enthusiastically. He told a kitten about it. The kitten was not concerned."
     },
     "tests": [
       {
@@ -1864,8 +1863,7 @@
       "result": "Ceruloplasmin: 0.08 g/L (low — normal 0.20-0.60). 24-hour urine copper: 210 mcg/day (elevated — normal <100). AST 88, ALT 102 (elevated). Alkaline phosphatase 34 (low — characteristically low in Wilson disease). Serum copper: low (reflects low ceruloplasmin-bound copper). Free copper: elevated."
     },
     "memory_fragments": {
-      "pe": "He has been holding his hands still for months. He noticed the tremor before anyone else did. He decided it was beneath a king to acknowledge it.",
-      "imaging": "The CT shows early change. It does not show what caused it. Whatever is doing this has been there for years. Long before the kingdom."
+      "pe": "He has been holding his hands deliberately still for months. He noticed the tremor before anyone else did. He decided it was beneath a king to acknowledge it."
     },
     "tests": [
       {
@@ -2270,8 +2268,7 @@
       "result": "ST elevation in leads II, III, aVF greater than 2mm. Reciprocal ST depression in I and aVL. Q waves developing in III. Rate 118. No bundle branch block. Pattern consistent with acute inferior STEMI. Right-sided leads: ST elevation in V4R — right ventricular involvement."
     },
     "memory_fragments": {
-      "pe": "He maintained upright posture throughout the examination. He corrected the angle of the stethoscope placement twice. His hands were cold.",
-      "imaging": "Pulmonary venous congestion. The left ventricle is failing forward. The fluid is going somewhere it should not be."
+      "special": "Significant ST elevation across the inferior leads. He looked at the upward trend on the monitor and remarked that it looked like a positive trajectory. He has no idea he was watching his heart die in real time. Troponin 2.8. He noted that it was not a failing grade and seemed satisfied. I did not tell him that the higher the number, the more of his heart has already turned to scar tissue."
     },
     "tests": [
       {
@@ -2690,8 +2687,7 @@
     "imaging": "Abdominal ultrasound: biliary ductal dilation. Common bile duct 12mm (dilated). Gallstones visible within the gallbladder. No free fluid. No hepatic mass.",
     "special_test": null,
     "memory_fragments": {
-      "pe": "He made a sound when the RUQ was palpated. Not a word. He had not made any sound before that.",
-      "imaging": "Dilated duct. Stone visible. The bile has nowhere to go. That is why he is yellow. That is why he has a fever. That is why he is here."
+      "pe": "He made a sound when the RUQ was palpated. Not a word. Just a sound. He had not made any sound before that."
     },
     "tests": [
       {
