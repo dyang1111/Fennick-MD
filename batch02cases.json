@@ -2193,51 +2193,6 @@
       },
       "on_crisis_portrait": "image_url_crisis"
     },
-    "crisis_stage": {
-      "title": "Ventricular fibrillation — immediate response",
-      "hint": "No pulse. No output. Monitor shows chaotic rhythm. What now.",
-      "options": [
-        {
-          "text": "Defibrillate immediately — unsynchronised shock 200J biphasic",
-          "sub": "Electrical cardioversion",
-          "correct": true,
-          "feedback_correct": "Correct. Ventricular fibrillation is a shockable rhythm — defibrillate immediately. Unsynchronised shock (not cardioversion — no organised rhythm to sync to). 200J biphasic first shock. Resume CPR immediately after. Adrenaline 1mg IV every 3-5 minutes if VF persists.",
-          "fennick_correct_comment": "\"VF does not negotiate. Shock first. Everything else after.\"",
-          "pt_remark_correct": "You did not give a countdown. Coordination is key to any successful drill. You lack synchronisation. I am telling you this so you do not fail the next one.",
-          "vital_update_on_correct": "on_crisis_resolved"
-        },
-        {
-          "text": "Synchronised cardioversion 100J — treat as unstable tachycardia",
-          "sub": "Synchronised shock",
-          "correct": false,
-          "feedback_wrong": "Synchronised cardioversion requires a detectable QRS to sync to. VF has no organised rhythm. Synchronised mode will fail to deliver the shock or delay it fatally. Unsynchronised defibrillation is required.",
-          "pt_remark_wrong": "(no response)",
-          "fennick_wrong_comment": "\"No QRS to sync to. The machine is waiting for a signal that is not there.\""
-        },
-        {
-          "text": "Amiodarone 300mg IV — pharmacological rhythm control first",
-          "sub": "Antiarrhythmic first",
-          "correct": false,
-          "feedback_wrong": "Amiodarone is used in VF refractory to defibrillation — after the third shock. It is not the first response to VF. Defibrillate first.",
-          "pt_remark_wrong": "(no response)",
-          "fennick_wrong_comment": "\"Amiodarone is for VF that does not respond to shocks. You have not shocked yet.\"",
-          "critical_error": true,
-          "fennick_endgame_comment": "\"VF. No defibrillation. Amiodarone cannot restart a heart in fibrillation.\""
-        },
-        {
-          "text": "Adrenaline 1mg IV — first-line in cardiac arrest",
-          "sub": "Vasopressor first",
-          "correct": false,
-          "feedback_wrong": "Adrenaline is used after the third shock in VF. The first action in VF is immediate defibrillation — not pharmacological. Every second without defibrillation reduces survival by approximately 10%.",
-          "pt_remark_wrong": "(no response)",
-          "fennick_wrong_comment": "\"Defibrillation first. Every second costs ten percent survival. Adrenaline comes later.\"",
-          "critical_error": true,
-          "fennick_endgame_comment": "\"VF. Shockable rhythm. You chose adrenaline first. The window closed.\""
-        }
-      ],
-      "fennick_transition": "\"VF. Shockable rhythm.\"",
-      "description": "Monitor shows ventricular fibrillation. No pulse."
-    },
     "chart": {
       "cc": "My chest is tight. But look at your station, Doctor. Disorganized. Chaos in the workspace leads to chaos in the mind. I am only pointing this out for your professional growth. Now. Perform your assessment.",
       "hpi": "The patient presented ambulatory, declining the wheelchair offered at triage. He is a 67-year-old retired school principal with a 45-minute history of central crushing chest pain radiating to the left arm, accompanied by diaphoresis and progressive dyspnoea. He described the pain as a sensation of someone sitting on his sternum, then immediately corrected himself — he said the correct anatomical term was retrosternal pressure. He has a history of hypertension and hypercholesterolaemia. He has not taken his antihypertensives today because he did not feel they were necessary. He arrived alone, having told his wife the appointment was routine.",
@@ -2428,6 +2383,53 @@
             "triggers_crisis": true
           }
         ]
+      },
+      {
+        "title": "Ventricular fibrillation — immediate response",
+        "hint": "No pulse. No output. Monitor shows chaotic rhythm. What now.",
+        "options": [
+          {
+            "text": "Defibrillate immediately — unsynchronised shock 200J biphasic",
+            "sub": "Electrical cardioversion",
+            "correct": true,
+            "feedback_correct": "Correct. Ventricular fibrillation is a shockable rhythm — defibrillate immediately. Unsynchronised shock (not cardioversion — no organised rhythm to sync to). 200J biphasic first shock. Resume CPR immediately after. Adrenaline 1mg IV every 3-5 minutes if VF persists.",
+            "fennick_correct_comment": "\"VF does not negotiate. Shock first. Everything else after.\"",
+            "pt_remark_correct": "You did not give a countdown. Coordination is key to any successful drill. You lack synchronisation. I am telling you this so you do not fail the next one.",
+            "vital_update_on_correct": "on_crisis_resolved"
+          },
+          {
+            "text": "Synchronised cardioversion 100J — treat as unstable tachycardia",
+            "sub": "Synchronised shock",
+            "correct": false,
+            "feedback_wrong": "Synchronised cardioversion requires a detectable QRS to sync to. VF has no organised rhythm. Synchronised mode will fail to deliver the shock or delay it fatally. Unsynchronised defibrillation is required.",
+            "pt_remark_wrong": "(no response)",
+            "fennick_wrong_comment": "\"No QRS to sync to. The machine is waiting for a signal that is not there.\""
+          },
+          {
+            "text": "Amiodarone 300mg IV — pharmacological rhythm control first",
+            "sub": "Antiarrhythmic first",
+            "correct": false,
+            "feedback_wrong": "Amiodarone is used in VF refractory to defibrillation — after the third shock. It is not the first response to VF. Defibrillate first.",
+            "pt_remark_wrong": "(no response)",
+            "fennick_wrong_comment": "\"Amiodarone is for VF that does not respond to shocks. You have not shocked yet.\"",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"VF. No defibrillation. Amiodarone cannot restart a heart in fibrillation.\""
+          },
+          {
+            "text": "Adrenaline 1mg IV — first-line in cardiac arrest",
+            "sub": "Vasopressor first",
+            "correct": false,
+            "feedback_wrong": "Adrenaline is used after the third shock in VF. The first action in VF is immediate defibrillation — not pharmacological. Every second without defibrillation reduces survival by approximately 10%.",
+            "pt_remark_wrong": "(no response)",
+            "fennick_wrong_comment": "\"Defibrillation first. Every second costs ten percent survival. Adrenaline comes later.\"",
+            "critical_error": true,
+            "fennick_endgame_comment": "\"VF. Shockable rhythm. You chose adrenaline first. The window closed.\""
+          }
+        ],
+        "fennick_transition": "\"VF. Shockable rhythm.\"",
+        "description": "Monitor shows ventricular fibrillation. No pulse.",
+        "hidden_until_crisis": true,
+        "crisis_insert": true
       },
       {
         "title": "PCI performed — angiographic finding",
