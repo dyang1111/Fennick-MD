@@ -278,9 +278,6 @@
     "generic_lab_remark": "I keep a record of everything. I assumed you'd want it.",
     "fennick_after_pe": "\"Her hands gave it away before the examination started.\"",
     "fennick_after_imaging": "\"DaTscan is the confirmatory test. MRI is not.\"",
-    "memory_fragments": {
-      "pe": "She wound the examination room clock while waiting. It was already correct. She wound it anyway."
-    },
     "tier": 1
   },
   {
@@ -881,9 +878,6 @@
     "patient_quote_addl_hx": "\"I actually looked up my symptoms last week. I thought maybe it was just a virus going around the construction site. My wife said I should come in sooner. I kept saying it wasn't a big deal. Is it a big deal?\"",
     "generic_lab_remark": "Whatever you need. Just be thorough.",
     "fennick_after_imaging": "\"1.4 centimetres on the non-coronary cusp.\"",
-    "memory_fragments": {
-      "pe": "He tapped the murmur rhythm on his knee while being examined. He thought he was keeping time. He was not keeping time."
-    },
     "tier": 1
   },
   {
@@ -1163,9 +1157,6 @@
     "generic_lab_remark": "Get what you need. Make it quick.",
     "fennick_after_pe": "\"190 over 118 at rest. Consider what it reaches during an episode.\"",
     "fennick_after_imaging": "\"Right adrenal. 4.8 centimetres. Central necrosis.\"",
-    "memory_fragments": {
-      "pe": "He described the episodes as his body running a drill without orders. He has been trying to countermand them for two years. The body has not listened."
-    },
     "tier": 1
   },
   {
@@ -1704,9 +1695,6 @@
     "generic_lab_remark": "Do it.",
     "fennick_after_pe": "\"One side. Listen to both.\"",
     "fennick_after_imaging": "\"Bilateral blebs. Second episode.\"",
-    "memory_fragments": {
-      "pe": "He rated the pain a four out of ten. He said he had worked through worse. His oxygen saturation disagreed."
-    },
     "tier": 1
   },
   {
@@ -1979,9 +1967,6 @@
     "generic_lab_remark": "Yes. Whatever it takes. Please hurry.",
     "fennick_after_pe": "\"Every secretion suppressed. Every smooth muscle relaxed.\"",
     "fennick_after_imaging": "\"Clear CT. The CNS is the remaining concern.\"",
-    "memory_fragments": {
-      "pe": "She brought the plant that caused it. She placed it on the desk and said it might be helpful for identification. It was already identified. It was the evidence."
-    },
     "tier": 1
   },
   {
@@ -3245,9 +3230,6 @@
       "rr": "14",
       "temp": "37.0",
       "o2": "99% RA"
-    },
-    "memory_fragments": {
-      "pe": "His hands have forty years of clay in them. The joints that hurt the most are the ones he uses the most. He has not considered stopping."
     },
     "additional_hx": "He answers carefully, like a man who measures things. Pain pattern: worse after work, better with rest — he is specific about this. Morning stiffness gone within twenty minutes of starting to move. The joints that hurt most are the base of both thumbs and the end joints of his index and middle fingers — the ones that press and shape. No other joint involvement. No swelling he can see — just a bony feeling, a thickening. He tried ibuprofen and it helps somewhat. He pulls the wooden rib from his coat pocket while talking and turns it over in his fingers without noticing.",
     "patient_quote_addl_hx": "\"The wheel still knows what to do. It's just the hands arguing with me now. Forty years of the same motion — I suppose I should have expected them to have an opinion eventually.\"",
